@@ -1,5 +1,5 @@
 # Ginger
 ## Welcome to Ginger-Automation Pages
 
-- A
-- B
+- Ginger is automation tool
+- More information will be added here soon
