@@ -1,8 +1,11 @@
 function setLayout()
 			{
-				$("#headerdiv").append("<img src='./images/Plugin.png' width='200' height='200'/>");	
-				$("#headerdiv").append("<h1>Ginger Automation</h1>");	
-				
+				$("#headerdiv").append("<div style='border: 1px solid; background:lightgray; height: 150px; width: 15%; float: left;'><img src='./images/GingerIcon.png' width='170' height='150'/></div>");	
+
+				h = "<div style='border: 1px solid; height: 150px; width: 60%; float: left; background:orange;'>";
+				h += "<h1>Ginger Automation</h1>"
+				// h += "<h4>Spice it up!</h4>"
+
 				s= '<nav><ul>';
 				s+='<li><a href="./index.html">Home</li>';
 				s+='<li><a href="./plugins.html">Plugins</li>';
@@ -11,7 +14,17 @@ function setLayout()
 				s+='<li><a href="./support.html">Support</li>';
 				s+='<li><a href="./about.html">About</a></li>';				
 				s+='</ul></nav>'
-				$("#headerdiv").append(s);	
+				h+=s;
+
+				h += "</div>"
+				$("#headerdiv").append(h);	
+				
+				h2 = "<div style='border: 1px solid; height: 150px; width: 20%; float: right; background:lightgray;'>";
+				h2+= "<img src='./images/amdocs.png' width='100' height='100'/>"
+				h2+= "<label>by amdocs</label>";
+				h2 += "</div>"
+				
+				$("#headerdiv").append(h2);	
 				
 				a='<ul>';
 				a='<li><a href="mailto:ginger@gmail.com">email</a></li>';
