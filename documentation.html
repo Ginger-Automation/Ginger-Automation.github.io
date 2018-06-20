@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>Ginger Documentation</title>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+	<script src="./js/jquery.min.js"></script> 
+	<script src="./js/layout.js"></script> 
+
+	<script> 	
+		   $(document).ready(function(){ 				
+				setLayout()
+
+				$("li").click(
+				function(){ 				
+							html = $(this).attr("data-html");								
+							html = "./documentation/" + html;							
+							$("#frm").attr("src", html);
+
+						} 
+				);
+		   }) 
+   </script>    
+</head>
+
+
+<body>
+
+	<div id="headerdiv"></div>
+
+	<h2>Documentation</h2>
+	<ul>
+    <li data-html="GettingStarted.html">Getting Started</li>
+	<li>Creating new solution</li>
+	<li>Agents</li>
+	<li>Creating new agent</li>
+	</ul>
+
+	<iframe id="frm" width="600" src=""></iframe>
+
+	<footer id="footer"></footer>
+
+	
+</body>
+
+</html>
+
+
