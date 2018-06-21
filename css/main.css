@@ -1,6 +1,7 @@
 body {
     margin: 60px auto;
     width: 70%;
+    background-image: url("../images/amdocsbg.png");
 }
 
 a {
@@ -15,11 +16,12 @@ a {
 p, ul {
     font-size: 1.5em;
     line-height: 1.4em;
-    color: #333;
+    color: white;
 }
 
 h1, h2, h3, h4 {
     font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+    color:white;
 }
 
 h1 {
@@ -56,3 +58,18 @@ footer {
     font-size: .8em;
 }
 
+#container {
+    /*background-image: url("../images/amdocsbg.png");*/
+    background: #2c2a42;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#logo
+{
+    float:left;
+}
+#headercenter {
+    width: 60%;
+    float: left;
+}
