@@ -8,6 +8,7 @@ function setLayout()
 				//h = "<div style='border: 1px solid; height: 150px; width: 60%; float: left; background:orange;'>";
 				// h += "<h1>Ginger Automation</h1>"
                 h = "<div id='headercenter'>";
+				h += "<h1>Ginger Automation</h1>"
 
 				h += "<h4>Spice it up!</h4>"
 
