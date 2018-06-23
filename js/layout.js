@@ -9,8 +9,8 @@ function setLayout()
 				// h += "<h1>Ginger Automation</h1>"
                 h = "<div id='headercenter'>";
 				h += "<h1>Ginger Automation</h1>";
-
-				h += "<h4>Spice it up!</h4>";
+				h += "<h5>Spice it up!</h4>";
+				h += "<br/>";
 
 				s= '<nav><ul>';
 				s+='<li><a href="./index.html">Home</li>';
