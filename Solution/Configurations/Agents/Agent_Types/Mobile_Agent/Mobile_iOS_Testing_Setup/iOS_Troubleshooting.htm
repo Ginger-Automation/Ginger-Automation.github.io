@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../../../../..";
+  gCommonRootRelPath = "../../../../../..";
+  gTopicId = "3.2.1.1.1.2.0_4";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Mobile iOS Troubleshooting</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Mobile Agent"/></head>
+<body>
+  <h1>Mobile iOS Troubleshooting</h1>
+  <p><strong><span style="font-size:20px;">   </span></strong><span style="font-size:17px;"><strong><span style="font-size:20px;"> 1.     Issue - Failed to Connect to Device</span></strong><br/>
+                    Possible Solution:-<br/>
+                         Make sure the tested device is not locked</span></p>
+  <p> </p>
+  <p><span style="font-size:17px;"><span style="font-size:20px;"><strong>    2.    Issue - Failed to load Safari Browser</strong></span><br/>
+                    Possible Solution:-<br/>
+                     1.    Especially on iPad- Make sure that Safari is been launched on the device only with only one tab. </span></p>
+  <p><span style="font-size:17px;">                      If other tabs exists then:<br/>
+                             o    Close all tabs by clicking on the tabs control button in Safari browser and closing all existing tabs before doing the Ginger-Appium connection<br/>
+                             o    Clear all browsing History data from Safari app or Settings before doing the Ginger-Appium connection<br/>
+                      2.    Make sure ios-web-proxy is not crashing- if it is, check for the crash reason:<br/>
+                             o    If ios-web-proxy saying it failed because “Unknown app ID” then uninstall the SafariLauncher app from the device and re-run (it will re-installed by appium)</span></p>
+
+</body></html>

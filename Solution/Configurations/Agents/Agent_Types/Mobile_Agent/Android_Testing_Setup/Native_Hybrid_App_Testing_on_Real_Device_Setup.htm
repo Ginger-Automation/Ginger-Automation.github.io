@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../../../../..";
+  gCommonRootRelPath = "../../../../../..";
+  gTopicId = "3.2.1.1.1.1.0_4";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Native/Hybrid App Testing on Real Device Setup</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Android Agent"/></head>
+<body>
+  <h1>Native/Hybrid App Testing on Real Device Setup</h1>
+  <p><span style="font-size:17px;">  Appium will be able to connect and automate any App which is installed on the Android device</span></p>
+  <p><span style="font-size:17px;"><strong>     </strong></span></p>
+  <p><span style="font-size:17px;"><span style="font-size:20px;"><strong>     1.    Getting the Tested App Details Identifiers </strong></span><br/>
+                    a.    Connect the tested device to the machine where Appium server is installed<br/>
+                    b.    Unlock the real device and get to it main screen (after lock screen) or load the App you want to test<br/>
+                    c.    First Method:<br/>
+                                 I.    Open CMD window<br/>
+                                II.    Type the command:<br/>
+                                      adb shell &quot;dumpsys window windows | grep -E &#39;mCurrentFocus|mFocusedApp&#39;<br/>
+                               III.    Look for the “&lt;&lt;Package&gt;&gt;/&lt;&lt;activity&gt;&gt;” value in the output<br/>
+                                      <img src="../../../../../../assets/images/image309.png"/> <img src="../../../../../../assets/images/image274.png"/><br/>
+                                      For example:<br/>
+                                        InstalledAppPackage: “com.lge.launcher2”<br/>
+                                        InstalledAppActivity: “.Launcher” </span></p>
+  <p><span style="font-size:17px;">              d.    Second Method:<br/>
+                                 I.    Open the uiautomatorviewer by doing StartRun %ANDROID_HOME%\tools\uiautomatorviewer.bat<br/>
+                               II.    Click on Device Screenshot button<br/>
+                              III.    Save the Package value<br/>
+                                      <img src="../../../../../../assets/images/image310.png"/> <img src="../../../../../../assets/images/image275.png"/><br/>
+                              IV.    Open the monitor tool by doing StartRun %ANDROID_HOME%\tools\monitor.bat<br/>
+                               V.    Past the Package value found in previous step in the search box<br/>
+                              VI.    Do some activities in the App on the real device<br/>
+                             VII.    Some records supposed to be shown in log area<br/>
+                            VIII.    Look for the “&lt;&lt;Package&gt;&gt;/&lt;&lt;activity&gt;&gt;” value structure in the logs<br/>
+                                      The first value will be the InstalledAppPackage and second one will be the InstalledAppActivity</span></p>
+  <p><span style="font-size:17px;">                                For example:<br/>
+                                       InstalledAppPackage: “com.lge.launcher2”<br/>
+                                       InstalledAppActivity: “com.lge.launcher2.Launcher” (can be just “.Launcher”)</span></p>
+  <p><span style="font-size:17px;">                                 <strong>Note:</strong> not always the InstalledAppActivity is exist and needed</span></p>
+  <p>                                   <img src="../../../../../../assets/images/image276.png"/>   <img src="../../../../../../assets/images/image311.png"/></p>
+  <p> </p>
+  <p> </p>
+  <p><span style="font-size:17px;"></span></p>
+  <p><span style="font-size:20px;"><strong>    2.    Getting the Tested App Details Identifiers </strong></span></p>
+  <p><span style="font-size:17px;">              a.    Launch Appium server on the Windows/Mac machine according to steps in section 1.3/1.6<br/>
+                    b.    Launch Ginger <br/>
+                    c.    Create Business Flow with the Mobile platform<br/>
+                    d.    Add new Agent, give it logical name and select the MobileAppiumAndroid driver<br/>
+                            <img src="../../../../../../assets/images/image312.png" style="cursor: nwse-resize;"/><img src="../../../../../../assets/images/image277.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                    e.    Define the Agent Driver Configurations as follow:<br/>
+                                I.    AppiumServer: http://&lt;&lt;Windows/Mac_Machine_IP from step 1.3.b/1.6.b&gt;&gt;:4723/wd/hub<br/>
+                               II.    DeviceName: Any Device name<br/>
+                              III.    DevicePlatformVersion: Real device platform version <br/>
+                              IV.    DeviceID: the device ID you found in step 2.2<br/>
+                               V.    In case the tested app is installed on the device:<br/>
+                                        InstalledAppPackage: The tested app Package found in step 3.1.d<br/>
+                                        InstalledAppActivity: The tested app Package found in step 3.1.d<br/>
+                                        Else, in case using the tested app APK file:<br/>
+                                        AppInstallerPath: The full path to the tested app APK file on the Appium server machine<br/>
+                                    <img src="../../../../../../assets/images/image278.png"/>   <img src="../../../../../../assets/images/image313.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                    f.    Save the Agent settings<br/>
+                    g.    Select the Business Flow created in step c and shift to the Automate tab<br/>
+                    h.    Select the Agent created in step d from the Agents selection in the ribbon<br/>
+                     i.    Click on Launch Agent<br/>
+                    j.    Make sure that the connection request got to the Appium server, you supposed to see something like this in screen </span></p>
+  <p><span style="font-size:17px;">                    shot below<br/>
+                           <img src="../../../../../../assets/images/image314.png"/><img src="../../../../../../assets/images/image279.png"/></span></p>
+  <p><span style="font-size:17px;">   <br/>
+                    k.    Once the connection establish the app supposed to be launched on the tested device and the Appium Mobile Driver </span></p>
+  <p><span style="font-size:17px;">                      Window supposed to appear on Ginger and allow you to control it and start creating your automation</span></p>
+  <p>                         <img src="../../../../../../assets/images/image315.png"/><img src="../../../../../../assets/images/image280.png"/></p>
+
+</body></html>

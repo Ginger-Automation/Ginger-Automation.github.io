@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../..";
+  gCommonRootRelPath = "../..";
+  gTopicId = "8.1.0_5";
+
+//]]></script>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Export Business Flow to ALM</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css"/>
+  <meta name="topic-comment" content="How to Export the Business Flows from Ginger to the ALM"/>
+<meta name="rh-index-keywords" content="QC/JIRA/RQM Integration"/></head>
+<body>
+  <p align="center" class="MsoTitle" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:20pt"><span style="font-family:Calibri,sans-serif"><span style="color:#0f243e"><span style="letter-spacing:-0.5pt"><span style="font-weight:bold"><span style="font-size:16.0pt"><span style="font-family:&quot;Century Gothic&quot;,sans-serif"></span></span></span></span></span></span></span></p>
+  <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt"><span style="font-family:&quot;Century Gothic&quot;,sans-serif"></span></span></span></span></p>
+  <p style="margin:0in 0in 0.0001pt"> </p>
+  <h1>Export Business Flow to ALM</h1>
+  <p><span style="font-size:16px;">Ginger allows to export a Ginger Business Flow to ALM.<br/>
+      The export is been done in 2 parts:<br/>
+           1.    Export Activities Groups to ALM Test Cases- each one of the exported Business Flow Activities Groups will be exported to an ALM Test Case item in ALM Test Plan.<br/>
+          2.    Export Business Flow to ALM Test Set- an ALM<br/>
+               a.    QC ALM Export - Test Set item will be created in QC ALM Test Lab into user selected folder.<br/>
+               b.    RQM ALM export - Test Plan will be exported to RQM, there are no folders in RQM ALM.<br/>
+          3.    all of the created ALM Test Cases from step 1 will be added to the Business Flow to represent the execution flow</span></p>
+  <p><span style="font-size:16px;">Steps to export Business Flow:<br/>
+      1.    Launch the export process by:</span></p>
+  <p><span style="font-size:16px;">    a. Double click the Business Flow to go to automation area. Click on the “Export to ALM” button       </span></p>
+  <p><span style="font-size:16px;">          <img src="../../assets/images/image12.png"/><img src="../../assets/images/image9.png"/></span></p>
+  <p><span style="font-size:16px;">             </span></p>
+  <p><span style="font-size:16px;">    b.    Right click the Business Flows to export and select the “Export All to ALM” option. It will export all the Business Flows of the solution to ALM<br/>
+               <img src="../../assets/images/image13.png"/><img src="../../assets/images/image10.png"/></span></p>
+  <p><span style="font-size:16px;"></span></p>
+  <p><span style="font-size:16px;">    c.    Right click on the desired Business Flow in the Solution Tree and select “Export to ALM”</span></p>
+  <p><span style="font-size:16px;">         <img src="../../assets/images/image14.png"/><img src="../../assets/images/image11.png"/></span></p>
+  <p><span style="font-size:16px;"> <br/>
+      2.    In case ALM connection details are missing or incorrect you will be asked to connect to ALM:<br/>
+             <img src="../../assets/images/image12.png"/></span></p>
+  <p><span style="font-size:16px;"><br/>
+      3.    Exporting to RQM or QC ALM – Ginger will try to use the current saved configurations saved on step 3 and use them to export to selected </span></p>
+  <p><span style="font-size:16px;">     ALM type. <br/>
+           Exporting to QC ALM - if QC ALM has been set in step 3, Ginger will use saved configurations and export to QC ALM:<br/>
+           In case not all of the exported Business Flow Activities Groups were exported before to ALM:</span></p>
+  <p><span style="font-size:16px;"><br/>
+               a. ALM Test Plan browser window will be shown and you will need to select to which ALM Test Plan folder the Activities Groups will be exported as ALM Test Cases<br/>
+                   <img src="../../assets/images/image13.png"/></span></p>
+  <p><span style="font-size:16px;"><br/>
+              b. Select a folder and click on “Select Folder” button<br/>
+              c. All Activities Groups which were not exported before will be exported into the selected folder as ALM Test Cases<br/>
+                     <img src="../../assets/images/image17.png"/><img src="../../assets/images/image14.png"/></span></p>
+  <p><span style="font-size:16px;"></span></p>
+  <p><span style="font-size:16px;">        d. For each Activities Group the details which will be exported are:<br/>
+                   i.    Activities Group Name<br/>
+                  ii.    For each Activity in the Activities Group an ALM Step item will be created containing the:<br/>
+                      •    Activity Name<br/>
+                      •    Activity Description<br/>
+                      •    Activity list of Variables Names<br/>
+                      •    Activity list of Actions Description<br/>
+                      •    Activity Expected <br/>
+                     <span style="font-family:&quot;Calibri&quot;,sans-serif"></span></span></p>
+  <p><span style="font-size:16px;"><span style="font-family:&quot;Calibri&quot;,sans-serif">            <span style="font-size:12.0pt"><span style="font-family:&quot;Calibri&quot;,sans-serif"><span style="font-size:12.0pt"><span style="font-family:&quot;Calibri&quot;,sans-serif"><span style="font-size:12.0pt"><span style="font-family:&quot;Calibri&quot;,sans-serif"><img height="266" src="../../assets/images/image15.png" width="942"/></span></span></span></span></span></span></span></span></p>
+  <p><span style="font-size:16px;"></span></p>
+  <p><span style="font-size:16px;"></span></p>
+  <p><span style="font-size:16px;">4.    ALM Test Lab browser window will be shown for selecting the ALM Test Lab folder to export the Business Flow ALM Test Set into</span></p>
+  <p><span style="font-size:16px;">      a.    Select an ALM Test Lab folder<br/>
+            b.    Click on “Select Folder” button<br/>
+                 <img src="../../assets/images/image19.png"/><img src="../../assets/images/image16.png"/></span></p>
+  <p><span style="font-size:16px;"></span></p>
+  <p><span style="font-size:16px;">5.    The Business Flow will be exported to ALM- new Test Set will be created with the Business Name and all the matching Test Cases for the Business Flow Activities Groups will be added into it Execution Flow<br/>
+                 <img src="../../assets/images/image20.png"/><img src="../../assets/images/image17.png"/></span></p>
+  <p><span style="font-size:16px;"> <br/>
+      <span style="font-size:18px;">6.    In case running from Automate tab you will be asked to save the Business Flow for saving the links to the ALM items (Test Cases &amp; Test Set) <br/>
+        7.    Exporting to RQM ALM: if RQM ALM has been set in step 3, Ginger will use saved configurations and export to RQM ALM:<br/>
+        8.    RQM ALM export is similar to QC ALM export, the only difference is that in RQM there are no folders and when exporting from Ginger to RQM there will be no option to select where to export to.</span></span></p>
+  <p><span style="font-size:18px;">        <strong>Note: </strong>if the Test Plan already exist in RQM ALM, exporting it again will update the existing Test Plan and wont create another instance.</span></p>
+  <p><span style="font-size:16px;"><span style="font-size:18px;">          Browsing RQM Test Plans:</span><br/>
+                <img src="../../assets/images/image23.png"/><img src="../../assets/images/image18.png"/></span></p>
+  <p><span style="font-size:16px;"><br/>
+         <span style="font-size:18px;">      <strong>Note: </strong><br/>
+                   •    Each business must have at least  one Activity Group<br/>
+                   •    It is possible to Export the Business Flow Activities Groups separately by:<br/>
+                          a.    Clicking on the Export icon which placed on the “Activities Groups” page after selecting all the Activities Group to export<br/>
+                                 <img src="../../assets/images/image24.png"/><img src="../../assets/images/image19.png"/></span></span></p>
+  <p><span style="font-size:18px;"><br/>
+                        b.    Right click on Shared Activities Group item in the Solution tree and select “Export to ALM”. For exporting group of Activities Groups you can right click on a folder of Activities Groups and select “Export All to ALM”</span></p>
+  <p><span style="font-size:16px;">                         <img src="../../assets/images/image25.png"/><img src="../../assets/images/image20.png"/><br/>
+                                     </span></p>
+
+</body></html>

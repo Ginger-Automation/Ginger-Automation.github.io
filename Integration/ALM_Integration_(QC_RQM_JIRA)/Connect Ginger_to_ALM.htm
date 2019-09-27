@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../..";
+  gCommonRootRelPath = "../..";
+  gTopicId = "8.1.0_2";
+
+//]]></script>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Connect Ginger to ALM (QC/RQM/JIRA)</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="QC/JIRA/RQM Integration"/></head>
+<body>
+  <p align="center" class="MsoTitle" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:20pt"><span style="font-family:Calibri,sans-serif"><span style="color:#0f243e"><span style="letter-spacing:-0.5pt"><span style="font-weight:bold"><span style="font-size:16.0pt"><span style="font-family:&quot;Century Gothic&quot;,sans-serif"></span></span></span></span></span></span></span></p>
+  <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt"><span style="font-family:&quot;Century Gothic&quot;,sans-serif"></span></span></span></span></p>
+  <p style="margin:0in 0in 0.0001pt"><span style="font-weight:bold;"><span style="font-size:24px;">Connect Ginger to ALM (QC/RQM/JIRA)</span></span></p>
+  <p style="margin:0in 0in 0.0001pt"> </p>
+  <h4 style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">    <span style="font-size:12.0pt">To set ALM connecting details in Ginger application please follow below steps:</span></span></span></h4>
+  <p> </p>
+  <ol class="Decimal">
+    <li style="margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:12.0pt">Click on  ‘Share Operations’ button.</span></span></span><br/>
+      <img height="75" src="../../assets/images/image2.png" width="659"/><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:12.0pt"></span></span></span></li>
+    <li style="margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:12.0pt">Select “ALM Connection Settings”</span></span></span></li>
+    <li style="margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:12.0pt">Select ALM type – QC/RQM using the radio buttons</span></span></span></li>
+    <li style="margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:12.0pt">Populate the ALM server URL and your ALM user name and password and click on “Get Projects Details”</span></span></span></li>
+    <li style="margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:12.0pt">If connection details are correct, projects details will be received, select project  and click “Save Project Mapping”<br/>
+            <span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:12.0pt"><img height="404" src="../../assets/images/image3.png" width="329"/></span></span></span></span></span></span></li>
+  </ol>
+  <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">             <span style="font-size:12.0pt"></span><span style="font-size:12.0pt"></span></span></span></p>
+  <p style="margin:0in 0in 0.0001pt"> </p>
+  <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:12.0pt"><u>Note</u>: From ALM version 11 the ALM Client need to be registered on your machine for allowing it to be connected with Ginger. </span></span></span></p>
+  <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:12.0pt">Please follow below steps for registering ALM client if needed:</span></span></span></p>
+  <ol>
+    <li style="margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:12.0pt">Launch IE as Administrator</span></span></span></li>
+    <li style="margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">Go to <span class="MsoHyperlink" style="color:blue"><span style="text-decoration:underline"><span style="font-size:12.0pt">http://&lt;&lt;ALM_URL&gt;&gt;/qcbin</span></span></span></span></span></li>
+    <li style="margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:12.0pt">Click on “Add-Ins Page” link</span></span></span></li>
+    <li style="margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:12.0pt">In next page, click on “HP ALM Client Registration”</span></span></span></li>
+    <li style="margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:12.0pt">In next page click on “Register HP ALM Client”</span></span></span><br/>
+       </li>
+  </ol>
+  <p><span style="font-size:12.0pt"><span style="font-family:&quot;Calibri&quot;,sans-serif">      <u>Note:</u> All Ginger – ALM interaction will try to use saved ALM configuration in Ginger, If in any case the saved configurations are incorrect or Ginger could not establish connection to ALM, “ALM Connection Settings” page will be shown and the user will need to enter/re-enter ALM configurations and test them before continue</span></span></p>
+  <p> </p>
+  <p> </p>
+  <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:18px;"><span style="font-family:Calibri,sans-serif"><b>Set Jira Connection Package</b></span></span></p>
+  <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:12.0pt">For working with Jira you will need to load the relevant Jira zip settings file according to the next steps:</span></span></span></p>
+  <ol>
+    <li style="margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:12.0pt">Download the relevant Jira settings zip file from Ginger support site.</span></span></span></li>
+    <li style="margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:12.0pt">On “ALM Connection Settings” window, click on “Change Server Details” Button.</span></span></span></li>
+    <li style="margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:12.0pt">Click on “Replace” button and choose your downloaded zip file.</span></span></span></li>
+    <li style="margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:12.0pt">Click on “Get Project Details “</span></span></span></li>
+    <li style="margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:12.0pt">Choose your domain and project and save your connection settings.</span></span></span></li>
+  </ol>
+  <p style="margin:0in 0in 0.0001pt 0.5in">       <img src="../../assets/images/image39.png"/><img src="../../assets/images/image8.png"/></p>
+
+</body></html>

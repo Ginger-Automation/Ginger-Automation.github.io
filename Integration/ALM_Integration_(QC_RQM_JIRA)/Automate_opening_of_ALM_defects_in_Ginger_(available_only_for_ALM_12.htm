@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../..";
+  gCommonRootRelPath = "../..";
+  gTopicId = "8.1.0_9";
+
+//]]></script>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Automate opening of ALM defects in Ginger (available only for QC 12.0 version)</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css"/>
+  <meta name="topic-comment" content="Ginger will automatically open defects in ALM when the test case is failed during execution"/>
+<meta name="rh-index-keywords" content="QC/JIRA/RQM Integration"/></head>
+<body>
+  <p align="center" class="MsoTitle" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:20pt"><span style="font-family:Calibri,sans-serif"><span style="color:#0f243e"><span style="letter-spacing:-0.5pt"><span style="font-weight:bold"><span style="font-size:16.0pt"><span style="font-family:&quot;Century Gothic&quot;,sans-serif"></span></span></span></span></span></span></span></p>
+  <p align="center" class="MsoTitle" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:20pt"><span style="font-family:Calibri,sans-serif"><span style="color:#0f243e"><span style="letter-spacing:-0.5pt"><span style="font-weight:bold"><span style="font-size:16.0pt"><span style="font-family:&quot;Century Gothic&quot;,sans-serif"></span></span></span></span></span></span></span></p>
+  <p style="margin:0in 0in 0.0001pt"> </p>
+  <h1>Automate opening of ALM defects in Ginger (available only for QC 12.0 version)</h1>
+  <p><span style="font-size:16px;"><strong>Pre-Requisite:-</strong><br/>
+        1.    The ALM Connection settings are already provided to Ginger from the ALM drop <br/>
+                down menu. ‘Use Rest API’ checkbox must be checked.<br/>
+        2.    The Business Flow is already exported to ALM.</span></p>
+  <p><span style="font-size:16px;">  <br/>
+      <span style="font-weight:bold;"><span style="font-style:italic;"><span style="font-size:18px;">1. Setting the ALM Defect’s Profiles</span></span></span></span></p>
+  <p><span style="font-size:16px;">       In order to have automated defect’s opening or to make a “manual” opening via ginger much faster, <br/>
+             defects field’s values (from ALM) should be pre-selected . <br/>
+             For this purpose a screen, “ALM Defect’s Profiles” is available under the ALM drop down of Solution <br/>
+             tab.</span><span style="font-size:16px;">           <img src="../../assets/images/image33.png"/>      </span></p>
+  <p><span style="font-size:16px;">   </span></p>
+  <p>           <img src="../../assets/images/image2.png"/></p>
+  <p> </p>
+  <p>           <img src="../../assets/images/image3.png"/></p>
+  <p><span style="font-size:16px;">       At the top part of a screen will be presented a list of existed Defect’s Profiles – in a grid form. At the grid’s toolbox will be presented next              </span></p>
+  <p><span style="font-size:16px;">       buttons/controls:<br/>
+              •    Create a Profile<br/>
+              •    Delete a Profile<br/>
+              •    Previous Profile<br/>
+              •    Next Profile<br/>
+              •    Search Profile by Name/Description</span></p>
+  <p> </p>
+  <p><span style="font-size:16px;">    Grid will contain next columns:<br/>
+              •    Name<br/>
+              •    Description<br/>
+              •    Is Default – column that will be single-selectable per all values in the rows</span></p>
+  <p> </p>
+  <p><span style="font-size:16px;">    Once Profile created/selected – Profile’s Fields grid became enabled and populated by fields and their values. Those fields/values will be    </span></p>
+  <p><span style="font-size:16px;">      retrieved from the ALM by new REST API.  <br/>
+          Profile’s Fields grid will have below columns:<br/>
+             •    Filed Name<br/>
+             •    Mandatory (Boolean flag)<br/>
+             •    Selected Values – dropdown with current field’s values list. Value that presented will be actually the selected one for this profile</span></p>
+  <p><span style="font-size:16px;">     Deselecting (selecting other) of a Profile will be not available till all mandatory field’s values will not be selected (value deferent than “N/A”).<br/>
+          Closing of a current window also will be not available till all mandatory field’s values will not be selected. Warning message will be popped in        </span></p>
+  <p><span style="font-size:16px;">     case that not expected.<br/>
+          Closing of a current window will be not available till at least one Profile will be created/exist. Warning message will be popped in case that not    </span></p>
+  <p><span style="font-size:16px;">     expected.</span></p>
+  <p><span style="font-size:16px;">    <br/>
+          <br/>
+      <span style="font-size:18px;font-style:italic;font-weight:bold">2.     How to automate opening of Defect?</span></span></p>
+  <p> </p>
+  <p><span style="font-size:16px;">   1) In the Run tab, click on “RunSet” and open the desired run set. Operations and click the button to add the operation “Automated Opening” <br/>
+         2) This operation can be added only when at least one “Defect’s Profiles” exists. Warning message will be popped in case that is no  “Defect’s </span><span style="font-size:16px;">Profiles” are existing yet.<br/>
+            In order to use operation’s functionality, operation should be added to “RunSet Operations” list (as usual operation’s behavior).<br/>
+             <img src="../../assets/images/image35.png"/></span></p>
+  <p>      <img src="../../assets/images/image4.png"/></p>
+  <p> </p>
+  <p><span style="font-size:16px;">   3) New Operation will have next options which the user can select from: <br/>
+            •    Run at<br/>
+                   o    “Execution End” – defects will be opened after execution’s end<br/>
+                   o    “During Execution” – defects will be during execution – in real time<br/>
+            •    Condition<br/>
+                   o    “Always Run”<br/>
+            •    Defect’s Opening Mode – radio buttons list <br/>
+                    o    “Open Defects For All Failures” – selecting this option will cause a creations of a defects in ALM for all failures that happened during                         </span><span style="font-size:16px;"> execution<br/>
+                    o    “Open Defects For Failures that marked at Action’s Flow Control” – selecting this option will a creations of defects in ALM for failures                     </span><span style="font-size:16px;">that </span><span style="font-size:16px;">have predefined condition at Action’s Flow Control<br/>
+                        <img src="../../assets/images/image36.png"/><img src="../../assets/images/image5.png"/></span></p>
+  <p><span style="font-size:16px;"><br/>
+                      For above purpose for Action’s flow control will be added new action, called “Set Failure to be Auto-Opened Defect”. If this action will be </span></p>
+  <p><span style="font-size:16px;">                with condition &quot;Action  Failed” and action will actually fail – this will cause a defect opening by current operation</span></p>
+  <p><span style="font-size:16px;font-style:italic;font-weight:bold"><br/>
+      <span style="font-size:18px;">3.     How to view opened automated defects?</span></span></p>
+  <p> </p>
+  <p><span style="font-size:16px;">      1) Go to Run tab and click on “ALM Defect’s Opening” tab. <br/>
+               This tab presents all the failures that happened during the execution - with all relevant data and screenshots. <br/>
+               Till the execution’s end this tab is disabled. Once execution finished the tab became enabled. </span></p>
+  <p><span style="font-size:16px;"><br/>
+            2) In case of operation “Automated ALM Defect’s Opening” was in use during the last execution (or it’s not first iteration of defect’s “manual”                </span><span style="font-size:16px;">opening) column “ALM’s defect ID” will be populated per concerted issue. ALM Defect ID will be saved per action at “RunSet” object</span></p>
+  <p><span style="font-size:16px;"><br/>
+                <img src="../../assets/images/image37.png"/><img src="../../assets/images/image6.png"/></span></p>
+  <p> </p>
+  <p><span style="font-size:16px;">      3) New tab will have dropdown-selector for “Defect’s Profile” that will be in use for current opened defects.<br/>
+               New tab will have a grid “Suggested Defect’s List” that will present all relevant data about the failures that happened during the execution –      </span></p>
+  <p><span style="font-size:16px;">          this is in order to understand if the ALM’s Defect should be opened per specific failure. At grid will be presented below columns:<br/>
+                 •    “To Open a Defect” – column of checkboxes that are marking failure to became a defect in ALM. Unselected by default<br/>
+                 •    “ALM Defect ID” - ALM Defect ID, presented only if defect is already created – in such case checkbox in first column is invisible<br/>
+                 •    “Runner Name”<br/>
+                 •    “Business Flow” <br/>
+                 •    “Activities Group”<br/>
+                 •    “Activity Sequence”<br/>
+                 •    “Activity Name”<br/>
+                 •    “Action Sequence”<br/>
+                 •    “Action Description”<br/>
+                 •    “Retry Iteration”<br/>
+                 •    “Error Details”<br/>
+                 •    “Extra Details”<br/>
+                 •    “Screenshot” – column of buttons, by clicking each one of them will be open separate frame with screenshot of relevant action (if </span></p>
+  <p><span style="font-size:16px;">                screenshot is available) <br/>
+                 <br/>
+            4) In the above grid at right corner, click on “Open Selected as Defects at ALM” button.<br/>
+               This button is enabled only if at list one issue in a grid has no defect for itself. <br/>
+               Once clicked – this will open for selected issues defects in ALM.<br/>
+               If ALM connectivity is not working correct – warning message will be popped and action will be aborted. Otherwise defects will be opened in    </span></p>
+  <p><span style="font-size:16px;">         ALM with values per fields as at currently selected “Defect’s Profile”.</span></p>
+  <p><span style="font-size:16px;"><br/>
+            5) Defect will be opened in below described way (same way is relevant for opening of defects with operation “Automated ALM Defect’s            </span></p>
+  <p><span style="font-size:16px;">         </span><span style="font-size:16px;"> Opening”):<br/>
+                         Naming convention: &lt;&lt;BussinesFlow&gt;&gt;_&lt;&lt;Activity&gt;&gt;_&lt;&lt;Action&gt;&gt;_”Failed”<br/>
+                         Defect description - should copy the steps of the test that was run. Example:<br/>
+                          o    BussinessFlow Name (failed)<br/>
+                                    Activity Group Name<br/>
+                                    …<br/>
+                                    Activity Group Name (failed)<br/>
+                                   •    Activity<br/>
+                                   •    …<br/>
+                                   •    Activity (failed) <br/>
+                                       o    Action<br/>
+                                       o    …<br/>
+                                       o    Action (failed)<br/>
+                   Variables of failed entities (of all leveles) also will be added at description [will be available in the next phase]<br/>
+                       Defect’s Attachment - screenshot to will be attached to the defect, showing the error [will be available in the next phase]</span></p>
+  <p><br/>
+     </p>
+
+</body></html>

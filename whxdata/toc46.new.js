@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"ALM_Integration_(QC_RQM_JIRA)","type":"book","key":"toc47"},{"name":"Ginger_-_Amdocs_BEAT_Testing_Studio_(ABTS)_Integration","type":"book","key":"toc48"},{"name":"Ginger Plugin for Jenkins","type":"item","url":"Integration/Ginger_Plugin_for_Jenkins.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

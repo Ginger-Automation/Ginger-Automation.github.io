@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../..";
+  gCommonRootRelPath = "../..";
+  gTopicId = "9.1.0_1";
+
+//]]></script>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>What is Gherkin?</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Gherkins"/></head>
+<body>
+  <h1>What is Gherkin?</h1>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">What is BDD (Behavior-Driven Development)?</strong><br/>
+      BDD is a set of best practices for writing great tests. One of the key things BDD addresses is implementation detail in tests. Behavior-Driven Development addresses this problem <br/>
+      by showing you how to test, focusing on testing behavior, and not implementation</span></p>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">What is Gherkin Language?</strong><br/>
+      Gherkin is a line-oriented language that uses indentation to define structure. Line endings terminate statements (called steps) and either spaces or tabs may be used for indentation. <br/>
+      (We suggest you use TABS for portability.) <br/>
+      Finally, most lines in Gherkin start with a special keyword: (more details in section: 5) Key Words include (Feature, Scenario, Given, And, Then, When, But)<br/>
+      <img src="../../assets/images/image1270.png"/></span></p>
+  <p><span style="font-size:17px;"><strong style="font-size: 17px">Seamless integration from BDD Gherkin to Ginger Automation</strong><br/>
+      The Ginger Automation tool now can allow users to write scenarios and Ginger will seamlessly turn these scenarios into Automation Activities.</span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong style="font-size: 20px">Gherkin – Introduction</strong><br/>
+         1. LAYOUT – Gherkin in Ginger <br/>
+             In the Solutions Tab, under documents, selecting a &lt;file&gt;.feature will allow you to write scenarios using Gherkin language in Ginger. </span></p>
+  <p><span style="font-size:17px;">           <img src="../../assets/images/image1271.png"/></span></p>
+  <p> </p>
+  <p><span style="font-size:17px;">  2. LAYOUT – Gherkin “Compile” to Automation<br/>
+            Once you have your scenarios wrote out, you can click “Compile &amp; Optimize” button and Ginger will convert your scenarios into Ginger as Scenarios and Steps. Fig 2.1<br/>
+                     <img src="../../assets/images/image1272.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+            The Compile tab is used to do the following:</span></p>
+  <p><span style="font-size:17px;">           •    Clicking “Compile &amp; Optimize” will refresh the Gherkin.feature file into Ginger. Anytime any changes are done in the .feature file, you will need to click button to allow <br/>
+                     the changes to be reflected into Ginger.</span></p>
+  <p><span style="font-size:17px;">           •    If you select a converted Scenario or Step row, it will highlight in both the .feature file and in the Scenario or Step row. This will allow quick navigation to and from <br/>
+                     converted scenarios/steps to the actual Gherkin code line.</span></p>
+  <p><span style="font-size:17px;">        All tags will be shown where you utilized them. Tags will help organize your scenarios for what area these scenarios are for.<br/>
+              (Fig 2.1)</span><br/>
+     </p>
+  <p><span style="font-size:17px;">3.    LAYOUT – Gherkin “Optimize” to Automation</span></p>
+  <p><span style="font-size:17px;">    Once you have “Compile &amp; Optimize” on the “Optimized” tab, you can see how many times you have reused the same steps. Fig 2.3.1<br/>
+                     <br/>
+          The Optimize tab is used to do the following:<br/>
+              •    Clicking “Update Business Flow” will refresh the Gherkin.feature file into Ginger Business Flow. Anytime any changes are done in the .feature file, you will need to click button to allow the changes to be reflected into Ginger.</span></p>
+  <p><span style="font-size:17px;">        •    User will be allowed to see how Optimized they wrote their scenarios. They can view how many times they reused the same steps. This also allows automation developers know where to start on their automation. Starting to develop those steps that are utilized the most.</span></p>
+  <p><span style="font-size:17px;">    User will also be able to check the automation status of each step.<br/>
+          (Fig 3.1)</span></p>
+  <p>        <img src="../../assets/images/image1273.png"/></p>
+
+</body></html>

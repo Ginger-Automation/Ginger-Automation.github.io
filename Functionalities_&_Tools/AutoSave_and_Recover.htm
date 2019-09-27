@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "..";
+  gCommonRootRelPath = "..";
+  gTopicId = "6.0_2";
+
+//]]></script>
+
+<script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>AutoSave and Recover </title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Autosave &amp; Recover"/></head>
+<body>
+  <h1>AutoSave and Recover</h1>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">Purpose</strong><br/>
+      The user is working on Ginger for long hours and because of some unavoidable conditions Ginger crashes.<br/>
+      Hence we are providing the AutoSave and Recover mechanism to save users recent work and give them an option of Recover their work.</span></p>
+  <p><strong><span style="font-size:20px">1.     How does Autosave work?</span></strong></p>
+  <p><span style="font-size:17px;">        1)    When user will start working in Ginger, (on the start of an application), AutoSave mechanism will be triggered. <br/>
+              2)    After interval of 5 minutes every Business flow and Runset which you have worked on will be saved in the AutoSave folder. This will be created at the run time in <br/>
+                  your Solution folder path. <br/>
+              3)    Runset / Business flow will be created/saved in the AutoSave folder as exactly same folder structure of the original one.<br/>
+              4)    Once any Business flow/ Runset has been saved, it will be removed from AutoSave folder. <br/>
+              5)    Only items which are unsaved and worked on will be saved in AutoSave folder. <br/>
+              6)    If you are closing Ginger manually then all the contents of  the AutoSave folder will be cleared. <br/>
+              7)    Right now we are only storing Businessflow and Runset files in the AutoSave folder. <br/>
+              8)    The support for storing other files like Environment, Agents etc. will be supported soon. In the coming Releases.</span></p>
+  <p><span style="font-size:17px;">      Location of AutoSave folder : </span></p>
+  <p>      <img src="../assets/images/image1117.png"/></p>
+  <p><span style="font-size:17px;">      Files which are being saved by AutoSave mechanism is as below:</span></p>
+  <p><span style="font-size:17px;">      <img src="../assets/images/image1118.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong style="font-size: 20px">2.    How does Recover work?</strong></span></p>
+  <p><span style="font-size:17px;">       1)    If Ginger has been closed abruptly or has been crashed last time, then all the files from AutoSave folders will be moved to Recover folder. <br/>
+            2)    Recover folder will be created at the Solution folder path. <br/>
+            3)    As soon as you will reopen Ginger, if there are any files in the Recover folder then a message will be shown on the UI with all the files listed inside it. <br/>
+                  <img src="../assets/images/image1119.png"/>           </span></p>
+  <p><span style="font-size:17px;"><br/>
+            4)    You can View details of each files, on clicking on View Details Button or on Double click event of a particular item.<br/>
+                  <img src="../assets/images/image1120.png"/></span></p>
+  <p> </p>
+  <p><span style="font-size:17px;"><strong>    2.1    Delete Items </strong><br/>
+                   If the items/ work is not needed, you can delete it by clicking on the Delete Recovered Items button. </span></p>
+  <p><span style="font-size:17px;">            <img src="../assets/images/image1121.png"/></span></p>
+  <p> </p>
+  <p><strong><span style="font-size:17px;">    2.2    Recover Items </span></strong></p>
+  <p><span style="font-size:17px;">            You can also recover the items which needs to be recovered by clicking on Recover Selected button. </span></p>
+  <p><span style="font-size:17px;">            <img src="../assets/images/image1122.png"/></span></p>
+  <p> </p>
+  <p><span style="font-size:17px;">            After deleting or recovering the items will be permanently removed from the list and the Recover folder. </span></p>
+
+</body></html>

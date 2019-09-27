@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../..";
+  gCommonRootRelPath = "../../..";
+  gTopicId = "3.1.2.0_5";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>How to use Unix Automation in Ginger</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Unix Automation"/></head>
+<body>
+  <h1>How to use Unix Automation in Ginger</h1>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">Description   </strong> <br/>
+          Any Unix based actions can be performed by Ginger tool.<br/>
+          Any Simple Unix commands to customized scripts can be executed from Ginger.<br/>
+          Free commands and Parameterized commands are available on Ginger.<br/>
+          Multiple Unix Environments can be configured on Ginger to conduct the same test like, QA1, QA2 by Simply switching the environment tab on the top.<br/>
+          Multiple DBs can be configured and used for same testing Purpose on Ginger.</span></p>
+  <p><strong><span style="font-size:20px">1.    Recording Unix based Action</span></strong></p>
+  <p><span style="font-size:17px;">        Recording Unix based actions<br/>
+                <img src="../../../assets/images/image920.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+             The above window will be opened upon launching the Unix agent, in this case Unix machine is configured with IP 10.122.113.194                 which is a Rasp PI machine.</span></p>
+  <p><span style="font-size:17px;">       Once the Agent comes up, click on Record button to start recording</span></p>
+  <p><span style="font-size:17px;">        <img src="../../../assets/images/image921.png"/></span></p>
+  <p><span style="font-size:17px;">        On the above window it clearly shows what all the actions performed on the Unix window is been recorded as individual actions on Ginger tool</span></p>
+  <p><span style="font-size:17px;">        The same exact steps needed for testing Unix based projects can be recorded and executed on Ginger</span></p>
+  <p><span style="font-size:17px;">        We can setup a pre and post waiting time as needed on Ginger tool</span></p>
+  <p><span style="font-size:17px;">        In case of developing a customized scripts for Project, the Output of each such script should have a pre-defined start and end display lined on the output</span></p>
+  <p><span style="font-size:17px;">       FTP file from and to services are as well available with all other Unix commands.</span></p>
+  <p><span style="font-size:17px;">       Ginger tool as of now have pre-defined Unix Building block scripts for basic operations like, is file exist, move file, copy file, delete files</span></p>
+  <p><span style="font-size:17px;">       There is no Ginger tool pre-defined experience are needed for using this tool</span></p>
+  <p><span style="font-size:17px;">       The Interface is user friendly and look and feel exactly like a Unix Xterm or putty Unix window</span></p>
+  <p><span style="font-size:17px;">       If there are multiple Unix servers needs to be used for accomplish the testing can be achieved using the multiple server configuration. <br/>
+             The business flow will have the same sequences of command on same servers as Manual testing performed.</span></p>
+  <p><span style="font-size:17px;">       Limitations</span></p>
+  <p><span style="font-size:17px;">       Unix session cannot be left ideal for more then 5 minutes, will terminate the connection at the backend</span></p>
+  <p><span style="font-size:17px;">       When dealing with multiple servers, each unit of work on the server by server needs to be completed before going to another server as we do in real world scenario.</span></p>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">2.    Unix based backend script execution in Ginger </strong><br/>
+              Please go through the below video more details.</span></p>
+  <p>          <video src="../../../GinGer_Unix_Based_BF.wmv" width="480" height="320" controls=""></video><span style="font-size:11.0pt"><span style="font-family:&quot;Calibri&quot;,sans-serif"></span></span></p>
+
+</body></html>

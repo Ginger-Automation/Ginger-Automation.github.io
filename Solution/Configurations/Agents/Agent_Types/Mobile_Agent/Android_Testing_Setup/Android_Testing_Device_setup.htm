@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../../../../..";
+  gCommonRootRelPath = "../../../../../..";
+  gTopicId = "3.2.1.1.1.1.0_1";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Android Testing Device setup</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Android Agent"/></head>
+<body>
+  <h1>Android Testing Device setup</h1>
+  <p><strong><span style="font-size:20px"></span></strong></p>
+  <p><span style="font-size:20px;"><strong>1.    Setting Device Configurations</strong></span></p>
+  <p><span style="font-size:17px;">        a.    Set the phone to “USB Debug Mode”:<br/>
+                   •    Enter the phone System Settings-&gt; General-&gt; Developer options<br/>
+                   •    Turn on the USB Debugging option<br/>
+                      <strong> Note:</strong> in case you can’t find the “Developer options” then go to System Settings-&gt; General-&gt; About phone-&gt; Software </span></p>
+  <p><span style="font-size:17px;">                             information-&gt; Click 7 time on the “Build number” then the Developer options supposed to be added<br/>
+              b.    Connect the phone to the PC using USB<br/>
+                   •    The correct phone driver should be automatically be installed. <br/>
+                           If it isn’t:<br/>
+                             o    For window: Install PDANet from http://pdanet.co/bin/PdaNetA4150.exe- as part of the installation it will allow </span></p>
+  <p><span style="font-size:17px;">                              you to install a driver which fits to your phone.<br/>
+                                    You can also search for relevant driver online.<br/>
+                             o    For Mac- search online for the relevant driver for your device<br/>
+              c.    If you been asked on the device to approve the PC – then do it</span></p>
+  <p><span style="font-size:17px;"><br/>
+      <span style="font-size:20px;"><strong> 2.    Getting Device Details</strong> </span><br/>
+       <br/>
+                a.    Connect the device to the PC using USB <br/>
+                b.    Get the Device ID<br/>
+                         o    On Windows:<br/>
+                              i.    First Method:<br/>
+                                   1.    Open CMD<br/>
+                                   2.    Type “adb devices”<br/>
+                                   3.    Get the ID of the device from returned list of connected devices</span><br/>
+                                               <img src="../../../../../../assets/images/image306.png"/><img src="../../../../../../assets/images/image241.png"/></p>
+  <p><span style="font-size:17px;">                        ii.    Second Method:<br/>
+                                   1.    Open the Android SDK monitor tool by doing StartRun “%ANDROID_HOME%\tools\monitor.bat”<br/>
+                                   2.    You supposed to see the connected devices in the top left list<br/>
+                                   3.    Part of the name is the device ID</span></p>
+  <p><span style="font-size:17px;">                                    <img src="../../../../../../assets/images/image307.png"/><img src="../../../../../../assets/images/image242.png"/><br/>
+                                               </span></p>
+  <p><span style="font-size:17px;">                   o    For Mac:<br/>
+                              i.    Open Terminal window<br/>
+                              ii.    Type the command below and type enter<br/>
+                                     adb devices<br/>
+                              iii.    List of all connected android device supposed to show with their device ID<br/>
+                                      <img src="../../../../../../assets/images/image308.png"/><img src="../../../../../../assets/images/image243.png"/><br/>
+                                     <strong>Note:</strong> if the list is empty then make sure that the device driver is installed and that it is connected </span></p>
+  <p><span style="font-size:17px;">                                          (also try to reboot your</span><span style="font-size:17px;"> Mac machine)</span></p>
+
+</body></html>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../../../..";
+  gCommonRootRelPath = "../../../../..";
+  gTopicId = "3.2.1.1.1.2_1";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Perfecto User guide</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Mobile Agent"/></head>
+<body>
+  <h1>Perfecto User guide</h1>
+  <p><span style="font-size:17px;">   Perfecto cloud supports mobile testing while connecting to perfecto cloud on real devices</span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong style="font-size: 20px">1.    Agent Configuration</strong></span></p>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px"></strong><br/>
+          1.1  Add New Agent<br/>
+       <br/>
+                 Give it a name and select Mobile as the agent type then select one of the 4 Perfecto options according to the Device type,             </span><span style="font-size:17px;">                  Android or IOS device and Native (regular App) or Web Browser testing.’<br/>
+                  <img src="../../../../../assets/images/image398.png"/><img src="../../../../../assets/images/image378.png"/><br/>
+                 <br/>
+          1.2  Populate Agent details<br/>
+                      <br/>
+                  On Agent configurations populate the Cloud URL, User Name, Password and the device ID</span></p>
+  <p>              <img src="../../../../../assets/images/image401.png"/><img src="../../../../../assets/images/image379.png"/></p>
+  <p> </p>
+  <p><span style="font-size:17px;">            To get the device id go to perfecto cloud click lunch device and take the id from the grid:</span></p>
+  <p>                <img src="../../../../../assets/images/image400.png"/><img src="../../../../../assets/images/image380.png"/></p>
+  <p> </p>
+  <p><span style="font-size:17px;">    1.3  Start Agent</span></p>
+  <p><span style="font-size:17px;">            Go to BusinessFlow page and start the Agent – agent should become Green, if the connection will fail the Agent will remain red                    </span><span style="font-size:17px;">and the connection error will be populated don the log.</span></p>
+  <p>              <img src="../../../../../assets/images/image402.png"/><img src="../../../../../assets/images/image381.png"/></p>
+  <p> </p>
+  <p><strong><span style="font-size:20px">2.    Automation &amp; Execution</span></strong></p>
+  <p><span style="font-size:17px;">    <strong>2.1 Dashboard</strong><br/>
+                 Perecto supplies a dashboard for the connected device, Ginger will open the browser while starting the agent, in order to see the                     </span><span style="font-size:17px;">device click on select device and select the device from the grid.<br/>
+                      <img src="../../../../../assets/images/image403.png"/><img src="../../../../../assets/images/image382.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+         <strong> 2.2 Action Types</strong></span></p>
+  <p><span style="font-size:17px;">           We have 2 types of mobile actions.<br/>
+                  •    Mobile Device action<br/>
+                  •      UI Element Action</span></p>
+  <p><span style="font-size:17px;">          <strong> 2.2.1 Mobile Device Action</strong></span></p>
+  <p><span style="font-size:17px;">                     To perform actions on the device level like swipe, type, volume buttons etc. use the Mobile device action</span></p>
+  <p>                        <img src="../../../../../assets/images/image383.png"/> <img src="../../../../../assets/images/image404.png"/></p>
+  <p>                    <img src="../../../../../assets/images/image405.png"/>   <img src="../../../../../assets/images/image384.png"/></p>
+  <p> </p>
+  <p><span style="font-size:17px;">          <strong> 2.2.2 UI Element action</strong></span></p>
+  <p><span style="font-size:17px;">                     In order to perform actions on elements like click set value etc. use the UI element action</span></p>
+  <p>                         <img src="../../../../../assets/images/image406.png"/><img src="../../../../../assets/images/image385.png"/></p>
+  <p>                         <img src="../../../../../assets/images/image386.png"/></p>
+  <p>                        <img src="../../../../../assets/images/image407.png"/></p>
+  <p> </p>
+  <p><span style="font-size:17px;">                     In order to grab values of locators (id xpath name etc) go to perfecto site, click on lunch mobile device, click on <br/>
+                    automate button</span></p>
+  <p><span style="font-size:17px;">                       <img src="../../../../../assets/images/image408.png"/><img src="../../../../../assets/images/image387.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                          Then open object spy window and select the element you want to find on the device, all the details will be <br/>
+                    populated on the screen</span></p>
+  <p>                        <img src="../../../../../assets/images/image409.png"/><img src="../../../../../assets/images/image388.png"/></p>
+  <p> </p>
+
+</body></html>

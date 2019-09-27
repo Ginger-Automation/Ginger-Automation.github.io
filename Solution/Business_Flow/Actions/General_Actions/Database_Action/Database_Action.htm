@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../../../..";
+  gCommonRootRelPath = "../../../../..";
+  gTopicId = "3.1.1.3.1.0_1";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>How to Configure Database Action?</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../assets/css/default.css"/>
+</head>
+<body>
+  <h1>How to Configure Database Action?</h1>
+  <p><span style="font-size:17px;"><strong>1. Pre-requisite</strong> <br/>
+          A Solution should be created.<br/>
+          A Data source should be defined. Either Define it in the Ginger’s DataSource or define the <br/>
+          database details in the environment.<br/>
+       <br/>
+      <strong>2. Creating Ginger Data Source</strong></span></p>
+  <p><span style="font-size:17px;">    a)    When a new solution is created, default Data Source is automatically added.<br/>
+                 It has Key table and customized table.</span></p>
+  <p><span style="font-size:17px;">          <img height="227" src="../../../../../assets/images/image667.png" width="699"/></span><br/>
+     </p>
+  <p><span style="font-size:17px;">    b)    To add another “ Key_Table”, right click on the GingerDataSource, select Add New table-&gt; Add New Key Value table.</span></p>
+  <p><span style="font-size:17px;">           <img src="../../../../../assets/images/image668.png"/><br/>
+          </span></p>
+  <p><span style="font-size:17px;"><br/>
+          c)     Define the key data in the area “ Key_Data” using the + button as shown <br/>
+                                <br/>
+                  <img src="../../../../../assets/images/image669.png" style="cursor: nwse-resize;"/><br/>
+                                 </span></p>
+  <p><span style="font-size:17px;"><br/>
+          d)    The Customized database is manually added using the + button as shown by the arrow</span></p>
+  <p><span style="font-size:17px;">           <img src="../../../../../assets/images/image670.png"/><br/>
+                            </span></p>
+  <p><span style="font-size:17px;"><strong>3. How to Define Database in Ginger</strong><br/>
+       <br/>
+          a)    In the Solution tab, go to Environments-&gt;Default. Then click the desired platform where the database should be connected.<br/>
+          b)    Go to the Database tab. Click the + button to add the database connection details.</span></p>
+  <p><span style="font-size:17px;">            <img src="../../../../../assets/images/image671.png"/></span></p>
+  <p><span style="font-size:17px;"><strong>4. Action Operation</strong><br/>
+                            <br/>
+          a)    Double click on the Business flow. In the Activity Actions, click on ‘Add New’ button<br/>
+                     <img src="../../../../../assets/images/image672.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+          b)    Go to the ‘General Actions’ tab and select the ‘DataBase Action’ then click on ‘Add Action’ button given in the below window<br/>
+                   <img src="../../../../../assets/images/image673.png"/></span></p>
+  <p><span style="font-size:17px;">             <br/>
+          c)    Below screen should be displayed.  Select the “Environment Application Name”, “Environment Application DB Name”                              and the “DB Operation Type” from the respective drop downs.<br/>
+                   <img src="../../../../../assets/images/image674.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+          d)    The ‘DB Operation Type’ drop down contains the below options. Select the desired option.</span><br/>
+                  <img src="../../../../../assets/images/image675.png"/></p>
+  <p> </p>
+  <p><span style="font-size:17px;">              i)    Free SQL – It allows you to enter a free sql query </span></p>
+  <p><span style="font-size:17px;">             ii)    Record count- It allows you to return the count from a table giving an example of the query<br/>
+                     <img src="../../../../../assets/images/image676.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                 iii)    Simple SQL One value – this is sued when a query is going to return  one value output.</span></p>
+  <p><span style="font-size:17px;">                  Here you select the table from the list of tables in the database.  Column is selected from the list of columns in the selected table. <br/>
+                        You can add a where clause if required.<br/>
+                        <img src="../../../../../assets/images/image677.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                 iv)    Update DB- this will update the Database with the query that you will provide. </span></p>
+  <p><span style="font-size:17px;">                   There are 2 options, viz. provide a free sql to update the DB or use a file which has multiple queries.<br/>
+                          You have to select the “Do commit after Update” check box to commit the changes to the DB.<br/>
+                          <img src="../../../../../assets/images/image678.png"/></span></p>
+  <p><span style="font-size:17px;">    e)  ‘Input type’ as ‘From File’ can also be selected. For this, the file needs to have a set of SQL commands.<br/>
+                Below screen will be displayed which will give Browse option to select the file.<br/>
+                The check box ‘Import SQL file to Solution folder’ will be checked by default.                                                                                              </span><span style="font-size:17px;">This will copy the file from the given location to the Ginger Solution folder.</span></p>
+  <p><span style="font-size:17px;">             <img src="../../../../../assets/images/image679.png"/><br/>
+       <br/>
+          f)    Run Action will execute the Action.</span></p>
+
+</body></html>

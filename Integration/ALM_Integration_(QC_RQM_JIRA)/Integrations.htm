@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../..";
+  gCommonRootRelPath = "../..";
+  gTopicId = "8.1.0_1";
+
+//]]></script>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Integration</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/default.css"/>
+</head>
+<body>
+  <p align="center" class="MsoTitle" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:20pt"><span style="font-family:Calibri,sans-serif"><span style="color:#0f243e"><span style="letter-spacing:-0.5pt"><span style="font-weight:bold"><span style="font-size:16.0pt"><span style="font-family:&quot;Century Gothic&quot;,sans-serif"></span></span></span></span></span></span></span></p>
+  <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt"><span style="font-family:&quot;Century Gothic&quot;,sans-serif"></span></span></span></span></p>
+  <h1>Integration</h1>
+  <p><span style="font-size:16px;">Amdocs BEAT Ginger application was enhanced to integrate with ALM (QC and RQM) application and this document comes to explain how to use the current Ginger-ALM functionalities.</span></p>
+  <p><span style="font-size:16px;">Current supported Ginger-ALM functionalities are:</span></p>
+  <ul class="Disc">
+    <li><span style="font-size:16px;">Import ALM Test Set into Ginger and automatically converting it to Ginger Test Set which will be ready to be automated or even execute in case it’s TC’s were already automated before by Ginger</span></li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li><span style="font-size:16px;">Export Ginger Business Flow To ALM- each one of the Business Flow Activities Group will be export to ALM Test Plan as Test Case item and a Test Set item will be created in ALM Test Lab containing all the relevant ALM Test Cases which were exported</span></li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li><span style="font-size:16px;">Export imported Ginger Test Set execution details back to ALM and reflect the execution status in the matching ALM Test Set TC’s Run status</span></li>
+  </ul>
+  <p> </p>
+  <ul class="Disc">
+    <li><span style="font-size:16px;">Review ALM Test Cases automation coverage and executions statistics done by Ginger using the “ALM Manager Report”  </span></li>
+  </ul>
+
+</body></html>

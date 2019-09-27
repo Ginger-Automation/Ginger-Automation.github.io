@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"What is an Agent?","type":"item","url":"Solution/Configurations/Agents/What_is_an_Agent_.htm"},{"name":"Agent_Types","type":"book","key":"toc16"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

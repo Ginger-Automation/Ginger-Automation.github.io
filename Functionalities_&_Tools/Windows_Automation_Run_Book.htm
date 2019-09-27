@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "..";
+  gCommonRootRelPath = "..";
+  gTopicId = "6.0_4";
+
+//]]></script>
+
+<script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Windows Automation Run Book</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Windows Automation Run Book"/></head>
+<body>
+  <h1>Windows Automation Run Book</h1>
+  <p><span style="font-size:17px;">Windows Automation enables Ginger to Automate windows .NET based apps, including the elements on Desktop.</span></p>
+  <p><strong><span style="font-size:17px;">1.    Configuring Solution </span></strong></p>
+  <p><span style="font-size:17px;">      Click on the Solution name drop down and select ‘Create a New Solution’ option.<br/>
+           <img src="../assets/images/image1123.png"/></span></p>
+  <p><span style="font-size:17px;">      Create a new solution, provide Name, browse Solution folder, Select Main Application Name as “New”, Select Main Application Platform “Web” and then click Create.  </span></p>
+  <p><span style="font-size:17px;">   <img src="../assets/images/image1124.png"/></span></p>
+  <p><strong><span style="font-size:17px;">2.    Configuration for Windows</span></strong></p>
+  <p><span style="font-size:17px;">      At least one agent is required for Windows Automation. When a new solution is created, a default agent is available in the solution.                 Another Agent can be added with the below steps.</span></p>
+  <p><span style="font-size:17px;">     2.1    Configuring Agent -</span></p>
+  <p><span style="font-size:17px;">            Click on the + button as shown below.<br/>
+                   <img src="../assets/images/image1125.png"/></span></p>
+  <p> </p>
+  <p><span style="font-size:17px;">            The Agent Wizard is displayed giving information about Agent. Click on the Next button.</span></p>
+  <p><span style="font-size:17px;">            <img src="../assets/images/image1126.png"/></span></p>
+  <p><span style="font-size:17px;">            It is advisable to go as per the methodology as: Windows_&lt;Application_Name&gt;<br/>
+                  In this case, we do not have any specific application so we are using the agent name as Windows Platform Agent”. <br/>
+                  Select the Platform Type as ‘Windows’ and click on the Next button.<br/>
+                  <img src="../assets/images/image1127.png"/><br/>
+       <br/>
+                  Driver Configurations page is displayed. User can edit the parameters if desired. <br/>
+                  User can click on the ‘Test Agent’ button to test if the connection is successful.<br/>
+                  Click on the Finish button.</span></p>
+  <p><span style="font-size:17px;">            <img src="../assets/images/image1128.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                  The Agent is added in the tree.</span></p>
+  <p><span style="font-size:17px;">            <img src="../assets/images/image1129.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+           2.2    Configuring Business flow:</span></p>
+  <p><span style="font-size:17px;">            While adding new Business flow, user have to select the target application “WindowsApplication”, so that Ginger would make the Windows agents available for that business flow.</span></p>
+  <p><span style="font-size:17px;">           <img src="../assets/images/image1130.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                  If the business flow is created already, the above dialog box will be displayed by clicking on the “Edit” button next to Target Application(s).</span></p>
+  <p><span style="font-size:17px;">            <img src="../assets/images/image1131.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong>3.    Record and play with Windows:</strong></span></p>
+  <p><span style="font-size:17px;">    To start Automating, double click on the business flow and go to the Automate area. <br/>
+          Provide agent mapping on the flow by clicking on Change Agent Mapping button, in case you want to change the agent.</span></p>
+  <p><span style="font-size:17px;">     <img src="../assets/images/image1132.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+          Double click the agent Name row in the agent application agent mapping window.</span></p>
+  <p><span style="font-size:17px;">    <img src="../assets/images/image1133.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+          Select the “Windows Platform Agent” agent and map it to the flow during development phase.</span></p>
+  <p><span style="font-size:17px;">    <br/>
+          Now start the Agent either by clicking on the red-colored OFF switch or by clicking on “Start All Agents” button.</span></p>
+  <p><span style="font-size:17px;">   <img src="../assets/images/image1134.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+          Make sure the Target Application of the Activity is set to “WindowsApplication”. <br/>
+          This will ensure windows based actions can be added successfully to the activity.</span></p>
+  <p><span style="font-size:17px;">   <img src="../assets/images/image1135.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+          3.1    Automation Procedure</span></p>
+  <p><span style="font-size:17px;">        Automation in Windows is possible only through spying (using the Window Explorer of Ginger). Recording actions are not implemented for Windows.</span></p>
+  <p><span style="font-size:17px;">        After the Agent has connected successfully, a green switch would indicate all is working fine up till this point.</span></p>
+  <p><span style="font-size:17px;">            <img src="../assets/images/image1136.png"/></span></p>
+  <p><span style="font-size:17px;">        <br/>
+          3.2    Concept and additional information -</span></p>
+  <p><span style="font-size:17px;">        In simple words, you need to use Switch Window action always before performing any activities on a particular window. This action tells Ginger which window to <br/>
+              work on out of many running windows applications.</span></p>
+  <p><span style="font-size:17px;">        How it works?<br/>
+              When we say we want to Automate a windows application, the first question comes:<br/>
+              How will Ginger identify the window that we want to automate out of all the windows running?<br/>
+              The answer is simple. We would tell Ginger to Automate a specific window by using it’s window name as its identity. Thus we refer to the window to <br/>
+              automate by using its window name and switching to that window before performing any other actions on it.</span></p>
+  <p><span style="font-size:17px;">          a.    Understanding the Ginger Window Explorer<br/>
+                      The button next to the Agent connection information displays Ginger’s Window Explorer.<br/>
+                      <img src="../assets/images/image1137.png"/></span></p>
+  <p> </p>
+  <p>                 <img src="../assets/images/image1138.png"/></p>
+  <p><span style="font-size:17px;">                Adding Switch Window Action -</span></p>
+  <p><span style="font-size:17px;">                First, select the window which we need to Automate from the Ginger Window Explorer.<br/>
+                     <img src="../assets/images/image1139.png"/></span></p>
+  <p><span style="font-size:17px;">                Note that the selection was done manually in this case.<br/>
+                      To do this at run time, we need a Switch Window Action with the window name as a parameter.<br/>
+                      Click on the <img height="15" src="../assets/images/image1141.png" width="15"/> button to create the activity and add it to the business flow with a single click.</span></p>
+  <p><span style="font-size:17px;">                 <img src="../assets/images/image1140.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                      As we proceed further with creating the actions for the automation, keep an eye on the “Activity Actions” section, where these actions will be added <br/>
+                      one by one as soon as we add them.</span></p>
+  <p><span style="font-size:17px;">                For now, we can see only the action that we’ve added, i.e. the switch window action:<br/>
+                       <img src="../assets/images/image1142.png"/></span></p>
+  <p><span style="font-size:17px;">                Spying Elements<br/>
+                      The   button in the Ginger Window Explorer allows the user to spy on the elements.</span></p>
+  <p><span style="font-size:17px;">                Click on the button once to activate the spy.<br/>
+                      (the icon becomes   when activated)</span></p>
+  <p><span style="font-size:17px;">                Click on it again to deactivate.<br/>
+                      (the icon becomes   when deactivated)</span></p>
+  <p><span style="font-size:17px;">                Now, activate the live spy through the Live Spy ( ) button.<br/>
+                          <img src="../assets/images/image1143.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                      On the windows application, hover over the area you need to perform an action and press and hold control button on the keyboard.</span></p>
+  <p><span style="font-size:17px;">                Suppose if we want to click on the   button in Skype, we hover on that button while keeping the control key pressed. A red border over the element will <br/>
+                      confirm the element that is being spied.<br/>
+                       <img src="../assets/images/image1144.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                      At this point, the Ginger Window Explorer would look like this:</span><br/>
+                     <img src="../assets/images/image1145.png"/></p>
+  <p><span style="font-size:17px;">                There are 2 sections of the Ginger Window Explorer that we require to check:<br/>
+                          1.    Actions<br/>
+                          2.    Locators</span></p>
+  <p><span style="font-size:17px;">                <span style="text-decoration:underline;">The Actions section: </span>This section shows the actions that we can perform on that specific element. Since it is a button, in this case, we can only perform “Click” <br/>
+                      and “Double Click” operations.</span></p>
+  <p><span style="font-size:17px;">                <span style="text-decoration:underline;">The Locators section:</span> This section will show the different locators that we can use to identify the element. We need to use a locator that works for this scenario. <br/>
+                      (Ideally should be unique)</span></p>
+  <p><span style="font-size:17px;"><br/>
+                      If there are any parameters that needs to be passed in the action (like if you need to set a specific text value in a text box), they should be added in the value <br/>
+                      textbox of the Ginger Window Explorer. For a button, this is not required, so we will skip that part.</span></p>
+  <p><span style="font-size:17px;">                 Once we have selected the Action and a Locator, we can click on the   button to test it.<br/>
+                      (In case it fails, test again with a different locator/action)</span></p>
+  <p><span style="font-size:17px;">                The test result will be displayed as follows. In this case, it is “Element Clicked” confirming the test has passed:<br/>
+                      <img src="../assets/images/image1146.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                      (If you do not get this message, try using a different locator)</span></p>
+  <p><span style="font-size:17px;"><br/>
+                      As soon as the action is tested to be working, add it to your business flow by using the   button.</span></p>
+  <p><span style="font-size:17px;"><br/>
+                      Spying different types of Elements<br/>
+                      There can be multiple element types, like buttons, text box, drop down, combo box, radio button etc.</span></p>
+  <p><span style="font-size:17px;">                For all these different types of elements the only thing that changes is the actions section of Ginger Window Explorer for obvious reasons. </span></p>
+  <p><span style="font-size:17px;">                <strong>For example:</strong><br/>
+                      If the element is a button, only “Click” and “Double Click” can be performed on it. Obviously one cannot enter values in a button. (screenshots same as above)</span></p>
+  <p><span style="font-size:17px;">                Similarly, in case the element is a text box, only “Set Value” and “Get Value” can be performed on it.<br/>
+                      <img src="../assets/images/image1147.png"/></span></p>
+  <p><span style="font-size:17px;">                Since the element selected is a text box this time, the Value field is used to send the text that needs to be set to that element.</span></p>
+  <p><span style="font-size:17px;">                So if we need to type in “Swarnav” in the search box of Skype through Automation, we would spy that element and select “Set Search Input Value” (Set Value) and <br/>
+                      provide the string “Swarnav” in the Value parameter.<br/>
+                      <img src="../assets/images/image1148.png"/>   </span></p>
+  <p><span style="font-size:17px;">                Ginger Window Explorer - Conclusion<br/>
+                      This concludes the Ginger Window Explorer.<br/>
+                      It is a powerful tool that is flexible to support and handle any type of element and can add actions in accordance with it.<br/>
+                      Not only is it useful in Windows, but you can also use it while Automating Web, CRM or CSM, in the same way.</span></p>
+  <p><span style="font-size:17px;"><br/>
+                b.    Ginger Windows Actions:</span></p>
+  <p><span style="font-size:17px;">                Although Ginger Window Explorer selects and adds action of the required type to the business flow, there can be circumstances where we need to add some actions manually.<br/>
+                      Hence, let us hover through the actions supported by a Windows Agent.</span></p>
+  <p><span style="font-size:17px;">                 <img src="../assets/images/image1149.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                      The help topics for these actions are provided in the Ginger interface itself and will be visible by clicking on the action type.</span></p>
+  <p><span style="font-size:17px;">                Windows Control Action<br/>
+                      Although the action can be created using Ginger Window Explorer, in some cases we need to use an action which is different from the available list of actions.</span></p>
+  <p><span style="font-size:17px;">                After the action is added, what the action does can be changed by editing the action.<br/>
+                        <img src="../assets/images/image1150.png"/></span></p>
+  <p><span style="font-size:17px;">                Below are a list of actions used frequently:<br/>
+                        1. Click: Performs click operation<br/>
+                        2. GetValue: Fetches value from an element<br/>
+                        3. IsEnabled: Returns the state of an object as true or false. (used in check boxes/radio buttons)<br/>
+                        4. SetValue: Sets value in an element. Can be a text box, combo box, list etc. anything that requires to set a value.<br/>
+                        5. DoubleClick: Performs double click operation<br/>
+                        6. RightClick: Performs right click operation.<br/>
+                        7. SendKeys: Sends keyboard strokes to an element. Use this if SetValue is not working.</span></p>
+  <p><span style="font-size:17px;"><br/>
+              <strong>        Window Action</strong><br/>
+                      The action comes with 5 operations which can be performed on a window level. Each action is self-explainatory.</span></p>
+  <p><span style="font-size:17px;">                The Window is generally located with the window title (hence “Locate By” field is By Title) and the title of the window is passed in the “Locate Value” field.</span></p>
+  <p><span style="font-size:17px;">                <img src="../assets/images/image1151.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                    <strong>  Switch Window Action</strong><br/>
+                      Brings a window in focus to perform actions on it.</span></p>
+  <p><span style="font-size:17px;">                “Locate By” used is generally “By Title” and “Locate Value” is the title of the window to be brought in focus.<br/>
+                       <img src="../assets/images/image1152.png"/></span></p>
+  <p><span style="font-size:17px;">          c.    Automating Desktop:<br/>
+                      Items on desktop can also be Automated using Ginger.</span></p>
+  <p><span style="font-size:17px;">                In order to automate an item on desktop, use “Program Manager” as the Window in the Ginger Window Explorer.</span></p>
+  <p><span style="font-size:17px;">                <img src="../assets/images/image1153.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                      After this, the procedure is same as automating any other application.</span></p>
+  <p><span style="font-size:17px;">           </span></p>
+  <p><span style="font-size:17px;"></span><br/>
+     </p>
+
+</body></html>

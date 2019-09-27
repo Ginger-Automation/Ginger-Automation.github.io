@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../..";
+  gCommonRootRelPath = "../..";
+  gTopicId = "8.1.0_3";
+
+//]]></script>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Import ALM Test Set to Ginger</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css"/>
+  <meta name="topic-comment" content="How to import the test sets from ALM into Ginger"/>
+<meta name="rh-index-keywords" content="QC/JIRA/RQM Integration"/></head>
+<body>
+  <p align="center" class="MsoTitle" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:20pt"><span style="font-family:Calibri,sans-serif"><span style="color:#0f243e"><span style="letter-spacing:-0.5pt"><span style="font-weight:bold"><span style="font-size:16.0pt"><span style="font-family:&quot;Century Gothic&quot;,sans-serif"></span></span></span></span></span></span></span></p>
+  <h1>Import ALM Test Set to Ginger</h1>
+  <p><span style="font-size:1px;"><span style="font-family:Arial;"></span></span></p>
+  <p style="font-family: Calibri;font-size: 12pt"><span style="font-size:16px;">Ginger supports importing ALM Test Set which was created manually in ALM or automatically by the Design Console (ATS) application and converting it into Ginger Test Set. This can be then used to automate or execute (assuming automation was already created for the Test Cases).</span></p>
+  <p style="font-family: Calibri;font-size: 12pt"><span style="font-size:16px;">For performing ALM Test Set import please follow below steps:</span></p>
+  <p><span style="font-size:16px;"><span style="font-family:Calibri;">1. Open Ginger Solution tab which loaded with your Ginger Solution<br/>
+        2. Right click on the Test Sets folder tree node and select “Import” -&gt;“Import ALM Test Set”<br/>
+             Ginger will use the current ALM Settings that have been saved in step 3 (Connecting Ginger to ALM Project) and try to import using saved ALM settings.<br/>
+        3. According to ALM type, Window with the connected ALM project Test Lab tree, or in a list for RQM ALM, will be loaded, select the ALM Test Set you want to      </span></span></p>
+  <p><span style="font-size:16px;"><span style="font-family:Calibri;">    import.<br/>
+        4. For QC ALM - After clicking on the ALM Test Set the window right panel will show:<br/>
+            a. How many ALM TC’s exists in the selected ALM Test Set<br/>
+            b. The execution status of the ALM Test Set TC’s<br/>
+            c. Indication if the ALM Test Set was already imported in the current Solution and if yes then to which Ginger Test Set it mapped<br/>
+            d. Click on “Import Selected”<br/>
+        5. For RQM ALM – A list of RQM Test Plans will be shown, Click on the right column button “Import Test” for the line of the test you want to import,<br/>
+            Then Select Test script from Combo box for that Test Plan you chosen to import and click on “Import”.<br/>
+        6. The ALM Test Set will be imported and converted into a Ginger Test Set with the same name under the Ginger Test Sets folder you selected to import to in </span></span><span style="font-size:16px;"><span style="font-family:Calibri;">step 2 </span></span></p>
+  <p><span style="font-family:Calibri;">        <br/>
+            <img height="410" src="../../assets/images/image24.png" width="442"/></span></p>
+  <p> </p>
+  <p><span style="font-size:16px;"><span style="font-family:Calibri;">QC ALM Select Test Set to Import Window:</span></span></p>
+  <p><span style="font-family:Calibri;"><img src="../../assets/images/image25.png"/></span></p>
+  <p><span style="font-family:Calibri;font-size:16px"><br/>
+      <strong>Note: </strong>(In QC ALM) User is able to import all ALM Test Set’s which placed in a specific ALM Test Lab folder by selecting the folder name and clicking on “Import Selected”</span></p>
+  <p style="font-size: 16px"> </p>
+  <p><span style="font-family:Calibri;"><span style="font-size:16px;">RQM ALM Select Test Plan to Import Window:</span></span></p>
+  <p><img src="../../assets/images/image27.png"/></p>
+  <p><img src="../../assets/images/image28.png"/></p>
+  <p><span style="font-family:Calibri;"><br/>
+      <span style="font-size:16px;">By selecting the imported Ginger Test Set you will be able to see that for all of the ALM Test Set TC’s a matching Ginger Test Cases were created, for viewing them click on the “Test Cases Manager”  icon which placed in the Ginger Test Set Steps grid</span></span></p>
+  <p><span style="font-family:Calibri;"><img src="../../assets/images/image29.png"/></span></p>
+  <p> </p>
+  <p><span style="font-family:Calibri;"><br/>
+      <span style="font-size:16px;">All of the ALM Test Set TC’s Steps will be shown in the Ginger Test Set Steps ready to be automated or execute.</span></span></p>
+  <p><img src="../../assets/images/image30.png"/></p>
+  <p> </p>
+  <p> </p>
+  <p><span style="font-size:16px;"><span style="font-family:Calibri;">For each ALM TC Step Parameter a matching Ginger Parameter from type Selection List will be created under the matching Ginger Step and the Parameter selected value will be added to the optional list of values.</span></span></p>
+  <p><span style="font-size:16px;"><span style="font-family:Calibri;"><br/>
+        <strong>Note:</strong> In case some of the ALM TC’s were imported before, automated and added to the Solution Shared repository, they will automatically be pulled from the Repository and reused in the imported Ginger Test Set</span></span></p>
+  <p><img src="../../assets/images/image31.png"/></p>
+  <p><span style="font-size:1px;"><span style="font-family:Arial;"></span></span></p>
+
+</body></html>

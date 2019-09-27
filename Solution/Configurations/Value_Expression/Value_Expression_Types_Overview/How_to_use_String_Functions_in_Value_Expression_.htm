@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../../..";
+  gCommonRootRelPath = "../../../..";
+  gTopicId = "3.2.5.1.0_13";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>How to use String Functions in Value Expression?</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Value Expression:Value Expression Types"/></head>
+<body>
+  <h1>How to use String Functions in Value Expression?</h1>
+  <p> </p>
+  <p><span style="font-size:17px;">These functions are ready to use script functions. Below is the list and its usages:-</span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong>a)    Trim whitespace</strong> – It discards the whitespace that occur in the given string. String can be either a variable or a text field copied from some page.<br/>
+             Eg. the below variable contains spaces before the string starts<br/>
+             <img height="105" src="../../../../assets/images/image479.png" width="720"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+      The spaces can be removed using Trim function shown as below.<br/>
+      Double click on the “Trim whitespace” function.<br/>
+      Replace the “hello” in the displayed expression {CS Exp=@&quot;hel lo&quot;.Replace(@&quot; &quot;,@&quot;&quot;)}<br/>
+      With the variable as shown in the screenshot.</span></p>
+  <p><span style="font-size:17px;">On clicking the ‘Test Value Expression’ button as shown by the arrow below, displays the value in ‘Value Calculated:’ which is used at run time.</span><br/>
+     </p>
+  <p><span style="font-size:17px;"><strong>b)    Trim whitespace  &amp; Line breaks</strong>– It discards the whitespace and line breaks that occur in the given string.                                                       </span><span style="font-size:17px;">String can be either a </span><span style="font-size:17px;">variable </span><span style="font-size:17px;">or a text field copied from some page.</span></p>
+  <p><span style="font-size:17px;">            <img height="443" src="../../../../assets/images/image480.png" width="688"/>       </span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong>c)    Get Inner String Index</strong> – it gives the number at which a given string begins in the main string.                     </span></p>
+  <p><span style="font-size:17px;">       <img height="446" src="../../../../assets/images/image482.png" width="614"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong>d)    Replace Text</strong></span></p>
+  <p><span style="font-size:17px;">      The content “abc” needs to be replaced with either a variable or some text to get the desired result.<br/>
+                <img src="../../../../assets/images/image473.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong>e)    Text Contains</strong><br/>
+             The content “abc” needs to be replaced with either a variable or some text to get the desired result.<br/>
+                <img src="../../../../assets/images/image474.png"/></span></p>
+  <p><span style="font-size:17px;"><strong>f)    Replace Text</strong><br/>
+             The content “Abc” needs to be replaced with either a variable or some text to get the desired result.<br/>
+             “A” needs to be replaced with your desired text.<br/>
+                <img src="../../../../assets/images/image475.png"/></span></p>
+  <p><strong><span style="font-size:17px;">g)    Ends With</span></strong></p>
+  <p><span style="font-size:17px;">       The content “Abc” needs to be replaced with either a variable or some text to get the desired result.<br/>
+             “c” needs to be replaced with your desired text.</span></p>
+  <p><span style="font-size:17px;">         <img src="../../../../assets/images/image476.png"/></span></p>
+  <p><strong><span style="font-size:17px;">h)    Get String Length</span></strong></p>
+  <p><span style="font-size:17px;">       The content “Abc” needs to be replaced with either a variable or some text to get the desired result.</span></p>
+  <p><span style="font-size:17px;">        <img src="../../../../assets/images/image477.png"/></span></p>
+  <p><strong><span style="font-size:17px;">i)    Get Substring</span></strong></p>
+  <p><span style="font-size:17px;">      The content “Abcdefg” needs to be replaced with either a variable or some text to get the desired result.<br/>
+            Also the numbers 1 &amp; 3 can be replaced with the number of your desire.</span></p>
+  <p><span style="font-size:17px;">      <img src="../../../../assets/images/image478.png"/></span><br/>
+     </p>
+  <p style="margin-left:.5in; margin:0in 0in 0.0001pt"><span style="font-size:17px;"><span style="font-family:Calibri,sans-serif"></span></span></p>
+  <p style="margin-left:.75in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"></span></span></p>
+  <p style="margin-left:.75in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"></span></span></p>
+  <p style="margin-left:.75in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"></span></span></p>
+
+</body></html>

@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"What is a Variable?","type":"item","url":"Solution/Business_Flow/Variables/What_is_a_Variable_.htm"},{"name":"Variable_Types_Overview","type":"book","key":"toc13"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

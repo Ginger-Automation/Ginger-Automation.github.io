@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../../..";
+  gCommonRootRelPath = "../../../..";
+  gTopicId = "3.1.1.4.0_8";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Smart Syn Action</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Platform Actions"/></head>
+<body>
+  <h1>Smart Syn Action</h1>
+  <p><span style="font-size:17px;"><strong>Pre-requisite </strong><br/>
+          A Solution should be created with Agent having Web, Windows, PowerBuilder or Java Platform.<br/>
+                                <br/>
+      <strong>Action Operation</strong><br/>
+                            <br/>
+      1)    Double click on the Business flow. In the Activity Actions, click on ‘Add New’ button<br/>
+                <img src="../../../../assets/images/image599.png"/>   </span><br/>
+     </p>
+  <p><span style="font-size:17px;">2)    In the ‘Platform Actions’ tab, select the ‘Smart Sync Action’ then click on ‘Add Action’ button given in the below window<br/>
+               <img src="../../../../assets/images/image598.png"/>                                     </span></p>
+  <p><span style="font-size:17px;"><br/>
+      3)    Below screen should be displayed.  <br/>
+             ‘Locate By:’ drop down can be used to indicate the locator.<br/>
+             The ‘Locate Value’ can be used using the ‘Open Window Explorer to select Element’ button.<br/>
+             Refer the ‘Locate by-Locate Value’ document to know how to use this.</span></p>
+  <p><span style="font-size:17px;">       ‘Action Type’ has 2 options :-<br/>
+                a)    ‘WaitUntilDisappear’ – this is used when it is required to wait until a screen disappears say after processing some data<br/>
+               b)    ‘WaitUntilDisplay’ – this is used when it is required to wait until a screen is displayed</span></p>
+  <p><span style="font-size:17px;">                ‘WaitTime’  is used to enter the time required to Sync the windows, eg. 10 (sec)<br/>
+                       Click on Ok to add the action to the Activity Actions.</span><br/>
+       <img src="../../../../assets/images/image597.png"/></p>
+
+</body></html>

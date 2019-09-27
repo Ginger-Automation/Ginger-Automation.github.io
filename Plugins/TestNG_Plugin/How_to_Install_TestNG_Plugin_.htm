@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../..";
+  gCommonRootRelPath = "../..";
+  gTopicId = "5.4.4.0_1";
+
+//]]></script>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>How to Install TestNG Plugin?</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Plugins:TestNG Plugin"/></head>
+<body>
+  <h1>How to Install TestNG Plugin?</h1>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">Purpose</strong><br/>
+      The TestNG Plugin target is to allow executing TestNG Java/Maven projects tests from Ginger as integrative part of the Ginger test flow.</span></p>
+  <p><span style="font-size:17px;">Ginger TestNG plugin allows to:<br/>
+          •    Configure Java/Maven TestNG execution by TestNG test configuration XML <br/>
+          •    Configure Java/Maven TestNG execution by free command line</span></p>
+  <p><span style="font-size:17px;">For above execution methods the Ginger TestNG plugin offers:<br/>
+      •    Send execution Input Values by overwriting the TestNG test XML parameters values<br/>
+      •    Get execution output values by parsing execution console values and look for “key=value” pairs<br/>
+      •    Automatic TestNG execution results parsing and showing the below on Ginger Action/Report:<br/>
+              o    Number of Passed/Failed/Skipped/Ignored/Total tests<br/>
+              o    Executed Suite/s details<br/>
+              o    Execution status of each executed Test<br/>
+              o    Error details for Failed/Skipped tests</span></p>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">Pre-requisites</strong><br/>
+      Please see below the items which needs to be set up on the testing environment before executing the TestNG plugin.<br/>
+          1.  NET Core SDK Installation<br/>
+              The plugin requires .NET Core SDK version 2.2 or above to be installed on the machine it running on.<br/>
+              Please install it from below link:<br/>
+              https://dotnet.microsoft.com/download</span></p>
+  <p><span style="font-size:17px;">    2.    Java Installation<br/>
+              Java installation is must for the plugin to work.<br/>
+              “JAVA_HOME” environment variable system configuration is also required in case not specifying specific path for the “java” executable in the Plugin Action definitions.</span></p>
+  <p><span style="font-size:17px;">    3.    Maven Installation<br/>
+              Maven installation is must just in case executing Maven Java project.<br/>
+              “MAVEN_HOME”/”M2_HOME” environment variable system configuration is also required in case not specifying specific path for the “mvn” executable in the Plugin Action definitions.</span></p>
+  <p><span style="font-size:17px;">    4.    Java/Maven Project<br/>
+              The Java/Maven project source files needs to be located on the machine which the TentNG Plugin running on.<br/>
+              It is recommended to place the project under the Ginger Solution “Documents” folder and use relative paths to it (like “~/Documents/MyJavaProject”) so it will work on any user machine. </span></p>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">How to Install TestNG Plugin?</strong><br/>
+      Ginger TestNG plugin needs to be added to the Ginger Solution in order to be used.<br/>
+      Please follow below steps to perform it.<br/>
+          1.    Download and Install latest/required Ginger version from here<br/>
+          2.    Lunch Ginger and add Solution to it<br/>
+          3.    In Solution go to Resources Plugins<br/>
+          4.    Click on “Online” tab<br/>
+          5.    Select “Test NG” Plugin from loaded list of Plugins<br/>
+          6.    Select latest/required Plugin version<br/>
+          7.    Click on Install <br/>
+          8.    Once installation done, shift to “Installed” tab and confirm ”Test NG” plugin appears on tree- you will see the Plugin details on the right including it imbedded Action types </span><br/>
+               <img src="../../assets/images/image1252.png"/></p>
+  <p>          <img src="../../assets/images/image1253.png"/></p>
+
+</body></html>

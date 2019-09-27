@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../../../..";
+  gCommonRootRelPath = "../../../../..";
+  gTopicId = "3.1.1.3.1.0_2";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>How to use Cassandra in Ginger?</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../assets/css/default.css"/>
+</head>
+<body>
+  <h1>How to use Cassandra in Ginger?</h1>
+  <p><span style="font-size:17px;">1. What is Cassandra? </span></p>
+  <p><span style="font-size:17px;">   Apache Cassandra is a free and open source distributed NoSQL database management system designed to handle large amounts of data <br/>
+         across many commodity servers, providing high availability with no single point failure.</span></p>
+  <p><span style="font-size:17px;">2. What does Ginger support in Cassandra? </span></p>
+  <p><span style="font-size:17px;">    a) UDT values which has been widely used in Cassandra Database.<br/>
+          b) JSON variant of SELECT and INSERT operation</span></p>
+  <p><span style="font-size:17px;">3. Which Cassandra operations are supported in Ginger? </span></p>
+  <p><span style="font-size:17px;">    a)    Read Data<br/>
+          b)    Write Data<br/>
+          c)    Update Data<br/>
+          d)    Record Count</span></p>
+  <p><span style="font-size:17px;">4. How to configure Cassandra in Ginger? </span></p>
+  <p><span style="font-size:17px;">    a)    Under the Resources tab, go to Environment and select the desired environment. <br/>
+          b)    Using the + button add the Cassandra DB. Enter name, select DB Type as “Cassandra”, enter the host and user name and password if any.</span></p>
+  <p><span style="font-size:17px;">              <img src="../../../../../assets/images/image680.png"/></span></p>
+  <p><span style="font-size:17px;">    c)    Click on the Test connection button to get the connection successful message.<br/>
+                  <img src="../../../../../assets/images/image681.png"/></span></p>
+  <p><span style="font-size:17px;">          <img src="../../../../../assets/images/image682.png"/></span><br/>
+     </p>
+  <p><span style="font-size:17px;">5. How to add Database Action for Cassandra? </span></p>
+  <p><span style="font-size:17px;"><br/>
+          a)    Double click on the Business flow. In the Activity Actions, click on ‘Add New’ button<br/>
+                 <img src="../../../../../assets/images/image683.png"/><br/>
+                    </span></p>
+  <p><span style="font-size:17px;">    b)    Go to the ‘General Actions’ tab and select the ‘DataBase Action’ then click on ‘Add Action’ button given in the below window<br/>
+                <img src="../../../../../assets/images/image684.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+          c)    Select the environment and the DB and the operation type.<br/>
+                 The DB operation type as same as given in the <span style="font-size:17px;">&#39;4. Action Operation&#39; section of &#39;How to Configure Database Action?&#39; doc.</span></span></p>
+  <p>            <img src="../../../../../assets/images/image685.png"/></p>
+  <p><span style="font-size:17px;">    d)    Run the Action to execute it</span></p>
+
+</body></html>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../..";
+  gCommonRootRelPath = "../..";
+  gTopicId = "8.1.0_7";
+
+//]]></script>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>ALM Manager Report</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="QC/JIRA/RQM Integration"/></head>
+<body>
+  <h1>ALM Manager Report</h1>
+  <p style="margin:0in 0in 0.0001pt"><span style="font-family:Calibri;"><span style="font-size:11pt"><span style="font-size:12.0pt">This report can be used for getting below information for each ALM TC which included in the selected Tests:</span></span></span></p>
+  <ol style="list-style-type:lower-alpha">
+    <li style="margin:0in 0in 0.0001pt"><span style="font-family:Calibri;"><span style="font-size:11pt"><span style="font-size:12.0pt">Automation coverage % by Ginger </span></span></span></li>
+  </ol>
+  <p style="margin-left:.5in; margin:0in 0in 0.0001pt"><span style="font-family:Calibri;"><span style="font-size:11pt"><span style="font-size:12.0pt">Note: automation coverage will be reflected according to the current loaded Ginger solution (based on it Shared Repository </span></span></span></p>
+  <ol start="2" style="list-style-type:lower-alpha">
+    <li style="margin:0in 0in 0.0001pt"><span style="font-family:Calibri;"><span style="font-size:11pt"><span style="font-size:12.0pt">Ginger Executions details (which were exported to ALM):</span></span></span>
+      <ol style="list-style-type:lower-alpha">
+        <li style="margin:0in 0in 0.0001pt"><span style="font-family:Calibri;"><span style="font-size:11pt"><span style="font-size:12.0pt">Number of Executions</span></span></span></li>
+        <li style="margin:0in 0in 0.0001pt"><span style="font-family:Calibri;"><span style="font-size:11pt"><span style="font-size:12.0pt">Pass Rate</span></span></span></li>
+        <li style="margin:0in 0in 0.0001pt"><span style="font-family:Calibri;"><span style="font-size:11pt"><span style="font-size:12.0pt">Last execution</span></span></span></li>
+      </ol>
+    </li>
+  </ol>
+  <p style="margin-left:.5in; margin:0in 0in 0.0001pt"><span style="font-family:Calibri;"><span style="font-size:11pt"><span style="font-size:12.0pt">User is able to filter the execution details by executing tester and/or execution period (last day, last month, etc.)</span></span></span></p>
+  <p style="margin:0in 0in 0.0001pt"><span style="font-family:Calibri;"><span style="font-size:11pt"><span style="font-size:12.0pt"></span></span></span></p>
+  <p style="margin:0in 0in 0.0001pt"><span style="font-family:Calibri;"><span style="font-size:11pt"><span style="font-size:12.0pt">For using the report please follow the below:</span></span></span></p>
+  <ol>
+    <li style="margin:0in 0in 0.0001pt"><span style="font-family:Calibri;"><span style="font-size:11pt"><span style="font-size:12.0pt">Connect to ALM (see section 3)</span></span></span></li>
+    <li style="margin:0in 0in 0.0001pt"><span style="font-family:Calibri;"><span style="font-size:11pt"><span style="font-size:12.0pt">Click on “ALM”</span><span style="font-size:12.0pt">à</span><span style="font-size:12.0pt">“ “ALM Manager Report” from the main menu drop down</span></span></span></li>
+    <li style="margin:0in 0in 0.0001pt"><span style="font-family:Calibri;"><span style="font-size:11pt"><span style="font-size:12.0pt">Click on “Browse” button to select the Test Set or Test Sets folder you want to get info about from the ALM Test Plan tree</span></span></span></li>
+  </ol>
+  <p style="margin:0in 0in 0.0001pt">          <img src="../../assets/images/image32.png"/></p>
+  <p style="margin:0in 0in 0.0001pt"> </p>
+  <p style="margin:0in 0in 0.0001pt">          <img src="../../assets/images/image33.png"/></p>
+  <p style="margin-left:.5in; margin:0in 0in 0.0001pt"><span style="font-family:Calibri;"><span style="font-size:11pt"></span></span></p>
+  <p style="margin-left:.5in; margin:0in 0in 0.0001pt"><span style="font-family:Calibri;"><span style="font-size:11pt"></span></span></p>
+  <p style="margin-left:.5in; margin:0in 0in 0.0001pt"><span style="font-family:Calibri;"><span style="font-size:11pt"></span></span></p>
+  <p style="margin-left:.5in; margin:0in 0in 0.0001pt"><span style="font-family:Calibri;"><span style="font-size:11pt"></span></span></p>
+  <p style="margin-left:.5in; margin:0in 0in 0.0001pt"><span style="font-family:Calibri;"><span style="font-size:11pt"></span></span></p>
+  <p style="margin-left:.5in; margin:0in 0in 0.0001pt"><span style="font-family:Calibri;"><span style="font-size:11pt"></span></span></p>
+  <ol start="4">
+    <li style="margin:0in 0in 0.0001pt"><span style="font-family:Calibri;"><span style="font-size:11pt">View the “Coverage” details</span></span></li>
+  </ol>
+  <p style="margin:0in 0in 0.0001pt">          <img src="../../assets/images/image34.png"/></p>
+  <p style="margin-left:.5in; margin:0in 0in 0.0001pt"><span style="font-family:Calibri;"><span style="font-size:11pt"></span></span></p>
+  <p style="margin-left:.5in; margin:0in 0in 0.0001pt"><span style="font-family:Calibri;"><span style="font-size:11pt"></span></span></p>
+  <ol start="5">
+    <li style="margin:0in 0in 0.0001pt"><span style="font-family:Calibri;"><span style="font-size:11pt">For shifting to “Execution” view select “Execution” from the View drop down</span></span></li>
+    <li style="margin:0in 0in 0.0001pt"><span style="font-family:Calibri;"><span style="font-size:11pt">Use the “User” and “Execution Period” filters to filter the shown data</span></span></li>
+  </ol>
+  <p style="margin:0in 0in 0.0001pt">         <img src="../../assets/images/image35.png"/></p>
+  <p style="margin-left:.5in; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"></span></span></p>
+
+</body></html>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../..";
+  gCommonRootRelPath = "../..";
+  gTopicId = "5.4.4.0_6";
+
+//]]></script>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>How to Parse TestNG Flow Execution Results?</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Plugins:TestNG Plugin"/></head>
+<body>
+  <h1>How to Parse TestNG Flow Execution Results?</h1>
+  <p><span style="font-size:17px;">TestNG Plugin supports parsing the TestNG execution results XML (testing-results.xml).<br/>
+      The values which been pulled from the TestNG execution results XML, are:<br/>
+         o    Number of Passed/Failed/Skipped/Ignored/Total tests<br/>
+         o    Executed Suite/s details<br/>
+         o    Execution status of each executed Test<br/>
+         o    Error details for Failed/Skipped tests<br/>
+       <br/>
+      Validations can be configured on top of the report values, like setting validation that specific Test status is “Passed”. </span></p>
+  <p><span style="font-size:17px;">Ginger Action status can indicate if all TestNG flow Tests Passed or not, in case the “Fail Action Due To Testng Results Xml Failure” check box is checked, Ginger Action status <br/>
+      will be “Passed” only if all TestNG flow tests will Pass and in case at least 1 TestNG flow test will Fail so also the Ginger Action status will be “Failed” and the failure reason <br/>
+      will be shown on the Action Status and also in Ginger execution report.</span></p>
+  <p><span style="font-size:17px;"><span style="font-size:20px;"><strong>How to Get TestNG Execution Results on Ginger Action?</strong></span><br/>
+         1.    Configure any one of the TestNG Actions configurations<br/>
+         2.    Check the “Parse Testng Results Xml” check box<br/>
+         3.    In case the TestNG “testng-results.xml” is configured not to be generated in the default location of it, please specify the full path to the Folder in <br/>
+          which the “testng-results.xml” will be found at the end of Execution in the “Overwrite Testng Results Xml Default Folder Path”. If default location is been used <br/>
+          so you can leave the text box empty. <br/>
+        4.    For Failing the Action in case the TestNG results contains Failures/Errors – please check the “Fail Action Due To Testng Results Xml Failure” check box</span><br/>
+              <img src="../../assets/images/image1268.png"/></p>
+  <p> </p>
+  <p>         <img src="../../assets/images/image1269.png"/></p>
+  <p> </p>
+  <p> </p>
+
+</body></html>

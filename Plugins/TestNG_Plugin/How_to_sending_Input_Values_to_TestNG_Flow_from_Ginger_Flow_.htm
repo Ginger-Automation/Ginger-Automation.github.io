@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../..";
+  gCommonRootRelPath = "../..";
+  gTopicId = "5.4.4.0_4";
+
+//]]></script>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>How to sending Input Values to TestNG Flow from Ginger Flow?</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Plugins:TestNG Plugin"/></head>
+<body>
+  <h1>How to sending Input Values to TestNG Flow from Ginger Flow?</h1>
+  <p><span style="font-size:17px;">TestNG plugin supports sending input values from Ginger flow to TestNG flow.<br/>
+      It been done by overwriting the values of the TestNG XML Parameters.<br/>
+      Input values can be static or dynamic (variables, environments parameters, Etc.) by using the Value Expression capabilities.<br/>
+      In case Input values been configured, the plugin will duplicate the original TestNG XML into temp file, will overwrite the Parameters values on the duplicated XML and will <br/>
+      use the duplicated XML for actual execution.<br/>
+      In case user prefer to overwrite the original TestNG XML and not to create temp duplication he should check the “Overwrite Original Testng XML” check box. </span></p>
+  <p><span style="font-size:17px;"><strong> How to Send Input Values to TestNG Flow from Ginger Flow?</strong><br/>
+          1.    Configure any one of the TestNG Actions configurations<br/>
+          2.    Set the “Testng XML Path” field in the Action configurations<br/>
+          3.    Open the TestNG XML to view it content and look for the “Parameters” nodes in it which you want to overwrite it values<br/>
+          4.    For each parameter which you want to overwrite it value:<br/>
+                  a.   Add row to the “Testng Xml Parameters To Overwrite” grid<br/>
+                  b.  Set the cell of the “Name” column as the name on Parameter in the TestNG XML<br/>
+                  c.  In case the Parameter appears in more than one node and you want to modify only specific one and not all so set the name on the                   </span><span style="font-size:17px;">Parameter Parent node in the cell of “ParentNodeName” column.<br/>
+                 d.  Set the value to be used in the “Value” column cell<br/>
+                     All cells values can be fully/parsially dynamic using Value Expression editor (“…” button).</span></p>
+  <p>                   <img src="../../assets/images/image1262.png"/></p>
+
+</body></html>

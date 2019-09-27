@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../..";
+  gCommonRootRelPath = "../..";
+  gTopicId = "8.1.0_6";
+
+//]]></script>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Export Execution Results to ALM</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="QC/JIRA/RQM Integration"/></head>
+<body>
+  <p align="center" class="MsoTitle" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:20pt"><span style="font-family:Calibri,sans-serif"><span style="color:#0f243e"><span style="letter-spacing:-0.5pt"><span style="font-weight:bold"><span style="font-size:16.0pt"><span style="font-family:&quot;Century Gothic&quot;,sans-serif"></span></span></span></span></span></span></span></p>
+  <h1>Export Execution Results to ALM</h1>
+  <p><span style="font-size:16px;">In case the executed Ginger Business Flow was originally imported from ALM Test Set or in case it was exported to ALM Test Set then the user is able to export the execution results to ALM.</span></p>
+  <p> </p>
+  <p><span style="font-size:16px;">Steps for exporting execution results to ALM:<br/>
+          a)    From Automate Tab:<br/>
+                    1.    Load the relevant Ginger Business Flow into Automate tab<br/>
+                    2.    Run the Ginger Test Set in “Run Flow” mode  <br/>
+                    3.    Once execution is done the user will get the “Test Set Execution Summary” window with summary of the execution results, for exporting the results to ALM user can click on “Export Execution Details” <br/>
+                           Note: Ginger will use saved ALM Configurations saved on step 3 to decide to which ALM to export to.<br/>
+                           <img src="../../assets/images/image28.png"/><img src="../../assets/images/image21.png"/></span></p>
+  <p> </p>
+  <p><span style="font-size:16px;">         b)   From Run Tab:<br/>
+                       1.    Open Run tab<br/>
+                       2.    Add Ginger Set and drag &amp; drop Ginger Business Flows to it<br/>
+                       3.    Click on Run Set Configurations button <br/>
+                       4.    Add new “Add Publish to ALM” Run set Action<br/>
+                       5.    Configure to Action<br/>
+                       6.    Run the Ginger Set by clicking on “Run All Ginger”  button<br/>
+                       7.    Execution details will be exported to ALM according to Run Set configurations.<br/>
+         </span></p>
+  <p>                      <img src="../../assets/images/image22.png"/></p>
+  <p> </p>
+  <p>                      <img src="../../assets/images/image23.png"/>   </p>
+  <p><span style="font-size:16px;"></span></p>
+  <p><span style="font-size:16px;"><strong> Note:</strong><br/>
+            •    Each Ginger Activity execution status will be exported as the matching ALM TC Step Run Status<br/>
+            •    According to selected “Run At” configuration:<br/>
+                 “During Execution” – will export a business flow execution results to ALM after each business flow run.<br/>
+                 “Execution End” – will export all businesses flows execution results only after all business flows finished in that “Ginger” run.<br/>
+           •    The ALM TC Run status will be set based on calculation of all of the matching Ginger Test Case Steps execution status: if all Ginger Steps </span><span style="font-size:16px;">                      Passed then the TC status will be “Passed”, if one failed then the TC status will be “Failed”, if partial passed and rest didn’t executed then the status will be set to “Not Completed” otherwise it will be set to “No Run”</span></p>
+
+</body></html>

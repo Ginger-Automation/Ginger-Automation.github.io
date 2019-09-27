@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../..";
+  gCommonRootRelPath = "../../..";
+  gTopicId = "5.1.3.0_1";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Page Objects Models</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Page Object Model"/></head>
+<body>
+  <h1>Page Objects Models Wizard</h1>
+  <p><span style="font-size:17px;">There are 2 ways to create a Page Objects Model, first is to create one manually and second is <br/>
+           to let the Ginger learn the Page you’d like to automate, both creations are being done using <br/>
+          the Page Objects Model Wizard.</span></p>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">1. Automatic page learn</strong><br/>
+         Prerequisites:<br/>
+          •    Solution with at least one Platform Target Application<br/>
+          •    At least one platform agent (e.g. selenium chrome Agent for Web Platform)<br/>
+          •    Site URL which you wish to learn.</span></p>
+  <p><span style="font-size:17px;">    Go to Resources tab -&gt; Applications Models -&gt; Page Objects Models. <br/>
+          Click the Plus button. </span><br/>
+         <img src="../../../assets/images/image1317.png"/></p>
+  <p><span style="font-size:17px;"><br/>
+          Add Page Objects Model Wizard is opened.<br/>
+              i.    Click Next Introduction page.<br/>
+              ii.    Learning Configurations page:<br/>
+                  1.    Select Target application (If you don’t have any Web Platform Target Application in your solution, <br/>
+                      please close the wizard configure new target application configure one agent and start over from step 1.1.1).</span><br/>
+                         <img src="../../../assets/images/image1318.png"/></p>
+  <p><span style="font-size:17px;"><br/>
+                  2.    Select Agent (If you don’t have any Agent in your solution, please close the wizard configure new Selenium agent and start over from step 1.1.1).<br/>
+                  3.    After selecting the agent, the On/Off button will be enabled. Click it in order to turn on your agent.</span></p>
+  <p><span style="font-size:17px;">                Now go to the browser instance which been raised by the Ginger and navigate to the page URL you would like to learn.</span><br/>
+                  <img src="../../../assets/images/image1319.png"/></p>
+  <p><span style="font-size:17px;"><br/>
+                  4.    When the Agent and its browser instance are opened, the list of Elements Types will be shown on the page.<br/>
+                      Here you can specify what types of element interesting you in order to create your automation.<br/>
+                      Once done selecting all desired elements click next.</span></p>
+  <p><span style="font-size:17px;">               <img src="../../../assets/images/image1320.png"/><br/>
+            <br/>
+              iii.    Learned Object Mapping</span></p>
+  <p><span style="font-size:17px;">                1.    When reaching to this page the learning process will be automatically started and the Ginger will start to learn all existing elements on the page <br/>
+                          you where navigated on the previous steps. <br/>
+                          Indication of the running process would be the spinning orange icon which become visible. Also you will notice that the elements are being added to <br/>
+                          the mapped elements and unmapped elements grids. <br/>
+                          The mapping between them is done depending upon the types of elements you selected on the learning configuration page.<br/>
+                          <img src="../../../assets/images/image1321.png"/></span></p>
+  <p><span style="font-size:17px;">                2.    Selecting any element on the grid will cause the details section to be opened and there you can find all the learned properties and locators of the selected element.<br/>
+                         <img src="../../../assets/images/image1322.png"/></span></p>
+  <p><span style="font-size:17px;">                3.    If you wish to stop the learning process (reason can be Ginger already learned all relevant elements and there is no reason to continue or you simply want to change <br/>
+                          the page on the browser instance etc.) you can do it by clicking the stop button. <br/>
+                           <img src="../../../assets/images/image1323.png"/></span></p>
+  <p><span style="font-size:17px;">                    After clicking the stop button, you will be able to re start the learning process by clicking <br/>
+                          Re-learn button<br/>
+                         <img src="../../../assets/images/image1324.png"/></span></p>
+  <p><span style="font-size:17px;">        iv.    Using the Spy:</span></p>
+  <p><span style="font-size:17px;">            1.    Click on the Spy button<br/>
+                         <img src="../../../assets/images/image1325.png"/><br/>
+                  <br/>
+                  2.    While the Spy is on move your mouse to the requested element on the page and click ctrl.<br/>
+                      a.    Element not found – re-try 2 or 3 times.<br/>
+                      b.    Element found – the element will be focused on the elements grid<br/>
+                      c.    Element found but not exist on the Element Grid – you will get a button to add the found element to the grid.<br/>
+                             <img src="../../../assets/images/image1326.png"/></span></p>
+  <p><span style="font-size:17px;">            3.    Click Next.</span></p>
+  <p><span style="font-size:17px;">                i.    General Details page:<br/>
+                             General details page contains all details which been pulled for the page, here you <br/>
+                          can change the page name, URL and screenshot.<br/>
+                           <img src="../../../assets/images/image1327.png"/></span></p>
+  <p><span style="font-size:17px;">                ii.    Click Finish – The Page Objects Model has been added to the Page Objects Model tree.</span></p>
+  <p><strong><span style="font-size:20px">2. Manual Page Objects Model creation</span></strong></p>
+  <p><span style="font-size:17px;">    2.1    Go to Resources tab -&gt; Application Models -&gt; Page Objects Models -&gt; and Click the Plus button. <br/>
+                    <img src="../../../assets/images/image1328.png"/>         </span></p>
+  <p><span style="font-size:17px;">                  Add Page Objects Model Wizard is opened.</span></p>
+  <p><span style="font-size:17px;">    2.2    Click Next Introduction page.<br/>
+          2.3    Check the Manual Radio Button and click Next. </span><br/>
+                  <img src="../../../assets/images/image1329.png"/></p>
+  <p><span style="font-size:17px;">    2.4    Learned Object Mapping:<br/>
+              2.4.1    Add Elements By clicking the Plus button </span><br/>
+                           <img src="../../../assets/images/image1330.png"/></p>
+  <p><span style="font-size:17px;">        2.4.2    Add Locators to your added elements</span><br/>
+                           <img src="../../../assets/images/image1331.png"/></p>
+  <p><span style="font-size:17px;">    2.5    General Details<br/>
+              2.5.1    Add Name, Description (optional)  and Page URL (optional)</span><br/>
+                           <img src="../../../assets/images/image1332.png"/></p>
+  <p><span style="font-size:17px;">        2.5.2    Browse and Image for your Page Objects Model (optional)<br/>
+          2.6    Click Finish, the New Page Objects Model added to the tree.</span></p>
+  <p> </p>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">3. Adding Unmapped Elements to Mapped Elements list and vice-versa</strong><br/>
+       <br/>
+         If an element is unmapped list and the user desires to use it in the Actions then follow the below steps.<br/>
+          1.    Go to Unmapped Elements tab and select the element.<br/>
+          2.    Click on the ‘Add Elements to mapped list’ button as shown below<br/>
+                   <img src="../../../assets/images/image1333.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+          3.    The element will move to the Mapped Elements tab as shown below</span></p>
+  <p>            <img src="../../../assets/images/image1334.png"/></p>
+  <p><span style="font-size:17px;">    4.    Same steps are to be performed while moving the elements from mapped to unmapped tab.<br/>
+                           </span></p>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">4. Learn Only Mapped Elements </strong><br/>
+                            <br/>
+            User can choose option to learn only mapped elements instead of learning all the elements of the page. <br/>
+            This reduces the learning time. This option is available by default. <br/>
+             User has to uncheck the checkbox if unmapped elements are to be learned.<br/>
+             <img src="../../../assets/images/image1335.png"/>              </span></p>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">5. Learning the Elements by Locator’s Priority</strong><br/>
+                       <br/>
+            User can set the priority of locators of the elements of the page.<br/>
+            On the Learning Configurations page, expand the area ‘Learned Elements Locators Preferences’.<br/>
+            There are 4 options viz. ById, ByName, ByRelXPath &amp; ByXpath.<br/>
+            The sequence of the priority can be changed by using the arrow buttons as indicated below.  <br/>
+            In this screenshot, when any element will be used in an Action, the Locator used will be ‘ByID’.<br/>
+              <img src="../../../assets/images/image1336.png"/>           </span></p>
+  <p><span style="font-size:17px;"><br/>
+              User can also change the Locator of a particular element after the page is learned.<br/>
+              For this, select the Page Object Model. Go to UI Elements tab and select the desired element.<br/>
+               Expand the Details area. Select the desired locator and using the arrow buttons bring it to the priority 1.</span></p>
+  <p><span style="font-size:17px;">           <img src="../../../assets/images/image1337.png"/>          </span></p>
+  <p><span style="font-size:20px;"><strong>6. Giving Dynamic value to a Locator of the Learned Element</strong></span></p>
+  <p><span style="font-size:17px;">    A locator of a learned element can be given a customized value.<br/>
+          For this, select the Page Object Model and go to the UI Elements tab.<br/>
+          Select the desired Element and expand the Details area.<br/>
+          Go to the Locators tab and select the desired locator.<br/>
+          Copy-paste the locator.<br/>
+          The pasted locator can then be edited by either directly typing in the value field or by using the <br/>
+          value expression button ‘…’ as shown below.<br/>
+                  <img src="../../../assets/images/image1338.png"/>           <br/>
+                         </span></p>
+  <p><span style="font-size:17px;"></span></p>
+  <p><span style="font-size:17px;"></span><br/>
+     </p>
+
+</body></html>

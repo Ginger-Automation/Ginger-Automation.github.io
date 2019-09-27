@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../..";
+  gCommonRootRelPath = "../../..";
+  gTopicId = "3.1.2.0_1";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>How to Automate Power Builder Widgets</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Power Builder Widgets"/></head>
+<body>
+  <h1>How to Automate Power Builder Widgets</h1>
+  <p><span style="font-size:17px;"><strong><span style="font-size:20px;">Description  </span>  </strong><br/>
+      Ginger Power Builder Widgets means web page or web browser embedded in power Builder window. <br/>
+      Widget window contains different elements button, text fields, labels, check box, drop down, radio button, combo box, links etc.</span></p>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">Prerequisite</strong><br/>
+      Ginger and target Power Builder application should be launched from the same machine.</span></p>
+  <p><strong><span style="font-size:20px">Steps to use Ginger for Widget Operation</span></strong></p>
+  <p><span style="font-size:17px;">    1.    Select Widget Window on Window Explorer Dropdown<br/>
+                 Please follow below steps for selecting widget window:<br/>
+                    1.    Open Ginger<br/>
+                    2.    Start Power Builder CSM agent from Automate tab-&gt;Agent<br/>
+                    3.    Open Window Explorer from Automate Tab-&gt;Agent-&gt;Window Explorer (next to Agent on-Off button)<br/>
+                    4.    Click on Refresh button present on top right of window explorer<br/>
+                    5.    Select Widget Window from dropdown present on top of window explorer</span></p>
+  <p>                      <img src="../../../assets/images/image914.png"/></p>
+  <p><span style="font-size:17px;">    2.    Find and Initialize Browser element from Tree<br/>
+                 Follow below steps to find and Initialize Browser Element:<br/>
+                    1.    Add Switch Window Action (Mandatory Action )<br/>
+                    2.    Expand tree elements until find the Browser Element <br/>
+                    3.    Select / Click on Browser Element present on tree<br/>
+                    4.    Run “Initialize Browser” Action present under Element Details &amp; Action -&gt; Action <br/>
+                    5.    Add “Initialize Browser” Action in solution.</span></p>
+  <p>                       <img src="../../../assets/images/image915.png"/>  </p>
+  <p><span style="font-size:17px;">                                <br/>
+          3.    Find Html Elements on Window Explorer<br/>
+                 Follow below steps to find Html Elements</span></p>
+  <p><span style="font-size:17px;">                3.1.    Find Element by Live Spy:<br/>
+                                Follow below steps to find element by live spy<br/>
+                                  1.    Initialize Browser element by mention above<br/>
+                                  2.    Click on “Live Spy” button present on top left of window explorer<br/>
+                                  3.    Move cursor on expected element on widget window<br/>
+                                  4.    Press “Control” key of keyboard</span></p>
+  <p><span style="font-size:17px;">                          Expected widget element will get highlighted by red color of border and you will find the expected element details like title,                            value, XPath, available action with different locators on window explorer.</span></p>
+  <p><span style="font-size:17px;">                               <img src="../../../assets/images/image916.png"/>     </span></p>
+  <p><span style="font-size:17px;"><br/>
+                      3.2.    Find Element on Tree View of Window Explorer:<br/>
+                                Expand the Tree elements until get the expected Html Element on Tree of window explorer.</span></p>
+  <p>                           <img src="../../../assets/images/image917.png"/></p>
+  <p><span style="font-size:17px;">                3.3.    Find Element on Grid View of Window Explorer:<br/>
+                                 1.    Click on Grid View Button present on right side on Window element tab on Window Explorer<br/>
+                                 2.    Click on “Refresh Controls” button present on Window element tab on Window Explorer<br/>
+                                 3.    Select expected Html Element from grid.<br/>
+                                        <img src="../../../assets/images/image918.png"/></span></p>
+  <p><span style="font-size:17px;">                3.4    Perform &amp; Add different Actions on Html Element<br/>
+                               Follow below steps perform &amp; add action on html elements</span></p>
+  <p><span style="font-size:17px;">                             1.    Find Available Actions &amp; locators in Action tab<br/>
+                                             a.    After selecting expected html element from Window Element tab (from tree view or grid view), go to Action                                                    tab present under Element Details &amp; Actions tab.<br/>
+                                             b.    Select different Actions from Actions Tab under Element Details &amp; Action tab<br/>
+                                             c.    Select different Locators from Locators Tab under Element Details &amp; Action tab</span></p>
+  <p><span style="font-size:17px;">                                               <img src="../../../assets/images/image919.png"/><br/>
+          <br/>
+                                   2.    Run the Action<br/>
+                                         You can run the Action by click on Run Action button present on bottom left under Element Details &amp; Action tab of window explorer.<br/>
+                                   3.    Add Action to Business Flow<br/>
+                                         You can add the Action by click on Add Action to Business Flow button present on bottom left under Element Details &amp; Action tab of window explorer.</span></p>
+  <p><span style="font-size:17px;">                             4.    Find general details and properties of Html elements (Optional)<br/>
+                                            a.     You can find general details like Title, value, XPath, Type of html element by click on General Tab present                                                         under Element Details &amp; Actions Tab.<br/>
+                                           b.    You can find different Properties of html element by click on Properties Tab present under Element Details &amp; Actions Tab.</span></p>
+
+</body></html>

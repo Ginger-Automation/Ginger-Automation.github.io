@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../..";
+  gCommonRootRelPath = "../..";
+  gTopicId = "5.4.2.0_2";
+
+//]]></script>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>How to use PACT in Actions?</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Plugins:PACT Plugin"/></head>
+<body>
+  <h1>How to use PACT in Actions?</h1>
+  <p><span style="font-size:17px;"><span style="font-size:20px;"><strong>Add New (Any) Action:</strong></span><br/>
+          1.    Go to Automate tab<br/>
+          2.    On Actions Grid click on the Plus (+) button<br/>
+          3.    On the Add Action page go to PlugIns Actions tab<br/>
+          4.    Select the desiered action<br/>
+          5.    Click Add Action button<br/>
+                <img src="../../assets/images/image1240.png"/></span></p>
+  <p><span style="font-size:17px;">         <img src="../../assets/images/image1241.png"/><br/>
+       <br/>
+       <strong style="font-size: 20px"> 1.    Start Mock Server</strong><br/>
+                  Pre-requisites: <br/>
+                  Pact PlugIn should be loaded.</span></p>
+  <p><span style="font-size:17px;">             <img src="../../assets/images/image1242.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                  1.     This action should be used for starting the PACT server in order for it to be ready to get Interactions load.<br/>
+                  2.    Configure free port on the port field.<br/>
+                  3.    If Use Dynamic port is checked, Ginegr will search for a free port on your machine and will use it to start the server.<br/>
+                  4.    Run Action<br/>
+                  5.    When Running the Action – the Mock service is started at: http://localhost:1234 with the port specified.<br/>
+                  6.    On Extra Info Field (Can be seen on the actions grid or from the start server action edit page on another tab) you will find the server location it been started. http://localhost: &lt;&lt;port specified&gt;&gt;</span></p>
+  <p><span style="font-size:17px;"><strong><span style="font-size:20px;">  2.    Load Interaction File</span></strong><br/>
+                  Prerequisites: <br/>
+                      •    Pact PlugIn loaded<br/>
+                      •    Pact File Created or Imported to the Documents Folder<br/>
+                      •    Pact File Compiled<br/>
+                      •    Pact File Exported to JSON<br/>
+                      •    Pact Server Started<br/>
+                         <img src="../../assets/images/image1243.png"/></span></p>
+  <p><span style="font-size:17px;">            1.    This Action should be used to Load Interaction JSON file in order to fire real API requests against the PACT server.<br/>
+                  2.    Open the Action Edit Page<br/>
+                  3.    Browse for the Exported Json file<br/>
+                  4.    Run Action<br/>
+                      Note: The server should be up and running while executing this action</span></p>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px"> 3.    Clear Interaction</strong><br/>
+                  Pre-requisites: <br/>
+                      •    Pact PlugIn loaded<br/>
+                      •    Pact File Created or Imported to the Documents Folder<br/>
+                      •    Pact File Compiled<br/>
+                      •    Pact File Exported to JSON<br/>
+                      •    Pact Server Started<br/>
+                      <br/>
+                  1.    This Action should be used to clean all interaction which been loaded to the pact server<br/>
+                  2.    This action doesn’t required any configuration<br/>
+                  3.    Simply add the action and run it in order to clean all loaded interactions from the server</span></p>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px"> 4.    Stop Mock Server</strong><br/>
+                  Pre-requisites: <br/>
+                      •    Pact PlugIn loaded<br/>
+                      •    Pact Server Started<br/>
+                      <br/>
+                  1.    This Action should be used to stop the pact server<br/>
+                  2.    This action doesn’t required any configuration<br/>
+                  3.    Simply add the action and run it in order to stop the Pact server</span></p>
+
+</body></html>

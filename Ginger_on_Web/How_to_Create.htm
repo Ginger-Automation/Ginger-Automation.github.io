@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "..";
+  gCommonRootRelPath = "..";
+  gTopicId = "10.0_2";
+
+//]]></script>
+
+<script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>How to Create Job?</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Ginger on Web"/></head>
+<body>
+  <h1>How to Create &amp; Run a Job?</h1>
+  <p> </p>
+  <p><strong style="font-size: 20px">1. How to Create a Job?</strong></p>
+  <p><span style="font-size:17px;">Create Job Page allows you to create a new job to trigger/schedule execution for a particular run set.<br/>
+      Job Configuration Mandatory Parameters:</span></p>
+  <table class="MsoTableGrid" style="margin-left:-.25pt; border-collapse:collapse; border:solid windowtext 1.0pt">
+    <tbody>
+      <tr style="height:9.0pt">
+        <td style="border:solid windowtext 1.0pt; background:#0f243e; width:166.15pt; padding:0in 5.4pt 0in 5.4pt; height:9.0pt" width="222">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt"><span style="color:white">Parameter Name</span></span></b></span></span></p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; background:#0f243e; width:249.85pt; border-left:none; padding:0in 5.4pt 0in 5.4pt; height:9.0pt" width="333">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt"><span style="color:white">Explanation</span></span></b></span></span></p>
+        </td>
+      </tr>
+      <tr style="height:9.0pt">
+        <td style="border:solid windowtext 1.0pt; width:166.15pt; border-top:none; padding:0in 5.4pt 0in 5.4pt; height:9.0pt" width="222">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt">Title</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:249.85pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt; height:9.0pt" width="333">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">Name of the Job</span></span></span></p>
+        </td>
+      </tr>
+      <tr style="height:9.0pt">
+        <td style="border:solid windowtext 1.0pt; width:166.15pt; border-top:none; padding:0in 5.4pt 0in 5.4pt; height:9.0pt" width="222">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt">Executor</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:249.85pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt; height:9.0pt" width="333">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">Jenkins Node name (connected on slave machine). Refer <span class="MsoHyperlink" style="color:blue"><span style="text-decoration:underline"><a href="#_How_to_connect" style="color:blue; text-decoration:underline">How to connect Slave</a></span></span></span></span></span></p>
+        </td>
+      </tr>
+      <tr style="height:18.1pt">
+        <td style="border:solid windowtext 1.0pt; width:166.15pt; border-top:none; padding:0in 5.4pt 0in 5.4pt; height:18.1pt" width="222">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt">Runset</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:249.85pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt; height:18.1pt" width="333">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">Runset to be executed</span></span></span></p>
+        </td>
+      </tr>
+      <tr style="height:18.1pt">
+        <td style="border:solid windowtext 1.0pt; width:166.15pt; border-top:none; padding:0in 5.4pt 0in 5.4pt; height:18.1pt" width="222">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt">Environment</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:249.85pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt; height:18.1pt" width="333">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">Environment on which execution will be triggered </span></span></span></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p><span style="font-size:17px;"></span></p>
+  <p><span style="font-size:17px;"><img src="../assets/images/image1302.png"/></span></p>
+  <p><span style="font-size:17px;">Job Configuration Advanced Parameters:</span></p>
+  <p><span style="font-size:17px;"></span></p>
+  <table class="MsoTableGrid" style="margin-left:-.25pt; border-collapse:collapse; border:solid windowtext 1.0pt">
+    <tbody>
+      <tr style="height:9.0pt">
+        <td style="border:solid windowtext 1.0pt; background:#0f243e; width:166.15pt; padding:0in 5.4pt 0in 5.4pt; height:9.0pt" width="222">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt"><span style="color:white">Parameter Name</span></span></b></span></span></p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; background:#0f243e; width:249.85pt; border-left:none; padding:0in 5.4pt 0in 5.4pt; height:9.0pt" width="333">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt"><span style="color:white">Explanation</span></span></b></span></span></p>
+        </td>
+      </tr>
+      <tr style="height:9.0pt">
+        <td style="border:solid windowtext 1.0pt; width:166.15pt; border-top:none; padding:0in 5.4pt 0in 5.4pt; height:9.0pt" width="222">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt">Enabled</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:249.85pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt; height:9.0pt" width="333">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">Job Enabled/Not</span></span></span></p>
+        </td>
+      </tr>
+      <tr style="height:9.0pt">
+        <td style="border:solid windowtext 1.0pt; width:166.15pt; border-top:none; padding:0in 5.4pt 0in 5.4pt; height:9.0pt" width="222">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt">Ginger Installation Path</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:249.85pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt; height:9.0pt" width="333">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">Path where Ginger is installed on the executor machine</span></span></span></p>
+        </td>
+      </tr>
+      <tr style="height:18.1pt">
+        <td style="border:solid windowtext 1.0pt; width:166.15pt; border-top:none; padding:0in 5.4pt 0in 5.4pt; height:18.1pt" width="222">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt">Remote Solution Path</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:249.85pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt; height:18.1pt" width="333">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">File system Path where the solution will be downloaded</span></span></span></p>
+        </td>
+      </tr>
+      <tr style="height:18.1pt">
+        <td style="border:solid windowtext 1.0pt; width:166.15pt; border-top:none; padding:0in 5.4pt 0in 5.4pt; height:18.1pt" width="222">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt">Build Period</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:249.85pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt; height:18.1pt" width="333">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">Refer Configure Build Period for valid values</span></span></span></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p><span style="font-size:17px;"></span></p>
+  <p><span style="font-size:17px;"> <img src="../assets/images/image1303.png"/></span></p>
+  <p><span style="font-size:17px;">   <img src="../assets/images/image1304.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+      Configure Build Period</span></p>
+  <p><span style="font-size:17px;"><strong>How to connect Jenkins Slave</strong><br/>
+          •    Login to Jenkins.<br/>
+          •    Click on Node name link under “Build Executor Status” section.<br/>
+                <img src="../assets/images/image1305.png"/><br/>
+          •    Click on Launch Button below.</span></p>
+  <p><span style="font-size:17px;">          <img src="../assets/images/image1306.png"/></span></p>
+  <p><span style="font-size:17px;">    •    Wait for below window</span></p>
+  <p>            <img src="../assets/images/image1307.png"/></p>
+  <p> </p>
+  <p> </p>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">2. How to Run a Job?</strong><br/>
+          After creating the job the Job Configuration Page will be loaded. You can then trigger the execution from below:<br/>
+             •    Job Configuration Page<br/>
+                  <img src="../assets/images/image1308.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+             •    Jobs List Page<br/>
+                  <img src="../assets/images/image1309.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+             •    Job Execution History Page</span><br/>
+     <br/>
+                    <img src="../assets/images/image1310.png"/></p>
+  <p> </p>
+  <p> </p>
+
+</body></html>

@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"What is an Environment?","type":"item","url":"Solution/Configurations/Environment/Environment.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

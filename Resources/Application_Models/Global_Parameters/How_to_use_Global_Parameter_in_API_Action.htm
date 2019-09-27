@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../..";
+  gCommonRootRelPath = "../../..";
+  gTopicId = "5.1.2.0_3";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>How to use Global Parameter in API Action</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Global Parameters"/></head>
+<body>
+  <h1>How to use Global Parameter in API Action?</h1>
+  <p> </p>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">1.    For adding a new API Action follow the below steps:-</strong><br/>
+          a)    In the Automate tab, select an Activity with Target application as ‘MyWebServicesApp’. <br/>
+                 Click on the Add Action button and select the Web API Model action.<br/>
+                   <img src="../../../assets/images/image1092.png"/></span></p>
+  <p><span style="font-size:17px;">    b)    Select the desired API having the global parameter and click on the Select button.<br/>
+                   <img src="../../../assets/images/image1093.png"/></span></p>
+  <p><span style="font-size:17px;">    c)    Below screen is displayed giving the API details. Click on the Next button.<br/>
+                   <img src="../../../assets/images/image1094.png"/></span></p>
+  <p> </p>
+  <p><span style="font-size:17px;">    d)    As shown in the below screen, the global parameter is also displayed. Click on the Finish button.<br/>
+                <img src="../../../assets/images/image1095.png"/></span><br/>
+     </p>
+  <p><span style="font-size:17px;">    e)    The Action gets added in the grid.<br/>
+                <img src="../../../assets/images/image1096.png"/></span></p>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">2.    When global parameter is added to an API model which is already used in an Action then follow the below steps.</strong><br/>
+              Refer the “Auto Pilot- Application Models” section on how to create the API Action.</span></p>
+  <p><span style="font-size:17px;">       Open an existing API Action in edit mode by double clicking on it. Below message is displayed. Click on the Ok button.<br/>
+             <img src="../../../assets/images/image1097.png"/></span></p>
+  <p> </p>
+  <p><span style="font-size:17px;">       The added global parameter should be displayed in the API Model Parameters list as shown below.</span></p>
+  <p>       <img src="../../../assets/images/image1098.png"/></p>
+
+</body></html>

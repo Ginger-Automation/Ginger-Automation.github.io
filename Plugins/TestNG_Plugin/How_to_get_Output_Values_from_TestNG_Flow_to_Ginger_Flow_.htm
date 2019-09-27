@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../..";
+  gCommonRootRelPath = "../..";
+  gTopicId = "5.4.4.0_5";
+
+//]]></script>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>How to get Output Values from TestNG Flow to Ginger Flow?</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Plugins:TestNG Plugin"/></head>
+<body>
+  <h1>How to get Output Values from TestNG Flow to Ginger Flow?</h1>
+  <p><span style="font-size:17px;">TestNG plugin supports getting output values from the TestNG Flow.<br/>
+      It been done by parsing all values which the TestNG flow write to the Console during execution, the parsing mechanism looks for any “key=value” pair and if it been found so the Key <br/>
+      and Value been added to the Action Output Values list.</span></p>
+  <p><span style="font-size:17px;">TestNG plugin also supports getting all the Errors which been written to the Console during TestNG Flow execution and Fail the Ginger Action in case Error exist. <br/>
+      For enabling it you should check the “Fail Action Due To Console Errors”</span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong>How to Get Output Values from TestNG Flow to Ginger Flow?</strong></span></p>
+  <p><span style="font-size:17px;"><strong></strong><br/>
+      <strong>1.    Prepare the TestNG Flow Code for Sharing Output Values</strong><br/>
+          a.    Open the Java project in Eclipse or other IDE<br/>
+          b.    Look for the places in code (either tested class methods or actual test methods) which in them you have value that can be shared with Ginger during execution<br/>
+          c.    In each such place, add “System.out.println()” line of code with the Value key name equal to the value need to be shared, see sample below:<br/>
+              <img src="../../assets/images/image1266.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong>2.    Configure Ginger TestNG Plugin Action to Read Output Values</strong><br/>
+          a.    Configure any one of the TestNG Actions configurations<br/>
+          b.    For the Action to read and parse the Console outputs, check the “Parse Console Outputs” check box<br/>
+          c.    After execution end, go to Action “Output Values” tab and see all output values which were parsed in run time<br/>
+          d.    Now you can set Validations on top of those values or pass them to Variables/Data Source or other to be used in next Actions/other in the Ginger flow</span><br/>
+              <img src="../../assets/images/image1267.png"/></p>
+
+</body></html>

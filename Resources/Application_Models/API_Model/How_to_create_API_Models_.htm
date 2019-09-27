@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../..";
+  gCommonRootRelPath = "../../..";
+  gTopicId = "5.1.1.0_2";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>How to create API Models?</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="API Model"/></head>
+<body>
+  <h1>How to create API Models?</h1>
+  <p><span style="font-size:17px;"><strong>1.    Introduction</strong><br/>
+              •    Auto Pilot is a new machine-learning based testing automation functionality.<br/>
+                   It reduces automatic test flows creation time and helps improve our customers’ quality and time to market.<br/>
+              •    Auto Pilot functionalities enables automatic modelling/learning of application capabilities in 4 model areas – front-end (UI), middle <br/>
+                   layer (APIs), back-end processes and database.<br/>
+             •    Auto Pilot automatically learn &amp; store all relevant definitions and capabilities for subsequent automation and reuse in progression <br/>
+                  automation, users can easily create automated test flows and reduce the efforts of future automation maintenance.</span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong>2.    How to create API Models?</strong><br/>
+               1)    Under the Resources tab, click on the API Model link. Under the Applications Models tab, click on the API Models link as shown <br/>
+                     below to get the API Model panel.</span></p>
+  <p><span style="font-size:17px;">                 <img src="../../../assets/images/image798.png"/>  </span></p>
+  <p><span style="font-size:17px;">         2)    Click on the Add button as shown below</span></p>
+  <p><span style="font-size:17px;">                    <img src="../../../assets/images/image799.png"/></span></p>
+  <p><span style="font-size:17px;">     <strong>2.1. How to import WSDL?</strong></span></p>
+  <p><span style="font-size:17px;">          1.    In the below window, enter the API url in the URL text field. Click on the ‘Load’ button to get the API loaded. A message is                           displayed “The File is Loaded successfully”. </span></p>
+  <p><span style="font-size:17px;">                    <img src="../../../assets/images/image800.png"/></span></p>
+  <p><span style="font-size:17px;">         2.    Preview button is displayed after the API gets loaded. Click on it to get the Preview of the API. Click on the Next button.</span></p>
+  <p><span style="font-size:17px;">                 <img src="../../../assets/images/image801.png"/></span></p>
+  <p>                   <img src="../../../assets/images/image802.png"/>    </p>
+  <p><span style="font-size:17px;"><br/>
+               3.    The xmls name, description &amp; Request body is displayed. <br/>
+                       As shown below 4 APIs are read from the wsdl.<br/>
+                       Select the desired API and Click on the Finish button.</span><br/>
+                       <img src="../../../assets/images/image803.png"/></p>
+  <p><span style="font-size:17px;">         4.    The APIs get added as shown below</span></p>
+  <p>                    <img src="../../../assets/images/image804.png"/></p>
+  <p><span style="font-size:17px;">           <br/>
+         <strong> 2.2. How to import JSON file?</strong></span></p>
+  <p><span style="font-size:17px;">          1.    In the below API model wizard, select in the API Type as ‘JSON Templates’ and add the files using the ‘+’ button in the <br/>
+                       Request Templates section.</span></p>
+  <p>                    <img src="../../../assets/images/image805.png"/></p>
+  <p><span style="font-size:17px;"><br/>
+                2.    Multiple JSON file can be added to the wizard. Click on the Next button.</span></p>
+  <p><span style="font-size:17px;">                    <img src="../../../assets/images/image806.png"/></span></p>
+  <p> </p>
+  <p><span style="font-size:17px;">          3.    In the below screen, user can select the desired API using the ‘Selected’ check box. Description can also be entered.<br/>
+                       Click on the Next button.</span></p>
+  <p>                  <img src="../../../assets/images/image807.png"/></p>
+  <p><span style="font-size:17px;">          4.    In the below screen, user can add sample JSON files if required using the ‘+; button. The values from the sample files will be <br/>
+                       considered as optional values. Click on the Next button.</span></p>
+  <p>                  <img src="../../../assets/images/image808.png"/></p>
+  <p><span style="font-size:17px;"><br/>
+                 5.    As shown below  select the desired target application, in this case its ‘MyWebServciesApp’. User can add Tags if required. <br/>
+                       The tags are populated as per Tags created on the Solution tree node under Solution tab.  Click on the Finish button.</span></p>
+  <p><span style="font-size:17px;">                   <img src="../../../assets/images/image809.png"/></span><br/>
+     </p>
+  <p><span style="font-size:17px;">          6.    The API will be added as shown below.<br/>
+                       <img src="../../../assets/images/image811.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                       As shown below, parameters from the JSON file are added under the Model Parameters tab. The values of the parameters from                      the same file are added as optional values.<br/>
+                      Output value if any will be displayed under the Output Values Template.<br/>
+                      <img height="257" src="../../../assets/images/image812.png" width="855"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong>   2.3.  How to import Swagger file?</strong></span></p>
+  <p><span style="font-size:17px;">          1.    In the below API model wizard, select in the API Type as ‘Swagger (Open API) document’ and add the files using the ‘+’ button                   in the Request Templates section.</span></p>
+  <p><span style="font-size:17px;">                <img src="../../../assets/images/image813.png"/><br/>
+                             </span><br/>
+    <span style="font-size: 17px;">          2.    Click on the Load button, only after which the Next button will be enabled. Click on the Next button.</span><span style="font-size:17px;"></span></p>
+  <p>                 <img src="../../../assets/images/image814.png"/></p>
+  <p> </p>
+  <p><span style="font-size:17px;">          3.    As shown below, the list of APIs with description from the document is displayed. User can de-select an  API as per requirement.                  Click on the Next button.<br/>
+                      <img src="../../../assets/images/image815.png"/></span></p>
+  <p><span style="font-size:17px;">          4.    As shown below, the user can add sample request files if required by clicking on the + button. The values from the sample file                        will be considered as optional values. Click on the Next button.</span></p>
+  <p><span style="font-size:17px;">                 <img src="../../../assets/images/image816.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                5.    As shown in below screen, select the Target application as ‘MyWebServicesApp’. Tag can also be added. Tags added in the                            Solution tab will be displayed here for selection. Click on the Finish button.</span><br/>
+                    <img src="../../../assets/images/image817.png"/></p>
+  <p><span style="font-size:17px;">         6.    As shown below, all the APIs will be added under the API Model tree</span></p>
+  <p><span style="font-size:17px;">              <img src="../../../assets/images/image818.png"/></span><br/>
+     </p>
+  <p><span style="font-size:17px;">  <strong>2.4.  How to import from XML?</strong></span></p>
+  <p><span style="font-size:17px;">         1.    In the below API model wizard, select in the API Type as ‘XML Templates’ and add the files using the ‘+’ button in the Request                    Templates section. Multiple XML files can be added to the wizard . Click on the Next button.</span></p>
+  <p><span style="font-size:17px;">                  <img src="../../../assets/images/image819.png"/><br/>
+                     </span><span style="font-size:17px;"><br/>
+                2.    As shown in the below screen, user can select the desired API using the ‘Selected’ check box. Description can also be entered.<br/>
+                      Click on the Next button.</span></p>
+  <p><span style="font-size:17px;">                <img src="../../../assets/images/image820.png"/></span></p>
+  <p><span style="font-size:17px;"></span><span style="font-size:17px;"><br/>
+                3.    As shown below, user can add sample XML files if required using the ‘+; button. The values from the sample files will be                               considered as optional values. Click on the Next button.</span></p>
+  <p>                  <img src="../../../assets/images/image821.png"/>  </p>
+  <p><span style="font-size:17px;">          </span><span style="font-size:17px;">4.    As shown below  select the desired target application, in this case its ‘MyWebServciesApp’. User can add Tags if required. The                      tags are populated as per Tags created on the Solution tree node under Solution tab.  Click on the Finish button.</span></p>
+  <p><span style="font-size:17px;">                <img src="../../../assets/images/image822.png"/></span></p>
+  <p><span style="font-size:17px;">          5.    The API will be added as shown below.<br/>
+                         <img src="../../../assets/images/image823.png"/></span></p>
+  <p><span style="font-size:17px;">                 As shown below, parameters from the XML file are added under the Model Parameters tab. The values of the parameters from                      the same file are added as optional values. Output value if any will be displayed under the Output Values Template.<br/>
+                       <img src="../../../assets/images/image824.png"/><br/>
+            </span></p>
+  <p><span style="font-size:17px;"></span><br/>
+     </p>
+  <p><span style="font-size:17px;"></span></p>
+  <p> </p>
+
+</body></html>

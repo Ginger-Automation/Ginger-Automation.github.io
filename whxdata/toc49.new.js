@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"How_to_ue_BDD_(Gherkin)_with_Ginger","type":"book","key":"toc50"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../../..";
+  gCommonRootRelPath = "../../../..";
+  gTopicId = "3.1.1.3.1_16";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Text File Operations</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="General Actions"/></head>
+<body>
+  <h1>Text File Operations</h1>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">How to Configure Action</strong><br/>
+                            <br/>
+          1)    Go to Automate tab. In the Activity Actions, click on ‘Add New’ button<br/>
+                  <img src="../../../../assets/images/image902.png"/></span></p>
+  <p><span style="font-size:17px;">   <br/>
+          2)    Go to the ‘General Actions’ tab and select the ‘Text File Operations’ then click on ‘Add Action’ button given in the below window<br/>
+                   <img src="../../../../assets/images/image903.png"/></span></p>
+  <p><span style="font-size:17px;">                     <br/>
+          3)    Below screen should be displayed.  <br/>
+                 Select the ‘OperationType’. Default option is Read. Other options are Write and Append.<br/>
+                ‘Encoding Type’ is available with default option as ‘UTF8’ and other options as ASCII, BigEndianUnicode, Unicode, UTF32 and UTF7.<br/>
+                Select the ‘Text File Path’ using the Browse button.<br/>
+                Click on Ok to add the action to the Activity Actions.</span></p>
+  <p>           <img src="../../../../assets/images/image904.png"/></p>
+
+</body></html>

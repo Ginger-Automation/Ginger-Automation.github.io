@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../..";
+  gCommonRootRelPath = "../..";
+  gTopicId = "8.1.0_4";
+
+//]]></script>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Configure ALM Items Fields</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css"/>
+  <meta name="topic-comment" content="How to configure the ALM Items Fields in Ginger"/>
+<meta name="rh-index-keywords" content="QC/JIRA/RQM Integration"/></head>
+<body>
+  <p align="center" class="MsoTitle" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:20pt"><span style="font-family:Calibri,sans-serif"><span style="color:#0f243e"><span style="letter-spacing:-0.5pt"><span style="font-weight:bold"><span style="font-size:16.0pt"><span style="font-family:&quot;Century Gothic&quot;,sans-serif"><sup></sup></span></span></span></span></span></span></span></p>
+  <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:16.0pt"><span style="font-family:&quot;Century Gothic&quot;,sans-serif"><span style="color:#e36c0a"><span style="letter-spacing:-.5pt"></span></span></span></span></b></span></span></p>
+  <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"> </p>
+  <h1>Configure ALM Items Fields</h1>
+  <p><span style="font-size:16px;"><span style="font-family:Calibri;">Ginger allows to configure the ALM Test Case and Test Set items fields’ value to be updated when doing export from Ginger to ALM.</span></span></p>
+  <p><span style="font-size:16px;"><span style="font-family:Calibri;">For configuring the items fields values:<br/>
+        1.    Click on “ALM” button from the menu</span></span></p>
+  <p><span style="font-size:16px;"><span style="font-family:Calibri;">      <img src="../../assets/images/image219.png"/><br/>
+        2.    Select “ALM Items Fields Configuration”<br/>
+        3.    “ALM Items Fields Configuration” window will open<br/>
+        4.    Click on “Refresh” button (near the search) in order to refresh ALM Items Fields Configurations from ALM.<br/>
+            Note that Refreshing ALM Items Fields Configurations from RQM ALM can take several hours, you can close “ALM Items Fields Configuration” during that process, but the computer and Ginger software must stay open.</span></span></p>
+  <p><span style="font-size:16px;"><span style="font-family:Calibri;"><br/>
+         <img src="../../assets/images/image7.png"/></span></span></p>
+  <p><span style="font-size:16px;"><span style="font-family:Calibri;"><br/>
+        5.    For fields you want their value to be updated during export:<br/>
+        a.    Check the “To Update” checkbox<br/>
+        b.    Select value from list or set the value (in case of free text field) in “Selected Value” column<br/>
+        6.    Click on “Save” button to save the configurations. <br/>
+        <strong>   Note:</strong><br/>
+           •    Only fields which “To Update” field will be checked for will be saved<br/>
+           •    Fields which are “Mandatory” will be updated during the export process even if they will be un-checked (with default value)</span></span></p>
+
+</body></html>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../..";
+  gCommonRootRelPath = "../../..";
+  gTopicId = "5.1.2.0_1";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>How to assign value to the Global Parameter</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Global Parameters"/></head>
+<body>
+  <h1>How to assign value to the Global Parameter?</h1>
+  <p><span style="font-size:17px;">    Global parameters can have 2 values viz Optional and Current.<br/>
+          The difference between the two is that the optional value is static and does not change even after the API Action is run.  <br/>
+          The Current value is can either be given manually or can be updated during the execution.<br/>
+          <br/>
+      <strong style="font-size: 20px">    1.     How to assign Optional values?</strong> </span></p>
+  <p><span style="font-size:17px;">          1.    Click on the button near the Optional Values as shown below.<br/>
+                     <img src="../../../assets/images/image1057.png"/></span></p>
+  <p><span style="font-size:17px;">          2.    Click on the + button in the new window as shown below.<br/>
+                      <img src="../../../assets/images/image1058.png"/></span></p>
+  <p><span style="font-size:17px;">          3.    An entry will added in the grid. Enter a value in it and click on the Ok button of the window.</span></p>
+  <p><span style="font-size:17px;">                <img src="../../../assets/images/image1059.png"/>  </span></p>
+  <p><span style="font-size:17px;"><br/>
+                4.    User can add multiple such values. User can also make the added value as default by selecting the ‘Default’ radio button. </span></p>
+  <p><span style="font-size:17px;">    <br/>
+                5.    The values will be displayed as shown below.</span></p>
+  <p><span style="font-size:17px;">                 <img src="../../../assets/images/image1060.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong style="font-size: 20px">    2.     How to assign Current value? </strong><br/>
+               <br/>
+                1.    From the Global Parameter tab :-<br/>
+                       Enter the current value in the text box as shown below.</span></p>
+  <p><span style="font-size:17px;">                <img src="../../../assets/images/image1061.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                2.    From the Action:-<br/>
+                      a)    Run the Action once so that values are populated in the Output values tab. <br/>
+                            Click on the ‘Store To’ drop down.<br/>
+                            <img src="../../../assets/images/image1062.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                     b)    Select the ApplicationModelParameter option.</span></p>
+  <p><span style="font-size:17px;">                       <img src="../../../assets/images/image1063.png"/></span></p>
+  <p><span style="font-size:17px;"> <br/>
+                     c)    Click on the ‘{NewGlobalParameter}’  drop down to select the desired parameter.<br/>
+                            Dropdown is displayed only when there are multiple global parameters added from the ‘Global Parameter’ tab.<br/>
+                            Click on the Ok button of the Action edit window.</span><br/>
+                           <img src="../../../assets/images/image1064.png"/></p>
+  <p> </p>
+  <p><span style="font-size:17px;">               d)    When this Action sis run, the selected global parameter is updated with the output value and will be its current value.</span></p>
+  <p><span style="font-size:17px;">                      </span><span style="font-size:17px;">As shown is the below example, the Actual value “4.0.30319” will be stored in the global parameter GP1 which will be its current value.</span><br/>
+                          <img src="../../../assets/images/image1066.png"/></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong style="font-size: 20px">    3.     How to import optional values from Excel file?</strong><br/>
+       <br/>
+                1.    Select the ‘Source Type’ as Excel.<br/>
+                2.    Click on the Browse button and select the path of the excel file.<br/>
+                3.    Click on the Template button. This will open the file with a sheet by name same as the API model name. The sheet will have the                    format in which the values need to be entered.</span></p>
+  <p><span style="font-size:17px;">              <img src="../../../assets/images/image1067.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+              4.    Enter the values in the given format. Eg. as shown below values in row no. 2 are entered manually. Row no. 1 was the heading provided in the template.<br/>
+                  <strong>Note:- </strong>The parameter name is case sensitive. Hence only the exact matched parameters will be added.</span></p>
+  <p><span style="font-size:17px;">               <img src="../../../assets/images/image1068.png"/></span></p>
+  <p> </p>
+  <p><span style="font-size:17px;">        5. If Template button was clicked and entries were created in the new sheet then user has to browse the file again to get the latest sheet.<br/>
+                  Select the template Sheet from the drop down <br/>
+                      <img src="../../../assets/images/image1069.png"/></span></p>
+  <p><span style="font-size:17px;">        6. ‘Select Row(s) Where’ field is displayed. The user can give any condition if required in this field.</span></p>
+  <p><span style="font-size:17px;">              <img src="../../../assets/images/image1071.png"/></span></p>
+  <p><span style="font-size:17px;">            If user wants to filter a field that has space in its name then use the below format:-<br/>
+                  Name in square brackets.<br/>
+                  [Name]</span></p>
+  <p><span style="font-size:17px;">            <img src="../../../assets/images/image1072.png"/></span></p>
+  <p><span style="font-size:17px;">        7. Click on the ‘View All Data’ button to view the content in the sheet. Click on the ‘View Filtered <br/>
+                  Data’ button to view the data that is filtered after applying the given condition.<br/>
+                  Click on the Next button once parameters are viewed.</span></p>
+  <p><span style="font-size:17px;">            <img src="../../../assets/images/image1073.png"/></span></p>
+  <p><span style="font-size:17px;">        8.  The below screen is displayed which will display the list of available parameters that can be added.    <br/>
+                  Select the desired parameters and click on the Finish button.<br/>
+                   <img src="../../../assets/images/image1074.png"/></span></p>
+  <p><span style="font-size:17px;">        9. Click on the Ok button of the message box.<br/>
+                  <img src="../../../assets/images/image1075.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+              10. As shown below all the optional values from the Excel file get added to the respective parameter names.<br/>
+                  <img src="../../../assets/images/image1076.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong style="font-size: 20px">    4.     How to import optional values from Database?</strong></span></p>
+  <p><span style="font-size:17px;">           1.    In the ‘Source Type’ select the Database option.<br/>
+                       There are 2 options, Oracle and MSAccess.<br/>
+                         <img src="../../../assets/images/image1077.png"/>  </span></p>
+  <p><span style="font-size:17px;">          2.    For Oracle Database, enter the connection string, user id and password. Click on the Connect button.<br/>
+                      <img src="../../../assets/images/image1078.png"/></span></p>
+  <p> </p>
+  <p><strong><span style="font-size:20px">    5.     How to Export optional values to an Excel file?</span></strong></p>
+  <p><span style="font-size:17px;">            1.    Go to Resources-&gt; Applications Models-&gt; Models Global Parameters tab.<br/>
+                  2.    Click on the ‘Export Parameters to Excel File’ button.</span></p>
+  <p><span style="font-size:17px;">                  <img height="262" src="../../../assets/images/image1079.png" width="841"/></span></p>
+  <p><span style="font-size:17px;">           3.    A message is displayed on successful export.<br/>
+                      <img src="../../../assets/images/image1080.png"/></span></p>
+  <p><span style="font-size:17px;">           4.    The file is opened on clicking the Ok button of the above message.<br/>
+                        <strong>This file is stored in the Documents folder of the local PC.</strong></span></p>
+  <p><span style="font-size:17px;">                    <img src="../../../assets/images/image1081.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong style="font-size: 20px">    6.     How to Export optional values to Data Source?</strong></span></p>
+  <p><span style="font-size:17px;">             1.    Go to Resources-&gt; Applications Models-&gt; Models Global Parameters tab <br/>
+                   2.    Click on the ‘Export Parameters to DataSource’ button.<br/>
+                           <img src="../../../assets/images/image1082.png"/><br/>
+                                  </span></p>
+  <p><span style="font-size:17px;">        3.    Data Source tables are displayed in tree format. Parameters values can be exported to only customized table and hence only the                      customized table in the data source are displayed in the window.<br/>
+                    Click on the desired table and then click on the Select button.</span></p>
+  <p>                <img src="../../../assets/images/image1083.png"/></p>
+  <p> </p>
+  <p>  <span style="font-size:17px;">      4.    A message is displayed on successful export.</span></p>
+  <p><span style="font-size:17px;">                <img src="../../../assets/images/image1084.png"/> </span></p>
+  <p><span style="font-size:17px;"><br/>
+              5.    Go to Resources-&gt; Data Sources. Right click on the GingerDataSource node and select refresh button. <br/>
+                    Or right click on the Customized table node and select refresh button.<br/>
+                    The exported data is displayed after the refresh is done.</span></p>
+  <p>               <img src="../../../assets/images/image1085.png"/></p>
+  <p> </p>
+
+</body></html>

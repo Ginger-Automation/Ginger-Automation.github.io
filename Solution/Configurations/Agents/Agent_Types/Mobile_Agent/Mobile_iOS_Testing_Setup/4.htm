@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../../../../..";
+  gCommonRootRelPath = "../../../../../..";
+  gTopicId = "3.2.1.1.1.2.0_1";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Web (Safari Browser) Testing on Real Device Setup</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Mobile Agent"/></head>
+<body>
+  <h1>Web (Safari Browser) Testing on Real Device Setup</h1>
+  <p><span style="font-size:17px;">If you’re interested in automating your web app in Mobile Safari on iOS Appium can help you. Basically, you write a normal WebDriver test, and use Appium as the Selenium server with a special set of desired capabilities.</span></p>
+  <p><span style="font-size:17px;"><br/>
+          Appium use the SafariLauncher App to launch Safari and run tests against mobile Safari. Once Safari has been launched the Remote Debugger automatically connects using the ios-webkit-debug-proxy. <br/>
+         <strong> Prerequisites:</strong><br/>
+           • iOS Development account with iOS App Development &amp; Distribution certificates<br/>
+           • ios-webkit-debug-proxy installed on the Appium server machine (see below)</span></p>
+  <p><span style="font-size:17px;">              </span><span style="font-size:11pt"><span style="line-height:115%"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:12.0pt"></span></b><b><span style="font-size:12.0pt"><span style="line-height:115%">Install iOS Web Proxy</span></span></b></span></span></span><span style="font-size:11pt"><span style="line-height:115%"><span style="font-family:Calibri,sans-serif"><span style="font-size:12.0pt"></span><span style="font-size:12.0pt"><span style="line-height:115%"></span></span></span></span></span></p>
+  <p><span style="font-size:11pt"><span style="line-height:115%"><span style="font-family:Calibri,sans-serif"><span style="font-size:12.0pt"><span style="line-height:115%">                    a. Go to the Mac main menu bar -&gt; “Utilities” -&gt; “Terminal” </span></span></span></span></span></p>
+  <p><span style="font-size:11pt"><span style="line-height:115%"><span style="font-family:Calibri,sans-serif"><span style="font-size:12.0pt"><span style="line-height:115%">                    b. </span></span></span></span></span><span style="font-size:11pt"><span style="line-height:115%"><span style="font-family:Calibri,sans-serif"><span style="font-size:12.0pt"></span><span style="font-size:12.0pt"><span style="line-height:115%">Type and run below command:</span></span></span></span></span></p>
+  <p style="margin-left:1.0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><i><span style="font-size:12.0pt">            brew install ios-webkit-debug-proxy</span></i></span></span></p>
+  <ol start="3" style="list-style-type:lower-alpha">
+    <li style="margin-top:0in; margin-right:0in; margin-bottom:10.0pt; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="line-height:115%"><span style="tab-stops:94.5pt"><span style="font-family:Calibri,sans-serif"><i><span style="font-size:12.0pt"></span></i><span style="font-size:12.0pt"><span style="line-height:115%">Make sure installation ended successfully<i></i></span></span></span></span></span></span></li>
+    <li style="margin-top:0in; margin-right:0in; margin-bottom:10.0pt; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="line-height:115%"><span style="font-family:Calibri,sans-serif"><span style="font-size:12.0pt"></span><span style="font-size:12.0pt"><span style="line-height:115%">More details on iOS Web Proxy can be found in:</span></span></span></span></span></li>
+  </ol>
+  <p style="margin-left:1.0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">           <a href="https://github.com/google/ios-webkit-debug-proxy" style="color:blue; text-decoration:underline"><span style="font-size:12.0pt">https://github.com/google/ios-webkit-debug-proxy</span></a><span style="font-size:12.0pt"></span></span></span></p>
+  <p>                         <span style="font-size:11.0pt"><span style="font-family:&quot;Calibri&quot;,sans-serif"><a href="http://appium.io/slate/en/master/?ruby#installation" style="color:blue; text-decoration:underline"><span style="font-size:12.0pt">http://appium.io/slate/en/master/?ruby#installation</span></a></span></span><span style="font-size:17px;"><br/>
+           <br/>
+          <strong style="font-size: 20px">1. Creating Provisioning Profile for SafariLauncher App</strong></span></p>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px"></strong><br/>
+               Note: New Provisioning Profile is needed only if existing one can’t be used. Usually an existing one can be used and just it list of                      included real devices need to be updated for it.<br/>
+               For creating a new Provisioning Profile:<br/>
+                  a.    Go to https://developer.apple.com/<br/>
+                  b.    Click on Member Center and login using your iOS Developer Account<br/>
+                  c.    Click on Certificates, Identifiers &amp; Profiles<br/>
+                         <img src="../../../../../../assets/images/image333.png"/><img src="../../../../../../assets/images/image312.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                 d.    Click on iOS Apps-&gt;Certificates<br/>
+                </span><span style="font-size:17px;"> e.    Validate your account has a valid iOS Development and iOS Distribution certificates<br/>
+                          <img src="../../../../../../assets/images/image334.png"/><img src="../../../../../../assets/images/image313.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                   f.    Create an App ID for SafariLauncher app (if existing one can’t be used):<br/>
+                         I.    Click on Identifiers-&gt; App IDs-&gt;Add<br/>
+                                 <img src="../../../../../../assets/images/image335.png"/><img src="../../../../../../assets/images/image314.png"/></span></p>
+  <p><span style="font-size:17px;"> <br/>
+                       II.    Give the App ID some Name to be identified in the App IDs list<br/>
+                      III.    Select Wildcard App ID radio button<br/>
+                      IV.    Set the Bundle ID as “*”<br/>
+                              <img src="../../../../../../assets/images/image336.png"/><img src="../../../../../../assets/images/image315.png"/><br/>
+                       V.    Click Continue<br/>
+                      VI.    Click Submit<br/>
+                     VII.    Click Done<br/>
+                    VIII.    Validate the new App ID was added to the list<br/>
+                               <img src="../../../../../../assets/images/image337.png"/><img src="../../../../../../assets/images/image316.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                 g.    Add your real device to the Devices list (in case it’s not already there):<br/>
+                        I.    Click on Devices-&gt; All-&gt;Add<br/>
+                               <img src="../../../../../../assets/images/image338.png"/><img src="../../../../../../assets/images/image317.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                       II.    Set the real device Name as it appear in step 2.2<br/>
+                      III.    Set the real device UDID as it appear in step 2.2<br/>
+                              <img src="../../../../../../assets/images/image339.png"/><img src="../../../../../../assets/images/image318.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                       IV.    Click on Continue<br/>
+                        V.    Click on Register<br/>
+                       VI.    Validate the device was added to the Devices list</span></p>
+  <p><span style="font-size:17px;">          h.    Create Provisioning Profile for the SafariLauncher app (if existing one can’t be used, for editing existing one just select it and click Edit button)<br/>
+                      I.    Click on Provisioning Profile-&gt;All-&gt;Add<br/>
+                            <img src="../../../../../../assets/images/image340.png"/><img src="../../../../../../assets/images/image319.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                     II.    Select Development -&gt; iOS App Development and click Continue<br/>
+                             <img src="../../../../../../assets/images/image342.png"/><img src="../../../../../../assets/images/image320.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                    III.    Select the wildcard App ID you created in step 1.f and click Continue<br/>
+                             <img src="../../../../../../assets/images/image343.png"/><img src="../../../../../../assets/images/image321.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                     IV.    Select your account iOS Distribution certificate and click Continue<br/>
+                      V.    Select your real device which was added in step 1.g (you can select all devices)<br/>
+                                 <img src="../../../../../../assets/images/image322.png"/> <img src="../../../../../../assets/images/image344.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                     VI.    Give your provisioning profile a Name which will be used to recognize it<br/>
+                               <img src="../../../../../../assets/images/image345.png"/><img src="../../../../../../assets/images/image323.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                    VII.    Click on Generate<br/>
+                   VIII.    Click on the Download button for downloading the Provisioning Profile file to your Mac machine (Downloads folder)<br/>
+                     IX.    Click on Done<br/>
+                      X.    Right click on the Provisioning Profile file which is on your Mac and select Open<br/>
+                     XI.    Noting visible supposed to happen<br/>
+                    XII.    Open the Provisioning Profile file in Text editor by<br/>
+                          1. Right click the file and click on Open With-&gt;Other…-&gt;TextEdit<br/>
+                               <img src="../../../../../../assets/images/image346.png"/><img src="../../../../../../assets/images/image324.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                          2.    Search for the TeamIdentifier and UUID (Provisioning Profile ID) keys in the text document<br/>
+                                 <img src="../../../../../../assets/images/image347.png"/><img src="../../../../../../assets/images/image325.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                          3.    Save those values for later use</span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong style="font-size: 20px">    2.    Sign and Install SafariLauncher App</strong><br/>
+              a.    Go to the Mac main menu bar Utilities-&gt; Terminal<br/>
+              b.    Type and run below command to get Appium source code:<br/>
+                      git clone https://github.com/appium/appium.git<br/>
+              c.    Validate it ended successfully<br/>
+              d.    Go to Appium source code folder by typing<br/>
+                     cd appium <br/>
+              e.    Type below command for building and signing SafariLauncher app<br/>
+                     ./reset.sh --ios --real-safari --code-sign &lt;&lt;the_TeamIdentifier_Key_from step_4.2.XII&gt;&gt; --profile &lt;&lt;the_UUID_Key_from         step_4.2.XII&gt;&gt; --verbose<br/>
+                      <img src="../../../../../../assets/images/image348.png"/><img src="../../../../../../assets/images/image326.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+              f.    Make sure it ended successfully<br/>
+                       <img src="../../../../../../assets/images/image327.png"/><img src="../../../../../../assets/images/image349.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+              g.    In case running Appium using the Appium.App, need to copy the built &amp; signed SafariLauncher app into it:<br/>
+                    I.    Open “Finder” and go to the appium source files build folder- supposed to be located in “/Users/&lt;&lt;MAC_USER_NAME&gt;&gt;/appium/build”<br/>
+                   II.    Copy “SafariLauncher” folder which in it<br/>
+                         <img src="../../../../../../assets/images/image350.png"/><img src="../../../../../../assets/images/image328.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                  III.    Go to the Appium.App “Build” folder by right click on the “Appium” app in “Applications” folder, choose “Show Package                            </span><span style="font-size:17px;"> Contents” and go to “/Applications/Appium.app/Contents/Resources/node_modules/appium/build”<br/>
+                        <img src="../../../../../../assets/images/image351.png"/>   <img src="../../../../../../assets/images/image329.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                   IV.    Paste the “SafariLauncher” folder into it</span><br/>
+                         <img src="../../../../../../assets/images/image352.png"/><img src="../../../../../../assets/images/image330.png"/></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong style="font-size: 20px">  3.  Prepare Appium Server for Web Testing</strong></span></p>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px"></strong><br/>
+               To allow Web (Safari) testing’s, the ios-web-proxy need to run for the specific tested real device in parallel to Appium server:<br/>
+                  a.    Go to the Mac main menu bar Utilities-&gt; Terminal<br/>
+                  b.    Type and run below command to run ios-webkit-debug-proxy:<br/>
+                          ios_webkit_debug_proxy –c &lt;&lt;REAL_DEVICE_UDID_founded in step 2.2&gt;&gt;:27753 –d<br/>
+                          <img src="../../../../../../assets/images/image353.png"/><img src="../../../../../../assets/images/image331.png"/><br/>
+                  c.    Validate no error showing<br/>
+                  d.    Leave the Terminal window open- ios-webkit-debug-proxy is running!<br/>
+                  e.    Launch Appium server according to steps in section 1.3</span></p>
+  <p> </p>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">   4.  Launch and Test Safari Browser Using Ginger</strong><br/>
+                  a.    Launch Ginger (on the Windows machine which is in the same network like the Appium Mac machine)<br/>
+                  b.    Create Business Flow with the Mobile platform<br/>
+                  c.    Add new Agent, give it logical name and select the MobileAppiumIOSBrowser driver<br/>
+                          <img src="../../../../../../assets/images/image354.png"/><img src="../../../../../../assets/images/image332.png"/><br/>
+                  d.    Define the Agent Driver Configurations as follow:<br/>
+                      1.    StartAppiumServerAutomatically – “false” or “true” if you want Ginger to start Appium server automatically.<br/>
+                      2.     AppiumServerIP – set IP value for Appium server.<br/>
+                      3.    AppiumServerPort – Set specific port or “dynamic” if you wish Ginger to allocate free port for appium server.<br/>
+                      4.    AppiumInstallationFolderPath - if StartAppiumServerAutomatically is set to “true” - insert your Appium installation folder path here.<br/>
+                      5.    AppiumServer – is Deprecated – keep empty and use AppiumServerIP and AppiumServerPort instead.<br/>
+                      6.    DeviceName: Any Device name<br/>
+                      7.    DevicePlatformVersion: Real device platform version <br/>
+                      8.    DeviceID: the device ID you found in &quot;Mobile iOS Testing  Device Setup&quot; file<br/>
+                      9.    In case the tested app is installed on the device:<br/>
+                          InstalledAppPackage: The tested app Package found in step 1.d of &quot;Native/Hybrid App Testing on Real Device Setup&quot; file<br/>
+                          InstalledAppActivity: The tested app Package found in step 1.d <span style="font-size:17px;">of &quot;Native/Hybrid App Testing on Real Device Setup&quot; file</span><br/>
+                          Else, in case using the tested app APK file:<br/>
+                          AppInstallerPath: The full path to the tested app APK file on the Appium server machine.<br/>
+                            <img src="../../../../../../assets/images/image355.png"/><img src="../../../../../../assets/images/image333.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                  e.    Save the Agent settings<br/>
+                  f.    Select the Business Flow created in step b and shift to the Automate tab<br/>
+                  g.    Select the Agent created in step c from the Agents selection in the ribbon<br/>
+                  h.    Click on Launch Agent<br/>
+                  i.    If you choose to start Appium Manually: Make sure that the connection request got to the Appium server, you supposed to see                         </span><span style="font-size:17px;">something like this in screen shot below<br/>
+                       <img src="../../../../../../assets/images/image356.png"/><img src="../../../../../../assets/images/image334.png"/><br/>
+                  j.    Once the connection establish the Safari app supposed to be launched on the tested device and the Appium Mobile Driver                                </span><span style="font-size:17px;">Window supposed to appear on Ginger and allow you to execute Selenium Web Driver actions on it</span></p>
+  <p>                  <img src="../../../../../../assets/images/image335.png"/></p>
+  <p>                    <img src="../../../../../../assets/images/image357.png"/></p>
+
+</body></html>

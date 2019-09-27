@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../..";
+  gCommonRootRelPath = "../../..";
+  gTopicId = "5.1.1.0_5";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>How to Import optional values for parameters offline?</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="API Model"/></head>
+<body>
+  <h1>How to Import optional values for parameters offline?</h1>
+  <p><span style="font-size:17px;">Select the desired API and go to the Model Parameters tab.<br/>
+      Click on the ‘Import Optional Values For Parameters’ button.<br/>
+       <br/>
+      <strong> 1. How to import optional values from Excel file?</strong><br/>
+       <br/>
+           a.    Select the ‘Source Type’ as Excel.<br/>
+           b.    Click on the Browse button and select the path of the excel file.<br/>
+           c.    Click on the Template button. This will open the file with a sheet by name same as the API model name. The sheet will have the format in which the values need to be entered.</span></p>
+  <p><span style="font-size:17px;">              <br/>
+           e.    Enter the values in the given format. Eg. as shown below values in row no. 2 are entered manually. Row no. 1 was the heading provided in the template.<br/>
+              Note:- The parameter name is case sensitive. Hence only the exact matched parameters will be added.</span></p>
+  <p><span style="font-size:17px;"><br/>
+           f. If Template button was clicked and entries were created in the new sheet then user has to <br/>
+               browse the file again to get the latest sheet.<br/>
+               Select the template Sheet from the drop down <br/>
+            </span></p>
+  <p><span style="font-size:17px;">     g. ‘Select Row(s) Where’ field is displayed. The user can give any condition if required in this field.</span></p>
+  <p><span style="font-size:17px;">        </span></p>
+  <p><span style="font-size:17px;">        If user wants to filter a field that has space in its name then use the below format:-<br/>
+              Name in square brackets.<br/>
+              [Name]</span></p>
+  <p><span style="font-size:17px;">     h. Click on the ‘View All Data’ button to view the content in the sheet. Click on the ‘View Filtered <br/>
+               Data’ button to view the data that is filtered after applying the given condition.<br/>
+               Click on the Next button once parameters are viewed.</span></p>
+  <p><span style="font-size:17px;">     </span></p>
+  <p><span style="font-size:17px;">     i.  The below screen is displayed which will display the list of available parameters that can be added.    <br/>
+               Select the desired parameters and click on the Finish button.<br/>
+                   </span></p>
+  <p><span style="font-size:17px;">     j. Click on the Ok button of the message box.<br/>
+            </span></p>
+  <p><span style="font-size:17px;"><br/>
+           k. As shown below all the optional values from the Excel file get added to the respective parameter names.<br/>
+              </span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong>2. How to import optional values from Database?</strong></span></p>
+  <p><span style="font-size:17px;">     a.    In the ‘Source Type’ select the Database option.<br/>
+              There are 2 options, Oracle and MSAccess.<br/>
+       <br/>
+           b.    For Oracle Database, enter the connection string, user id and password. Click on the Connect button.<br/>
+              Free SQL field is populated once the connection is successful.<br/>
+              Enter the desired query in it and click on Next button.</span></p>
+  <p><span style="font-size:17px;">        Examples of Oracle string:-<br/>
+              TNS\Host\File Path : <br/>
+              Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=illin056)(PORT=1521))(CONNECT_DATA=(sid=ATSTSTDB)));User Id=GingerTST;<br/>
+              Password=GingerTST; <br/>
+              TNS\Host\File Path :  DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=illin056)(PORT=1521))(CONNECT_DATA=(sid=ATSTSTDB)))</span></p>
+  <p><span style="font-size:17px;"><br/>
+      3.    The result of the query is displayed. The fields are displayed and not the values stored in the fields. Click on the Finish button to add the values. </span></p>
+  <p><span style="font-size:17px;"></span></p>
+  <p><span style="font-size:17px;">4.    It will display a message giving the number of parameters updated</span></p>
+
+</body></html>

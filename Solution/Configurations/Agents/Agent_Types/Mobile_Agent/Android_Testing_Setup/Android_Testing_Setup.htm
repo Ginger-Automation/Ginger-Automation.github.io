@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../../../../..";
+  gCommonRootRelPath = "../../../../../..";
+  gTopicId = "3.2.1.1.1.1.0_2";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Android Testing Setup on Appium Server</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Android Agent"/></head>
+<body>
+  <h1>Android Testing Setup on Appium Server</h1>
+  <p><span style="font-size:17px;">These steps will allows Ginger to run tests on an USB connected Android device using Appium.</span></p>
+  <p> </p>
+  <p><span style="font-size:17px;"><strong><span style="font-size:20px;"> Pre-requisites</span></strong><br/>
+          i)    Ginger need to be installed on a Windows operating system machine.</span></p>
+  <p><span style="font-size:17px;">    ii)    In server can be installed on:<br/>
+                 Windows OS that supports .NET Framework 4.5.1<br/>
+                         1.    Windows Vista SP2<br/>
+                         2.    Windows 7 SP1<br/>
+                         3.    Windows Server 2008 SP2<br/>
+                         4.    Windows Server R2 SP1<br/>
+                         5.    Windows Server 2012</span></p>
+  <p><span style="font-size:17px;"><br/>
+         iii)    Ginger Windows machine and Appium server machine must be located on the same network (can ping each other)<br/>
+         iv)    Admin user to the Ginger Windows’s machine and Appium server machine is required for installations<br/>
+       <br/>
+      <strong style="font-size: 20px">Ginger- Appium Connection Diagram</strong></span></p>
+  <p><span style="font-size:17px;">            <img src="../../../../../../assets/images/image320.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong style="font-size: 20px">Appium Server Installation</strong><br/>
+              All installation steps need to be done on the Appium sever machine using an Admin user.</span></p>
+  <p><span style="font-size:17px;">     <strong>   1.    On Windows Machine</strong><br/>
+                   1.1    Windows: Install Appium Prerequisites for Windows<br/>
+                         1.1.1  Install latest Java JDK:<br/>
+                                  a.    Download the latest Java JDK version from below link (which fits to OS type 32/64 bit):  <br/>
+                                         http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html<br/>
+                                         <img src="../../../../../../assets/images/image321.png"/><img src="../../../../../../assets/images/image244.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                                  b.    Double click and install it- Make sure Java JDK is saved in a folder that is accessible to all users (e.g. “C:\Program                                                  Files\Java\jdk1.8.0_25”)</span></p>
+  <p> </p>
+  <p><span style="font-size:17px;">                   1.1.2  Install Android SDK:<br/>
+                                 a.    Download the latest Android Studio (SDK is included) from http://developer.android.com/sdk/installing/index.html<br/>
+                                        <img src="../../../../../../assets/images/image322.png"/><img src="../../../../../../assets/images/image245.png"/><br/>
+                                 b.    Run it - Make sure Android SDK is saved in a folder that is accessible to all users (e.g.  “C:\Android\Android SDK”)</span></p>
+  <p><span style="font-size:17px;"><br/>
+                         1.1.3    Set the Environment Variables:<br/>
+                                a.    Go to Control Panel-&gt; System and Security-&gt; System-&gt;Advanced system settings<br/>
+                                        <img src="../../../../../../assets/images/image323.png"/><img src="../../../../../../assets/images/image246.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                                b.    Go to Advanced tab-&gt;Environment Variables…<br/>
+                                       <img src="../../../../../../assets/images/image324.png"/><img src="../../../../../../assets/images/image247.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                                c.    Add/Edit the below System variables:<br/>
+                                       i.    Variable Name: JAVA_HOME<br/>
+                                             Variable Value: [path to Java SDK] (e.g., “C:\Program Files\Java\jdk1.8.0_25”]<br/>
+                                             <img src="../../../../../../assets/images/image325.png"/><img src="../../../../../../assets/images/image248.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                                     ii.    Variable Name: ANDROID_HOME<br/>
+                                            Variable Value: [path to Android SDK] (e.g., “C:\Android\Android SDK”]</span></p>
+  <p><span style="font-size:17px;">                               iii. Variable Name: Path<br/>
+                                          Variable Value: %PATH%;%JAVA_HOME%\bin;%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools;<br/>
+                                          <strong>Note:</strong> If Path variable is already exist then just add the above value to the existing value</span></p>
+  <p><span style="font-size:17px;"><br/>
+                  1.2    Windows: Install Appium <br/>
+                           a.    Open the Appium Web site:<br/>
+                                   http://appium.io/<br/>
+                          b.    Click on Download Appium button<br/>
+                                  <img src="../../../../../../assets/images/image326.png"/><img src="../../../../../../assets/images/image249.png"/></span></p>
+  <p><span style="font-size:17px;">                    c.    Double click and install Appium application- install it in a folder which will be accessible to all users</span></p>
+  <p><span style="font-size:17px;">                    d.    Launch the application from Start-&gt;Appium-&gt;Appium<br/>
+                                  <img src="../../../../../../assets/images/image327.png"/><img src="../../../../../../assets/images/image250.png"/></span></p>
+  <p>                              <img src="../../../../../../assets/images/image251.png"/></p>
+  <p>                               <img src="../../../../../../assets/images/image328.png"/></p>
+  <p><span style="font-size:17px;"><br/>
+                1.3    Windows: Configure and Launch Appium Server<br/>
+                           a.    In case you plan to run Ginger which installed on a different machine (same network):<br/>
+                                 i.    Open windows Run type “CMD” and click enter in the opened window type “Ipconfig”<br/>
+                                ii.    Write the IP value which appears for “IPv4 Address”</span><br/>
+                                        <img src="../../../../../../assets/images/image252.png"/>   <img src="../../../../../../assets/images/image329.png"/></p>
+  <p><span style="font-size:17px;"><br/>
+                              iii.    In Appium, click on “General Settings” button and replace the “127.0.0.1” value with the IP number you got in </span></p>
+  <p><span style="font-size:17px;">                                  the previous step </span><br/>
+                                          <img src="../../../../../../assets/images/image253.png"/>    <img src="../../../../../../assets/images/image330.png"/>  </p>
+  <p><span style="font-size:17px;">                        iv.    Close the General Settings window<br/>
+                              v.    Click on “Launch the Appium Node Server” (Play icon)  </span></p>
+  <p>                                     <img src="../../../../../../assets/images/image331.png"/><img src="../../../../../../assets/images/image254.png"/></p>
+  <p><span style="font-size:17px;">                       vi.    Make sure appium is starting without errors<br/>
+                            vii.    Appium server is UP and ready to get connecting request from Ginger!</span><span style="font-size:17px;"><br/>
+      <strong>  </strong></span><br/>
+    <span style="font-size:17px;"></span><br/>
+    <br/>
+    <span style="font-size:17px;"></span><br/>
+    <span style="font-size:17px;"><br/>
+      <strong style="font-size: 20px"></strong></span></p>
+  <p><br/>
+    <strong><span style="font-size:17px;"> </span></strong></p>
+
+</body></html>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../..";
+  gCommonRootRelPath = "../..";
+  gTopicId = "5.4.3.0_2";
+
+//]]></script>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>How to Execute &amp; get Output Values from Python Script?</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Plugins:Python Plugin"/></head>
+<body>
+  <h1>How to Execute &amp; get Output Values from Python Script?</h1>
+  <p><br/>
+    <span style="font-size:17px;"><strong style="font-size: 20px">1. How to Execute Python Script?</strong><br/>
+          Please follow below steps to execute python script.<br/>
+       <strong>   1. How to execute python script using external file?</strong><br/>
+              a.    Add Business Flow or select existing one and click on “Automate” for loading it in Automate page<br/>
+              b.    Click on Add Action button, in loaded window go to “Plugins Actions”<br/>
+              c.    Select “Run Script file” Action         </span><span style="font-size:17px;">                                  </span></p>
+  <p><span style="font-size:17px;">             <img src="../../assets/images/image1247.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+              d.    Set Action configurations according to the below:</span></p>
+  <p><span style="font-size:17px;">            </span></p>
+  <table class="MsoTableGrid" style="margin-left:35.75pt; border-collapse:collapse; border:solid windowtext 1.0pt" width="702">
+    <tbody>
+      <tr style="height:11.65pt">
+        <td style="border:solid windowtext 1.0pt; background:#daeef3; width:94.5pt; padding:0in 5.4pt 0in 5.4pt; height:11.65pt" valign="top" width="126">
+          <p align="center" style="margin-left:0in; text-align:center; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:9.0pt">Field Name</span></b></span></span></p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; background:#daeef3; width:81.0pt; border-left:none; padding:0in 5.4pt 0in 5.4pt; height:11.65pt" valign="top" width="108">
+          <p align="center" style="margin-left:0in; text-align:center; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:9.0pt">Mandatory?</span></b></span></span></p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; background:#daeef3; width:130.5pt; border-left:none; padding:0in 5.4pt 0in 5.4pt; height:11.65pt" valign="top" width="174">
+          <p align="center" style="margin-left:0in; text-align:center; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:9.0pt">Field Description</span></b></span></span></p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; background:#daeef3; width:99.0pt; border-left:none; padding:0in 5.4pt 0in 5.4pt; height:11.65pt" valign="top" width="132">
+          <p align="center" style="margin-left:0in; text-align:center; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:9.0pt">Sample Value</span></b></span></span></p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; background:#daeef3; width:121.5pt; border-left:none; padding:0in 5.4pt 0in 5.4pt; height:11.65pt" valign="top" width="162">
+          <p align="center" style="margin-left:0in; text-align:center; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:9.0pt">Comments</span></b></span></span></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:solid windowtext 1.0pt; width:94.5pt; border-top:none; padding:0in 5.4pt 0in 5.4pt" valign="top" width="126">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:9.0pt">Python Script Path</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:81.0pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="108">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">Yes</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:130.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="174">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">Full Path of the python script file.</span></span></span></p>
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt"></span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:99.0pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="132">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">“C:\Work\Python\</span> <span style="font-size:9.0pt">BasicScript.py”</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:121.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="162">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">For allowing the Action to run on any machine It is recommended to place the python script file under the Ginger Solution “Documents” folder and set a relative path to it in Action definitions like:</span></span></span></p>
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">“~\Documents\Scripts\BasicScript.py”</span></span></span></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:solid windowtext 1.0pt; width:94.5pt; border-top:none; padding:0in 5.4pt 0in 5.4pt" valign="top" width="126">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:9.0pt">Input Parameters</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:81.0pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="108">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">No</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:130.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="174">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">Add python input parameters as per requirement.</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:99.0pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="132">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt"></span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:121.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="162">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt"></span></span></span></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p><span style="font-size:17px;"></span></p>
+  <p>          <img src="../../assets/images/image1248.png"/></p>
+  <p> </p>
+  <p><span style="font-size:17px;"><span style="font-size:17px;"> <strong>   2. How to execute python script using content?</strong></span><br/>
+           </span><span style="font-size: 17px;">    a.    Add Business Flow or select existing one and click on “Automate” for loading it in Automate page</span></p>
+  <p><span style="font-size:17px;">         b.    Click on Add Action button, in loaded window go to “Plugins Actions”<br/>
+               c.    Select “Run Script” Action</span></p>
+  <p><span style="font-size:17px;">                <img src="../../assets/images/image1249.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+               d.    Set Action configurations according to the below:</span></p>
+  <p>                </p>
+  <table class="MsoTableGrid" style="margin-left:35.75pt; border-collapse:collapse; border:solid windowtext 1.0pt" width="702">
+    <tbody>
+      <tr style="height:11.65pt">
+        <td style="border:solid windowtext 1.0pt; background:#daeef3; width:94.5pt; padding:0in 5.4pt 0in 5.4pt; height:11.65pt" valign="top" width="126">
+          <p align="center" style="margin-left:0in; text-align:center; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:9.0pt">Field Name</span></b></span></span></p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; background:#daeef3; width:81.0pt; border-left:none; padding:0in 5.4pt 0in 5.4pt; height:11.65pt" valign="top" width="108">
+          <p align="center" style="margin-left:0in; text-align:center; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:9.0pt">Mandatory?</span></b></span></span></p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; background:#daeef3; width:130.5pt; border-left:none; padding:0in 5.4pt 0in 5.4pt; height:11.65pt" valign="top" width="174">
+          <p align="center" style="margin-left:0in; text-align:center; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:9.0pt">Field Description</span></b></span></span></p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; background:#daeef3; width:99.0pt; border-left:none; padding:0in 5.4pt 0in 5.4pt; height:11.65pt" valign="top" width="132">
+          <p align="center" style="margin-left:0in; text-align:center; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:9.0pt">Sample Value</span></b></span></span></p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; background:#daeef3; width:121.5pt; border-left:none; padding:0in 5.4pt 0in 5.4pt; height:11.65pt" valign="top" width="162">
+          <p align="center" style="margin-left:0in; text-align:center; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:9.0pt">Comments</span></b></span></span></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:solid windowtext 1.0pt; width:94.5pt; border-top:none; padding:0in 5.4pt 0in 5.4pt" valign="top" width="126">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:9.0pt">Python Script Content</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:81.0pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="108">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">Yes</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:130.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="174">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">Copy-Paste python script.</span></span></span></p>
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt"></span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:99.0pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="132">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">import sys</span></span></span></p>
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">a = sys.argv[1]</span></span></span></p>
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">b = sys.argv[2]</span></span></span></p>
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">print(&#39;a=&#39; + a)</span></span></span></p>
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">print(&#39;b=&#39; + b)</span></span></span></p>
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">sum = int(a) + int(b)</span></span></span></p>
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">print(&#39;sum=&#39; + str(sum))</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:121.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="162">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt"></span></span></span></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:solid windowtext 1.0pt; width:94.5pt; border-top:none; padding:0in 5.4pt 0in 5.4pt" valign="top" width="126">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:9.0pt">Input Parameters</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:81.0pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="108">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">No</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:130.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="174">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">Add python input parameters as per requirement.</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:99.0pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="132">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt"></span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:121.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="162">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt"></span></span></span></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p><strong><span style="font-size:20px">2.    Get Output Values from Python Flow to Ginger Flow</span></strong></p>
+  <p><span style="font-size:17px;">    Python plugin supports getting output values from the Python Flow.<br/>
+          It been done by parsing all values which the Python flow write to the Console during execution, the parsing mechanism looks for any “key=value” pair and if it been found so <br/>
+          the Key and Value been added to the Action Output Values list.</span></p>
+  <p><span style="font-size:17px;"><strong>    1.    How to Get Output Values from Python Flow to Ginger Flow</strong><br/>
+               1.1. Prepare the Python Flow Code for Sharing Output Values<br/>
+                      a.    Open the Script in notepad or another Editor.<br/>
+                      b.    Look for the places in code (either tested class methods or actual test methods) which have values that can be shared with Ginger during execution<br/>
+                      c.    In each such place, add “print()” line of code with the Value key name equal to the value need to be shared, see sample below:</span></p>
+  <p><span style="font-size:17px;">                    <img src="../../assets/images/image1250.png"/></span></p>
+  <p><span style="font-size:17px;">        1.2. Configure Ginger Python Plugin Action to Read Output Values<br/>
+                      a.    Configure any one of the Python Actions configurations<br/>
+                      b.    After execution end, go to Action “Output Values” tab and see all output values which were parsed in run time<br/>
+                      c.    Now you can set Validations on top of those values or pass them to Variables/Data Source or other to be used in next Actions/other in the Ginger flow</span></p>
+  <p><span style="font-size:17px;">                  <img src="../../assets/images/image1251.png"/></span><br/>
+     </p>
+
+</body></html>

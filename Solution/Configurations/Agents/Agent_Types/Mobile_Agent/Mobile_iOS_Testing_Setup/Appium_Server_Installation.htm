@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../../../../..";
+  gCommonRootRelPath = "../../../../../..";
+  gTopicId = "3.2.1.1.1.2.0_2";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Appium Server Installation</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Mobile Agent"/></head>
+<body>
+  <h1>Appium Server Installation</h1>
+  <p><span style="font-size:17px;">These steps will allows Ginger to run tests on an USB connected iOS device using Appium.</span></p>
+  <p><span style="font-size:17px;"><strong>Pre-requisite</strong><br/>
+          •    Ginger need to be installed on a Windows operating system machine<br/>
+          •    Mac machine (Mac Mini, Mac Book, etc.) with OS X operating system (OS X Yosemite or later) is required<br/>
+          •    Ginger Windows machine and Appium server Mac machine must be located on the same network (can ping each other)<br/>
+          •    Admin user to the Ginger Windows’s machine and Appium server Mac machine is required for installations. Steps for Mac machine password rest:<br/>
+              a.    Restart the machine while holding “command + R” until apple logo is appearing (Apple keyboard may be required is using Mac Mini)<br/>
+              b.    Go to the Mac main menu bar -&gt; “Utilities” -&gt; “Terminal”<br/>
+              c.    In the command line write “resetpassword”<br/>
+              d.    Select the required volume<br/>
+              e.    Insert new password and confirmation then Save<br/>
+              f.    Watch the following video for more instructions<br/>
+                     https://www.youtube.com/watch?v=QNZkvrsDspo <br/>
+                     •    Apple Developer Account is required for installing Appium server and tested apps setup on the devices</span></p>
+  <p> </p>
+  <p><span style="font-size:17px;"><span style="font-size:20px;"><strong>Appium Server Installation</strong></span><br/>
+          All installation steps need to be done on the Mac machine using an Admin user <br/>
+      <strong>    1.    Install Appium Pre-requisites</strong><br/>
+              1.1    Install latest Java JDK:<br/>
+                  a.    Download the latest Java JDK version from below link:  </span></p>
+  <p><span style="font-size:17px;">                  </span><span style="font-size:17px;">http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html<br/>
+                             <img src="../../../../../../assets/images/image387.png"/> <img src="../../../../../../assets/images/image336.png"/>             <br/>
+                  b.    Double click and install it.</span></p>
+  <p> </p>
+  <p><span style="font-size:17px;">        1.2.    Install Xcode and Command Line Tools:<br/>
+                  a.    Go to below link (you will need to login with an Apple Developer account details):<br/>
+                      https://developer.apple.com/downloads/<br/>
+                  b.    Search for “Xcode”<br/>
+                  c.    Download the latest (non Beta) “Xcode” version and it matching “Command Line Tools”<br/>
+                           <img src="../../../../../../assets/images/image388.png"/><img src="../../../../../../assets/images/image337.png"/>  <br/>
+                  d.    Double click and install them both</span></p>
+  <p> </p>
+  <p><span style="font-size:17px;">        1.3.    Install Homebrew:<br/>
+                  a.    Go to the Mac main menu bar -&gt; “Utilities” -&gt; “Terminal”<br/>
+                  b.    Type and run below command:<br/>
+                      ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;<br/>
+                  c.    Make sure installation ended successfully<br/>
+                      Note: for allowing network access from the Terminal you may need an external network connection (non Amdocs) only for the installation purpose</span></p>
+  <p> </p>
+  <p><span style="font-size:17px;">        1.4.    Install Node:<br/>
+                  a.    Go to the Mac main menu bar -&gt; “Utilities” -&gt; “Terminal”<br/>
+                  b.    Type and run below command:<br/>
+                      brew install node<br/>
+                  c.    Make sure installation ended successfully</span></p>
+  <p> </p>
+  <p><span style="font-size:17px;">        1.5.    Install libimobiledevice and ideviceinstaller:<br/>
+                  a.    Go to the Mac main menu bar -&gt; “Utilities” -&gt; “Terminal”<br/>
+                  b.    Type and run below command:<br/>
+                      brew install -v --devel --fresh  automake autoconf libtool wget libimobiledevice<br/>
+                      (if fails try:<br/>
+                      brew install -v --fresh  automake autoconf libtool wget libimobiledevice)</span></p>
+  <p><span style="font-size:17px;">            c.    Type and run below command:<br/>
+                      brew install -v --HEAD --fresh --build-from-source ideviceinstaller<br/>
+                  d.    Make sure installation ended successfully</span></p>
+  <p> </p>
+  <p><span style="font-size:17px;">        1.6.    Install iOS Web Proxy<br/>
+                  a.    Go to the Mac main menu bar -&gt; “Utilities” -&gt; “Terminal”<br/>
+                  b.    Type and run below command:<br/>
+                      brew install ios-webkit-debug-proxy<br/>
+                  c.    Make sure installation ended successfully<br/>
+                  d.    More details on iOS Web Proxy can be found in:<br/>
+                      https://github.com/google/ios-webkit-debug-proxy<br/>
+                      http://appium.io/slate/en/master/?ruby#installation</span></p>
+  <p> </p>
+  <p><span style="font-size:17px;"><strong>    2.     Install Appium </strong><br/>
+              1.    Open the Appium Web site on the Mac machine (using Safari)<br/>
+                      http://appium.io/<br/>
+              2.    Click on Download Appium button<br/>
+                      <img src="../../../../../../assets/images/image389.png"/><img src="../../../../../../assets/images/image338.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+              3.    Double click and install Appium application<br/>
+              4.    After Appium installed on your machine, you can set Ginger to Start Appium Server Automatically or do it manually,                                    </span><span style="font-size:17px;">by setting “StartAppiumServerAutomatically” parameter in an Agent.<br/>
+                  If StartAppiumServerAutomatically parameter set to “false” you will need to start Appium server manually (Read section 1.3).<br/>
+                  set StartAppiumServerAutomatically parameter to “true” and Ginger will start Appium server automatically in the background.<br/>
+              5.    When StartAppiumServerAutomatically set to true, you will need to insert your Appium installation folder path:<br/>
+                      <img src="../../../../../../assets/images/image390.png"/><img src="../../../../../../assets/images/image339.png"/></span></p>
+  <p><span style="font-size:17px;">        6.    AppiumServerIP – set IP value for Appium server.<br/>
+                  AppiumServerPort – Set specific port or “dynamic” if you wish Ginger to allocate free port for appium server.<br/>
+                  AppiumServer – is Deprecated – keep empty and use AppiumServerIP and AppiumServerPort instead.<br/>
+                  (Read section 5.2 for more details)</span></p>
+  <p> </p>
+  <p><span style="font-size:17px;"><strong>    3.    Configure and Launch Appium Server Manually </strong><br/>
+              a.    Launch the application from main menu bar “Go”-&gt; “Applications”<br/>
+                     <img src="../../../../../../assets/images/image391.png"/><img src="../../../../../../assets/images/image340.png"/><br/>
+              b.    For checking that noting is missing for iOS testing’s, click on the “doctor” button in the Appium GUI<br/>
+              c.    Terminal window supposed to open and tests will be done for iOS and Android setup, make sure the iOS one passed successfully                   </span><span style="font-size:17px;">(Android will be installed in different user guide)<br/>
+                      Note: in case the Appium doctor (or on Appium launch) identify that something is missing and asks you if to install it- answer YES</span><br/>
+                     <img src="../../../../../../assets/images/image392.png"/><img src="../../../../../../assets/images/image341.png"/></p>
+  <p><span style="font-size:17px;">        d.    Connect the Mac machine to the same network that Ginger Windows machine is in<br/>
+              e.    Get the Mac IP Address by:<br/>
+                   I.    Go to main menu Go-&gt;Applications-&gt;System Preferences-&gt;Network<br/>
+                           <img src="../../../../../../assets/images/image393.png"/> <img src="../../../../../../assets/images/image342.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                  II.    Copy the IP Address<br/>
+                          <img src="../../../../../../assets/images/image394.png"/><img src="../../../../../../assets/images/image343.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+              f.    Launch (if not already launched) the Appium application from main menu bar Go-&gt;Applications-&gt;Appium<br/>
+              g.    Click on General Settings button<br/>
+              h.    Set the IP Address you found in step b into the Server Address field<br/>
+              i.    Configure the rest of settings as appear in below screen shot</span><br/>
+                    <img src="../../../../../../assets/images/image344.png"/>     <img src="../../../../../../assets/images/image395.png"/></p>
+  <p><span style="font-size:17px;">        j.    Close the General Settings window<br/>
+              k.    Click on Launch button<br/>
+                      <img src="../../../../../../assets/images/image345.png"/> <img src="../../../../../../assets/images/image396.png"/><br/>
+              l.    Make sure appium is starting without errors<br/>
+                     <img src="../../../../../../assets/images/image346.png"/> <img src="../../../../../../assets/images/image397.png"/><br/>
+              m.    Appium server is UP and ready to get connecting request from Ginger!</span></p>
+
+</body></html>

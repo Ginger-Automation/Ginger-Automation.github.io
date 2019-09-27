@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../../..";
+  gCommonRootRelPath = "../../../..";
+  gTopicId = "3.1.1.3.1_5";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>File Operations Action</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="General Actions"/></head>
+<body>
+  <h1>File Operations Action</h1>
+  <p><span style="font-size:17px;"><strong>1.  Introduction    </strong><br/>
+           File Operations Action is used to various operations on a file. <br/>
+           Below is the available list of operations:-<br/>
+              1)    Check File exists<br/>
+              2)    Check folder Exists<br/>
+              3)    Copy<br/>
+              4)    Execute<br/>
+              5)    Force Copy<br/>
+              6)    Move<br/>
+              7)    Run command<br/>
+              <br/>
+      <strong>2.    How to Configure Action</strong><br/>
+      <strong>       2.1 Pre-requisite </strong><br/>
+                 A Solution should be created.<br/>
+                 Please refer below section on how to create a solution:-<br/>
+                 Solution-&gt; Business Flows                                  </span></p>
+  <p><span style="font-size:17px;"><strong>       2.2 How to create this Action</strong><br/>
+      <strong>            2.2.1 Check File Exists</strong></span></p>
+  <p><span style="font-size:17px;">                1)    Go to Automate tab. In the Activity Actions, click on ‘Add New’ button<br/>
+                                  <img src="../../../../assets/images/image716.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                      2)    Go to the ‘General Actions’ tab and select the ‘File Operations’ then click on ‘Add Action’ button given in the below window                       </span></p>
+  <p><span style="font-size:17px;">                      <img src="../../../../assets/images/image717.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                      3)    Below screen should be displayed.  The Operation type ‘checkfileExists’ is displayed by default.<br/>
+                             Select a file using the Browse button. Click on Ok button to add the Action to the Activity Actions.</span></p>
+  <p>                          <img src="../../../../assets/images/image718.png"/></p>
+  <p><span style="font-size:17px;">                4)    Run Action will check if the given file exists in the given folder. The action fails if the file is not found.<br/>
+            <br/>
+      <strong>            2.2.2    Check folder Exists</strong></span></p>
+  <p><span style="font-size:17px;">                1)    Follow steps 1 &amp; 2 from the Check File Exists action.</span></p>
+  <p><span style="font-size:17px;">                2)    Below screen should be displayed. Select ‘CheckFolderExists’ from the Operation Type drop down.<br/>
+                             Select the folder path using the Browse button.<br/>
+                             Click on Ok button to add the action to the Activity Actions. <br/>
+                             <img src="../../../../assets/images/image719.png"/></span></p>
+  <p><span style="font-size:17px;">                3)    The Run Action will check if the given folder exists in the given path. The action fails if the folder is not found.</span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong>            2.2.3   Copy</strong></span></p>
+  <p><span style="font-size:17px;">                1)    Follow steps 1 &amp; 2 from the Check File Exists action.</span></p>
+  <p><span style="font-size:17px;"><br/>
+                      2)    Below screen is displayed. Select ‘Copy’ option from the Operations Type drop down.<br/>
+                             Select the ‘Source File Path:’ using the Browse button.<br/>
+                             Enter the ‘Destination Path (Folder/File)’ in the given field.<br/>
+                             Click on Ok button to add the action to the Activity Actions.</span></p>
+  <p><span style="font-size:17px;">                        <img src="../../../../assets/images/image720.png"/></span></p>
+  <p><span style="font-size:17px;">                3)    The Run Action will Copy the given file in the Destination folder/file.</span></p>
+  <p><strong><span style="font-size:17px;">            2.2.4    Execute</span></strong></p>
+  <p><span style="font-size:17px;">                1)    Follow steps 1 &amp; 2 from the Check File Exists action.</span></p>
+  <p><span style="font-size:17px;">                2)    Below screen is displayed. Select ‘Execute’ option from the Operations Type drop down.<br/>
+                             Select the ‘Source File Path:’ using the Browse button. <br/>
+                             Click on Ok button to add the action to the Activity Actions.</span></p>
+  <p><span style="font-size:17px;">                      <img src="../../../../assets/images/image721.png"/><br/>
+       <br/>
+                      3)    The Run Action executes the file that was selected.</span></p>
+  <p><strong><span style="font-size:17px;">            2.2.5    Force Copy</span></strong></p>
+  <p><span style="font-size:17px;">                      If for some reason, a file is not getting copies then Force copy can be used.</span></p>
+  <p><span style="font-size:17px;">                       1)    Follow steps 1 &amp; 2 from the Check File Exists action.</span></p>
+  <p><span style="font-size:17px;">                       2)    Below screen is displayed. Select ‘Force Copy’ option from the Operations Type drop down.<br/>
+                                    Select the ‘Source File Path:’ using the Browse button. <br/>
+                                    Enter the Destination Path Folder/File.<br/>
+                                   Click on Ok button to add the action to the Activity Actions.</span></p>
+  <p>                               <img src="../../../../assets/images/image722.png"/></p>
+  <p><span style="font-size:17px;">                    3)    The Run Action copies the given file into the destination file.</span></p>
+  <p><strong><span style="font-size:17px;">            2.2.6    Move</span></strong></p>
+  <p><span style="font-size:17px;">                    1)    Follow steps 1 &amp; 2 from the Check File Exists action.</span></p>
+  <p><span style="font-size:17px;">                    2)    Below screen is displayed. Select ‘Move’ option from the Operations Type drop down.<br/>
+                                 Select the ‘Source File Path:’ using the Browse button. <br/>
+                                 Enter the Destination Path.<br/>
+                                 Click on Ok button to add the action to the Activity Actions.</span></p>
+  <p><span style="font-size:17px;">                            <img src="../../../../assets/images/image723.png"/> <br/>
+       <br/>
+                          3)    The Run Action movies the given file into the destination path.</span></p>
+  <p><span style="font-size:17px;"><strong>            2.2.7    Run command</strong><br/>
+                             This is same as Execute command. The only difference is that Execute command returns an error message when a file is not <br/>
+                              found whereas the Run command gives a proper informative message when a file is not found.</span></p>
+
+</body></html>

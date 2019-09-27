@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../../..";
+  gCommonRootRelPath = "../../../..";
+  gTopicId = "3.1.1.4.0_1";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Browser Action and Go to Url Action</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Platform Actions"/></head>
+<body>
+  <h1>Browser Action</h1>
+  <p><span style="font-size:17px;">This action is used to handle Browser and Widgets. </span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong>How to Configure Action</strong><br/>
+              <strong>1. Pre-requisite </strong><br/>
+                        A Solution should be created with Agent having Web, Java or PowerBuilder Platform.<br/>
+                                <br/>
+              <strong>2. Action Operation- Initialize Browser </strong><br/>
+                            <br/>
+                    1)    Double click on the Business flow. In the Activity Actions, click on ‘Add New’ button<br/>
+                            <img src="../../../../assets/images/image103.png"/> </span></p>
+  <p><span style="font-size:17px;"><br/>
+                    2)    In the ‘Platform Actions’ tab, select the ‘Browse Action’ then click on ‘Add Action’ button given in the below window<br/>
+                            <img src="../../../../assets/images/image520.png"/><img src="../../../../assets/images/image104.png"/><br/>
+                                <br/>
+                    3)    Below screen should be displayed.  <br/>
+                            The ‘Operation Type’ have default option as ‘Initialize Browser’.<br/>
+                            Click on Ok to add the action to the Activity Actions.<br/>
+                            User needs to use ‘Go to URL’ Operation type to launch a website.</span></p>
+  <p>                         <img src="../../../../assets/images/image521.png"/><img src="../../../../assets/images/image105.png"/></p>
+  <p> </p>
+  <p><span style="font-size:17px;">                    <strong>The ‘Operation Type’ for Web application have the below options:-</strong><br/>
+                       </span></p>
+  <p><span style="font-size:17px;">                    Accept Message Box   -------used to accept a message box which is displayed during execution with a OK button</span></p>
+  <p><span style="font-size:17px;">                    Closee All                      ------- all the tabs opened in a Web browser will be closed</span></p>
+  <p><span style="font-size:17px;">                     Close Tab                     --------the current tab of the web browser will be closed</span></p>
+  <p><span style="font-size:17px;">                    Close Tab Except        ---------all tabs will be closed except the name that will be mentioned in the action</span></p>
+  <p><span style="font-size:17px;">                    Delete All Cookies       --------all the cookies will be deleted</span></p>
+  <p><span style="font-size:17px;">                    Dismiss Message Box  --------used to dismiss a message box during execution which has Cancel button in it</span></p>
+  <p><span style="font-size:17px;">                    Get MessageBox Text   -------to get the text displayed on the message box</span></p>
+  <p><span style="font-size:17px;">                    Get Page Source           -----– used to get source of  a Web page<br/>
+                          Get Page URL               ----- – used to get the url of the displayed page<br/>
+                          Inject Java Script            --- – used when we want to inject a different Java script on the web page<br/>
+                          Maximize Window       -----– used to maximize the displayed window</span></p>
+  <p><span style="font-size:17px;">                    Navigate Back                ------used on a Web Browser to back to the previous page</span></p>
+  <p><span style="font-size:17px;">                    Open URL in New Tab    -----used to open the url in the new tab of the Web browser</span></p>
+  <p><span style="font-size:17px;">                    Refresh                           -------used to Refresh the Web page</span></p>
+  <p><span style="font-size:17px;">                    Run Java Script             -------as said, its used to turn the java script</span></p>
+  <p><span style="font-size:17px;">                    Set AlertBox Text           ------used to display alert message during execution</span></p>
+  <p><span style="font-size:17px;">                    Switch Frame                ------ used when it is required to shift the focus to another frame <br/>
+                          Switch to Default Frame --– used when the focus is required to shift to the default frame         <br/>
+                          Switch to Parent Frame --- - used to switch to the parent frame of the web page<br/>
+                          Switch Window            ------- used to switch between different windows</span></p>
+  <p>                       <span style="font-size:17px;">Wait till page loaded    -------used to wait untill the page is loaded   </span></p>
+  <p> </p>
+  <p> </p>
+  <p>                     <strong><span style="font-size:17px;">The below options of the ‘Operation Type’ are displayed for Java and Power Builder application:-</span></strong></p>
+  <p>                        <span style="font-size:17px;">Get Page Source           -----– used to get source of  a page<br/>
+                          Get Page URL                 ---- – used to get the url of the displayed page</span></p>
+  <p>                       <span style="font-size:17px;"> Initialize Browser         -------<span style="font-family: Calibri, sans-serif;">used to initialize a browser when the application has widgets in it</span></span></p>
+  <p>                       <span style="font-size:17px;"> Switch Frame                ------ used when it is required to shift the focus to another frame </span></p>
+  <p>                        <span style="font-size:17px;"> Switch to Default Frame --– used when the focus is required to shift to the default frame</span>  </p>
+  <p><span style="font-size:17px;"><br/>
+                  4)    Run Action will perform the action in the Agent.</span></p>
+  <p> </p>
+  <p><span style="font-size:17px;">       <strong>3.  Action Operation- Handle Browser Alerts</strong></span></p>
+  <p><span style="font-size:17px;">               In the below screen, select the ‘Operation Type’  as per the browser alert required.<br/>
+                     <img src="../../../../assets/images/image522.png"/><img src="../../../../assets/images/image106.png"/></span></p>
+  <p> </p>
+  <p><span style="font-size:17px;">              Below are the list of operation available:-<br/>
+                     1)    Accept Message Box<br/>
+                     2)    Dismiss Message Box<br/>
+                     3)    Get Message Box Text<br/>
+                     4)    Set Alert Box Text</span></p>
+  <p><span style="font-size:17px;"><br/>
+      <span style="font-size:20px;"><strong>    4. How to use Page Object Model for Goto Url Operation</strong></span><br/>
+       <br/>
+                 1.    Open the Browser Action and select operation type as ‘Goto URL’.<br/>
+                 2.    Select the ‘Page Object Model URL’ radio button<br/>
+                         <img src="../../../../assets/images/image523.png"/><img src="../../../../assets/images/image107.png"/></span></p>
+  <p><span style="font-size:17px;">          3.    Click on the pen icon and select the Page Object Model from the displayed tree.<br/>
+                        Click on the Select button of the selection window.</span></p>
+  <p><span style="font-size:17px;">                  <img src="../../../../assets/images/image524.png"/><img src="../../../../assets/images/image108.png"/><br/>
+                        </span></p>
+  <p><span style="font-size:17px;">         4.    The select Page Object Model is then displayed. User can modify the page object model if desired using the ‘View/Edit POM’ button as shown below.</span></p>
+  <p>                   <img src="../../../../assets/images/image525.png"/><img src="../../../../assets/images/image109.png"/></p>
+
+</body></html>

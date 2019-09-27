@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../..";
+  gCommonRootRelPath = "../..";
+  gTopicId = "9.1.0_5";
+
+//]]></script>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Gherkin – TextEdtor for .Feature Files</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Gherkins"/></head>
+<body>
+  <h1>Gherkin – TextEdtor for .Feature Files</h1>
+  <p><span style="font-size:17px;">The integration of Gherkin into Ginger using the Gherkin TextEditor allows users to easily read, write and review Gherkin Feature files in Ginger.</span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong style="font-size: 20px">1.    Feature TextEditor – Layout</strong><br/>
+              The Gherkin TextEditor is fully integrating in Ginger.<br/>
+               TextEditor Layout<br/>
+               You can see how the Gherkin TextEditor fits into Ginger and how its layed out in the following Fig 1.1.<br/>
+                 A.    This is the Current Feature file that you are working on.<br/>
+                 B.    This is the Feature name on the first line, and the description in the following lines BEFORE the “space line”<br/>
+                 C.    This is the Scenario with following Keywords that make up the Scenarios Steps<br/>
+                 D.    These are Steps that are within the Scenario<br/>
+                 E.    These are Tags that you can associate functionality within the Feature<br/>
+                 F.    These are the existing automation steps that are already in Ginger Shared Repository having at least one tag associated with the feature or Scenario.<br/>
+          Fig 1.1<br/>
+         <img src="../../assets/images/image1285.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong style="font-size: 20px">2.    Feature TextEditor – Autocomplete Lines with existing automation</strong><br/>
+              If an activity (Line) has already been developed it will show in the Line helper shown in Fig 2.1 While typing the helper box will give you a list of automated steps to choose from. <br/>
+          Fig 2.1<br/>
+           <img src="../../assets/images/image1286.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+             Shown Below is the Activity Repository of Activities that will appear in the auto complete box while you write your scenarios.</span><br/>
+           <img src="../../assets/images/image1287.png"/></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong style="font-size: 20px">3.    Feature TextEditor – Getting your Feature file ready for automation</strong><br/>
+              &lt;&lt;Text / Ginger Normal Style&gt;&gt;</span></p>
+  <p><span style="font-size:17px;">        &lt;&lt;Document_Label_1 / Ginger Heading3 Style&gt;&gt;<br/>
+              &lt;&lt;Text / Ginger Normal Style&gt;&gt;<br/>
+              &lt;&lt;Document_Label_2 / Ginger Heading3 Style&gt;&gt;<br/>
+              &lt;&lt;Text / Ginger Normal Style&gt;&gt;</span><br/>
+     </p>
+
+</body></html>

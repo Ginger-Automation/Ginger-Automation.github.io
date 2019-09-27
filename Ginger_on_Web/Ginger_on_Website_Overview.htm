@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "..";
+  gCommonRootRelPath = "..";
+  gTopicId = "10.0_1";
+
+//]]></script>
+
+<script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>How to Use Ginger Website?</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Ginger on Web"/></head>
+<body>
+  <h1>How to use Ginger Website?</h1>
+  <p><span style="font-size:17px;">The Ginger Website is created for allowing Ginger users to configure and trigger Ginger Executions from any machine without Installing Ginger.<br/>
+      Ginger Website offers:<br/>
+          -    Create a Job to create and schedule Ginger Run Set Execution<br/>
+          <br/>
+      <strong style="font-size: 20px">Pre-Requisites</strong><br/>
+        1. Ginger Solution which:<br/>
+              a.    Configured on Ginger SVN/GIT Data Source<br/>
+              b.    Includes Run Set/s ready to be executed <br/>
+        2. Jenkins Server version 1.606 or above with Ginger Plug 1.5 or above Installed<br/>
+        3. Jenkins Slave installed on the machine hosting Ginger(Beta 2.5.9 or above) installation (machine also need to be able to access SVN server in which the Ginger Solution exist) <br/>
+            <br/>
+      <strong>How to use the Ginger Website</strong><br/>
+          1.    Login<br/>
+                 Solution Login<br/>
+                 Enter the Solution Source Control details.<br/>
+                           SVN                                                                   GIT</span></p>
+  <p>         <img src="../assets/images/image1288.png"/>      <img src="../assets/images/image1289.png"/></p>
+  <p>           </p>
+  <table class="MsoTableGrid" style="margin-left:-.25pt; border-collapse:collapse; border:solid windowtext 1.0pt">
+    <tbody>
+      <tr>
+        <td style="border:solid windowtext 1.0pt; background:#0f243e; width:107.75pt; padding:0in 5.4pt 0in 5.4pt" width="144">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt"><span style="color:white"> Parameter Name</span></span></b></span></span></p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; background:#0f243e; width:2.25in; border-left:none; padding:0in 5.4pt 0in 5.4pt" width="216">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt"><span style="color:white">Explanation</span></span></b></span></span></p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; background:#0f243e; width:134.5pt; border-left:none; padding:0in 5.4pt 0in 5.4pt" width="179">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt"><span style="color:white">Sample Value</span></span></b></span></span></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:solid windowtext 1.0pt; width:107.75pt; border-top:none; padding:0in 5.4pt 0in 5.4pt" width="144">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt">Source Control Type</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:2.25in; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="216">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">Type of source Control</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:134.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="179">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">SVN/GIT</span></span></span></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:solid windowtext 1.0pt; width:107.75pt; border-top:none; padding:0in 5.4pt 0in 5.4pt" width="144">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt">Repository Type</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:2.25in; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="216">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">User credentials not required for public repository</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:134.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="179">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">Private/Public</span></span></span></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:solid windowtext 1.0pt; width:107.75pt; border-top:none; padding:0in 5.4pt 0in 5.4pt" width="144">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt">URL</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:2.25in; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="216">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">The URL of Source Control server which host the Ginger Solution to execute</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:134.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="179">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">In case of GIT, provide clone/Download URL of the repository. Refer </span><span class="MsoHyperlink" style="color:blue"><span style="text-decoration:underline"><b><span style="font-size:9.0pt"><a href="#_GIT_Clone_URL" style="color:blue; text-decoration:underline">GIT Clone URL</a></span></b></span></span><b><u><span style="font-size:9.0pt"></span></u></b></span></span></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:solid windowtext 1.0pt; width:107.75pt; border-top:none; padding:0in 5.4pt 0in 5.4pt" width="144">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt">User</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:2.25in; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="216">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">Source Control user name</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:134.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="179">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt"></span></span></span></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:solid windowtext 1.0pt; width:107.75pt; border-top:none; padding:0in 5.4pt 0in 5.4pt" width="144">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt">Password</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:2.25in; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="216">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">Source Control password</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:134.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="179">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt"></span></span></span></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:solid windowtext 1.0pt; width:107.75pt; border-top:none; padding:0in 5.4pt 0in 5.4pt" width="144">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt">Proxy</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:2.25in; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="216">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">Required for githib.com only</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:134.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="179">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">None/Manual</span></span></span></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:solid windowtext 1.0pt; width:107.75pt; border-top:none; padding:0in 5.4pt 0in 5.4pt" width="144">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt">Proxy Server</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:2.25in; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="216">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">Required for githib.com only</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:134.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="179">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">genproxy.amdocs.com</span></span></span></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:solid windowtext 1.0pt; width:107.75pt; border-top:none; padding:0in 5.4pt 0in 5.4pt" width="144">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt">Proxy Port</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:2.25in; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="216">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">Required for githib.com only</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:134.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="179">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">8080</span></span></span></p>
+          <p style="margin:0in 0in 0.0001pt"> </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>  <img src="../assets/images/image1290.png"/></p>
+  <p> <span style="font-size:17px;">    <span style="text-decoration:underline;">GIT Clone URL</span><br/>
+            After entering correct credentials, Jenkins Login Page will be loaded.</span></p>
+  <p> </p>
+  <p><strong style="font-size: 20px">Jenkins Login</strong><br/>
+    <span style="font-size:17px;">Enter the Jenkins Login details below:</span><br/>
+    <img src="../assets/images/image1291.png"/></p>
+  <p>  </p>
+  <table class="MsoTableGrid" style="margin-left:-.25pt; border-collapse:collapse; border:solid windowtext 1.0pt">
+    <tbody>
+      <tr style="height:9.0pt">
+        <td style="border:solid windowtext 1.0pt; background:#0f243e; width:166.15pt; padding:0in 5.4pt 0in 5.4pt; height:9.0pt" width="222">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt"><span style="color:white">Parameter Name</span></span></b></span></span></p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; background:#0f243e; width:249.85pt; border-left:none; padding:0in 5.4pt 0in 5.4pt; height:9.0pt" width="333">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt"><span style="color:white">Explanation</span></span></b></span></span></p>
+        </td>
+      </tr>
+      <tr style="height:9.0pt">
+        <td style="border:solid windowtext 1.0pt; width:166.15pt; border-top:none; padding:0in 5.4pt 0in 5.4pt; height:9.0pt" width="222">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt">URL</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:249.85pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt; height:9.0pt" width="333">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">Jenkins URL</span></span></span></p>
+        </td>
+      </tr>
+      <tr style="height:9.0pt">
+        <td style="border:solid windowtext 1.0pt; width:166.15pt; border-top:none; padding:0in 5.4pt 0in 5.4pt; height:9.0pt" width="222">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt">User</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:249.85pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt; height:9.0pt" width="333">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">Jenkins User</span></span></span></p>
+        </td>
+      </tr>
+      <tr style="height:18.1pt">
+        <td style="border:solid windowtext 1.0pt; width:166.15pt; border-top:none; padding:0in 5.4pt 0in 5.4pt; height:18.1pt" width="222">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt">Token</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:249.85pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt; height:18.1pt" width="333">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">Jenkins API Token Available in Jenkins User Configuration. Refer <span class="MsoHyperlink" style="color:blue"><span style="text-decoration:underline"><a href="#_How_to_Generate" style="color:blue; text-decoration:underline">How to Generate API Token</a></span></span></span></span></span></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p><br/>
+    <span style="font-size:17px;">How to Generate API Token<br/>
+          •    Login to Jenkins.<br/>
+                <img src="../assets/images/image1292.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+          •    Go to Configuration.<br/>
+                <img src="../assets/images/image1293.png"/> </span></p>
+  <p><span style="font-size:17px;"><br/>
+          •    Click on Show API Token.<br/>
+                </span></p>
+  <p><span style="font-size:17px;">             <img src="../assets/images/image1294.png"/><br/>
+          •    Copy the API Token</span></p>
+  <p><span style="font-size:17px;">             <img src="../assets/images/image1295.png"/></span></p>
+  <p><span style="font-size:17px;">    If Jenkins has valid ginger plug in installed, Jobs List Page will be loaded.</span></p>
+
+</body></html>

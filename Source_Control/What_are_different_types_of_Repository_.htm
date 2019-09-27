@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "..";
+  gCommonRootRelPath = "..";
+  gTopicId = "7.0_1";
+
+//]]></script>
+
+<script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>What are different types of Repository?</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../assets/css/default.css"/>
+</head>
+<body>
+  <h1>What are different types of Repository?</h1>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">1. Introduction    </strong><br/>
+           When multiple users are working on the same solution then it is better to put the solution on a repository like SVN (Subversion).<br/>
+           This helps the solution to be edited by multiple users and the latest solution can be downloaded by the users.</span></p>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">2.  Pre-requisite</strong><br/>
+            Drop a mail to *GingerCoreTeam GingerCoreTeam@int.amdocs.com giving the details of the solution name and the name of the users that need access to it.<br/>
+            A mail should be received with the details of the login credentials.<br/>
+            <strong>Note: All users should use the same version of Ginger in order to take the benefits of Repositories. </strong><br/>
+          <br/>
+          An empty folder is created in SVN. The user has to then copy his solution to the SVN folder.<br/>
+          Follow the below section &quot;How to download a solution&quot; to add your solution to the SVN repository.<br/>
+          <br/>
+                                       <br/>
+      <strong style="font-size: 20px">3.  What are different types of Repository?</strong><br/>
+             There are 2 types of repositories viz. SVN and GIT.<br/>
+          <br/>
+             1)    SVN repository is used within the Amdocs network.<br/>
+             2)    GIT repository is used in projects which has GIT services.  This is used for external network like ATT project.<br/>
+                     The users have to create their own solution folder in it and use it in Ginger.<br/>
+          </span></p>
+
+</body></html>

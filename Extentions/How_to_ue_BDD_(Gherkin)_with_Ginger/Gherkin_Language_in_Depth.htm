@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../..";
+  gCommonRootRelPath = "../..";
+  gTopicId = "9.1.0_4";
+
+//]]></script>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Gherkin Language in Depth</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Gherkins"/></head>
+<body>
+  <h1>Gherkin Language in Depth</h1>
+  <p><br/>
+    <span style="font-size:17px;">The Gherkin Language is used by many Business and Functional Testers, writing Tests and Automation with the Gherkin Language in a easy to read and write language.</span></p>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">1.    GHERKIN – Language Details</strong><br/>
+              If you do not know what Gherkin is, below is summary.<br/>
+             Gherkin is the language that Cucumber understands. It is a Business Readable, Domain Specific Language that lets you describe software&#39;s behavior without detailing how that <br/>
+            behavior is implemented. Gherkin serves two purposes — documentation and automated tests.<br/>
+             You can view the in depth details of the language in the following sections.</span></p>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">2.    GHERKIN – Language Syntax</strong><br/>
+              Like Python and YAML, Gherkin is a line-oriented language that uses indentation to define structure. Line endings terminate statements (eg, steps). <br/>
+              Either spaces or tabs may be used for indentation (but spaces are more portable). Most lines start with a keyword.<br/>
+               Comment lines are allowed anywhere in the file. They begin with zero or more spaces, followed by a hash sign (#) and some amount of text.<br/>
+               The parser divides the input into features, scenarios and steps. When you run the feature the trailing portion (after the keyword) of each step is matched to a Ruby code block <br/>
+               called Step Definitions.</span></p>
+  <p><span style="font-size:17px;">   A Gherkin source file usually looks like this<br/>
+          1: Feature: Some terse yet descriptive text of what is desired<br/>
+          2:   Textual description of the business value of this feature<br/>
+          3:   Business rules that govern the scope of the feature<br/>
+          4:   Any additional information that will make the feature easier to understand<br/>
+          5: <br/>
+          6:   Scenario: Some determinable business situation<br/>
+          7:     Given some precondition<br/>
+          8:       And some other precondition<br/>
+          9:     When some action by the actor<br/>
+          10:       And some other action<br/>
+          11:       And yet another action<br/>
+          12:     Then some testable outcome is achieved<br/>
+          13:       And something else we can check happens too<br/>
+          14:     <br/>
+          15:   Scenario: A different situation<br/>
+          16:       ...</span></p>
+  <p><span style="font-size:17px;">First line starts the feature. Lines 2–4 are unparsed text, which is expected to describe the business value of this feature. Line 6 starts a scenario. Lines 7–13 are the <br/>
+      steps for the scenario. Line 15 starts next scenario and so on.</span></p>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">3.    GHERKIN – Feature Introduction</strong><br/>
+              Every .feature file conventionally consists of a single feature. A line starting with the keyword Feature followed by free indented text starts a feature. <br/>
+             A feature usually contains a list of scenarios. You can write whatever you want up until the first scenario, which starts with the word  Scenario (or localized equivalent; <br/>
+              Gherkin is localized for dozens of languages) on a new line. You can use tagging to group features and scenarios together independent of your file and directory structure.</span></p>
+  <p><span style="font-size:17px;">        Every scenario consists of a list of steps, which must start with one of the keywords Given, When, Then, But or And. Gherkin Editors treats them all the same, but you shouldn’t.<br/>
+             Feature Example<br/>
+             Feature: Serve coffee<br/>
+             Coffee should not be served until paid for<br/>
+             Coffee should not be served until the button has been pressed<br/>
+             If there is no coffee left then money should be refunded</span></p>
+  <p><span style="font-size:17px;">       Scenario: Buy last coffee<br/>
+              Given there are 1 coffees left in the machine<br/>
+             And I have deposited 1$<br/>
+             When I press the coffee button<br/>
+              Then I should be served a coffee</span></p>
+  <p><span style="font-size:17px;">       In addition to a scenario, a feature may contain a background, scenario outline and examples. Respective keywords (in English) and places to read more.</span></p>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">4.    GHERKIN – Language Key Words</strong><br/>
+              Below are the Gherkin Key Words, if you want more information please click the associated Link in the More Info.<br/>
+              KeyWord Table with links for additional info if needed.<br/>
+               </span></p>
+  <table class="Table" style="width:386.7pt; margin-left:61.85pt; background:white; border-collapse:collapse; border:solid #dfe2e5 1.0pt" width="516">
+    <tbody>
+      <tr style="height:27.3pt">
+        <td style="border:solid #dfe2e5 1.0pt; background:white; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:27.3pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><strong><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#24292e">keyword</span></span></strong><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#24292e"></span></span></span></span></p>
+        </td>
+        <td style="border:solid #dfe2e5 1.0pt; background:white; border-left:none; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:27.3pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><strong><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#24292e">localized</span></span></strong><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#24292e"></span></span></span></span></p>
+        </td>
+        <td style="border:solid #dfe2e5 1.0pt; background:white; border-left:none; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:27.3pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><strong><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#24292e">more info, see</span></span></strong><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#24292e"></span></span></span></span></p>
+        </td>
+      </tr>
+      <tr style="height:28.05pt">
+        <td style="border:solid #dfe2e5 1.0pt; background:#f6f8fa; border-top:none; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:28.05pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:#24292e">name</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid #dfe2e5 1.0pt; background:#f6f8fa; border-top:none; border-left:none; border-right:solid #dfe2e5 1.0pt; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:28.05pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:#24292e">‘English’</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid #dfe2e5 1.0pt; background:#f6f8fa; border-top:none; border-left:none; border-right:solid #dfe2e5 1.0pt; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:28.05pt"> </td>
+      </tr>
+      <tr style="height:28.05pt">
+        <td style="border:solid #dfe2e5 1.0pt; background:white; border-top:none; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:28.05pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:#24292e">native</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid #dfe2e5 1.0pt; background:white; border-top:none; border-left:none; border-right:solid #dfe2e5 1.0pt; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:28.05pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:#24292e">‘English’</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid #dfe2e5 1.0pt; background:white; border-top:none; border-left:none; border-right:solid #dfe2e5 1.0pt; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:28.05pt"> </td>
+      </tr>
+      <tr style="height:27.3pt">
+        <td style="border:solid #dfe2e5 1.0pt; background:#f6f8fa; border-top:none; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:27.3pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:#24292e">encoding</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid #dfe2e5 1.0pt; background:#f6f8fa; border-top:none; border-left:none; border-right:solid #dfe2e5 1.0pt; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:27.3pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:#24292e">‘UTF-8’</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid #dfe2e5 1.0pt; background:#f6f8fa; border-top:none; border-left:none; border-right:solid #dfe2e5 1.0pt; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:27.3pt"> </td>
+      </tr>
+      <tr style="height:28.05pt">
+        <td style="border:solid #dfe2e5 1.0pt; background:white; border-top:none; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:28.05pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:#24292e">feature</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid #dfe2e5 1.0pt; background:white; border-top:none; border-left:none; border-right:solid #dfe2e5 1.0pt; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:28.05pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:#24292e">‘Feature’</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid #dfe2e5 1.0pt; background:white; border-top:none; border-left:none; border-right:solid #dfe2e5 1.0pt; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:28.05pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span class="MsoHyperlink" style="color:blue"><span style="text-decoration:underline"><span style="color:#0366d6"><a href="https://github.com/cucumber/cucumber/wiki/Feature-Introduction" style="color:blue; text-decoration:underline"><span style="color:#0366d6">Feature Introduction</span></a></span></span></span><span style="color:#24292e"></span></span></span></p>
+        </td>
+      </tr>
+      <tr style="height:27.3pt">
+        <td style="border:solid #dfe2e5 1.0pt; background:#f6f8fa; border-top:none; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:27.3pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:#24292e">background</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid #dfe2e5 1.0pt; background:#f6f8fa; border-top:none; border-left:none; border-right:solid #dfe2e5 1.0pt; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:27.3pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:#24292e">‘Background’</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid #dfe2e5 1.0pt; background:#f6f8fa; border-top:none; border-left:none; border-right:solid #dfe2e5 1.0pt; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:27.3pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span class="MsoHyperlink" style="color:blue"><span style="text-decoration:underline"><span style="color:#0366d6"><a href="https://github.com/cucumber/cucumber/wiki/Background" style="color:blue; text-decoration:underline"><span style="color:#0366d6">Background</span></a></span></span></span><span style="color:#24292e"></span></span></span></p>
+        </td>
+      </tr>
+      <tr style="height:27.3pt">
+        <td style="border:solid #dfe2e5 1.0pt; background:white; border-top:none; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:27.3pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:#24292e">scenario</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid #dfe2e5 1.0pt; background:white; border-top:none; border-left:none; border-right:solid #dfe2e5 1.0pt; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:27.3pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:#24292e">‘Scenario’</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid #dfe2e5 1.0pt; background:white; border-top:none; border-left:none; border-right:solid #dfe2e5 1.0pt; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:27.3pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span class="MsoHyperlink" style="color:blue"><span style="text-decoration:underline"><span style="color:#0366d6"><a href="https://github.com/cucumber/cucumber/wiki/Feature-Introduction" style="color:blue; text-decoration:underline"><span style="color:#0366d6">Feature Introduction</span></a></span></span></span><span style="color:#24292e"></span></span></span></p>
+        </td>
+      </tr>
+      <tr style="height:27.3pt">
+        <td style="border:solid #dfe2e5 1.0pt; background:#f6f8fa; border-top:none; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:27.3pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:#24292e">scenario_outline</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid #dfe2e5 1.0pt; background:#f6f8fa; border-top:none; border-left:none; border-right:solid #dfe2e5 1.0pt; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:27.3pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:#24292e">‘Scenario Outline’</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid #dfe2e5 1.0pt; background:#f6f8fa; border-top:none; border-left:none; border-right:solid #dfe2e5 1.0pt; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:27.3pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span class="MsoHyperlink" style="color:blue"><span style="text-decoration:underline"><span style="color:#0366d6"><a href="https://github.com/cucumber/cucumber/wiki/Scenario-Outlines" style="color:blue; text-decoration:underline"><span style="color:#0366d6">Scenario outlines</span></a></span></span></span><span style="color:#24292e"></span></span></span></p>
+        </td>
+      </tr>
+      <tr style="height:28.05pt">
+        <td style="border:solid #dfe2e5 1.0pt; background:white; border-top:none; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:28.05pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:#24292e">examples</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid #dfe2e5 1.0pt; background:white; border-top:none; border-left:none; border-right:solid #dfe2e5 1.0pt; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:28.05pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:#24292e">‘Examples’ / ‘Scenarios’</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid #dfe2e5 1.0pt; background:white; border-top:none; border-left:none; border-right:solid #dfe2e5 1.0pt; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:28.05pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span class="MsoHyperlink" style="color:blue"><span style="text-decoration:underline"><span style="color:#0366d6"><a href="https://github.com/cucumber/cucumber/wiki/Scenario-Outlines" style="color:blue; text-decoration:underline"><span style="color:#0366d6">Scenario outlines</span></a></span></span></span><span style="color:#24292e"></span></span></span></p>
+        </td>
+      </tr>
+      <tr style="height:27.3pt">
+        <td style="border:solid #dfe2e5 1.0pt; background:#f6f8fa; border-top:none; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:27.3pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:#24292e">given</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid #dfe2e5 1.0pt; background:#f6f8fa; border-top:none; border-left:none; border-right:solid #dfe2e5 1.0pt; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:27.3pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:#24292e">‘Given’</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid #dfe2e5 1.0pt; background:#f6f8fa; border-top:none; border-left:none; border-right:solid #dfe2e5 1.0pt; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:27.3pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span class="MsoHyperlink" style="color:blue"><span style="text-decoration:underline"><span style="color:#0366d6"><a href="https://github.com/cucumber/cucumber/wiki/Given-When-Then" style="color:blue; text-decoration:underline"><span style="color:#0366d6">Given-When-Then</span></a></span></span></span><span style="color:#24292e"></span></span></span></p>
+        </td>
+      </tr>
+      <tr style="height:27.3pt">
+        <td style="border:solid #dfe2e5 1.0pt; background:white; border-top:none; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:27.3pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:#24292e">when</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid #dfe2e5 1.0pt; background:white; border-top:none; border-left:none; border-right:solid #dfe2e5 1.0pt; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:27.3pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:#24292e">‘When’</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid #dfe2e5 1.0pt; background:white; border-top:none; border-left:none; border-right:solid #dfe2e5 1.0pt; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:27.3pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span class="MsoHyperlink" style="color:blue"><span style="text-decoration:underline"><span style="color:#0366d6"><a href="https://github.com/cucumber/cucumber/wiki/Given-When-Then" style="color:blue; text-decoration:underline"><span style="color:#0366d6">Given-When-Then</span></a></span></span></span><span style="color:#24292e"></span></span></span></p>
+        </td>
+      </tr>
+      <tr style="height:28.05pt">
+        <td style="border:solid #dfe2e5 1.0pt; background:#f6f8fa; border-top:none; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:28.05pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:#24292e">then</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid #dfe2e5 1.0pt; background:#f6f8fa; border-top:none; border-left:none; border-right:solid #dfe2e5 1.0pt; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:28.05pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:#24292e">‘Then’</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid #dfe2e5 1.0pt; background:#f6f8fa; border-top:none; border-left:none; border-right:solid #dfe2e5 1.0pt; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:28.05pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span class="MsoHyperlink" style="color:blue"><span style="text-decoration:underline"><span style="color:#0366d6"><a href="https://github.com/cucumber/cucumber/wiki/Given-When-Then" style="color:blue; text-decoration:underline"><span style="color:#0366d6">Given-When-Then</span></a></span></span></span><span style="color:#24292e"></span></span></span></p>
+        </td>
+      </tr>
+      <tr style="height:27.3pt">
+        <td style="border:solid #dfe2e5 1.0pt; background:white; border-top:none; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:27.3pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:#24292e">and</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid #dfe2e5 1.0pt; background:white; border-top:none; border-left:none; border-right:solid #dfe2e5 1.0pt; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:27.3pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:#24292e">‘And’</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid #dfe2e5 1.0pt; background:white; border-top:none; border-left:none; border-right:solid #dfe2e5 1.0pt; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:27.3pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span class="MsoHyperlink" style="color:blue"><span style="text-decoration:underline"><span style="color:#0366d6"><a href="https://github.com/cucumber/cucumber/wiki/Given-When-Then" style="color:blue; text-decoration:underline"><span style="color:#0366d6">Given-When-Then</span></a></span></span></span><span style="color:#24292e"></span></span></span></p>
+        </td>
+      </tr>
+      <tr style="height:27.3pt">
+        <td style="border:solid #dfe2e5 1.0pt; background:#f6f8fa; border-top:none; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:27.3pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:#24292e">but</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid #dfe2e5 1.0pt; background:#f6f8fa; border-top:none; border-left:none; border-right:solid #dfe2e5 1.0pt; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:27.3pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:#24292e">‘But’</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid #dfe2e5 1.0pt; background:#f6f8fa; border-top:none; border-left:none; border-right:solid #dfe2e5 1.0pt; padding:4.5pt 9.75pt 4.5pt 9.75pt; height:27.3pt">
+          <p style="margin-bottom:12.0pt; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span class="MsoHyperlink" style="color:blue"><span style="text-decoration:underline"><span style="color:#0366d6"><a href="https://github.com/cucumber/cucumber/wiki/Given-When-Then" style="color:blue; text-decoration:underline"><span style="color:#0366d6">Given-When-Then</span></a></span></span></span><span style="color:#24292e"></span></span></span></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p><span style="font-size:17px;"></span></p>
+  <p><span style="font-size:17px;"></span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong style="font-size: 20px">5.    GHERKIN – Writing Scenarios Best Practices</strong><br/>
+                We suggest to use indentation with spaces to organize your scenarios in your feature file.</span></p>
+  <p><span style="font-size:17px;">         File Organization <br/>
+               You can see how we organized our feature files on a application level with folders shown in Fig 5.1<br/>
+          (fig 5.1)<br/>
+            <img src="../../assets/images/image1283.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+          Step Optimization for Reusability <br/>
+             We also suggest to use what has already been developed in the repository. If an activity(Line) has already been developed it will show in the Line helper shown in Fig 5.2. <br/>
+              While typing the helper box will give you a list of automated steps to choose from. <br/>
+          Fig 5.2<br/>
+          <img src="../../assets/images/image1284.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+          If your step does not exist yet, we STRONGLY recommend to use a step line that can be reused. For example if your step is to enter a value in a text box, use the same <br/>
+          line verbiage exactly. Do not reword the line. This will allow us to reuse the same step. </span></p>
+
+</body></html>

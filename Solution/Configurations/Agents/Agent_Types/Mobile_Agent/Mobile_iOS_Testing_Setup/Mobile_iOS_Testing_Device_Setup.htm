@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../../../../..";
+  gCommonRootRelPath = "../../../../../..";
+  gTopicId = "3.2.1.1.1.2.0_5";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Mobile iOS Testing Device Setup</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Mobile Agent"/></head>
+<body>
+  <h1>Mobile iOS Testing Device Setup</h1>
+  <p><strong><span style="font-size:20px;">2.1. Setting Device Configurations </span></strong></p>
+  <p><span style="font-size:20px;">    <span style="font-size:17px;">  a.    Connect the device to the Mac via USB<br/>
+              b.    When connecting the iOS device to the Mac machine you will be asked (on the device) if to trust the connected Mac- select “Trust”<br/>
+              c.    For iOS 6.0 and up Turn on “Web inspector” on iOS device (settings &gt; safari &gt; advanced)<br/>
+              d.    For iOS 8.0 and up Turn on &quot;UI Automation&quot; toggle on iOS device (settings &gt; Developer)</span><br/>
+            <br/>
+      <strong>2.2.    Getting Device Details</strong></span></p>
+  <p><span style="font-size:20px;">    <span style="font-size:17px;">  a.    Go to the Mac main menu bar -&gt; “Utilities” -&gt; “Terminal”<br/>
+              b.    Type and run below command:<br/>
+                    instruments –s devices<br/>
+              c.    You will see list of all known devices, the list contains the Simulators and real devices (which connected to the Mac via USB)- those </span></span><span style="font-size:17px;"></span></p>
+  <p><span style="font-size:17px;">are the devices which will be known by Appium and automation will be available for them<br/>
+            d.    For each device there are 3 important details<br/>
+            a.    Device Name<br/>
+            b.    Platform Version<br/>
+            c.    Device ID (UDID)<br/>
+                   <img src="../../../../../../assets/images/image358.png"/><img src="../../../../../../assets/images/image347.png"/><br/>
+            e.    The device details will be used for the Ginger Agent configuration so automation will run on the relevant device</span></p>
+
+</body></html>

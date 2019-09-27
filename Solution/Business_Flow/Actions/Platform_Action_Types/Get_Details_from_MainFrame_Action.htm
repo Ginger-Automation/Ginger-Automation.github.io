@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../../..";
+  gCommonRootRelPath = "../../../..";
+  gTopicId = "3.1.1.4.0_2";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Get Details from MainFrame Action</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Platform Actions"/></head>
+<body>
+  <h1>Get Details from MainFrame Action</h1>
+  <p><span style="font-size:17px;">This is used to when we have to get details form the Main frame.</span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong>How to Configure Action</strong><br/>
+      <strong>     1. Pre-requisite </strong><br/>
+                               A Solution should be created with Agent having Main Frame Platform.<br/>
+                                <br/>
+           <strong>2. Action Operation</strong><br/>
+                  <br/>
+                1)    Double click on the Business flow. In the Activity Actions, click on ‘Add New’ button <br/>
+                        <img src="../../../../assets/images/image110.png"/></span></p>
+  <p><span style="font-size:17px;">          2)    In the ‘Platform Actions’ tab, select the ‘Get Details from MainFrame’ then click on ‘Add Action’ button given in the below window</span></p>
+  <p>                    <img src="../../../../assets/images/image111.png"/></p>
+  <p><span style="font-size:17px;">          </span><span style="font-size:17px;">3)    Below screen should be displayed.  <br/>
+                        ‘Locate By:’ drop down can be used to indicate the locator.<br/>
+                        The ‘Locate Value’ can be used using the ‘Open Window Explorer to select Element’ button.<br/>
+                        Refer the ‘Locate by-Locate Value’ document to know how to use this.</span></p>
+  <p><span style="font-size:17px;">                  Select the ‘Get Mainframe Details’ from the drop down.<br/>
+                        ‘Value’ is entered if required either manually or using a variable.<br/>
+                        Click on Ok to add the action to the Activity Actions.</span></p>
+  <p><span style="font-size:17px;">                   <img src="../../../../assets/images/image528.png"/><img src="../../../../assets/images/image112.png"/></span></p>
+  <p> </p>
+  <p><span style="font-size:17px;">                   The ‘Get Mainframe Details’ drop down has the below options:-<br/>
+                         Get Text  (default selected)—used to get the text from the caret position (position where the cursor is)<br/>
+                         Get all Editable fields       ------used to get all the editable fields from the mainframe<br/>
+                         Get Current screen as XML  -- used to get the screen in the agent as an XML<br/>
+                         Get Details from Text          ---- used to get the position of the text on the screen    </span></p>
+  <p> </p>
+  <p><span style="font-size:17px;">          4)    Run Action will perform the selected Action</span></p>
+
+</body></html>

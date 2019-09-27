@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "..";
+  gCommonRootRelPath = "..";
+  gTopicId = "8.2_1";
+
+//]]></script>
+
+<script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Ginger Plugin for Jenkins</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Jenkins Plugin"/></head>
+<body>
+  <h1>Ginger Plugin for Jenkins</h1>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">Description </strong>   <br/>
+      The Ginger plugin was created for allowing Ginger users to schedule Ginger executions using Jenkins with ease, including advanced capabilities like automatic updates from SVN.<br/>
+      Ginger Plugin offers:<br/>
+              Selecting which Solution Run Set &amp; Environment to use from drop list<br/>
+              Automatic update of the Solution to execute from SVN automatically prior to execution<br/>
+              Execution of the configured Run set on schedule time<br/>
+          <br/>
+      <strong style="font-size: 20px">Pre Requisites</strong><br/>
+          1.    Jenkins requires Java7 or above to function. Java8 is recommended.<br/>
+          2.    Jenkins Server version 1.606 or above<br/>
+          3.    Jenkins Slave installed on the machine hosting Ginger installation (machine also need to be able to access SVN server in which the Ginger Solution exist) <br/>
+          4.    Jenkins projects creation and execution knowledge<br/>
+          5.    Ginger Solution which:<br/>
+              a.    Configured on Ginger SVN Data Source<br/>
+              b.    Includes Run Set/s ready to be executed <br/>
+          6.    Ginger Version (Beta 2.5.7 or above) on Slave machine(For Ginger Plug in V1.5 or above)<br/>
+          <br/>
+      <strong style="font-size: 20px">How to use the Ginger Plugin?</strong><br/>
+      <strong>  1. Install Ginger Plugin</strong><br/>
+             Please follow below steps for installing the Ginger Plugin:<br/>
+                1.    Login to Jenkins <br/>
+                2.    Go to: Manage Jenkins &gt; Manage Plugins<br/>
+                3.    Click on “Advance configuration” tab<br/>
+                4.    In that page there is an option to upload a plugin browse and select the Ginger Plugin file “gingerPlugin.hpi”<br/>
+                5.    Click on “Upload”<br/>
+              The plugin now supposed to be installed and ready to be used.</span></p>
+  <p><span style="font-size:17px;">               <img src="../assets/images/image1211.png"/></span></p>
+  <p> </p>
+  <p><span style="font-size:17px;"><strong>  2. Set Ginger Execution using Ginger Plugin</strong><br/>
+             2.1 Use Ginger Plugin in Your Project<br/>
+                   Follow below steps to use the Ginger plugin in your new/existing Jenkins project:<br/>
+                     1.    Open the Project page<br/>
+                     2.    Click on “Configure”<br/>
+                     3.    Go to “Build” section configurations<br/>
+                     4.    Click on “Add Build Step” and choose “Configure Ginger execution parameters”</span></p>
+  <p><span style="font-size:17px;">                    <img src="../assets/images/image1212.png"/></span></p>
+  <p> </p>
+  <p><span style="font-size:17px;">       2.2 Configure Ginger Plugin Parameters<br/>
+                    Please set below details in the plugin configurations:<br/>
+                       1.    Set below “Source Control (SVN) Configurations” details                         </span></p>
+  <table align="center" class="MsoTableGrid" style="border-collapse:collapse; border:solid windowtext 1.0pt">
+    <tbody>
+      <tr>
+        <td style="border:solid windowtext 1.0pt; background:#0f243e; width:107.75pt; padding:0in 5.4pt 0in 5.4pt" width="144">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt"><span style="color:white">Parameter Name</span></span></b></span></span></p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; background:#0f243e; width:2.25in; border-left:none; padding:0in 5.4pt 0in 5.4pt" width="216">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt"><span style="color:white">Explanation</span></span></b></span></span></p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; background:#0f243e; width:134.5pt; border-left:none; padding:0in 5.4pt 0in 5.4pt" width="179">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt"><span style="color:white">Sample Value</span></span></b></span></span></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:solid windowtext 1.0pt; width:107.75pt; border-top:none; padding:0in 5.4pt 0in 5.4pt" width="144">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt">Source Control Type</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:2.25in; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="216">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">Type of source Control</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:134.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="179">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">SVN/GIT</span></span></span></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:solid windowtext 1.0pt; width:107.75pt; border-top:none; padding:0in 5.4pt 0in 5.4pt" width="144">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt">URL</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:2.25in; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="216">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">The URL of Source Control server which host the Ginger Solution to execute</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:134.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="179">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">http://cmitechint1srv.corp.amdocs.com:81/svn/</span></span></span></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:solid windowtext 1.0pt; width:107.75pt; border-top:none; padding:0in 5.4pt 0in 5.4pt" width="144">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt">User</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:2.25in; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="216">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">Source Control user name</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:134.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="179">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt"></span></span></span></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:solid windowtext 1.0pt; width:107.75pt; border-top:none; padding:0in 5.4pt 0in 5.4pt" width="144">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt">Password</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:2.25in; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="216">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">Source Control password</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:134.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="179">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt"></span></span></span></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:solid windowtext 1.0pt; width:107.75pt; border-top:none; padding:0in 5.4pt 0in 5.4pt" width="144">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt">Proxy Server</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:2.25in; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="216">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">Required for githib.com only</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:134.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="179">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">genproxy.amdocs.com</span></span></span></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:solid windowtext 1.0pt; width:107.75pt; border-top:none; padding:0in 5.4pt 0in 5.4pt" width="144">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt">Proxy Port</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:2.25in; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="216">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">Required for githib.com only</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:134.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="179">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">8080</span></span></span></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p><span style="font-size:17px;">    <br/>
+                        2.    Click on “Test Connection”<br/>
+                        3.    Set below “Test Properties” details</span>                          </p>
+  <table align="center" class="MsoTableGrid" style="border-collapse:collapse; border:solid windowtext 1.0pt">
+    <tbody>
+      <tr>
+        <td style="border:solid windowtext 1.0pt; background:#0f243e; width:107.75pt; padding:0in 5.4pt 0in 5.4pt" width="144">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt"><span style="color:white">Parameter Name</span></span></b></span></span></p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; background:#0f243e; width:2.25in; border-left:none; padding:0in 5.4pt 0in 5.4pt" width="216">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt"><span style="color:white">Explanation</span></span></b></span></span></p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; background:#0f243e; width:134.5pt; border-left:none; padding:0in 5.4pt 0in 5.4pt" width="179">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt"><span style="color:white">Sample Value</span></span></b></span></span></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:solid windowtext 1.0pt; width:107.75pt; border-top:none; padding:0in 5.4pt 0in 5.4pt" width="144">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt">Solution Name</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:2.25in; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="216">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">Ginger Solution name to execute as appear in SVN repository</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:134.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="179">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt"></span></span></span></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:solid windowtext 1.0pt; width:107.75pt; border-top:none; padding:0in 5.4pt 0in 5.4pt" width="144">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt">RunSet Name</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:2.25in; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="216">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">The Ginger Run Set to execute (must be exist in the Solution)</span></span></span></p>
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt"></span></span></span></p>
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">For selecting from drop list of optional RunSets- click on “Get Solution Details” button and type “.” In the text box</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:134.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="179">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt"></span></span></span></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:solid windowtext 1.0pt; width:107.75pt; border-top:none; padding:0in 5.4pt 0in 5.4pt" width="144">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt">Environment Name</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:2.25in; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="216">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">The Ginger environment to use for execution (must be exist in the Solution)</span></span></span></p>
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt"></span></span></span></p>
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">For selecting from drop list of optional Environments- click on “Get Solution Details” button and type “.” In the text box</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:134.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="179">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt"></span></span></span></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p><span style="font-size:17px;">                  4.    Set below “Ginger Execution Definitions” details:</span><br/>
+                                  </p>
+  <table align="center" class="MsoTableGrid" style="border-collapse:collapse; border:solid windowtext 1.0pt">
+    <tbody>
+      <tr>
+        <td style="border:solid windowtext 1.0pt; background:#0f243e; width:107.75pt; padding:0in 5.4pt 0in 5.4pt" width="144">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt"><span style="color:white">Parameter Name</span></span></b></span></span></p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; background:#0f243e; width:2.25in; border-left:none; padding:0in 5.4pt 0in 5.4pt" width="216">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt"><span style="color:white">Explanation</span></span></b></span></span></p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; background:#0f243e; width:134.5pt; border-left:none; padding:0in 5.4pt 0in 5.4pt" width="179">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt"><span style="color:white">Sample Value</span></span></b></span></span></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:solid windowtext 1.0pt; width:107.75pt; border-top:none; padding:0in 5.4pt 0in 5.4pt" width="144">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt">Solution Full Path</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:2.25in; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="216">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">The full path on the slave machine to place the Ginger Solution before the execution</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:134.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="179">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">C:\GingerSolutions</span></span></span></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:solid windowtext 1.0pt; width:107.75pt; border-top:none; padding:0in 5.4pt 0in 5.4pt" width="144">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:10.0pt">Ginger Executable Full Path</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:2.25in; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="216">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">The full path to “Ginger.exe” on the slave machine</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:134.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" width="179">
+          <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:10.0pt">C:\Program Files (x86)\Amdocs\Amdocs BEAT Ginger Automation\Ginger.exe</span></span></span></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><u>Config Example For GIT:</u></b><b><u></u></b></span></span></p>
+  <p><img src="../assets/images/image1215.png"/></p>
+  <p> </p>
+  <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><u>Config Example For SVN:</u></b></span></span></p>
+  <p style="margin:0in 0in 0.0001pt"><img src="../assets/images/image1216.png"/></p>
+
+</body></html>

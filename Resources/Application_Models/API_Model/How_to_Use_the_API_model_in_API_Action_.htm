@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../..";
+  gCommonRootRelPath = "../../..";
+  gTopicId = "5.1.1.0_6";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>How to Use the API model in API Action?</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="API Model"/></head>
+<body>
+  <h1>How to Use the API model in API Action?</h1>
+  <p><span style="font-size:17px;"><strong>Pre-requisite :- </strong></span></p>
+  <p><span style="font-size:17px;"><strong></strong>The Activity where this Action will be added should have Target application as MyWebServicesApp.</span></p>
+  <p><span style="font-size:17px;">1)    In the Automate tab, click the + button in the ‘Activity-Actions’ section to get the below window. Select the <br/>
+          ‘Web API Model Action’ and click the ‘Add Action’ button.</span></p>
+  <p><span style="font-size:17px;">    <img src="../../../assets/images/image1005.png"/></span><br/>
+     </p>
+  <p><span style="font-size:17px;">2)    A new screen is displayed showing the list of APIs that were added in the Resources tab.<br/>
+          Select the desired API and click on Select button.</span></p>
+  <p><span style="font-size:17px;">    <img src="../../../assets/images/image1006.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+      3)    The below API Models screen will display the API. More APIs can be added using the + button. Click on the enabled Next button.</span></p>
+  <p><span style="font-size:17px;">      <img src="../../../assets/images/image1007.png"/></span></p>
+  <p><span style="font-size:17px;">          <br/>
+      4)    The API Parameters Consolidation screen will display the parameter details in the API. “Selected Value” drop down can be used to change the value if required.<br/>
+          Or the use can use the Value expression (…) button to choose another value.<br/>
+          Click on the Finish button.</span></p>
+  <p><span style="font-size:17px;">    <img src="../../../assets/images/image1008.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+      5)    The API Action gets added in the solution</span></p>
+  <p>   <img src="../../../assets/images/image1009.png"/></p>
+
+</body></html>

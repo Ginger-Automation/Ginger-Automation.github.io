@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../../..";
+  gCommonRootRelPath = "../../../..";
+  gTopicId = "3.1.1.4.0_12";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Web API Rest Action</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Platform Actions"/></head>
+<body>
+  <h1>Web API Rest Action</h1>
+  <p> </p>
+  <p><span style="font-size:17px;"><strong>1. Introduction</strong><br/>
+           Web API SOAP &amp; Web API REST Actions support the following features:<br/>
+           • Security – ability to use certificates provided by user<br/>
+           • Authorization - currently added Basic authorization method using username and password.</span></p>
+  <p><span style="font-size:17px;"><strong>2. Agent Configuration </strong><br/>
+           2.1. Create new agent and select platform and driver as WebService.<br/>
+                  Go to Configurations-&gt; Agents and click on the + button.<br/>
+                  <img src="../../../../assets/images/image607.png"/><br/>
+                In the Agent Wizard, enter the Name and select ‘WebServices’ in the Platform type.<br/>
+                    <img src="../../../../assets/images/image608.png"/></span></p>
+  <p><span style="font-size:17px;">    <br/>
+           2.2. Configure relevant fields:<br/>
+                  SaveRequestXML, SaveResponseXML – setting to true will save the request files being sent and received responses<br/>
+                  SaveXMLDirectoryPath – The path where all requests and response will be saved<br/>
+                     <img src="../../../../assets/images/image609.png"/>                  </span></p>
+  <p><span style="font-size:17px;"><br/>
+           2.3. Test Agent – click on ‘Test Agent Configurations’ button to make sure all the settings are correct.<br/>
+                  Make sure connection is successful:</span></p>
+  <p><span style="font-size:17px;">           <img src="../../../../assets/images/image610.png"/></span></p>
+  <p> </p>
+  <p><span style="font-size:17px;"><strong>3. Configuration</strong><br/>
+              3.1. Go To ‘Add Action’ screen and select ‘WebAPI REST Action’ and click ‘Add Action’<br/>
+                    <img src="../../../../assets/images/image625.png"/></span></p>
+  <p><span style="font-size:17px;">        3.2. Action Type configurations:<br/>
+                  In the screenshot below you can see the required fields<br/>
+                  a)    Endpoint URL – this is the ‘end point ‘ URL where the request is being sent (same as in SOAP UI)<br/>
+                  b)    In the event that custom network credentials are required to access the endpoint URL (for example Username = sa , Password=sa) , </span></p>
+  <p><span style="font-size:17px;">                   a radio button  can be marked as ‘Custom’ and then 3 additional fields will be visible allowing the user to populate : </span></p>
+  <p><span style="font-size:17px;">                   username, password and domain <br/>
+                  c)    ‘Do not Fail Action on Bad Response’ - when checkbox is marked no validation will be done on the response code (useful for negative testing).<br/>
+                  d)    ‘Request Headers’ – by clicking on the ‘+’ sign (#6) the user can add a field which is required in the request e.g. token , </span></p>
+  <p><span style="font-size:17px;">                   in the case of adding a token the values should be as follows:<br/>
+                            i.  Header = ‘Token’ (or as required per specifications).<br/>
+                            ii. Value   =  the token value .<br/>
+                  e)    Request Type : populate request type per requirement <br/>
+                       **Note: GET/DELETE Requests do not require request body<br/>
+                        <strong><img src="../../../../assets/images/image626.png"/></strong></span></p>
+  <p><span style="font-size:17px;"><strong></strong><br/>
+                  f)    HTTP Version – http protocol version (mostly used Version 1.1):<br/>
+                         <img src="../../../../assets/images/image627.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                  g)    Response content Type – encoding of the response the user expects to receive:<br/>
+                         <img src="../../../../assets/images/image628.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                  h)    Cookie Mode:<br/>
+                         i.   Don’t use cookies – the platform will not record nor send cookies.<br/>
+                         ii.     Use Fresh Cookies – the platform will retrieve the cookies from the response and store them, for example storing the cookies from a login step.<br/>
+                         iii. Use Session Cookies – will use previously stored cookies, for example if a login step is required then the cookies </span></p>
+  <p><span style="font-size:17px;">                      retrieved from the login step will be used </span><br/>
+                              <img src="../../../../assets/images/image629.png"/></p>
+  <p>                         <img src="../../../../assets/images/image630.png"/></p>
+  <p><span style="font-size:17px;">                From any ‘…’ the user can reach the value expression editor screen and parameterize the inputs:</span></p>
+  <p><span style="font-size:17px;">                      <img src="../../../../assets/images/image631.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+              3.3. Request Body:<br/>
+                     In this section the user can define the body of the message <br/>
+                        i.     Radio button selecting input type: free text or from file.<br/>
+                               **Note file types are : json, xml,txt.<br/>
+                        ii.  Body content Parameters – ability to replace keys with values per definition<br/>
+                        iii. Body content Type – request encoding </span></p>
+  <p><span style="font-size:17px;"></span></p>
+  <p><span style="font-size:17px;">                        <img src="../../../../assets/images/image632.png"/></span></p>
+  <p><span style="font-size:17px;">                        <img src="../../../../assets/images/image633.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+              <strong>     1.    Security Configurations:</strong><br/>
+                           This section allows the user to configure security settings:<br/>
+                             <img src="../../../../assets/images/image634.png"/><br/>
+                      a.    SSL Certificates : <br/>
+                             This area allows to add a custom SSL certificate to the request, as default the platform Accepts all Certificates,<br/>
+                             When ‘Custom’ radio button is selected 2 fields become visible, Certificate Path &amp; Certificate Password ( not mandatory) </span></p>
+  <p><span style="font-size:17px;">                       and the user can browse for the certificate or pass it’s path in a variable.</span></p>
+  <p>                          <strong><img src="../../../../assets/images/image635.png"/></strong></p>
+  <p><span style="font-size:17px;">                b.    Security Type – as mentioned in the introduction the user can select the security protocol per system requirements </span></p>
+  <p><span style="font-size:17px;">                        from a drop down list</span></p>
+  <p><span style="font-size:17px;">                         <img src="../../../../assets/images/image636.png"/></span></p>
+  <p><span style="font-size:17px;">                c.    Authorization – allows to use different authorization methods:</span><br/>
+                             <img src="../../../../assets/images/image637.png"/></p>
+  <p>                        <img src="../../../../assets/images/image638.png"/></p>
+  <p><span style="font-size:17px;"></span></p>
+  <p><span style="font-size:17px;"><br/>
+                      Output Section<br/>
+                      If the actions successful the output values will be populate with the</span></p>
+  <p>                  <span style="font-size:17px;">Response code, headers, full response , parsed response per fields.</span></p>
+  <p><span style="font-size:17px;">                   <img height="143" src="../../../../assets/images/image639.png" width="815"/></span></p>
+  <p><span style="font-size:17px;">                   <img height="67" src="../../../../assets/images/image640.png" width="814"/><br/>
+                      </span></p>
+
+</body></html>

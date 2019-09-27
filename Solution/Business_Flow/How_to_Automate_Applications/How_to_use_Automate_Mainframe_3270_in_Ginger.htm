@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../..";
+  gCommonRootRelPath = "../../..";
+  gTopicId = "3.1.2.0_3";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>How to use Automate Mainframe 3270 in Ginger </title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Main Frame 3270"/></head>
+<body>
+  <h1>How to use Automate Mainframe 3270 in Ginger</h1>
+  <p><strong><span style="font-size:20px">1.    Configurations</span></strong></p>
+  <p><span style="font-size:17px;">    a.    Add a new Target Application  with platform Mainframe<br/>
+                <img src="../../../assets/images/image964.png"/></span></p>
+  <p><span style="font-size:17px;">    b.    Add a New Agent of Type Mainframe 3270<br/>
+            <img src="../../../assets/images/image965.png"/></span></p>
+  <p><span style="font-size:17px;">    c.    Configure the agent with your application details, Do not change Term Type unless necessary<br/>
+                <img src="../../../assets/images/image966.png"/>                  </span></p>
+  <p><span style="font-size:17px;"><br/>
+          d.    Add the Target Application to the desired Business Flow<br/>
+          e.    Add a new activity and choose the Target application with Platform Mainframe.<br/>
+          f.    On Proper connection you’ll see your application screen with message that the connection is successful.</span></p>
+  <p><span style="font-size:17px;">        <img src="../../../assets/images/image967.png"/>                      </span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong style="font-size: 20px">2.    Add Action</strong><br/>
+          a.    Set Text To Main frame Action<br/>
+              Locate By : Use  By Caret Position or BY XY<br/>
+              <strong>ByCaretPosition </strong>:  Use the caret position shown in the Ginger mainframe window for the desired location.<br/>
+              <strong>ByXY</strong> : We can also use the XY in the format x,y to set the location of the text<br/>
+              <strong>Set Text and Send Enter Checkbox</strong>: Tick this if you want to send enter after setting text.</span></p>
+  <p><span style="font-size:17px;">     <img src="../../../assets/images/image968.png"/></span></p>
+  <p><span style="font-size:17px;">    b.    Get Details from MainFrame Action</span></p>
+  <p><span style="font-size:17px;">        Similar to Set Text , Get Details also requires the Locate by and Locate Value .</span></p>
+  <p><span style="font-size:17px;">        The value field is the length of the required text starting from the provided Caret Position/ XY.<br/>
+              If left blank it will return the text till next whitespace.  <br/>
+            <img src="../../../assets/images/image969.png" style="cursor: nesw-resize;"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+         c.    Send Keys to Mainframe<br/>
+             Use this Action to send Special Keys to mainframe like Enter, Tab Insert, Function Keys etc.<br/>
+            User just need to select the desired key from the dropdown, no other configuration is required.<br/>
+          <img src="../../../assets/images/image970.png"/></span></p>
+
+</body></html>

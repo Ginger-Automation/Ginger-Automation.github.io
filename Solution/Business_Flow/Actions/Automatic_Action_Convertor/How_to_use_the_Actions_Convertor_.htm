@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../../..";
+  gCommonRootRelPath = "../../../..";
+  gTopicId = "3.1.1.2.0_2";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>How to use the Actions Convertor?</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css"/>
+  <meta name="rh-index-keywords" content="Actions,Actions Conversion"/>
+</head>
+<body>
+  <h1>How to use the Actions Convertor?</h1>
+  <p><span style="font-size:17px;">As you can see below, &quot;Actions Conversion&quot; button is available in the Business Flow section of the Automate tab.</span></p>
+  <p><span style="font-size:17px;"> <img src="../../../../assets/images/image649.png"/></span><span style="font-size:17px;"></span></p>
+  <p><span style="font-size:17px;">                Figure 2 – Actions Conversion button</span></p>
+  <p><span style="font-size:17px;"><br/>
+      Please follow the steps mentioned below: </span></p>
+  <p><span style="font-size:17px;">  a. Open your ASCF Business Flow in the Automate tab.<br/>
+           For example, we have created a sample ASCF Business Flow, TestBFlow, containing two activities viz. 1. Automate Selenium Web.<br/>
+           Now as you can see below, the first activity consists of non-platform based actions and the second one consists of ASCF actions,</span></p>
+  <p>     <img src="../../../../assets/images/image650.png"/></p>
+  <p>    <img src="../../../../assets/images/image651.png"/></p>
+  <p><span style="font-size:17px;">          Figure 3 &amp; 4 – Displaying old ASCF Flow, TestBFlow</span></p>
+  <p><span style="font-size:17px;">  b. Click on ‘Actions Conversion’ button on the tab.<br/>
+           On clicking the button, the following window will open up enlisting all the activities present in the respective business flow, <br/>
+           <img src="../../../../assets/images/image652.png"/><br/>
+           Figure 5 – Actions Conversion window showing activities in TestBFlow</span></p>
+  <p><span style="font-size:17px;">     Now in this example, Action Conversion wizard will be opened and will display the activities which contains legacy actions.<br/>
+           <img src="../../../../assets/images/image653.png"/><br/>
+           Figure 6</span></p>
+  <p><span style="font-size:17px;"><br/>
+        c. Now we can select the activities which we want to convert to new actions and click on Next button, we will see a list of <br/>
+           Convertible Actions Types along with their count listed next to their Source Activities and Target Action Type, which states the <br/>
+           Action Type to which the old action will be converted to, after the conversion is completed.</span></p>
+  <p><span style="font-size:17px;">     <img src="../../../../assets/images/image654.png"/><br/>
+           Figure 7</span></p>
+  <p><span style="font-size:17px;">     As you can see above, the selected activity consists of:</span></p>
+  <p><span style="font-size:17px;">     •    1 Goto URL Action and,<br/>
+           •    6 Generic Element Actions</span></p>
+  <p><span style="font-size:17px;">    These are the obsolete actions that will be converted to UIElement Actions that once configured with Java-platform based TA will be executed.</span></p>
+  <p><span style="font-size:17px;">  d. Now, we need to select the type of actions that we want to convert. We can also select all the enlisted Source Action Types too, <br/>
+           the selections can be made depending on requirement.<br/>
+           After selection the Source Action Type, we need to decide the conversion configuration. <br/>
+           This means that we need to decide whether we want to add newly converted action(s) to a New Activity or to the Same Activity along  with <br/>
+           the TA from the dropdown list.<br/>
+           Let’s consider both the scenarios separately here,</span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong>1. New Activity with selected Target Application from dropdown list</strong></span></p>
+  <p><span style="font-size:17px;">   In our example, we can select Web-App (or any other from dropdown) Target Application from the list and then, hit the Finish button, a new <br/>
+         activity with the name, New - Automate Selenium Web, will be added to your business flow just below the parent activity.</span></p>
+  <p><span style="font-size:17px;">   <img src="../../../../assets/images/image655.png"/><br/>
+         Figure 8</span></p>
+  <p><span style="font-size:17px;">    We can notice that the old activity has been marked as Inactive and the newly converted activity has been set as Active.<br/>
+          <br/>
+      <strong>2. Same Activity with selected Target Application from dropdown list</strong></span></p>
+  <p><span style="font-size:17px;">   Now, if we select Menu Item Action and will take the default Target Application as for the Target Application for selected activity from the <br/>
+         list and then, hit the Convert button, we will see that the newly converted Menu Item actions will be added to the same activity <br/>
+         i.e. 2. Create Contact - Mandatory Information.</span></p>
+  <p><span style="font-size:17px;">  <img src="../../../../assets/images/image656.png"/><br/>
+       <br/>
+         Figure 9</span></p>
+  <p><span style="font-size:17px;">   As we can see below that the newly converted Menu Item action into UIElement actions have been added right below the source action in the same <br/>
+         activity. Also the source actions have been marked as Inactive and the new UIElement actions have been set as Active.</span></p>
+  <p><span style="font-size:17px;">  <img src="../../../../assets/images/image657.png"/><br/>
+         Figure 10</span></p>
+  <p><span style="font-size:17px;"><strong>3. Action conversion to use the POM object</strong><br/>
+         As we can see below that, if we select the POM object to convert the legacy actions to use the POM object then we need to select the <br/>
+         Menu Item Action as in the figure below, by selecting this we can convert the selected actions to be converted to new actions which uses the <br/>
+         selected POM object. It tries to search the element (control in action) in the POM object and binds the new action with the element searched.</span></p>
+  <p><span style="font-size:17px;">   <img src="../../../../assets/images/image658.png"/><br/>
+         Figure 11</span></p>
+  <p><span style="font-size:17px;"><br/>
+        <img src="../../../../assets/images/image659.png"/><br/>
+         Figure 12</span></p>
+  <p><span style="font-size:17px;"><strong>4.    Some troubleshooting tips</strong><br/>
+          a)    The Actions Convertor has been tested against a number of ASCF Driver-based scenarios, with different business flows from different <br/>
+              projects but there could be some edge-cases, where it may encounter issues while conversion. In such cases, we advise the users to <br/>
+              manually configure the obsolete action causing issue like mapping of values – Locate Value, Column Number or Column Title etc. <br/>
+              from the old action with the new UIElement Action.</span></p>
+  <p><span style="font-size:17px;">    b)    If the users still face issues with the convertor beyond their control, they are requested to share the scenarios with the <br/>
+              Ginger Core Team so that they can look into it and fix it, as soon as possible to make the convertor more robust and intuitive. <br/>
+              Their feedback and suggestions are also welcome.</span></p>
+  <p><span style="font-size:17px;">    c)    It is recommended to choose a New Activity in Conversion Configurations section to add the newly converted actions.</span></p>
+
+</body></html>

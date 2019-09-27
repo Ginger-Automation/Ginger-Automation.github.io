@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../..";
+  gCommonRootRelPath = "../..";
+  gTopicId = "5.2.0_4";
+
+//]]></script>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Data Source Config Page</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Data Source"/></head>
+<body>
+  <h1>Data Source Config Page</h1>
+  <p><span style="font-size:17px;">Data Source Config Page will be used to read/write from Data Source Tables. We can open Data Source Config Page from below:<br/>
+        •    Value Expression Editor Page (For Input Data)<br/>
+        •    Output Grid (To Save Data in Data Table)</span></p>
+  <p><span style="font-size:17px;"><br/>
+      1.   Data Source Config – Value Expression<br/>
+             Value Expression can be now used to read from Data Source and use it as input data for Action. You will find the Data Source                           Hierarchy  in Value Expression Component Tree.</span></p>
+  <p><span style="font-size:17px;">         <img src="../../assets/images/image737.png"/><br/>
+                         <br/>
+             You can double click on the Data Source Table Item to open Data Source Config Page.</span></p>
+  <p><span style="font-size:17px;"> 2.    Data Source Config – Output Grid<br/>
+              If you want to store the output of the Action to Data Source Table. You can do that by clicking on the Store to Data source button from <br/>
+              output grid as shown below.</span></p>
+  <p><span style="font-size:17px;">          <img src="../../assets/images/image738.png"/><br/>
+       <br/>
+               It will open the Data Source Config Page.</span></p>
+  <p><span style="font-size:17px;"> 3.    Data Source Config Page – Configuration<br/>
+              Data Source Config Page will allow us to point to a cell in the table which should to which user want to read/write the data in Data                Table. Data Source Config Page is divided to below 4 Sections:<br/>
+               <img src="../../assets/images/image739.png"/></span></p>
+  <p><span style="font-size:17px;">      3.1    Data Source Table Details Section<br/>
+                     This Section contains the List of the available Data Sources of the Solution and its corresponding Data Table Names. <br/>
+                    You can always change the selected Data Source Name/Table Name in the Data Source configuration page to choose where you                       want to read/write the data.</span></p>
+  <p><span style="font-size:17px;"><br/>
+            3.2    Table Data Section<br/>
+                     This section will show the actual table data after expanding the section. It will need to be reloaded after you change the data <br/>
+                     Source Table from the Data Source Table Details Section.<br/>
+                     After Expanding the Table data Section you will be see the Table Data as below.</span></p>
+  <p><span style="font-size:17px;">              <img src="../../assets/images/image740.png"/><br/>
+       <br/>
+            3.3    Table Cell Identifier Section<br/>
+                     Table Cell Identifier section will allow us to point to a particular cell in the Data table where we want to read/write the data. <br/>
+                     The Configurations options will be different for different Table Types. We will discuss both the configurations below.</span></p>
+  <p><span style="font-size:17px;">              3.3.1    Table Cell Identifier – Ginger Key Value Table<br/>
+                                In order to identify the cell where you want to read/write the data, you just need to select the Key Name from Key Name                                Combo list in the Table Cell Identifier Section.<br/>
+                                  <img src="../../assets/images/image741.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                   3.3.2    Table Cell Identifier – Customized Table<br/>
+                               There are multiple identifiers available to identify the cell from customized Table. <br/>
+                               •    By Selected Cell- This option will be enabled only after loading the Table data section.<br/>
+                                    You can just select the cell from the table data section to identify cell.<br/>
+                                     <img src="../../assets/images/image742.png"/></span></p>
+  <p><span style="font-size:17px;">                        •    By Query – If you want to identify the cell by writing a query. <br/>
+                                   There is readymade Operators given to create the query.<br/>
+                                    <img src="../../assets/images/image743.png"/></span></p>
+  <p><span style="font-size:17px;">                        •    Customized – You can identify the cell by providing the Column and Row identifier.<br/>
+                                      o Column – You can choose the name of the column from the Column Drop Down.<br/>
+                                      o Row – We have 3 options available to specify the row.</span></p>
+  <p><span style="font-size:17px;">                                    1. Row Number – Specify the row number in the row number drop down as shown below.<br/>
+                                                 <img src="../../assets/images/image744.png"/></span></p>
+  <p><span style="font-size:17px;">                                    2. Next Available Row – It will select the first row where Ginger_Used Column value is Null. <br/>
+                                              Note:- This option will be shown only in customized table having GINGER_USED column.<br/>
+                                               <img src="../../assets/images/image745.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                                          3.    Where – You can provide the condition to identify the row from the Table.</span><br/>
+                                                  <img src="../../assets/images/image746.png"/></p>
+  <p><span style="font-size:17px;">              3.3.3  Mark Row As Done <br/>
+                             You can check this check box if you want to update the GINGER_USED column as “Done” after read/writing data from the                          Table Cell. <br/>
+                            Note: - This option will be shown only in customized table having GINGER_USED column.</span></p>
+  <p><span style="font-size:17px;"></span>                        </p>
+  <p><span style="font-size:17px;">   3.4     Value Expression<br/>
+                   This section is read only Auto Populated section. It will show the Value expression which is getting generated by selecting the                          different options to identify the cell. </span></p>
+  <p><span style="font-size:17px;">             The Value Expression created will be using below keywords:<br/>
+                      •    DS Name – Name of the Data Source<br/>
+                      •    DST – Name of the Data Source Table<br/>
+                      •    KEY – Key Name from the Ginger KEY Name Table<br/>
+                      •    MASD – Y/N, if you want to mark row as Done/Not.<br/>
+                      •    IDEN – Identifier<br/>
+                            o    Query – Identify by Query<br/>
+                            o    Cust – If you identifier is Customized<br/>
+                      •    QUERY – The query by which cell will be executed to get the Table Cell.<br/>
+                      •    ICOLVAL – The Value of the column Name for Customized Identifier.<br/>
+                      •    IROW – Row Identifier.<br/>
+                            o    RowNum – To identify Row by Row Number<br/>
+                            o    NxtAvail – To get Next Available Row<br/>
+                            o    Where – To get Row with the Condition<br/>
+                      •    ROWNUM – Value of the Row Number.  <br/>
+                      •    WCOLVAL – Value of Column in where clause.<br/>
+                      •    WOPR – Operation for where Column value.<br/>
+                      •    WROWVAL – Value of the column cell in where clause.</span></p>
+
+</body></html>

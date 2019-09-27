@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../../../../..";
+  gCommonRootRelPath = "../../../../../..";
+  gTopicId = "3.2.1.1.1.2.0_6";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Native/Hybrid App Testing on Real Device Setup</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Mobile Agent"/></head>
+<body>
+  <h1>Native/Hybrid App Testing on Real Device Setup</h1>
+  <p><span style="font-size:17px;">Appium will be able to connect and automate only apps which were signed using a valid iOS Development Distribution Certificate and Provisioning Profile (due to Apple limitations).</span></p>
+  <p><span style="font-size:17px;">Prerequisites:<br/>
+          •    Tested app source code (Xcode project)<br/>
+          •    iOS Development account with iOS App Development &amp; Distribution certificates</span></p>
+  <p><span style="font-size:17px;"><br/>
+      <span style="font-size:20px;">  <strong>1.    Creating Provisioning Profile for Tested App</strong></span><br/>
+                  a.    Go to https://developer.apple.com/<br/>
+                  b.    Click on Member Center and login using your iOS Developer Account<br/>
+                  c.    Click on Certificates, Identifiers &amp; Profiles<br/>
+                         <img src="../../../../../../assets/images/image348.png"/><br/>
+                  d.    Click on iOS Apps Certificates<br/>
+                  e.    Validate your account has a valid iOS Development and iOS Distribution certificates<br/>
+                         <img src="../../../../../../assets/images/image360.png"/><img src="../../../../../../assets/images/image349.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                  f.    Create an App ID for your tested app (if existing one can’t be used):<br/>
+                        I.    Click on Identifiers-&gt; App IDs-&gt; Add<br/>
+                               <img src="../../../../../../assets/images/image361.png"/><img src="../../../../../../assets/images/image350.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                       II.    Give the App ID some Name to be identified in the App IDs list<br/>
+                      III.    Select Explicit App ID (Wildcard App ID can also be used) radio button<br/>
+                       IV.    Set the Bundle ID as “com.ginger.&lt;&lt;AppName&gt;&gt;” (different Bundle ID can be used)<br/>
+                                 <img src="../../../../../../assets/images/image362.png"/><img src="../../../../../../assets/images/image351.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                        V.    Click Continue<br/>
+                       VI.    Click Submit<br/>
+                      VII.    Click Done<br/>
+                     VIII.    Validate the new App ID was added to the list<br/>
+                                <img src="../../../../../../assets/images/image363.png"/><img src="../../../../../../assets/images/image352.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                  g.    Add your real device to the Devices list:<br/>
+                        I.    Click on Devices-&gt; All-&gt;Add<br/>
+                               <img src="../../../../../../assets/images/image364.png"/><img src="../../../../../../assets/images/image353.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                       II.    Set the real device Name as it appear in step 2 of &quot;Mobile iOS Testing Setup Device Setup&quot; file<br/>
+                      III.    Set the real device UDID as it appear in <span style="font-size:17px;">step 2 of &quot;Mobile iOS Testing Setup Device Setup&quot; file</span><br/>
+                              <img src="../../../../../../assets/images/image354.png"/>  <img src="../../../../../../assets/images/image365.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                       IV.    Click on Continue<br/>
+                        V.    Click on Register<br/>
+                       VI.    Validate the device was added to the Devices list</span></p>
+  <p> </p>
+  <p><span style="font-size:17px;">            h.    Create Provisioning Profile for the tested app<br/>
+                        I.    Click on Provisioning Profile-&gt;All-&gt;Add<br/>
+                                 <img src="../../../../../../assets/images/image366.png"/> <img src="../../../../../../assets/images/image355.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                       II.    Select Distribution -&gt; Ad Hoc and click Continue<br/>
+                                  <img src="../../../../../../assets/images/image367.png"/><img src="../../../../../../assets/images/image356.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                      III.    Select the App ID you created in step 1.f and click Continue<br/>
+                                 <img src="../../../../../../assets/images/image368.png"/><img src="../../../../../../assets/images/image357.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                       IV.    Select your account iOS Distribution certificate and click Continue<br/>
+                        V.     Select your real device which was added in step 1.g (you can select all devices)<br/>
+                                  <img src="../../../../../../assets/images/image358.png"/>  <img src="../../../../../../assets/images/image369.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                       VI.    Give your provisioning profile a Name which will be used to recognize it<br/>
+                                    <img src="../../../../../../assets/images/image370.png"/><img src="../../../../../../assets/images/image359.png"/></span></p>
+  <p><span style="font-size:17px;"> <br/>
+                      VII.    Click on Generate<br/>
+                     VIII.    Click on the Download button for downloading the Provisioning Profile file to your Mac machine <br/>
+                                  <img src="../../../../../../assets/images/image371.png"/><img src="../../../../../../assets/images/image360.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                       IX.    Click on Done<br/>
+                        X.    Right click on the Provisioning Profile file which is on your Mac and select Open<br/>
+                       XI.    Noting visible supposed to happen</span></p>
+  <p> </p>
+  <p><span style="font-size:17px;"><span style="font-size:20px;"><strong>2.    Sign and Install Tested App</strong></span><br/>
+          a.    Place the tested app Xcode project files (source code) on your Mac machine<br/>
+                 (sample app called “UICatalog” can be downloaded from Here)<br/>
+          b.    Open Xcode from Go-&gt; Applications-&gt; Xcode<br/>
+                  <img src="../../../../../../assets/images/image372.png"/><img src="../../../../../../assets/images/image361.png"/><br/>
+          c.    Load the tested app Xcode project<br/>
+          d.    Click on top menu Xcode-&gt;Preferences-&gt;Accounts and add your iOS development account<br/>
+          e.    Select the application header on the left menu and select the Info tab<br/>
+          f.    Set the Bundle Identifier value to be the same as the App ID Bundle ID you configured in the App ID you created in step 1.f<br/>
+                  <img src="../../../../../../assets/images/image373.png"/><img src="../../../../../../assets/images/image362.png"/><br/>
+          g.    Select the General tab<br/>
+          h.    Set below values:<br/>
+                I.    Bundle Identifier- supposed to be he same as the App ID Bundle ID you configured in the App ID you created in step 1.f<br/>
+               II.    Team- select your iOS development account<br/>
+              III.    Deployment Target- select the minimum device platform (OS version) the application supposed to support (according to the testing devices you have)<br/>
+               IV.    Devices- select “Universal” (to support iPhone and iPad)<br/>
+                      <img src="../../../../../../assets/images/image374.png"/><img src="../../../../../../assets/images/image363.png"/><br/>
+          i.    Select the Build Settings tab<br/>
+          j.    Expand the Code Signing section and set below values:<br/>
+               I.    Code Signing Identity<br/>
+                  o    Debug: iOS Developer<br/>
+                  o    Debug-&gt;Any iOS SDK: iOS Developer<br/>
+                  o    Release: iPhone Distribution- &lt;&lt;Your iOS Development Account&gt;&gt;<br/>
+                  o    Release-&gt;Any iOS SDK: iPhone Distribution- &lt;&lt;Your iOS Development Account&gt;&gt;<br/>
+              II.    Provisioning Profile<br/>
+                  o    Debug: Automatic<br/>
+                  o    Release: &lt;&lt;The Provisioninig Profile you created in step 1.h&gt;&gt;</span><br/>
+                         <img src="../../../../../../assets/images/image375.png"/><img src="../../../../../../assets/images/image364.png"/></p>
+  <p><span style="font-size:17px;">    k.    Select the real device you want to test the app on from the devices drop list (if your device appears as un available then try to save                 </span><span style="font-size:17px;">the </span><span style="font-size:17px;">project and restart Xcode application)<br/>
+                   <img src="../../../../../../assets/images/image365.png"/>    <img src="../../../../../../assets/images/image376.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+               l.    Click on the Run button<br/>
+                      <img src="../../../../../../assets/images/image377.png"/><img src="../../../../../../assets/images/image366.png"/><br/>
+          m.    Xcode supposed to successfully build the app, sign it, install and run it on the real device<br/>
+          n.    Stop Xcode by clicking on the Stop button<br/>
+          o.    Not Mandatory: For creating an IPA file (app installation file) that can be sent to other users and allow them to configure appium                    </span><span style="font-size:17px;">to </span><span style="font-size:17px;">install and run the app without using Xcode:<br/>
+                    I.    Click on top menu Product Archive<br/>
+                   II.    Xcode will create archive of the app<br/>
+                  III.    In Archives window select the latest archive and click on Export…<br/>
+                          <img src="../../../../../../assets/images/image378.png"/><img src="../../../../../../assets/images/image367.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                   IV.    Select Save for Ad Hoc Deployment radio button anf click Next<br/>
+                             <img src="../../../../../../assets/images/image379.png"/><img src="../../../../../../assets/images/image368.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                    V.    Select your iOS Development Account ancd click on Choose<br/>
+                           <img src="../../../../../../assets/images/image380.png"/><img src="../../../../../../assets/images/image369.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                   VI.    In Summary window, make sure the selected Provisioning Profile is the Provisioning Profile you created in step 3.1.h and click Export</span></p>
+  <p><span style="font-size:17px;">                    <img src="../../../../../../assets/images/image381.png"/><img src="../../../../../../assets/images/image370.png"/><br/>
+       <br/>
+                  VII.    Select export target (like Desktop) and click on Export<br/>
+                 VIII.    Find the app.IPA file in the target location<br/>
+                           <img src="../../../../../../assets/images/image382.png"/><img src="../../../../../../assets/images/image371.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                   IX.    Send the app.ipa file to other users<br/>
+          p.    Close the installed app on the device<br/>
+          q.    Close Xcode (not have to)</span></p>
+  <p> </p>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">3.    Launch and Test the App Using Ginger</strong><br/>
+          a.    Launch Appium server on the Mac machine according to steps in section 1.3<br/>
+          b.    Launch Ginger (on the Windows machine which is in the same network like the Appium Mac machine)<br/>
+          c.    Create Business Flow with the Mobile platform<br/>
+          d.    Add new Agent, give it logical name and select the MobileAppiumIOS driver<br/>
+                  <img src="../../../../../../assets/images/image383.png"/><img src="../../../../../../assets/images/image372.png"/><br/>
+          e.    Define the Agent Driver Configurations as follow:<br/>
+                I.    StartAppiumServerAutomatically – “false” or “true” if you want Ginger to start Appium server automatically.<br/>
+               II.     AppiumServerIP – set IP value for Appium server.<br/>
+              III.    AppiumServerPort – Set specific port or “dynamic” if you wish Ginger to allocate free port for appium server.<br/>
+               IV.    AppiumInstallationFolderPath - if StartAppiumServerAutomatically is set to “true” - insert your Appium installation folder path here.<br/>
+                V.    AppiumServer – is Deprecated – keep empty and use AppiumServerIP and AppiumServerPort instead.<br/>
+               VI.    DeviceName: Any Device name<br/>
+              VII.    DevicePlatformVersion: Real device platform version <br/>
+             VIII.    DeviceID: the device ID you found in step 2.2<br/>
+               IX.    In case the tested app is installed on the device:<br/>
+                      InstalledAppPackage: The tested app Package found in step 3.1.d<br/>
+                      InstalledAppActivity: The tested app Package found in step 3.1.d<br/>
+                      Else, in case using the tested app APK file:<br/>
+                      AppInstallerPath: The full path to the tested app APK file on the Appium server machine<br/>
+                       <img src="../../../../../../assets/images/image373.png"/><img src="../../../../../../assets/images/image384.png" style="cursor: nwse-resize;"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+          f.    Save the Agent settings<br/>
+          g.    Select the Business Flow created in step b and shift to the Automate tab<br/>
+          h.    Select the Agent created in step c from the Agents selection in the ribbon<br/>
+          i.    Click on Launch Agent<br/>
+          j.    If you choose to start Appium Manually: Make sure that the connection request got to the Appium server, you supposed to see                        </span><span style="font-size:17px;">something like this in screen shot below<br/>
+                <img src="../../../../../../assets/images/image385.png"/><img src="../../../../../../assets/images/image374.png"/><br/>
+          k.    Once the connection establish the app supposed to be launched on the tested device and the Appium Mobile Driver Window                          </span><span style="font-size:17px;">supposed </span><span style="font-size:17px;">to appear on Ginger and allow you to control it and start creating your automation  </span></p>
+  <p><span style="font-size:17px;">          <img src="../../../../../../assets/images/image386.png"/><img src="../../../../../../assets/images/image375.png"/></span></p>
+  <p> </p>
+
+</body></html>

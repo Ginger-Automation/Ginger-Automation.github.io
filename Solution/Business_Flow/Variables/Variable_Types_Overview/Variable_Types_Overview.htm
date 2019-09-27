@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../../..";
+  gCommonRootRelPath = "../../../..";
+  gTopicId = "3.1.3.1.0_4";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Variable Types Overview</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Variables"/></head>
+<body>
+  <h1>Variable Types Overview</h1>
+  <p><span style="font-size:17px;"><strong>1. Dynamic Variables</strong><br/>
+          This variable can store Dynamic type of data.</span></p>
+  <p><span style="font-size:17px;">    Shown in the below pic, ‘Value Expression’ is the area where a value is entered for the variable. <br/>
+           Another variable can also be used to set the value using the ‘…’ button next to it.</span></p>
+  <p><span style="font-size:17px;">    <img src="../../../../assets/images/image951.png"/></span></p>
+  <p><span style="font-size:17px;"><strong>2. Variable Selection List</strong><br/>
+          User can store list of values in this variable. So when Set variable action is used, only the values from the list<br/>
+          can be stored in this variable. If any other value is tried to be stored then the Action fails.</span></p>
+  <p><span style="font-size:17px;">  This variable is used when user wants to select a default value of his choice.</span></p>
+  <p><span style="font-size:17px;">   As shown below, the list of values can be added using the + button.</span></p>
+  <p><span style="font-size:17px;">  The user can select a default value using the &#39;Selected Value&#39; drop down.<br/>
+          <img src="../../../../assets/images/image953.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong>3. Variable Password String</strong><br/>
+          This variable stores the password in encrypted format.<br/>
+          So the user won&#39;t be able to see what password is displayed.<br/>
+          <img src="../../../../assets/images/image954.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong>4. Variable Random String</strong><br/>
+          This variable generates random string during execution.</span></p>
+  <p><span style="font-size:17px;">    User has to give the minimum and maximum length.</span></p>
+  <p><span style="font-size:17px;">     <img src="../../../../assets/images/image955.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+          <br/>
+      <strong>5. Variable Sequence</strong><br/>
+         This variable is used when a sequencial number is required every time the Business Flow is executed.<br/>
+         User can give the Min &amp; Max value along with the interval required.</span></p>
+  <p><span style="font-size:17px;">    <img src="../../../../assets/images/image956.png"/></span></p>
+  <p><span style="font-size:17px;"></span></p>
+  <p><span style="font-size:17px;"><strong>6. Variable String</strong><br/>
+         This is used to store alphabets &amp; numbers. <br/>
+         Set Variable Action can also be used to store value in this type of variable.</span></p>
+  <p><span style="font-size:17px;">  <img src="../../../../assets/images/image957.png"/></span></p>
+  <p><span style="font-size:17px;"></span></p>
+  <p><span style="font-size:17px;"><strong>7. Variable List </strong>  <br/>
+          User can store list of values in this variable. So when Set variable action is used, only the values from the list<br/>
+          can be stored in this variable. If any other value is tried to be stored then the Action fails.</span></p>
+  <p><span style="font-size:17px;">      <img src="../../../../assets/images/image958.png"/></span></p>
+  <p><span style="font-size:17px;"></span></p>
+  <p><span style="font-size:17px;"><strong>8. Variable Random Number</strong><br/>
+          This variable generates random number during execution.<br/>
+          User can give the Min &amp; Max value along with the interval required. Integer can also be generated.</span></p>
+  <p><span style="font-size:17px;">    <img src="../../../../assets/images/image959.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+          <br/>
+      <strong>9. Variable Timer</strong><br/>
+          This variable is used when a timer is required to be set during the execution.</span></p>
+  <p><span style="font-size:17px;">   <img src="../../../../assets/images/image960.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+          <br/>
+      <strong>    9.1 How to use Variable Timer?</strong><br/>
+              i)     Click on the ‘Add New’ button in the Activity Actions section.<br/>
+                  In the Add Action window, select the ‘Set Variable Action’ and click on Add Action button.</span></p>
+  <p><span style="font-size:17px;">         <img src="../../../../assets/images/image961.png"/><br/>
+                  <br/>
+              ii)    Select the variable in the Variable Name drop down. The variable type is automatically populated depending on the variable used. <br/>
+                  Select value from the ‘Select Variable Value Operation Type’ drop down.<br/>
+                  User can start, stop, continue or reset the timer.<br/>
+                  <img src="../../../../assets/images/image962.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+              iii)    Click on Ok to add the action.<br/>
+              iv)    When the Action is run, the Timer is started for the Start timer operation type.<br/>
+              Timer is shown running in the current value field of the Timer variable.</span></p>
+  <p><span style="font-size:17px;"> <img src="../../../../assets/images/image963.png"/></span></p>
+
+</body></html>

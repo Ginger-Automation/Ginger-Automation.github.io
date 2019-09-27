@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../../..";
+  gCommonRootRelPath = "../../../..";
+  gTopicId = "3.1.1.4.0_13";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Web API Action- SoapUI Wrapper &amp; Rest</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Platform Actions"/></head>
+<body>
+  <h1>Web API SoapUI Wrapper Action</h1>
+  <p><span style="font-size:17px;"><strong>1. Introduction</strong><br/>
+           Web API SOAP &amp; Web API REST Actions support the following features:<br/>
+           • Security – ability to use certificates provided by user<br/>
+           • Authorization - currently added Basic authorization method using username and password.</span></p>
+  <p><span style="font-size:17px;"><strong>2. Agent Configuration </strong><br/>
+           2.1. Create new agent and select platform and driver as WebService.<br/>
+                  Go to Configurations-&gt; Agents and click on the + button.<br/>
+                  <img src="../../../../assets/images/image607.png"/><br/>
+                In the Agent Wizard, enter the Name and select ‘WebServices’ in the Platform type.<br/>
+                    <img src="../../../../assets/images/image608.png"/></span></p>
+  <p><span style="font-size:17px;">    <br/>
+           2.2. Configure relevant fields:<br/>
+                  SaveRequestXML, SaveResponseXML – setting to true will save the request files being sent and received responses<br/>
+                  SaveXMLDirectoryPath – The path where all requests and response will be saved<br/>
+                     <img src="../../../../assets/images/image609.png"/>                  </span></p>
+  <p><span style="font-size:17px;"><br/>
+           2.3. Test Agent – click on ‘Test Agent Configurations’ button to make sure all the settings are correct.<br/>
+                  Make sure connection is successful:</span></p>
+  <p><span style="font-size:17px;">           <img src="../../../../assets/images/image610.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong>3. SOAP UI Wrapper Action</strong><br/>
+          3.1 Pre-requisite <br/>
+              •    A Solution should be created with WebServices Platform.<br/>
+              •    Soap UI 5.0.0 or above should be installed on the machine.<br/>
+              •    SoapUI Project XML should be available<br/>
+              •    String for validation is required to verify the output if needed.</span><span style="font-size:17px;">             </span></p>
+  <p><span style="font-size:17px;"><br/>
+          3.2 Action Operation<br/>
+              1)    Double click on the Business flow. In the Activity Actions, click on ‘Add New’ button<br/>
+                     <img src="../../../../assets/images/image612.png"/></span></p>
+  <p><span style="font-size:17px;">        2)    In the ‘Platform Actions’ tab, select the ‘SoapUI Wrapper Action’ then click on ‘Add Action’ button given in the below window.<br/>
+                     <img src="../../../../assets/images/image613.png"/></span></p>
+  <p><span style="font-size:17px;">                   <br/>
+              3)    Below screen should be displayed.  <br/>
+                  • ‘XML File Location:’ use the Browse button to give the soapUI project XML file.<br/>
+                  • The ‘Import XML file to Solution folder’ is used to copy the file to the Ginger Solution folder.<br/>
+                  • There is option to Add Respond XML Nodes to the Output Values.<br/>
+                  • Checkbox “Ignore Report XML validation” is by default unchecked, the process will check if all the return test steps statuses are “OK” otherwise the action will be failed, </span></p>
+  <p><span style="font-size:17px;">              if you don’t want the process to fail the action based on the statuses, please check this check box. <br/>
+                  • By default the process will run all test steps exists on this project XML. If you want to narrow your test scope </span></p>
+  <p><span style="font-size:17px;">               or if you need to configure test case properties please select test suite and test case, if the combo boxes are empty please press refresh button<br/>
+                    <img src="../../../../assets/images/image614.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                  From any ‘…’ the user can reach the value expression editor screen and parameterize the inputs:<br/>
+                    <img src="../../../../assets/images/image615.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                  • Once Test Case selected the “Configure Test Case Properties” become enabled, </span></p>
+  <p><span style="font-size:17px;">               Click it if you need to configure test case properties or place holder which will be replaced by the process on runtime<br/>
+                       <img src="../../../../assets/images/image616.png"/><br/>
+                  • Once “Configure Test Case Properties” checked, Radio selection and test case properties grid will become visible to the screen with all the </span></p>
+  <p><span style="font-size:17px;">              relevant properties related to this test case, fill the ones you need and then delete all the rest (not mandatory), </span></p>
+  <p><span style="font-size:17px;">              if you need placeholders instead so please click on Placeholders radio button and add the placeholders you need to replace on runtime.<br/>
+                     <img src="../../../../assets/images/image617.png"/></span></p>
+  <p><span style="font-size:17px;">        <br/>
+                  • Entering any field from the below screenshot will replace the default value inside the project XML on runtime.<br/>
+                     <img src="../../../../assets/images/image618.png"/></span></p>
+  <p><span style="font-size:17px;">               In the screenshot below you can see the required fields<br/>
+                     1. Endpoint URL – this is the ‘end point ‘ URL where the request is being sent (same as in SOAP UI)<br/>
+                     2. In the event that custom network credentials are required to access the endpoint URL (for example Username = sa , Password=sa) , a radio button  can be marked as ‘Custom’ and then 3 additional fields will be visible allowing the user to populate : username, password and domain <br/>
+                     3. SOAP Action – Allows to customize the Action header in the request (if required, or can be used to identify different actions or index them).<br/>
+                     4. ‘Do not Fail Action on Bad Response’ - when checkbox is marked no validation will be done on the response code (useful for negative testing).<br/>
+                     5. ‘Request Headers’ – by clicking on the ‘+’ sign (#6) the user can add a field which is required in the request e.g. token , in the case of adding a token the values should be as follows:<br/>
+                         a. Header = ‘Token’ (or as required per specifications).<br/>
+                         b. Value  =  the token value .</span></p>
+  <p>                     <img src="../../../../assets/images/image619.png"/></p>
+  <p> </p>
+  <p><span style="font-size:17px;">            •    If you need to configure system, global or project properties you shell do it in the below grids.</span></p>
+  <p><span style="font-size:17px;">                  <img src="../../../../assets/images/image620.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                  •    Run Action.<br/>
+                  •    After running the action “Open Execution Output Directory” button will become enabled, click it if you wants to see all the generated output files.</span></p>
+  <p><span style="font-size:17px;">            •    All the relevant data (Request, Respond, Message, Properties, Output Properties ete..) will  be generated at the Output values grid, </span></p>
+  <p><span style="font-size:17px;">                in order to validate the data you can add expected value fields just click on the “…” button and fill your expected behavior here are some examples:<br/>
+                         <img src="../../../../assets/images/image621.png"/></span></p>
+  <p> </p>
+  <p><span style="font-size:17px;">                a. If you wants to see if some data got on the response use “Actual contains string”</span></p>
+  <p>                     <img src="../../../../assets/images/image622.png"/></p>
+  <p><span style="font-size:17px;">                b. If you wants to see what is the index of a specific text inside the response use “Get Inner String Index”.        <br/>
+                           <img src="../../../../assets/images/image623.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                         Security Configurations:-<br/>
+                         Authorization – allows to use authorization method.</span></p>
+  <p>                    <img src="../../../../assets/images/image624.png"/></p>
+  <p><br/>
+    <span style="font-size:17px;"><strong></strong><br/>
+           </span></p>
+
+</body></html>

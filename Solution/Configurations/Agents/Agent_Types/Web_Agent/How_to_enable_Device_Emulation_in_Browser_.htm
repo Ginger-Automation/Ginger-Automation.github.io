@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../../../..";
+  gCommonRootRelPath = "../../../../..";
+  gTopicId = "3.2.1.1.2.0_1";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>How to enable Device Emulation in Browser?</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Web Agent"/></head>
+<body>
+  <h1>How to enable Device Emulation in Browser?</h1>
+  <p><span style="font-size:17px;">This is technique or mechanism that allows you to look at your web application with about the same resolution you would receive from your phone.</span></p>
+  <p><span style="font-size:17px;"><strong>1.    Enable using Device Name (For Chrome Only)</strong><br/>
+       <br/>
+             If you want to simulate browser as iPad device. As shown in below screen.</span></p>
+  <p><span style="font-size:17px;">        <img src="../../../../../assets/images/image1263.png"/></span></p>
+  <p><span style="font-size:17px;">       Then you need to provide Device name (iPad) in EmulationDeviceName Field.</span></p>
+  <p><span style="font-size:17px;">        <img src="../../../../../assets/images/image1264.png"/> <br/>
+       <br/>
+      <strong>2.    Enable using Browser User Agent (Chrome &amp; Firefox)</strong></span></p>
+  <p><span style="font-size:17px;">       You can also open browser in device emulation mode by setting below value of user-agent, height and width.</span></p>
+  <p><span style="font-size:17px;">        <img src="../../../../../assets/images/image1265.png"/></span></p>
+  <p><span style="font-size:17px;">       You can get the BrowserUserAgent String by running the command : navigator.userAgent in browser console.</span></p>
+  <p> </p>
+
+</body></html>

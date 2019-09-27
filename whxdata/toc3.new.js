@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Business_Flow","type":"book","key":"toc4"},{"name":"Configurations","type":"book","key":"toc14"},{"name":"Create New/Open Solution","type":"item","url":"Solution/Create_New_Solution.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

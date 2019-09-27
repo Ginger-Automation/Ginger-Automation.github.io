@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "..";
+  gCommonRootRelPath = "..";
+  gTopicId = "4.5_5";
+
+//]]></script>
+
+<script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Run Set Extra Functionalities</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../assets/css/default.css"/>
+  <meta name="rh-index-keywords" content="Analyzer,Run set Shortcut"/>
+</head>
+<body>
+  <h1>Run Set Extra Functionalities</h1>
+  <p><strong><span style="font-size:20px;">1.    How to Run Analyzer?</span></strong></p>
+  <p><span style="font-size:17px;">    a)    The Analyzer Run set button is displayed as shown below in the drop down.</span><span style="font-size:17px;">                                                                         <br/>
+                   <img src="../assets/images/image1027.png"/>                 </span></p>
+  <p><span style="font-size:17px;">    b)    Below Analyzer screen is displayed. It gives details of the Business Flow that has an issue along with the description of the issue, the             status, if  it can be auto fixed  and the severity of it.</span></p>
+  <p><span style="font-size:17px;">           <img src="../assets/images/image1028.png"/>                                   </span></p>
+  <p><span style="font-size:17px;"><br/>
+          c)    If the ‘Can Auto Fix’ is Yes then click on the ‘Fix Selected’ button and the status changes to Fixed. Click on the ‘Save Fixed Items’               button to save the changes in the Solution.<br/>
+                 If the issue cannot be fixed automatically then the user needs to manually fix the issue before execution.<br/>
+                 User can also cross check the Auto fix if it is as per the user expectation. </span></p>
+  <p><span style="font-size:17px;">            <img src="../assets/images/image1029.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+           </span><span style="font-size:17px;"><br/>
+          d)    Click on the Re-Analyze button to check the fix. The issue is not populated.</span></p>
+  <p><span style="font-size:17px;">              <img src="../assets/images/image1030.png"/>                              </span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong style="font-size: 20px">2.    How to disable the Analyzer?</strong><br/>
+                     <br/>
+              The Analyzer can be disabled from the Configurations tab.<br/>
+               Uncheck the checkbox as shown below and execute the Run set. The Analyzer will not be called and run set will be executed.<br/>
+                <img src="../assets/images/image1031.png"/>                                                   <br/>
+                             <br/>
+      <strong style="font-size: 20px">3.    How to create Run set shortcut?</strong></span></p>
+  <p><span style="font-size:17px;">    1)    Click on the button as shown below and select the ‘Create Run Set Executer Shortcut on Desktop’ option.  </span></p>
+  <p><span style="font-size:17px;">             <img src="../assets/images/image1032.png"/></span></p>
+  <p><span style="font-size:17px;">                      <br/>
+          2)    Below message is displayed.<br/>
+                   <img src="../assets/images/image1033.png"/>                      </span></p>
+  <p><span style="font-size:17px;">    3)   Go to the desktop and search for the shortcut as shown below.<br/>
+                    <img src="../assets/images/image1034.png"/>                       </span></p>
+  <p><span style="font-size:17px;">    4)   Double click the shortcut to execute the run set.</span><span style="font-size:17px;">           </span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong style="font-size: 20px">4.    How to reload Run set?</strong></span></p>
+  <p><span style="font-size:17px;">      When a user works on the configurations of a Run set and he wants to restore the Run set to previously saved state i.e. he does not want        to save his new changes, then he can use the below button to reload the Runset.</span></p>
+  <p><span style="font-size:17px;">     <img src="../assets/images/image1036.png"/></span></p>
+  <p>      <img src="../assets/images/image1037.png"/></p>
+  <p><span style="font-size:17px;">    Click on the Yes, the Run set will be loaded to the state where it was last saved.</span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong style="font-size: 20px">5.    How to view Activity/Action details during execution?</strong></span></p>
+  <p><span style="font-size:17px;">      When an Activity/Action fails the user can see the details of the failed action along with the reason of its failure while the execution is in progress.<br/>
+          Select the Activity/Action and click on the magnifying glass button as shown below.</span></p>
+  <p><span style="font-size:17px;">    Below screen is for Activity.<br/>
+           <img src="../assets/images/image1038.png"/></span></p>
+  <p><span style="font-size:17px;">                    <br/>
+          Below screen is for Action.<br/>
+            <img src="../assets/images/image1039.png"/>                    </span></p>
+  <p><span style="font-size:17px;">                           <br/>
+          Below is the View Action screen for Activity. This is the same window as you see in Automate tab, however it opens in Read Only mode.      It shows which Action has failed.<br/>
+           <img src="../assets/images/image1040.png"/>              </span></p>
+  <p> </p>
+  <p><span style="font-size:17px;">    Below is the View Action screen for Action. This is the same window as you see in Automate tab, however it opens in Read Only mode.<br/>
+            <img src="../assets/images/image1041.png"/>                  </span></p>
+  <p><span style="font-size:17px;"><br/>
+          The Run Details tab will display the failure details.</span><br/>
+          <img src="../assets/images/image1042.png"/>               </p>
+
+</body></html>

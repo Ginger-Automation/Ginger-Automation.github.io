@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../..";
+  gCommonRootRelPath = "../../..";
+  gTopicId = "3.2.3.0_3";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>How to Generate HTML Report</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Reports"/></head>
+<body>
+  <h1>How to Generate HTML Report</h1>
+  <p><strong><span style="font-size:20px">1.    Runset Configuration on the Run tab</span></strong></p>
+  <p> </p>
+  <p><span style="font-size:17px;">        i)      Go to “Run” tab, select your “Runset”.<br/>
+                      Click on “Configuration” tab.</span></p>
+  <p><span style="font-size:17px;">                   <img src="../../../assets/images/image423.png"/>   </span></p>
+  <p><span style="font-size:17px;">                Here user can update the name of the Runset, add description and select if Analyzer is required before manual <br/>
+                      execution of the runset.</span></p>
+  <p> </p>
+  <p><span style="font-size:17px;">        ii)    Producing Reports of the execution</span></p>
+  <p><span style="font-size:17px;">               Here user can add various activities that will be done before/after  runset execution.<br/>
+                     The one of a such activities is the “Add Producing HTML Report Action”.<br/>
+                      Go to the Operations tab and click on relevant button. (there is no limitation on quantity of added actions (meaning - produced reports) per one execution here.<br/>
+                      <img src="../../../assets/images/image424.png"/></span></p>
+  <p><span style="font-size:17px;">               By adding this action to tray -&gt; one report will be created at by the finish of execution.<br/>
+                     Used template of report can be changed here (default selection is the “Default” report)<br/>
+                     Also folder for saving current report can be changed here (to be deferent than one that considered at bullet 2, second figure)</span></p>
+  <p><span style="font-size:17px;">                 <img src="../../../assets/images/image425.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                     Once such action added – report will be created per each execution, with options that described in this action.<br/>
+                     Folder with new created report will be opened automatically by windows explorer.<br/>
+          </span></p>
+  <p><span style="font-size:17px;">      iii)    Sending Reports via email</span></p>
+  <p><span style="font-size:17px;">              User can send reports via email before/after  runset execution.</span></p>
+  <p><span style="font-size:17px;">              Go to the Operations tab and click on ‘Add Send HTML Report Email Action’. </span></p>
+  <p><span style="font-size:17px;">               <img src="../../../assets/images/image426.png"/></span></p>
+  <p> </p>
+  <p><span style="font-size:17px;">             Enter the desired email ids in the From and To fields, subject and the body of the email.</span></p>
+  <p><span style="font-size:17px;">                 <img src="../../../assets/images/image427.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                   Go to the attachments tab and click on ‘Add Report’ button. This is will send the HTML Reports as attachment in the mail.<br/>
+                   Run button is displayed at the bottom to check if the test mail is delivered successfully. </span></p>
+  <p>                   <img src="../../../assets/images/image428.png"/><img src="../../../assets/images/image430.png"/></p>
+  <p> </p>
+  <p><span style="font-size:17px;">             Click on the Save button to Save the updates to the Runset.</span></p>
+  <p><span style="font-size:17px;">                 <img src="../../../assets/images/image431.png"/><img src="../../../assets/images/image429.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong style="font-size: 20px">2.    Run set list</strong></span></p>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px"></strong><br/>
+                   Presentation of all RunSet executions (that are done at “Run” tab) is available as list.<br/>
+                   Reports per execution also can be produced – it can be done instantly and on demand. <br/>
+                  For customization of such report will automatically be used a default template.<br/>
+                  In order to see this presentation -  left click on “Execution Results” – “Execution Results Configuration” (“Solution tab”)</span></p>
+  <p><span style="font-size:17px;">           <img src="../../../assets/images/image430.png"/>      <img src="../../../assets/images/image432.png"/></span></p>
+  <p> </p>
+  <p><span style="font-size:17px;">            “Search” RunSet execution, “Configure” execution creation of results, “Refresh execution results”, “Delete” and “Open selected  execution results folder” functionality is available at this window.<br/>
+                   By clicking on icon at “Generate Report” column at specific row – generation of report is done. </span></p>
+  <p>                   <img src="../../../assets/images/image431.png"/> <img src="../../../assets/images/image433.png"/></p>
+  <p>    </p>
+  <p><span style="font-size:17px;">             Folder with new-created report will be opened automatically.</span></p>
+  <p>                <img src="../../../assets/images/image432.png"/>   <img src="../../../assets/images/image434.png"/></p>
+  <p> </p>
+  <p><strong><span style="font-size:20px">3.    Generate Last Executed Report</span></strong></p>
+  <p> </p>
+  <p><span style="font-size:17px;">            It is possible to create the report for the last execution that done via “Automation” tab.</span></p>
+  <p><span style="font-size:17px;">            For this - run one from 2 possible ways to do the execution – “Run Action”, “Run Activity” or “Run Flow”.<br/>
+                  Once it’s done - you able to process the report – click on “Generate Report” -&gt; “Generate Last Executed Item Report”   or “Generate Full Business Flow Report”</span></p>
+  <p>               <img src="../../../assets/images/image435.png"/><img src="../../../assets/images/image433.png"/></p>
+  <p> </p>
+  <p>              <img src="../../../assets/images/image436.png"/><img src="../../../assets/images/image434.png"/></p>
+
+</body></html>

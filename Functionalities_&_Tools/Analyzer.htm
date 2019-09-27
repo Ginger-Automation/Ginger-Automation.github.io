@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "..";
+  gCommonRootRelPath = "..";
+  gTopicId = "6.0_1";
+
+//]]></script>
+
+<script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Analyzer</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Analyzer"/></head>
+<body>
+  <h1>Analyzer</h1>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">Description    </strong><br/>
+      Analyzer will help you to find problems and issues within your solution\Business Flow\Run Set, <br/>
+      Problems that will prevent your flow from running correctly or getting failed.<br/>
+      This problem can be defined as wrong implementation.</span></p>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">How to Run the Analyzer </strong><br/>
+          1.    Go to Business Flow tab and double click on the desired Business Flow to go to the Automation area. <br/>
+                 When a Business Flow is Run, Ginger analyzes your Business Flow trying to find implementation Errors that will prevent your flow to run correctly.  <br/>
+                When user selects the option ‘Run Flow without Analyzing’, Ginger runs the flow without analyzing or doing any checks.<br/>
+                Same goes also for Run on “Run set” tab.<br/>
+                 <img src="../assets/images/image1103.png"/>  </span></p>
+  <p><span style="font-size:17px;">    2.    You can run the analyzer also by Clicking on analyzer button both on solution or Business flow, if you will run it on solution level                 Analyzer will include all business flows within this solution.<br/>
+                 Once your solution/ business flows is open, click on the Analyzer button.</span></p>
+  <p><span style="font-size:17px;">             <img src="../assets/images/image1104.png"/></span></p>
+  <p><span style="font-size:17px;">  <br/>
+      <strong style="font-size: 20px">The Analyzer Report</strong><br/>
+          Once the Analyzing processes is done we will get report that will list the issues that we have <br/>
+          On our solution/Business flow/Activity/Action.</span></p>
+  <p><span style="font-size:17px;">    1.    List of issues :<br/>
+                 •    In the grid you will be able to see the list of issues that were found sorted by severity Critical - &gt; Low   <br/>
+                 •    If Critical/High issues found this will prevent the Run to run correctly and probably you’re Flow will fail.<br/>
+                 •    All issues that can be Auto fixed will be already selected in the grid (As shown in the pic).</span></p>
+  <p><span style="font-size:17px;">    2.    Statistics :<br/>
+                  Here u can find total issues that were found, number of high and critical and the amount of can be Auto fixed issues.</span></p>
+  <p><span style="font-size:17px;">    3.    Issue description and detailed information:<br/>
+                 Here u can find all the needed information regarding the founded issue:<br/>
+                    •    Item Type – Solution /BF/Activity/Action<br/>
+                    •    Item Name – the name of the Solution/BF/Activity/Action that the issue was found on.<br/>
+                    •    Item Parent – if the issue was found on Activity then the parent will be the name of the BF that contain this Activity. (Same for action).<br/>
+                    •    Issue – what issue was found<br/>
+                    •    Issue Details – Detailed description.<br/>
+                    •    Issue Impact - how this issue will impact your   Solution/BF/Activity/Action.<br/>
+                    •    How To Fix<br/>
+                     •    Can Auto Fix – if the issue can be Auto fix then by clicking on Fix Selected it will be fixed automaticity for you.   </span><br/>
+                          <img src="../assets/images/image1105.png"/></p>
+
+</body></html>

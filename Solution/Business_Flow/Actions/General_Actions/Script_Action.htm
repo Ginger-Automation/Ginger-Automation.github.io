@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../../..";
+  gCommonRootRelPath = "../../../..";
+  gTopicId = "3.1.1.3.1_13";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Script Action</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="General Actions"/></head>
+<body>
+  <h1>Script Action</h1>
+  <p><strong><span style="font-size:20px;">How to Configure Action</span></strong></p>
+  <p><span style="font-size:17px;">    1)    Go to Automate tab. In the Activity Actions, click on ‘Add New’ button<br/>
+                   <img src="../../../../assets/images/image875.png"/>  </span></p>
+  <p><span style="font-size:17px;">    2)    Go to the ‘General Actions’ tab and select the ‘Script Action’ then click on ‘Add Action’ button given in the below window<br/>
+                     <img src="../../../../assets/images/image876.png"/>            </span></p>
+  <p><span style="font-size:17px;">    3)    Below screen should be displayed.  <br/>
+                 The ‘Locate Value’ can be used using the ‘Open Window Explorer to select Element’ button shown below to locate the element where scripting will be used.<br/>
+                  The ‘Locate By:’ drop down values gets auto-populated when the Open Window Explorer to select Element’ button is used.<br/>
+                  ‘Script Interpreter’ has default option as ‘VBS’. Other options are ‘JS’ and ‘Other’.<br/>
+                   ‘Value’ can be used if required.<br/>
+                 <img src="../../../../assets/images/image877.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+          4)    Clicking on ‘Open Window Explorer to select Element’ button opens the ‘Ginger Window Explorer’ window. <br/>
+                  Web agent should be opened in order to spy the element.<br/>
+                  Click on the ‘Live Spy’ button to Hover with the mouse over the Element you want to spy and Click/Hold Down ‘Ctrl’ Key in the Web Agent.<br/>
+                   <img src="../../../../assets/images/image878.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+          5)    The below screen is displayed with highlighted element when the spy element is used.</span><br/>
+                  <img src="../../../../assets/images/image879.png"/></p>
+  <p><span style="font-size:17px;"><br/>
+          6)    The ‘Actions’ tab in the ‘Ginger Window Explorer’ gets updated with the Element identifiers. <br/>
+                  Select one of the identifier eg. ByID in the ‘Locators’ section.<br/>
+                  The ‘Actions’ section shows the list of Actions that can be performed on the element. Choose one of them.<br/>
+                  Use the button ‘Add Selected Action to Business Flow’ as shown below to add this Action. </span></p>
+  <p>              <img src="../../../../assets/images/image880.png"/></p>
+  <p><span style="font-size:17px;"> <br/>
+          7)    As shown in the below screen the ‘Locate By:’ and ‘Locate Value:’ get populated with the selected values.<br/>
+                 Click on Ok button to add the action in the ‘Activity Actions’.</span></p>
+  <p><span style="font-size:17px;">            The Locate By drop down has multiple options.<br/>
+                   <img src="../../../../assets/images/image881.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+             </span><span style="font-size:17px;"></span></p>
+  <p><span style="font-size:17px;">    8)    Run Action will execute the Script Action. </span></p>
+  <p><span style="font-size:17px;"> <br/>
+      <strong style="font-size: 20px">Example of Script Action</strong></span></p>
+  <p><span style="font-size:17px;">    a.    A Calculator script file is attached in the Documents folder of the solution.<br/>
+                 Below screenshot shows how it will looks like.<br/>
+          b.    User can view/edit it in Resources/Documents section in UI<br/>
+          c.    See marked points:<br/>
+                 1.    User can add description comment in script which will be shown to user when selecting this script on flow<br/>
+                 2.    User can specify the input values which it can expect to get from Ginger and these will be asked from user wanting to execute this script<br/>
+                     3+4: User can specify “key=value” pairs which will be writing to console and picked by Ginger after script <br/>
+                            ends and be shown in output values action list to be used for validation/passing values to next <br/>
+                             actions in flow</span></p>
+  <p><span style="font-size:17px;"><br/>
+                  <strong> Script view in UI:</strong><br/>
+          d.    This is how Script looks like when selecting it in “Script Action”:</span></p>
+  <p><span style="font-size:17px;">           <img src="../../../../assets/images/image884.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                 See how description and input values been pulled from script and been shown in friendly way to user wanting to execute it</span></p>
+  <p>            <img src="../../../../assets/images/image885.png"/></p>
+  <p><span style="font-size:17px;">          Action output values containing the script outputs post execution of script:</span></p>
+  <p>           <img src="../../../../assets/images/image886.png"/></p>
+
+</body></html>

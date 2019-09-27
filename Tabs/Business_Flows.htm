@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "..";
+  gCommonRootRelPath = "..";
+  gTopicId = "2.0_1";
+
+//]]></script>
+
+<script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Business Flows</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../assets/css/default.css"/>
+</head>
+<body>
+  <h1>Business Flows</h1>
+  <p><span style="font-size:16px;"></span></p>
+  <p><span style="font-size:16px;"></span></p>
+  <p><span style="font-size:18px;">Business flows tab is the main working area of Ginger which has the following components:-</span></p>
+  <p><span style="font-size:18px;"><br/>
+        1)    <strong><span style="color:#ffa500;">Business Flow area</span></strong> – this displays the details of the Business Flow like name, description, target application, status,                                                                     automation % and creator’s name.<br/>
+                                          <img src="../assets/images/image135.png"/></span></p>
+  <p><span style="font-size:18px;">      </span></p>
+  <p><span style="font-size:18px;">  2)    Double clicking on the Business Flow 1, it displays the Automation area where the Actions, Variables, <br/>
+              Activities group and Activities are created<br/>
+                                      <img src="../assets/images/image136.png"/></span></p>
+  <p> </p>
+  <p><span style="font-size:18px;">  3)    <strong><span style="color:#ffa500;">Variables </span></strong>– this is the area where the Business Flow and Activity variables are created. There are different types of variables                                   viz. String, list, dynamic, password, random string, etc. <br/>
+                                     Variables can be used in the Actions.</span><br/>
+                                          <img src="../assets/images/image137.png"/></p>
+  <p><span style="font-size:18px;"><br/>
+        4)    <span style="color:#ffa500;"><strong>Activities</strong> –</span> An activity can be added here with name and description. Actions are then added inside the  Activities.</span><br/>
+                                         <img src="../assets/images/image138.png"/></p>
+  <p><span style="font-size:18px;"><br/>
+        5)     <strong style="color: 	rgb(255,165,0)">Activities Groups</strong> – Activities can be grouped together here. They can be stored in Shared Repository to be used in other                                                        Business Flows in the solution.</span><br/>
+                            <img src="../assets/images/image139.png"/></p>
+  <p>                        <img src="../assets/images/image140.png"/></p>
+  <p>                       </p>
+  <p><span style="font-size:18px;"></span></p>
+  <p><span style="font-size:18px;">  6)     <strong style="color: 	rgb(255,165,0)">Activity - Activity Actions</strong> – here the actions are added which are the executables.<br/>
+                        <img src="../assets/images/image141.png"/></span></p>
+  <p> </p>
+  <p><span style="font-size:18px;">  7)    <strong style="color: 	rgb(255,165,0)">Shared Repository</strong>             - this is the area where Activity Groups/Activities/Actions/Variables can be<br/>
+                                                                 stored to be re-used in other Business Flows in the solution.<br/>
+                       <img src="../assets/images/image142.png"/><br/>
+          <br/>
+        8)    <strong><span style="color:#ffa500;">Toolbar of the Business Flow</span></strong></span></p>
+  <p><span style="font-size:18px;">           Double click on a Business Flow to get the below toolbar</span></p>
+  <p><span style="font-size:18px;">                <img src="../assets/images/image143.png"/></span></p>
+  <p> </p>
+  <p><span style="font-size:18px;">     8.1)    <span style="color:#ffa500;">Back to Business Flows List    </span>  <img src="../assets/images/image144.png"/><br/>
+                  This button takes you back to the list of Business Flows in the solution. </span></p>
+  <p><span style="font-size:18px;">            <br/>
+           8.2)    <span style="color:#ffa500;">Save</span>     <img src="../assets/images/image145.png"/><br/>
+                       This is to save any changes made in the Business Flow.<br/>
+                       <br/>
+                       <br/>
+           8.3)     <span style="color:#ffa500;">Undo All changes  </span> <img src="../assets/images/image146.png"/><br/>
+                       This will undo the changes made in the Business flow.<br/>
+           <br/>
+           <br/>
+           8.4)    Analyzer   <img src="../assets/images/image147.png"/>        <br/>
+                       It is an easy way to identify any missing configuration in the flows and can       <br/>
+                       be fixed here. E.g.  Missing locate value or missing flow control action etc. <br/>
+                       It also helps in identifying if any action in the flow is obsolete and should be upgraded. </span></p>
+  <p> </p>
+  <p><span style="font-size:18px;">    8.5)    <span style="color:#ffa500;">Actions Conversion <img src="../assets/images/image148.png"/> </span> <br/>
+                       This button is used to convert Legacy Actions (Actions from older version) to new actions.</span></p>
+  <p><span style="font-size:18px;"><br/>
+          8.6)    <span style="color:#ffa500;">Reset status     <img src="../assets/images/image149.png"/></span><br/>
+                       This is used to reset the status of Business Flow/Activities/Actions so that fresh <br/>
+                        execution status is visible.<br/>
+                        <br/>
+                        <br/>
+          8.7)    <span style="color:#ffa500;">Find and Replace  <img src="../assets/images/image150.png"/></span><br/>
+                         This is used to find and replace any Business Flow, Activity, Action or variable.</span></p>
+  <p> </p>
+  <p><span style="font-size:18px;">    8.8)    <span style="color:#ffa500;">Run Action/Activity</span>    <img src="../assets/images/image152.png"/><br/>
+                       These are used to run the Activity/Action which are executable.<br/>
+                       </span></p>
+  <p><span style="font-size:18px;">    8.9)    <span style="color:#ffa500;">Run Flow</span>   <img src="../assets/images/image153.png"/><span style="font-size:18px;"></span><br/>
+                       This is used to run the flow. 3 options are available.</span></p>
+  <p><span style="font-size:18px;">                 <br/>
+          8.10)    <span style="color:#ffa500;">Stop   <img src="../assets/images/image154.png"/></span><br/>
+                       This is used to stop the running executables.<br/>
+                       </span></p>
+  <p><span style="font-size:18px;">    8.11)    <span style="color:#ffa500;">Continue  <img src="../assets/images/image155.png"/></span><br/>
+                       This button is used to continue running the executable after it was stopped from running.</span></p>
+  <p> </p>
+  <p><span style="font-size:18px;">    8.12)    <span style="color:#ffa500;">Environment    <img src="../assets/images/image156.png"/></span><br/>
+                       List of environments are displayed in the drop-down and can be selected from here for execution.<br/>
+                       </span></p>
+  <p><span style="font-size:18px;">    8.13)    <span style="color:#ffa500;">Speed  </span>  <img src="../assets/images/image157.png"/>         <br/>
+                       This button is used to decide the speed between 2 Actions during the execution.  <br/>
+                       Options are 0,1,2,3. 0 means there will not be any wait time. <br/>
+                       Run in simulation mode is available when certain environments are not ready and <br/>
+                       yet you want to run the Flow</span></p>
+  <p><span style="font-size:18px;">                <br/>
+          8.14)    <span style="color:#ffa500;">Configuration   <img src="../assets/images/image158.png"/>    </span>  <br/>
+                       This displays the mapped Agent to the application<br/>
+                      <br/>
+                      <br/>
+          8.15)    <span style="color:#ffa500;">Double click on Agent/ flower icon</span>  <img src="../assets/images/image159.png"/><br/>
+                         This is used to change the mapping of Agent from list of Agents to an application.<br/>
+                       <br/>
+                       <br/>
+          8.16)    <span style="color:#ffa500;">On/Off </span>              <img src="../assets/images/image160.png"/>         <br/>
+                       This is used to on/off the Agent. Off is when the Agent is not opened. <br/>
+                       Clicking on it opens the Agent and turns the status to On.<br/>
+                       <br/>
+                       <br/>
+          8.17)    <span style="color:#ffa500;">Start All Agents </span>     <img src="../assets/images/image161.png"/>     <br/>
+                       All the mapped agents are opened after clicking on this button<br/>
+                       <br/>
+                       <br/>
+          8.18)    <span style="color:#ffa500;">Grid View  </span>   <img src="../assets/images/image162.png"/>               <br/>
+                       This is used to display only the relevant columns as per the selection. <br/>
+                       It has options viz. All, Design and Execution<br/>
+                       All – all the columns in the Activities and Activity Action areas are displayed<br/>
+                       Design- columns related to design are displayed<br/>
+                       Execution- columns related to execution are displayed<br/>
+                       <br/>
+                       <br/>
+          8.19)    <span style="color:#ffa500;">Execution Summary  <img src="../assets/images/image163.png"/></span><br/>
+                       This displays the summary of the execution<br/>
+                       <br/>
+                       <br/>
+         8.20)    <span style="color:#ffa500;">Generate Report  </span>      <img src="../assets/images/image164.png"/><br/>
+                       This is used to generate report of the execution in HTML format. <br/>
+                       It has two options  ‘Generate Last Execute Item Report’ and ‘Generate Full Business Flow Report’<br/>
+                       <br/>
+                       <br/>
+         8.21)   <span style="color:#ffa500;"> Export to ALM </span>            <img src="../assets/images/image165.png"/><br/>
+                       This is used to export the Activities to ALM like QC, RQM<br/>
+                        <br/>
+                        <br/>
+         8.22)    <span style="color:#ffa500;">Refresh from ALM </span>    <img src="../assets/images/image166.png"/>   <br/>
+                       This is used to refresh the activities that were updated in ALM so that the latest changes reflect in Ginger.<br/>
+          <br/>
+          <br/>
+         8.23)    <span style="color:#ffa500;">Export Results to ALM</span>    <img src="../assets/images/image167.png"/><br/>
+                       This is used to export the execution result to ALM where the test cases in the Test Lab of ALM will be passed/failed<br/>
+                                    <br/>
+                                    <br/>
+       9)    <strong style="color: 	rgb(255,165,0)">Toolbar of the components – </strong><br/>
+          <br/>
+               <img src="../assets/images/image168.png"/></span></p>
+  <p><span style="font-size:18px;"><br/>
+          9.1)    <span style="color:#ffa500;">Mark all as Active/Inactive</span>      <img src="../assets/images/image169.png"/><br/>
+                       This button is used to make all the Actions/Activities as active or inactive. By default all the Actions and Activities are                            active.<br/>
+                              <br/>
+          9.2)    Refresh  <img src="../assets/images/image170.png"/><br/>
+                       This is used to refresh the area after making some changes.                 <br/>
+                       <br/>
+          9.3)    Undo  <img src="../assets/images/image171.png"/><br/>
+                       This is used to undo the changes made.                 <br/>
+                       <br/>
+          9.4)    <span style="color:#ffa500;">Edit  <img src="../assets/images/image172.png"/></span><br/>
+                       This is used to edit the selected component.                 <br/>
+                       <br/>
+          9.5)    <span style="color:#ffa500;">Add New  <img src="../assets/images/image173.png"/></span><br/>
+                       This is used to add a new component.                 <br/>
+                       <br/>
+          9.6)    <span style="color:#ffa500;">Delete selected</span>   <img src="../assets/images/image176.png"/><br/>
+                       This is used to delete the selected component.                 <br/>
+                       <br/>
+          9.7)    <span style="color:#ffa500;">Delete All  <img src="../assets/images/image175.png"/></span><br/>
+                       This is used to deletes all the added items in the component.                 <br/>
+                       <br/>
+          9.8)    <span style="color:#ffa500;">Cut   <img src="../assets/images/image177.png"/></span><br/>
+                       This is used to cut the selected item in the component.                 <br/>
+                       <br/>
+          9.9)    <span style="color:#ffa500;">Copy  <img src="../assets/images/image178.png"/></span><br/>
+                       This is used to copy selected item.                 <br/>
+                       <br/>
+          9.10)    <span style="color:#ffa500;">Paste </span> <img src="../assets/images/image179.png"/><br/>
+                       This is used to paste the copied or cut item.                 <br/>
+                       <br/>
+          9.11)    <span style="color:#ffa500;">Up arrow   <img src="../assets/images/image180.png"/></span><br/>
+                       This is used to move the item upward.                 <br/>
+                       <br/>
+          9.12)   <span style="color:#ffa500;"> Down arrow  <img src="../assets/images/image181.png"/></span><br/>
+                       This is used to move the item downward.                 <br/>
+                       <br/>
+          9.13)    <span style="color:#ffa500;">Split to Activities  <img src="../assets/images/image182.png"/></span><br/>
+                       This is used to split the selected Action and the actions below it into a separate New Activity.                 <br/>
+                       <br/>
+          9.14)    <span style="color:#ffa500;">Reset Run Details</span>  <img src="../assets/images/image183.png"/><br/>
+                       This is to reset the last run details of the Action/Activity.                 <br/>
+                       <br/>
+          9.15)    <span style="color:#ffa500;">Take/Un-take Screenshots  <img src="../assets/images/image184.png"/></span><br/>
+                       This is used to take screenshot of the action during the execution. <br/>
+                       Clicking on this button applies to all the items of the component.<br/>
+                       <br/>
+          9.16)    <span style="color:#ffa500;">Set Actions- Variables Dependencies  <img src="../assets/images/image185.png"/></span><br/>
+                       The variables can be set Dependent on each other using this button.<br/>
+                       <br/>
+          9.17)    <span style="color:#ffa500;">Add to Repository  <img src="../assets/images/image186.png"/></span><br/>
+                       The item gets added to the Repository.<br/>
+                       <br/>
+          9.18)    <span style="color:#ffa500;">Search </span><br/>
+                       This is used to search an item in the component.                 <br/>
+                       <br/>
+          9.19)    <span style="color:#ffa500;">Views</span> <br/>
+                       There are 3 views for Activities pane :-<br/>
+                       •    All  - It is  combination of columns from both Execution and Design View.</span></p>
+  <p>                        <img src="../assets/images/image187.png"/></p>
+  <p><span style="font-size:18px;">                 •    Design – <br/>
+                             <img src="../assets/images/image188.png"/>       </span></p>
+  <p><span style="font-size:18px;">                 •    Execution -</span></p>
+  <p><span style="font-size:18px;">                      <img src="../assets/images/image189.png"/>  <br/>
+           </span><span style="font-size:18px;">    <br/>
+                 </span></p>
+  <p><span style="font-size:18px;"><br/>
+           9.20)    <span style="color:#ffa500;">Filter By  </span> <img src="../assets/images/image190.png"/><br/>
+                       This is used to filter items based on the Tags they are associated with.</span></p>
+  <p><span style="font-size:18px;"></span><br/>
+     </p>
+  <div class="WordSection1"><span style="page:WordSection1"></span>
+    <p style="margin:0in 0in 0.0001pt"><span style="page:WordSection1"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="FONT-SIZE:12pt"></span></b></span></span></span></p>
+    <p style="margin:0in 0in 0.0001pt 0.5in"><span style="page:WordSection1"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="FONT-SIZE:12pt"></span></span></span></span><span style="page:WordSection1"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="FONT-SIZE:12pt"></span></span></span></span><span style="page:WordSection1"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="FONT-SIZE:12pt"></span></span></span></span><span style="page:WordSection1"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><i><span style="FONT-SIZE:12pt"><span style="COLOR:#e36c0a"></span></span></i></span></span></span><span style="page:WordSection1"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><i><span style="FONT-SIZE:12pt"><span style="COLOR:#e36c0a"></span></span></i></span></span></span></p>
+    <p style="margin:0in 0in 0.0001pt 0.5in"><span style="page:WordSection1"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><i><span style="FONT-SIZE:12pt"><span style="COLOR:#e36c0a"></span></span></i></span></span></span></p>
+    <ol start="20" style="list-style-type:lower-roman">
+      <li style="MARGIN-LEFT:83.15pt; margin:0in 0in 0.0001pt 0.5in"><span style="page:WordSection1"><span style="font-size:11pt"><span style="tab-stops:227.8pt"><span style="font-family:Calibri,sans-serif"><span style="FONT-SIZE:12pt"></span></span></span></span></span></li>
+    </ol>
+    <p style="margin:0in 0in 0.0001pt 0.5in"><span style="page:WordSection1"><span style="font-size:11pt"><span style="tab-stops:227.8pt"><span style="font-family:Calibri,sans-serif"><span style="FONT-SIZE:12pt"></span></span></span></span></span></p>
+    <p style="margin:0in 0in 0.0001pt 0.5in"><span style="page:WordSection1"><span style="font-size:11pt"><span style="tab-stops:227.8pt"><span style="font-family:Calibri,sans-serif"><span style="FONT-SIZE:12pt"></span></span></span></span></span></p>
+  </div>
+
+</body></html>

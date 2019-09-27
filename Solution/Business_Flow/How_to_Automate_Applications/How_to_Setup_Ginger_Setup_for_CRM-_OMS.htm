@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../..";
+  gCommonRootRelPath = "../../..";
+  gTopicId = "3.1.2.0_2";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>How to Setup Ginger Setup for CRM- OMS</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="CRM-OMS Setup"/></head>
+<body>
+  <h1>How to Setup Ginger Setup for CRM- OMS</h1>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">Ginger Setup  </strong>  <br/>
+      To incorporate Ginger capabilities in an ASCF SmartClient application, you need to make three changes to the application’s JNLP deployment:  1) add a tag to the workspace.xml file, 2) add the Ginger jar to the JNLP descriptor file, and 3) add the signed Ginger JAR to the JNLP WAR.</span></p>
+  <p><span style="font-size:17px;">Materials needed:<br/>
+          1)    Contents of \\DAVIDFRE04\GingerToolBox\.  Use the corresponding Ginger jar depending on if your host app is v8 or v9.  Ginger ToolBox requires the host app use either ASCF 9.0 (any release) or ASCF 8.2 HF68 (or higher).<br/>
+          2)    SmartClient application JNLP EAR/WAR<br/>
+          3)    Windows machine for signing the Ginger jar</span></p>
+  <p><strong><span style="font-size:20px">Steps</span></strong></p>
+  <p><span style="font-size:17px;">    1)    Add the Ginger JAR to the JNLP descriptor file<br/>
+              a)    Find the .jnlp file in the application EAR’s WAR path.  EX:  JNLPServer/ear/war/AppName/AppName.jnlp<br/>
+              b)    Add a line for the Ginger JAR.   EX:  &lt;jar href=&quot;Ginger_ASCF.jar&quot;  version=&quot;9.0&quot;/&gt;<br/>
+          2)    Add the Ginger JAR to the JNLP WAR<br/>
+              a)    Download the Ginger JAR from the above location<br/>
+              b)    Put the Ginger JAR in the same folder as the .jnlp file<br/>
+          3)    Sign the Ginger JAR<br/>
+              a)    Copy SignJar.cmd, Unsign.cmd, and MANIFEST.MF to a Windows machine (see Ginger download folder)<br/>
+              b)    In this same folder, make 2 temp folders, “signed” and “unsigned”<br/>
+              c)    All JNLP Jars need to be signed with the same certificate<br/>
+                  Option 1:  your jar signing process involves a custom certificate<br/>
+                      1)    Copy your AmdocsStoreName to the Windows folder<br/>
+                      2)    Download the Ginger JAR from the above location to the unsigned folder<br/>
+                      3)    Sign the JAR:  SignJar.cmd -sc unsigned signed<br/>
+                      4)    Move the Ginger JARs (*.jar and *.jar.pack.gz) from “signed” folder to the .jnlp file folder<br/>
+                  Option 2: your jar signing process uses the default self-signing certificate<br/>
+                      1)    Copy all SmartClient JARs (*.jar not *.jar.pack.gz)  from the .jnlp file folder to “signed” folder <br/>
+                      2)    Unsign the JARs:  SignJar.cmd -u signed unsigned<br/>
+                      3)    Create the certificate file:   SignJar.cmd -c<br/>
+                      4)    Sign the JARs:  SignJar.cmd -sc unsigned signed<br/>
+                      5)    Move the JARs (*.jar and *.jar.pack.gz) from “signed” folder to the .jnlp file folder<br/>
+          4)    Edit the workspace.xml<br/>
+              a)    Find the workspace.xml, possibly in the same path as the .jnlp file<br/>
+              b)    Add the Inject tag to workspace.xml just below the &lt;Applications/&gt; block (after the closing tag):<br/>
+                  &lt;Inject&gt;<br/>
+                  &lt;ToolboxForm logicalFormName=&quot;GingerToolBox&quot; /&gt;<br/>
+                  &lt;/Inject&gt;<br/>
+          5)    Restart the JNLP server<br/>
+          6)    Launch the SmartClient application from hyperlink on the AppName.jnlp web browser page</span></p>
+
+</body></html>

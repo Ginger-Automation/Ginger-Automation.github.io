@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../..";
+  gCommonRootRelPath = "../..";
+  gTopicId = "5.2.0_5";
+
+//]]></script>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Export/ Import to Excel</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Data Source"/></head>
+<body>
+  <h1>Export/ Import to Excel</h1>
+  <p><span style="font-size:17px;">1.    Export Data Source to Excel</span></p>
+  <p><span style="font-size:17px;">     1)    Right click on the Data Source and select the option to Export to Excel as shown below.</span></p>
+  <p><span style="font-size:17px;">             <img src="../../assets/images/image747.png"/></span></p>
+  <p><span style="font-size:17px;">            <br/>
+           2)    Select the File name and click on ok button. (User need to first create an empty Excel file to use it).</span></p>
+  <p><span style="font-size:17px;">            <img src="../../assets/images/image748.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                  The Excel file will have separate sheet for every table with the Table name as the sheet name.<br/>
+                  <img src="../../assets/images/image749.png"/>             </span></p>
+  <p><span style="font-size:17px;"><br/>
+      2.    Export Table to Excel (Customized or Key table)</span></p>
+  <p><span style="font-size:17px;">     1)    Select the Export to Excel option by right clicking on the desired table.</span></p>
+  <p>            <img src="../../assets/images/image750.png"/></p>
+  <p><span style="font-size:17px;">     2)    Select the File and the sheet where you want to export and click on Ok button to export the data.</span></p>
+  <p>            <img src="../../assets/images/image751.png"/></p>
+  <p><span style="font-size:17px;">3.    Import Data Source from Excel </span></p>
+  <p><span style="font-size:17px;">     1)    Right click on the Data Source and select the Import from Excel option</span></p>
+  <p><span style="font-size:17px;">            <img src="../../assets/images/image752.png"/></span></p>
+  <p><span style="font-size:17px;">     2)    In the Wizard window, click on the Next button after the Information of Data source is displayed.<br/>
+                 Then select the desired excel file and click on Next button.</span></p>
+  <p><span style="font-size:17px;">           <img src="../../assets/images/image753.png"/><br/>
+       <br/>
+           3)    Select the desired Sheet in the file</span></p>
+  <p>            <img src="../../assets/images/image754.png"/></p>
+  <p><span style="font-size:17px;">            a)    When user selects ‘Sheet as first row as column name’ then the same column name is given to the column in the table.                                      </span><span style="font-size:17px;">Field 1 etc is not added in the Table.</span></p>
+  <p><span style="font-size:17px;">                    Columns without the ‘Sheet as first row as column name’ option<br/>
+                           <img src="../../assets/images/image755.png"/></span></p>
+  <p><span style="font-size:17px;">                    Columns with the ‘Sheet as first row as column name’ option</span></p>
+  <p><span style="font-size:17px;">                     <img src="../../assets/images/image756.png"/><br/>
+       <br/>
+                 b)    When ‘Is the Model Parameter File’ is selected then the first column of the sheet is taken as the fields of the table and the rest                         are  considered as their values.<br/>
+                          <img src="../../assets/images/image757.png"/></span><br/>
+     </p>
+  <p><span style="font-size:17px;">     4)    The data from the Excel file is displayed<br/>
+                      <img src="../../assets/images/image758.png"/>                      </span></p>
+  <p><span style="font-size:17px;">     5)    User can filter the desired data if required. <br/>
+                   Use the ‘Select Row(s) Where’ filed to enter filter and view it using  ‘View Filtered Data’ button.<br/>
+                   If the column has space in it then use square brackets eg. [Parameter Name]=’ABC’</span></p>
+  <p><span style="font-size:17px;">     6)    The Imported Table is given the name of the sheet in the file.</span></p>
+  <p>            <img src="../../assets/images/image759.png"/></p>
+
+</body></html>

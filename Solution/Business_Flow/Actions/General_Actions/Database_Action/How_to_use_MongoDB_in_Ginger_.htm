@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../../../..";
+  gCommonRootRelPath = "../../../../..";
+  gTopicId = "3.1.1.3.1.0_4";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>How to use MongoDB in Ginger?</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../assets/css/default.css"/>
+</head>
+<body>
+  <h1>How to use MongoDB in Ginger?</h1>
+  <p><strong><span style="font-size:17px;"></span></strong></p>
+  <p><strong><span style="font-size:17px;">1. What is MongoDB? </span></strong></p>
+  <p><span style="font-size:17px;">  MongoDB is an open source document database and leading NoSQL database. MongoDB is a cross-platform, document-oriented database    that provides, high performance, high availability, and easy scalability. MongoDB works on concept of collection and document.</span></p>
+  <p><strong><span style="font-size:17px;">2. What does Ginger support in MongoDB? </span></strong></p>
+  <p><span style="font-size:17px;">   a) Used to connect MongoDB databases and perform operations<br/>
+         b) Used to perform operations like insert, update, select</span></p>
+  <p><strong><span style="font-size:17px;">3. Which MongoDB operations are supported in Ginger? </span></strong></p>
+  <p><span style="font-size:17px;">    a) Read Data<br/>
+          b) Write Data<br/>
+          c) Update Data<br/>
+          d) Record Count</span></p>
+  <p><strong><span style="font-size:17px;">4. How to configure MongoDB in Ginger? </span></strong></p>
+  <p><span style="font-size:17px;">    a)    Under the Resources tab, go to Environment and select the desired environment. <br/>
+          b)    Using the + button add the MongoDB. Enter name, select DB Type as “MongoDB”, enter the Connection String or Host and user                    </span><span style="font-size:17px;">name and password if any.</span></p>
+  <p><span style="font-size:17px;">        Use following ways to connect with MongoDB</span></p>
+  <p><span style="font-size:17px;">        Option 1: &quot;mongodb://user1:password1@localhost/DB&quot; (Connection String format)</span></p>
+  <p><span style="font-size:17px;">        Option 2: &quot;mongodb://HostOrIP:27017/DBName&quot; (TNS/Host/FilePath format)</span></p>
+  <p>         <strong><img src="../../../../../assets/images/image691.png"/></strong></p>
+  <p><span style="font-size:17px;">    d)    Click on the Test connection button to get the connection successful message.</span></p>
+  <p>         <img src="../../../../../assets/images/image692.png"/></p>
+  <p><strong><span style="font-size:17px;">5. How to add Database Action for MongoDB? </span></strong></p>
+  <p><span style="font-size:17px;">    a)    Double click on the Business flow. In the Activity Actions, click on ‘Add New’ button</span></p>
+  <p><span style="font-size:17px;">            <img src="../../../../../assets/images/image693.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+          b)    Go to the ‘General Actions’ tab and select the ‘DataBase Action’ then click on ‘Add Action’ button given in the below window</span></p>
+  <p><span style="font-size:17px;">           <img src="../../../../../assets/images/image694.png"/><br/>
+       <br/>
+          c)    Select the environment and the DB and the operation type. The DB operation type as same as given in the                       <br/>
+                  &#39;4. Action Operation&#39; section of &#39;How to Configure Database Action?&#39; doc.</span></p>
+  <p>            <img src="../../../../../assets/images/image695.png"/></p>
+  <p><span style="font-size:17px;">    d)    Run the Action to execute it</span></p>
+  <p><strong><span style="font-size:17px;"></span></strong></p>
+
+</body></html>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../../..";
+  gCommonRootRelPath = "../../../..";
+  gTopicId = "3.1.1.3.1_9";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Image Search and Click on screen</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css"/>
+</head>
+<body>
+  <h1>Image Search and Click on screen</h1>
+  <p><span style="font-size:17px;"><strong><span style="font-size:20px;">1.    Introduction    </span></strong><br/>
+               Image Search and Click on screen Action is used to search an  element and take mouse action on it.</span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong style="font-size: 20px">2.    How to Configure Action</strong><br/>
+           1)    Go to Automate tab. In the Activity Actions, click on ‘Add New’ button<br/>
+                     <img src="../../../../assets/images/image852.png"/></span></p>
+  <p><span style="font-size:17px;"> <br/>
+           2)    Go to the ‘General Actions’ tab and select the ‘Image search and click on screen’ then click on Add Action button given in the below window<br/>
+                   <img src="../../../../assets/images/image853.png"/></span></p>
+  <p><span style="font-size:17px;">     3)    Below screen should be displayed. <br/>
+                   •    ‘Locate By:’ drop down can be used to indicate the locator.<br/>
+                         The ‘Locate Value’ can be used using the ‘Open Window Explorer to select Element’ button.<br/>
+                         Refer the ‘Locate by-Locate Value’ document to know how to use this.</span></p>
+  <p><span style="font-size:17px;">             •    ‘Value’ is entered if required either manually or using a variable.<br/>
+                   •    Main Window title can be given of the element if there are multiple windows open in the Agent<br/>
+                   •    Loca1tor’s Image can be given using the Capture Locator Image button.<br/>
+                   •    Action Type are:-<br/>
+                         i)    Input Value<br/>
+                        ii)    MouseLeftClick<br/>
+                       iii)    MouseDoubleClick<br/>
+                        iv)    MouseRightClick<br/>
+                   •    Click on Ok to add the action to the Activity Actions.</span></p>
+  <p><span style="font-size:17px;">                  </span></p>
+  <p><span style="font-size:17px;">     4)    On Open of Edit Window <br/>
+                     a.    Select Action Type<br/>
+                     b.    And click button “Capture Locator Image”.</span></p>
+  <p><span style="font-size:17px;">                   <img src="../../../../assets/images/image854.png"/></span></p>
+  <p><span style="font-size:17px;">     5)    Go to the page you want to capture object and select the area as shown below.<br/>
+           6)    Once selected click on object you want to be clicked while execution. Example Radio button in below image.</span></p>
+  <p><span style="font-size:17px;">               <img src="../../../../assets/images/image855.png"/>    </span></p>
+  <p><span style="font-size:17px;">     7)    Once capture done you will see following details auto populated on your Edit window.</span></p>
+  <p><span style="font-size:17px;">             <img src="../../../../assets/images/image856.png"/><br/>
+                    <br/>
+           8)    On click of Run Action, it will try to locate the radio button you captured and click.</span></p>
+  <p><span style="font-size:17px;">             <img src="../../../../assets/images/image857.png"/><br/>
+                      <br/>
+                   Please Note: Execution might take few seconds to make it locate your object.</span></p>
+  <p><span style="font-size:17px;"></span><br/>
+     </p>
+  <p> </p>
+  <p><br/>
+          <br/>
+          <br/>
+        </p>
+  <p><br/>
+     </p>
+  <p><br/>
+          </p>
+
+</body></html>

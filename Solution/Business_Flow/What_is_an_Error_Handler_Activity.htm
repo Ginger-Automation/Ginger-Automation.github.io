@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../..";
+  gCommonRootRelPath = "../..";
+  gTopicId = "3.1.0_4";
+
+//]]></script>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>What is an Error Handler Activity</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Activity"/></head>
+<body>
+  <h1>What is an Error Handler Activity?</h1>
+  <p><span style="font-size:17px;"><strong><span style="font-size:20px;">Purpose</span></strong><br/>
+      The Error Handler Activity is created to help the user to manage errors in a better way that occurs during execution.</span></p>
+  <p><strong><span style="font-size:20px"> 1.     How to add Error Handler Activity?</span></strong></p>
+  <p><span style="font-size:17px;">        i.    Double click on the Business Flow to go to the page as shown below<br/>
+                      <img src="../../assets/images/image1012.png"/>   <br/>
+        <br/>
+              ii.    Select the desired Group and the Type as Error Handler option and click on the Next button.<br/>
+                     <img src="../../assets/images/image1013.png"/>        </span></p>
+  <p><span style="font-size:17px;"><br/>
+              iii. By default name given is ‘New Error Handler’. Select the desired Target Application and the Error Handler Type.<br/>
+                    Click on the Finish button.</span><br/>
+                   <img src="../../assets/images/image1014.png"/></p>
+  <p><span style="font-size:17px;"><br/>
+              iv.    The Error Handler Activity is added in the Activity Group as shown below. Now user can add Actions to it.<br/>
+                          <img src="../../assets/images/image1015.png"/>  </span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong style="font-size: 20px"> 2.    Types of Error Handler</strong></span></p>
+  <p><span style="font-size:17px;">       2.1    Error Handler <br/>
+                      This is used to handle the errors during execution.  User can select the option in the Actions of other Activities, if he wants to                    execute all the Error Handler Activities in the Business Flow or any specific one when the Action is failed.<br/>
+                      After the Error Handler Activity is executed, the failed Action is run again.        </span></p>
+  <p><span style="font-size:17px;"><br/>
+            2.2    Popup Handler <br/>
+                    This is used to handle the popups during execution.  <br/>
+                    However this Activity will be executed after the execution of each and every action of other Activities irrespective of the Action is                passed or failed.  Hence this Activity is rarely used by users.<br/>
+                    <img src="../../assets/images/image1016.png"/></span></p>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px"> 3.    How to add Actions in Error Handler Activity?</strong><br/>
+                i.     Click on the + button to expand the Actions Library.<br/>
+                       <img src="../../assets/images/image1017.png"/> </span></p>
+  <p><span style="font-size:17px;"><br/>
+               ii.   Click on the Actions Library button as shown below.<br/>
+                    <img src="../../assets/images/image1018.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+              iii. Select the desired Action and click on the arrow button as shown below. <br/>
+                    <img src="../../assets/images/image1019.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+              iv.  The Action gets added. Double click on it to open it in Edit mode and enter the desired things.<br/>
+                    <img src="../../assets/images/image1020.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong style="font-size: 20px"> 4.    How to Configure Actions to call Error Handler Activity?</strong></span></p>
+  <p><span style="font-size:17px;">        1.    Go to desired Activity (non-Error handler) and click on the Configurations tab.<br/>
+                     <img src="../../assets/images/image1021.png"/></span></p>
+  <p><span style="font-size:17px;">        2.    By default ‘Error Handler Map’ is ‘All Available Error Handlers’ which means all the error handler activities in the business                   flow </span><span style="font-size:17px;">will be executed if this Action is failed.<br/>
+                     <img src="../../assets/images/image1022.png"/></span></p>
+  <p><span style="font-size:17px;">        3. User can None option as shown below, if user does not want to execute any Error Handler Activity when this Action is failed.<br/>
+                    <img src="../../assets/images/image1023.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+              4.    a. User can select a specific error handler activity by selecting the ‘Specific Error Handlers’ option<br/>
+                       <img src="../../assets/images/image1024.png"/><br/>
+       <br/>
+                   b. ‘Set Error Handler’ button is displayed where the <br/>
+                        <img src="../../assets/images/image1025.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                  c. Activity-Error Handler Mapping window is displayed which contains all the Error Handler Activities of the Business Flow.<br/>
+                     Select the desired Activity and click on Ok button. <br/>
+                     When this Action is failed, the selected  Error Handler Activity will be run and then this Action will be run again.<br/>
+                       <img src="../../assets/images/image1026.png"/><br/>
+                                       </span><br/>
+     </p>
+
+</body></html>

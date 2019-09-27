@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../../..";
+  gCommonRootRelPath = "../../../..";
+  gTopicId = "3.1.1.1.0_2";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Action Output Simulation</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Actions"/></head>
+<body>
+  <h1>Action Output Simulation</h1>
+  <p><span style="font-size:17px;">Simulation Mode allows Ginger end users to simulate required outputs from services which are either not yet implemented or temporarily unavailable (web services, portals etc.). The mode is available for all Ginger Platforms and all Ginger Actions. </span></p>
+  <p> </p>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">1.    Configuration</strong></span></p>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px"></strong><br/>
+               <strong>Action Level configuration</strong><br/>
+               Open the action for which you want to simulate output, and go to ‘Output Values’ tab<br/>
+               By default ‘Support Simulation’ checkbox is unmarked, by checking the checkbox the view of Output Values fields will change, 3 new columns will be added to the view : “Simulated Actual” , “…”,”&lt;&lt;” : </span></p>
+  <p>           <img src="../../../../assets/images/image509.png"/><img src="../../../../assets/images/image86.png"/></p>
+  <p> </p>
+  <p><span style="font-size:17px;">         The user can populate the “Simulated Actual” field manual or use the “…” to populate the field using the Value Editor Expression window. </span></p>
+  <p><span style="font-size:17px;">        Another option is to use the”&lt;&lt;” button to copy the actual value field to the “Simulated Actual” field.  </span></p>
+  <p>          <img src="../../../../assets/images/image508.png"/><img src="../../../../assets/images/image87.png"/></p>
+  <p> </p>
+  <p><span style="font-size:17px;">        <strong>Automate Tab Level configuration</strong><br/>
+              Go To ‘Automate Tab’ and click the ‘Run in Simulation mode’ checkbox:</span></p>
+  <p><span style="font-size:17px;">        <img src="../../../../assets/images/image507.png"/><img src="../../../../assets/images/image88.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+       <br/>
+              <strong>Ginger Runner Configuration</strong><br/>
+               In the run tab go to the Ginger window and click on the configurations icon</span></p>
+  <p><span style="font-size:17px;">         <img src="../../../../assets/images/image506.png"/><img src="../../../../assets/images/image89.png"/><br/>
+       <br/>
+                Click the ‘Run in simulation mode’ checkbox:</span></p>
+  <p><span style="font-size:17px;">          <img src="../../../../assets/images/image505.png"/><img src="../../../../assets/images/image90.png"/><br/>
+       <br/>
+      <strong style="font-size: 20px">2.    Execution </strong></span></p>
+  <p> </p>
+  <p><span style="font-size:17px;">         <strong>Action Level </strong><br/>
+               At this point if the action will not be executed. Ginger mechanism will copy the value from ‘Simulated Actual’ column to the ‘Actual’ column and will compare its value to the one populated in the ‘Expected’ column. </span></p>
+  <p><span style="font-size:17px;">         The action is not going to be executed but rather based on output validation the action will be Passed/Failed</span></p>
+  <p>          <img src="../../../../assets/images/image504.png"/><img src="../../../../assets/images/image91.png"/></p>
+  <p> </p>
+  <p><span style="font-size:17px;">          When the ‘Support Simulation’ checkbox is marked in the action a button ‘Simulate Run’ will be visible clicking it will execute the action in simulation mode:<br/>
+                <img src="../../../../assets/images/image503.png"/><img src="../../../../assets/images/image92.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+               <strong>Activity/Business Flow</strong> <br/>
+              When the check box is marked any actions that are marked as output simulation will be run as such, if the activity contains actions that require an agent start, the agent will be started. For example a browser window will be launched.</span></p>
+  <p><span style="font-size:17px;">        In the activity grid a checkbox allows the user to select whether the action will be executed in simulation mode, if no special configuration was made in the simulated values fields then there is a possibility that the action will fail. <br/>
+              After an action was executed it will indicate in the Extra info column execution mode.</span></p>
+  <p>           <img src="../../../../assets/images/image93.png"/> <img src="../../../../assets/images/image502.png"/></p>
+  <p><span style="font-size:17px;">       <strong> Ginger Runner level </strong><br/>
+          Any business flows added to this ginger runner depending if they have any actions with output simulation marked will be executed in simulation mode.</span></p>
+  <p> </p>
+  <p> </p>
+
+</body></html>

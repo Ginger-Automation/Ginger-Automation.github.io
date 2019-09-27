@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../../..";
+  gCommonRootRelPath = "../../../..";
+  gTopicId = "3.1.1.4.0_11";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>UI Element</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Platform Actions"/></head>
+<body>
+  <h1>UI Element</h1>
+  <p><span style="font-size:17px;">Pre-requisite:-<br/>
+          A Solution should be created having Agent as Web, Mobile, Java, AndroidDevice, PowerBuilder platform.<br/>
+                                <br/>
+      1. Action Operation:-<br/>
+                            <br/>
+         i)    Double click on the Business flow. In the Activity Actions, click on ‘Add New’ button<br/>
+                 <img src="../../../../assets/images/image922.png"/>       </span></p>
+  <p><span style="font-size:17px;"><br/>
+        ii)    In the ‘Platform Actions’ tab, select the ‘UIElement Action’ then click on ‘Add Action’ button given in the below window                     <img src="../../../../assets/images/image923.png"/>                      </span></p>
+  <p><span style="font-size:17px;"><br/>
+        iii)    Below screen should be displayed.  <br/>
+              Details on Locate By-Locate Value can be found in Platform Actions.</span></p>
+  <p><span style="font-size:17px;">        Locate value can be manually entered or a variable can be selected using the ‘…’ button.<br/>
+              Element Type and Element Action needs to be selected from the drop down.</span></p>
+  <p><span style="font-size:17px;">     <img src="../../../../assets/images/image924.png"/></span></p>
+  <p><span style="font-size:17px;">2.    Action Operation for setting Password</span></p>
+  <p><span style="font-size:17px;">    In the below screen enter the details on Locate By-Locate Value.<br/>
+          Select the Element Type as Text box.<br/>
+          Select Element Action as ‘Send Keys’.  Enter the password value. User can create a variable with type as Password Variable and use it in the Value field. Click on the’…’ button near the Value field to add the variable.<br/>
+          On run time the password will be entered with display of ‘*’ instead of displaying the actual alphabets.</span></p>
+  <p><span style="font-size:17px;">    <img src="../../../../assets/images/image925.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+      3.    Action Operation- Submit Action</span></p>
+  <p><span style="font-size:17px;">    In the below screen enter the details on Locate By-Locate Value.<br/>
+          Select the Element Type as ‘Button’.<br/>
+          Select Element Action as ‘Submit’.  <br/>
+          <img src="../../../../assets/images/image926.png"/> </span></p>
+  <p><span style="font-size:17px;"><br/>
+      4.    Action Operation- Text Box Action</span></p>
+  <p><span style="font-size:17px;">    In the below screen enter the details on Locate By-Locate Value.<br/>
+          Select the Element Type as ‘Text Box’.<br/>
+          Select Element Action as ‘Send Keys’.  </span></p>
+  <p><span style="font-size:17px;">    <img src="../../../../assets/images/image927.png"/></span></p>
+  <p><span style="font-size:17px;">    Below are the Element Actions used more often:-<br/>
+          -    Clear Value<br/>
+          -    Get Value<br/>
+          -    Is Disabled<br/>
+          -    Get Font<br/>
+          -    Is Value Populated<br/>
+          -    Is Visible<br/>
+          -    GetTextLength</span></p>
+  <p><span style="font-size:17px;">5.    How to use Page Object Model in the Action</span></p>
+  <p><span style="font-size:17px;">    i.    Add the Action and in the Locate By select ‘Page Objects Model Element’ option.<br/>
+          ii.    In the Locate Value, select the desired Page Object Model using the pen icon. </span></p>
+  <p><span style="font-size:17px;">       <img src="../../../../assets/images/image928.png"/><br/>
+                          </span></p>
+  <p><span style="font-size:17px;">    iii.    Select the desired element and click on the ‘Select Element’ button.</span></p>
+  <p><span style="font-size:17px;">      <img src="../../../../assets/images/image929.png"/></span></p>
+  <p><span style="font-size:17px;">    iv.    The Element type is automatically populated. User can then select the desired Element Action for it.</span></p>
+  <p><span style="font-size:17px;">    <img src="../../../../assets/images/image930.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+          v.    User can also check where is the element exactly located in the page by clicking on the ‘Highlight Element’ button as shown below.<br/>
+              For this the Agent should be running and the page should already be displayed in it.<br/>
+         <img src="../../../../assets/images/image931.png" style="cursor: nesw-resize;"/></span></p>
+
+</body></html>

@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"API_Model","type":"book","key":"toc34"},{"name":"Global_Parameters","type":"book","key":"toc35"},{"name":"Page_Objects_Models","type":"book","key":"toc36"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

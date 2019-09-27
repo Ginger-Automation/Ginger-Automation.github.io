@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../..";
+  gCommonRootRelPath = "../..";
+  gTopicId = "5.2.0_3";
+
+//]]></script>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Types of Data Source Tables</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Data Source"/></head>
+<body>
+  <h1>Types of Data Source Tables</h1>
+  <p><span style="font-size:17px;">There are two types of Data Source Tables which can be used for to transfer Data from one Business Flow/Activity/Action to another.<br/>
+          •    Ginger Key Value(Recommended)<br/>
+          •    Customized<br/>
+      There is one table of each type added by default after Creating a New Solution.</span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong>1.    Ginger KEY VALUE</strong><br/>
+              Ginger Key Value Table Saves the data and In Key Name/Key Value Pair. Each Key Name should be Unique so it can be later read by            another Action. <br/>
+              Below are columns found in the Key Value Table:<br/>
+              •    GINGER_ID- Unique ID to refer the Row in Table. Auto Populated(Read Only)<br/>
+              •    GINGERKEY_NAME – Name of the KEY to be referred to store Data Like (CUSTOMER_ID, CUST_NAME etc.)<br/>
+              •    GINGERKEY_VALUE – Value if the Key. Can be read/write from the Ginger Actions.<br/>
+              •    GINGER_LAST_UPDATE_DATETIME- The last time when the Row was updated. Auto Populated(Read Only)<br/>
+              •    GINGER_LAST_UPDATED_BY- NTNET of the User who updated the Value of the Row. Auto Populated(Read Only)</span></p>
+  <p><span style="font-size:17px;">             <img src="../../assets/images/image733.png"/><br/>
+       <br/>
+             <br/>
+      <strong>2.    CUSTOMIZED</strong><br/>
+             If you want to use Data in the customized format, you can use Customized Data Table Type. Below are the default columns added                 while reating a new Customized Table.<br/>
+              •    GINGER_ID - Unique ID to refer the Row in Table. Auto Populated(Read Only)<br/>
+              •    GINGER_USED – Can be used to check if the Current Row’s Data is used or Note. We will also have the option in the Value                  Expression to Mark Row as Done after reading/writing data to the row. It will set value Done in the GINGER_USED Column<br/>
+             •    GINGER_LAST_UPDATE_DATETIME- The last time when the Row was updated. Auto Populated(Read Only)<br/>
+             •    GINGER_LAST_UPDATED_BY- NTNET of the User who updated the Value of the Row. Auto Populated(Read Only)</span><br/>
+               <img src="../../assets/images/image734.png"/></p>
+
+</body></html>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../../../../..";
+  gCommonRootRelPath = "../../../../../..";
+  gTopicId = "3.2.1.1.1.1.0_5";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Web (Chrome Browser) Testing on Real Device Setup</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Android Agent"/></head>
+<body>
+  <h1>Web (Chrome Browser) Testing on Real Device Setup</h1>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px"></strong></span></p>
+  <p><span style="font-size:17px;"> If you’re interested in automating your web app in Mobile Chrome on Android Appium can help you. </span></p>
+  <p><span style="font-size:17px;">Basically, you write a</span><span style="font-size:17px;"> normal  WebDriver test and use Appium as the Selenium server with a special set of desired capabilities.</span></p>
+  <p> </p>
+  <p><strong><span style="font-size:17px;">   Launch and Test on Chrome Browser Using Ginger  </span></strong></p>
+  <p><span style="font-size:17px;"><br/>
+                   a.    Launch Appium server according to steps in section 1.3/1.6<br/>
+                   b.    Launch Ginger <br/>
+                   c.    Create Business Flow with the Mobile platform<br/>
+                   d.    Add new Agent, give it logical name and select the MobileAppiumAndroidBrowser driver<br/>
+                           <img src="../../../../../../assets/images/image316.png"/><img src="../../../../../../assets/images/image281.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                  e.    Define the <strong>Agent Driver Configurations</strong> as follow:<br/>
+                          i.    <strong>AppiumServer:</strong> http://&lt;&lt;Windows/Mac_Machine_IP from step 1.3.b/1.6.b&gt;&gt;:4723/wd/hub<br/>
+                         ii.    <strong>DeviceName:</strong> Any Device name<br/>
+                        iii.    <strong>DevicePlatformVersion:</strong> Real device platform version <br/>
+                        iv.    <strong>DeviceID:</strong> the device ID you found in step 2.2</span></p>
+  <p><span style="font-size:17px;">                       <img src="../../../../../../assets/images/image282.png"/>    <img src="../../../../../../assets/images/image317.png"/></span></p>
+  <p><span style="font-size:17px;">   <br/>
+                 f.    Save the Agent settings<br/>
+                g.    Select the Business Flow created in step b and shift to the <strong>Automate </strong>tab<br/>
+                h.    Select the Agent created in step c from the Agents selection in the ribbon<br/>
+                 i.    Click on Launch Agent<br/>
+                 j.    Make sure that the connection request got to the Appium server, you supposed to see something like this in screen shot below<br/>
+                       <img src="../../../../../../assets/images/image284.png"/> <img src="../../../../../../assets/images/image318.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                k.    Once the connection establish the Safari app supposed to be launched on the tested device and the Appium Mobile Driver  </span></p>
+  <p><span style="font-size:17px;">                  Window supposed to appear on Ginger and allow you to execute Selenium Web Driver actions on it</span></p>
+  <p><span style="font-size:17px;">                  <img src="../../../../../../assets/images/image319.png"/><img src="../../../../../../assets/images/image285.png"/></span></p>
+
+</body></html>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../../..";
+  gCommonRootRelPath = "../../../..";
+  gTopicId = "3.1.1.2.0_1";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Understanding Action Conversions</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Actions,Actions Conversion"/></head>
+<body>
+  <h1>Understanding Actions Conversion</h1>
+  <h1 style="margin:12pt 0in 6pt"><span style="font-size:16pt"><span style="font-family:Calibri,sans-serif"><span style="color:#e36c0a"><a name="_Toc3311730"></a></span></span></span></h1>
+  <p><strong style="font-size: 17px">Purpose</strong></p>
+  <p><span style="font-size:17px;">The purpose of adding an Actions Convertor is to allow users to automatically convert their obsolete flows containing redundant actions to new flows, also it provides ability to convert to new actions using the POM objects.</span></p>
+  <p><span style="font-size:17px;">In this document, we’ll consider the example of conversion of obsolete ASCF Driver-based flows to Java Driver-based flows. There could be more such scenarios in the future but for simplicity in understanding, we will take the example of conversion of obsolete ASCF flows to Java Driver.<br/>
+      Since ASCF Driver is no longer supported by Ginger and users are highly recommended to switch to Java Driver for automation, the ASCF/GTB Convertor will facilitate the users to automatically convert their obsolete ASCF Driver-based actions to Java Driver-based ones thus, minimizing manual effort to a great extent.</span></p>
+  <p><span style="font-size:17px;"><strong>Understanding the Actions Convertor </strong></span></p>
+  <p><span style="font-size:17px;"><strong></strong>  The Actions Conversion window consists of mainly three sections:</span></p>
+  <p><span style="font-size:17px;">   1.    Name of Activities in the Business Flow,<br/>
+         2.    Convertible Action Types and,<br/>
+         3.    Conversion Configurations</span></p>
+  <p><span style="font-size:17px;">  <strong>1.  Name of Activities in the Business Flow</strong><br/>
+             This section lists out all the activities present in the selected Business Flow regardless they are active or inactive.<br/>
+             The user needs to select the activities that he wants to convert from the grid and then, click on the View Convertible Action Types buttons.</span></p>
+  <p><span style="font-size:17px;"><strong> 2. Convertible Action Types</strong><br/>
+            This section enlists all the types of actions present in the selected activity by the user. The action types are shown in a grid along                </span><span style="font-size:17px;">with their Source Activities, which are the parent activities that contain that specific type of action in the activity.<br/>
+            The users can also view the Count of the action types in the selected activity i.e. number of occurrences of the action types in this              activity along with their parent activities.<br/>
+           Finally, we have the Target Action Type that states the action type of the newly converted actions after the conversion is done.</span></p>
+  <p><span style="font-size:17px;"><strong> 3. Conversion Configurations</strong><br/>
+           In this section, the users can do the configuration settings for the conversion. The users can choose whether they want to add the               newly converted actions to a New Activity or the Same Activity i.e. the parent activity to which the obsolete action belongs to,                   also it provides the ability to convert to new actions using the POM objects user can select the existing POM object.<br/>
+          The users can also set a default Target Application (TA) for the modified activities by selecting the respective TA from a list of                   available TAs that are present in the selected Business Flow.</span></p>
+  <p><span style="font-size:17px;">    In case the flow doesn’t have the required TA (in this case, a Java platform-based) then, the user can simply minimize the Actions               Flow Conversion window and add the required TA to the flow from the Solution tab. Once added successfully, the user can switch             back to the Actions Conversion window and click on the Refresh button ( ) and the newly added TA will be shown in the list of TAs.<br/>
+          The user can choose the TA from the dropdown list and then, click on the Convert button and the newly converted actions will be               added to a new activity or to the same parent activity, depending on the selection made by the user.</span></p>
+  <p><span style="font-size:17px;">     NOTE: It’s recommended to add the newly converted actions to a New Activity rather than the Same Activity because the new                   actions will need mapping to a different TA, in this case, a Java Driver-based TA.<br/>
+           Therefore, in a new activity, it is simpler to configure a new TA, in this case, a Java Driver-based TA. Whereas, if we choose to add           new actions to same activity that is already mapped to an ASCF Driver-based TA, this will result in a conflict here. Although the               conflict can be resolved manually by the user, it will be easier for him/her in case of a new activity.</span></p>
+  <p><span style="font-size:17px;">     <img src="../../../../assets/images/image644.png"/></span></p>
+  <p><span style="font-size:17px;">    <img src="../../../../assets/images/image645.png"/></span></p>
+  <p><span style="font-size:17px;">  <img src="../../../../assets/images/image646.png"/></span></p>
+  <p><span style="font-size:17px;">   <img src="../../../../assets/images/image647.png"/></span><br/>
+     </p>
+  <p><span style="font-size:17px;"><br/>
+       </span><span style="font-size: 17px;">  POM Selection window</span></p>
+  <p>   <img src="../../../../assets/images/image648.png" style="cursor: nesw-resize;"/></p>
+  <p> </p>
+  <p><br/>
+     <br/>
+     </p>
+  <p><br/>
+     </p>
+
+</body></html>

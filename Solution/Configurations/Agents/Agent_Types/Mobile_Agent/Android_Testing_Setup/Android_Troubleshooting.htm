@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../../../../..";
+  gCommonRootRelPath = "../../../../../..";
+  gTopicId = "3.2.1.1.1.1.0_6";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Android Troubleshooting </title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Android Agent"/></head>
+<body>
+  <h1>Android Troubleshooting</h1>
+  <p><strong><span style="font-size:17px;"><span style="font-size:20px;">   1.    Issue:- Appium failing mysteriously </span>  </span></strong></p>
+  <p><span style="font-size:17px;">              Possible Solution<br/>
+                     1.    Most likely this is because you haven’t added the user connecting to the phone’s USB debugging <br/>
+                             whitelist (or someone cleared the whitelist on the phone)<br/>
+                     2.    Make sure you chose yes for reporting errors to Google, if you were asked.</span></p>
+  <p><span style="font-size:17px;"><br/>
+      <span style="font-size:20px;">  <strong>  2.    Issue:- Appium: “requested port is already in use”  </strong></span></span></p>
+  <p><span style="font-size:17px;">              Possible Solution<br/>
+                    Fix 1:Close any other instance of Appium <br/>
+                              Check if another instance of Appium is open (if it is, close it). Try again.<br/>
+       <br/>
+                    Fix 2: Kill Node.JS server<br/>
+                              Execute the following from command prompt as admin <br/>
+                              (Programs --&gt; Accessories --&gt; Command Prompt (rightclick &amp; choose Run as Admin)<br/>
+                               taskkill /f /im node.exe<br/>
+       <br/>
+                               You should get a message like &quot;SUCCESS: The process &quot;node.exe&quot; with PID #### has been <br/>
+                               terminated.&quot; or (if it has already been killed) &quot;ERROR: The process &quot;node.exe&quot; not found.&quot;</span></p>
+  <p> </p>
+  <p><span style="font-size:17px;"><span style="font-size:20px;">  <strong>  3.    Issue:- Ginger:  “Unexpected error. System.Net.WebException: Unable to connect to the remote server”</strong>     </span>                         <br/>
+                    Possible Solution<br/>
+                    Appium needs to be started or restarted (click the play button).   </span></p>
+  <p> </p>
+  <p><strong><span style="font-size:17px;"> <span style="font-size:20px;">   4.    Issue:- Chrome browser failed to load  </span></span></strong></p>
+  <p><span style="font-size:17px;">              Possible Solution <br/>
+                     1. Check if the “chromedriver.exe” process is running on the Appium server machine. If yes then kill it and re-try to connect to                              Chrome Browser using Ginger<br/>
+                     2. Make sure the device is not locked (unlock the lock screen)</span></p>
+  <p><span style="font-size:17px;">           </span></p>
+
+</body></html>

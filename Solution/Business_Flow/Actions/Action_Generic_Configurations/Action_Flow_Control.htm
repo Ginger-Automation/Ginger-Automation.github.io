@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../../..";
+  gCommonRootRelPath = "../../../..";
+  gTopicId = "3.1.1.1.0_1";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Action Flow Control</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Actions"/></head>
+<body>
+  <h1>Action Flow Control</h1>
+  <p><span style="font-size:17px;">1.    A flow control can be added using the ‘Flow Control’ tab using the + button as shown below.<br/>
+              It adds a row where the condition can be defined.<br/>
+              ‘Action’ drop down has options to control the flow.<br/>
+                <img src="../../../../assets/images/image77.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+      2.    Default Flow Control can be added using the Condition drop down.</span></p>
+  <p><span style="font-size:17px;">         <img src="../../../../assets/images/image78.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                 Eg.<br/>
+                   <img src="../../../../assets/images/image495.png"/><img src="../../../../assets/images/image79.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+      3.    Variables can be used using ‘…’ button as shown below:-<br/>
+                <img src="../../../../assets/images/image496.png"/><img src="../../../../assets/images/image80.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+      4.    Action drop down:-</span></p>
+  <p><span style="font-size:17px;">    a)    Go to Action:- this will enable another drop down beside it to select the list of Actions from the solution.</span></p>
+  <p>              <img src="../../../../assets/images/image497.png"/><img src="../../../../assets/images/image81.png"/></p>
+  <p> </p>
+  <p><span style="font-size:17px;">    b)    Go to Activity :- this will enable another drop down beside it to select the list of Activities from the solution.<br/>
+                  <img src="../../../../assets/images/image498.png"/><img src="../../../../assets/images/image82.png" style="cursor: nwse-resize;"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+          c)    Go to Activity by Name: in this user can type the name of the activity which needs to be executed.</span></p>
+  <p><span style="font-size:17px;">    d)    Go to Next Action:- will take the flow to the next action.</span></p>
+  <p><span style="font-size:17px;">    e)    Go to Next Activity:- will take the flow to the next activity.</span></p>
+  <p><span style="font-size:17px;">    f)    Rerun Action:- executes the Action again.</span></p>
+  <p><span style="font-size:17px;">    g)    Run shared Repository Action:- this executes the action from shared repository. Action name is given in the field as shown below.<br/>
+                 <img src="../../../../assets/images/image499.png"/><img src="../../../../assets/images/image83.png"/></span></p>
+  <p> </p>
+  <p><span style="font-size:17px;">    h)    Set Failure to be Auto- Opened Defect :- if the action fails, then Ginger will automatically open defect in ALM. For the ALM Connection Details and the Defect Profile must be created.</span></p>
+  <p>            <img src="../../../../assets/images/image500.png"/><img src="../../../../assets/images/image84.png"/></p>
+  <p> </p>
+  <p><span style="font-size:17px;">    i)    Set Variable value:- to set a value of a variable as shown below</span></p>
+  <p>            <img src="../../../../assets/images/image501.png"/><img src="../../../../assets/images/image85.png"/></p>
+  <p> </p>
+  <p><span style="font-size:17px;">    j)    Show message box :- when the given condition will be met, then we can direct Ginger to display a pop up message during the execution.</span></p>
+  <p><span style="font-size:17px;">    k)    Stop Business Flow:- this will stop the complete execution of the Business flow.</span></p>
+  <p><span style="font-size:17px;">    l)    Stop Run :- this will stop the currently executed Action/Activity.</span></p>
+
+</body></html>

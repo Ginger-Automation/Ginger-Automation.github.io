@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../..";
+  gCommonRootRelPath = "../..";
+  gTopicId = "8.1.0_8";
+
+//]]></script>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Automate ALM TC &amp; Add it to Ginger Repository</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="QC/JIRA/RQM Integration"/></head>
+<body>
+  <p align="center" class="MsoTitle" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:20pt"><span style="font-family:Calibri,sans-serif"><span style="color:#0f243e"><span style="letter-spacing:-0.5pt"><span style="font-weight:bold"><span style="font-size:16.0pt"><span style="font-family:&quot;Century Gothic&quot;,sans-serif"></span></span></span></span></span></span></span></p>
+  <p align="center" class="MsoTitle" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:20pt"><span style="font-family:Calibri,sans-serif"><span style="color:#0f243e"><span style="letter-spacing:-0.5pt"><span style="font-weight:bold"><span style="font-size:16.0pt"><span style="font-family:&quot;Century Gothic&quot;,sans-serif"></span></span></span></span></span></span></span></p>
+  <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt"><span style="font-family:&quot;Century Gothic&quot;,sans-serif"></span></span></span></span></p>
+  <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt"><span style="font-family:&quot;Century Gothic&quot;,sans-serif"></span></span></span></span></p>
+  <p style="margin:0in 0in 0.0001pt"> </p>
+  <h1>Automate ALM Test Case &amp; Add it to Ginger Repository</h1>
+  <p><span style="font-size:16px;">Once user has imported ALM Test (to a Business Flow) or exported Ginger Business Flow to ALM he can automate the Ginger Activities Groups which it contains and add them to the Ginger Solution repository so they will be reused the next time those ALM TC’s will be used in other Tests that will be imported to Ginger.</span></p>
+  <p><span style="font-size:16px;">For automating an ALM TC &amp; add it to the Ginger repository please follow below steps:</span></p>
+  <p><span style="font-size:16px;">    1.    Import ALM Test Set into Ginger <br/>
+          2.    Double click the Ginger Test Set which was created for the ALM Test Set in order to shift to Ginger “Automate” tab<br/>
+          3.    Record or manually add the automation Actions for the relevant ALM TC Steps matching Ginger Steps<br/>
+          4.    Test and make sure the Ginger Steps been executed as expected<br/>
+          5.    Mark the “Automation Status” of the automated Ginger Steps to “Automated” in the Ginger Step edit window or from the Ginger Steps grid<br/>
+                  <img src="../../assets/images/image.png"/></span></p>
+  <p><span style="font-size:16px;"><br/>
+          6.    Add the ALM TC matching Ginger Test Case and all of it Ginger Steps to the Solution Shared Repository by:<br/>
+                a.    Opening the “Test Cases Manager” window by clicking on it icon  in the Ginger Steps grid tool bar<br/>
+                b.    Selecting the Ginger Test Case which match to the ALM TC from the Groups list<br/>
+                c.    Click on the “Add to Repository” icon   in the groups grid tool bar<br/>
+                d.    The Ginger Test Case and all of it Ginger Steps supposed to be added to the Ginger Solution Shared Repository</span></p>
+  <p> </p>
+  <p><span style="font-size:16px;">  <strong> Note:</strong> In case the Ginger Test Case or one of its Ginger Steps already exist in the Repository the user will be asked if he wants to overwrite                </span><span style="font-size:16px;">              the existing one.</span></p>
+  <p><span style="font-size:16px;">            <img src="../../assets/images/image27.png"/><img src="../../assets/images/image1.png"/></span></p>
+  <p><span style="font-size:16px;">  <strong>Note:</strong> For reflecting the automated TC’s in the Design Console (ATS) application the user will need to Check In the automated items (Ginger Test </span></p>
+  <p><span style="font-size:16px;">             Cases &amp; Ginger Steps) to the Solution Source Control (SVN).</span></p>
+
+</body></html>

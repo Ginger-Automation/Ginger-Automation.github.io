@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "..";
+  gCommonRootRelPath = "..";
+  gTopicId = "6.0_3";
+
+//]]></script>
+
+<script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Find and Replace</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Find &amp; Replace"/></head>
+<body>
+  <h1>Find and Replace</h1>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">Purpose</strong><br/>
+      The purpose is to find and replace fields among the Ginger entities such as actions, API Models, Variables etc.</span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong>1.     Find items</strong></span></p>
+  <p><span style="font-size:17px;">        Go to the Business Flow tab and double click on the desired Business Flow. Find and Replace button is displayed as shown below.  <br/>
+               <img src="../assets/images/image1106.png"/></span></p>
+  <p><span style="font-size:17px;">      1.1    How to Find Items?<br/>
+                     a.    Step one will be to select the Item Type user want to find. <br/>
+                     b.    Once selected, Sub Item Type will be visible. In case the selected ‘Item Type’ has sub item then by default all ‘Sub Items                              Type’ will be included in the search. User has to select the ‘Sub Item’ to narrow the search scope.</span></p>
+  <p>                        <img src="../assets/images/image1107.png"/></p>
+  <p><span style="font-size:17px;">                       <img src="../assets/images/image1108.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                     c.    Populate the ‘Find What’ field with the field value you want to search.<br/>
+                            If user wants to include case sensitive in the search then check the ‘Match Case’ checkbox.<br/>
+                            If user wants to find values which are equal to the whole field value check the ‘Match whole word’ check box.<br/>
+                            <img src="../assets/images/image1109.png"/></span></p>
+  <p><span style="font-size:17px;">                d.    Click the find button<br/>
+                             <img src="../assets/images/image1110.png"/></span></p>
+  <p><span style="font-size:17px;">      1.2    Found Items Grid</span></p>
+  <p><span style="font-size:17px;">               a.    Grid column dictionary:<br/>
+                            •    Item Type – Ginger Entity Type<br/>
+                            •    Item Name – Entity Name (Action Name, Activity Name etc.)<br/>
+                            •    Item Path – Relative path from solution directory<br/>
+                            •    Item Parent – Parents Path from the Item Path (relative solution directory)<br/>
+                            •    Found Field – The actual field name – in case it’s a field inside field it will appear as path for example                                                              IntptValues/EndPointURL/Value (The user will understand the EndPoint URL, it is shown like this because the way we                                  are saving it on our backend) please try to find the field inside the path in our example ‘EndPointURL’<br/>
+                            •    Field value -  The actual field value<br/>
+                                    <img src="../assets/images/image1111.png"/><br/>
+       <br/>
+                             •    Double Click on the row or regular click on the View Details will open the Item edit page which should can also change                                the value from there and save. </span></p>
+  <p><strong><span style="font-size:20px">2.    Replace</span></strong></p>
+  <p><span style="font-size:17px;">        Only after the finding process is finished, we can run replace process.<br/>
+               In order to see replace configuration please check the Replace Radio Button.</span></p>
+  <p><span style="font-size:17px;">         <img src="../assets/images/image1112.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+             2.1    Replace Items <br/>
+                      Once selecting the Replace Radio button, Replace configuration will be appear, Replace text box Replace Selected Button<br/>
+                      Note: – Value can be replaced only if it selected and its status is Pending Replace or Replace Failed.</span></p>
+  <p><span style="font-size:17px;">                   <img src="../assets/images/image1113.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                       Also after selecting the Replace Radio Button 2 new column will be added to the grid Selected and Status.</span></p>
+  <p><span style="font-size:17px;">                 <img src="../assets/images/image1114.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                      2.1.1    Replace With the Right Value<br/>
+                                  In some cases Replace will be possible only with the right value:<br/>
+                                  a)    Value which been selected from a list of already defined values cannot be replace with just any text<br/>
+                                  b)    Boolean Value – true or false which generally reflect the checkbox ‘Is checked’ property<br/>
+                                        To overcome this obstacle we forced the Replace text box to be changed to dropdown list with defined values                                                   whenever you will select a row from the Find Result grid which meets the above cases.</span></p>
+  <p><span style="font-size:17px;"><strong>                                Please note –</strong>If you need to replace value like describe above make sure to select only rows with the same field so you                                 don’t replace all the find value but only the once which selected from this list, The selected check box will be by default unselected.<br/>
+                                      <img src="../assets/images/image1115.png"/></span></p>
+  <p><span style="font-size:17px;">                 2.1.2    Replace States<br/>
+                                   In order to understand the Replace states please refer to the below table</span></p>
+  <p><span style="font-size:17px;">                             </span></p>
+  <table class="Table" style="width:553.55pt; border-collapse:collapse; border:solid windowtext 1.0pt" width="738">
+    <tbody>
+      <tr style="height:28.4pt">
+        <td style="border:solid windowtext 1.0pt; background:#ffc000; width:60.5pt; border-right:none; padding:0in 5.4pt 0in 5.4pt; height:28.4pt" width="81">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt">MatchCase</p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; background:#ffc000; width:1.05in; border-right:none; padding:0in 5.4pt 0in 5.4pt; height:28.4pt" width="101">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt">MatchAllWord</p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; background:#ffc000; width:65.25pt; border-right:none; padding:0in 5.4pt 0in 5.4pt; height:28.4pt" width="87">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Find What</span></span></span></p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; background:#ffc000; width:52.0pt; border-right:none; padding:0in 5.4pt 0in 5.4pt; height:28.4pt" width="69">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Replace</span></span></span></p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; background:#ffc000; width:63.85pt; border-right:none; padding:0in 5.4pt 0in 5.4pt; height:28.4pt" width="85">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Value before replac</span></span></span></p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; background:#ffc000; width:106.95pt; border-right:none; padding:0in 5.4pt 0in 5.4pt; height:28.4pt" width="143">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Value After replace </span></span></span></p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; background:#ffc000; width:129.4pt; padding:0in 5.4pt 0in 5.4pt; height:28.4pt" width="173">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Description</span></span></span></p>
+        </td>
+      </tr>
+      <tr style="height:30.5pt">
+        <td style="border:solid windowtext 1.0pt; background:red; width:60.5pt; border-top:none; padding:0in 5.4pt 0in 5.4pt; height:30.5pt" width="81">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">X</span></span></span></p>
+        </td>
+        <td style="border:none; border-bottom:solid windowtext 1.0pt; background:red; width:1.05in; padding:0in 5.4pt 0in 5.4pt; height:30.5pt" width="101">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">X</span></span></span></p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; width:65.25pt; border-top:none; padding:0in 5.4pt 0in 5.4pt; height:30.5pt" width="87">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:red">o</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:52.0pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt; height:30.5pt" width="69">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:#00b050">GINGER</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:63.85pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt; height:30.5pt" width="85">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Hell</span><span style="color:red">o</span><span style="color:black"> W</span><span style="color:red">o</span>rld</span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:106.95pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt; height:30.5pt" width="143">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Hell</span><span style="color:#00b050">GINGER</span><span style="color:black"> W</span><span style="color:#00b050">GINGER</span>rld</span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:129.4pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt; height:30.5pt" width="173">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Only the Value O replaced with the new value to replace</span></span></span></p>
+        </td>
+      </tr>
+      <tr style="height:55.45pt">
+        <td style="border:solid windowtext 1.0pt; background:#00b050; width:60.5pt; border-top:none; padding:0in 5.4pt 0in 5.4pt; height:55.45pt" width="81">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">V</span></span></span></p>
+        </td>
+        <td style="border:none; border-bottom:solid windowtext 1.0pt; background:red; width:1.05in; padding:0in 5.4pt 0in 5.4pt; height:55.45pt" width="101">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">X</span></span></span></p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; width:65.25pt; border-top:none; padding:0in 5.4pt 0in 5.4pt; height:55.45pt" width="87">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:red">o</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:52.0pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt; height:55.45pt" width="69">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:#00b050">GINGER</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:63.85pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt; height:55.45pt" width="85">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">HellO W</span><span style="color:red">o</span>rld</span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:106.95pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt; height:55.45pt" width="143">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">HellO W</span><span style="color:#00b050">GINGER</span>rld</span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:129.4pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt; height:55.45pt" width="173">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">only thelower o has been changed because we included case sensitive by checking the match case</span></span></span></p>
+        </td>
+      </tr>
+      <tr style="height:27.7pt">
+        <td style="border:solid windowtext 1.0pt; background:red; width:60.5pt; border-top:none; padding:0in 5.4pt 0in 5.4pt; height:27.7pt" width="81">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">X</span></span></span></p>
+        </td>
+        <td style="border:none; border-bottom:solid windowtext 1.0pt; background:#00b050; width:1.05in; padding:0in 5.4pt 0in 5.4pt; height:27.7pt" width="101">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">V</span></span></span></p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; width:65.25pt; border-top:none; padding:0in 5.4pt 0in 5.4pt; height:27.7pt" width="87">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:red">Hello World</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:52.0pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt; height:27.7pt" width="69">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:#00b050">GINGER</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:63.85pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt; height:27.7pt" width="85">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:red">HELLO WORLD</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:106.95pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt; height:27.7pt" width="143">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:#00b050">GINGER</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:129.4pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt; height:27.7pt" width="173">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">The complete value has been changed to the new value</span></span></span></p>
+        </td>
+      </tr>
+      <tr style="height:28.4pt">
+        <td style="border:solid windowtext 1.0pt; background:#00b050; width:60.5pt; border-top:none; padding:0in 5.4pt 0in 5.4pt; height:28.4pt" width="81">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">V</span></span></span></p>
+        </td>
+        <td style="border:none; border-bottom:solid windowtext 1.0pt; background:#00b050; width:1.05in; padding:0in 5.4pt 0in 5.4pt; height:28.4pt" width="101">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">V</span></span></span></p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; width:65.25pt; border-top:none; padding:0in 5.4pt 0in 5.4pt; height:28.4pt" width="87">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:red">Hello World</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:52.0pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt; height:28.4pt" width="69">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:#00b050">GINGER</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:63.85pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt; height:28.4pt" width="85">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:red">Hello World</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:106.95pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt; height:28.4pt" width="143">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:#00b050">GINGER</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:129.4pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt; height:28.4pt" width="173">
+          <p align="center" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">The complete has been changed to the new value</span></span></span></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p><span style="font-size:17px;"></span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong style="font-size: 20px">3.    Save</strong><br/>
+              After the replace process, Save Selected button will be appeared, clicking on it will save all the selected replaced file.<br/>
+              <strong>Note: – file can be saved only if it selected and its status is Replaced or Save Failed.</strong></span></p>
+  <p>        <img src="../assets/images/image1116.png"/></p>
+
+</body></html>

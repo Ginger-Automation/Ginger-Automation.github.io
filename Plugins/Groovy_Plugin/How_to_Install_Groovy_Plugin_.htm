@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../..";
+  gCommonRootRelPath = "../..";
+  gTopicId = "5.4.1.0_1";
+
+//]]></script>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>How to Install Groovy Plugin?</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/default.css"/>
+</head>
+<body>
+  <h1>How to Install Groovy Plugin?</h1>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">Purpose</strong><br/>
+      The Groovy Plugin target is to allow executing groovy scripts from Ginger as integrative part of the Ginger test flow.</span></p>
+  <p><span style="font-size:17px;">Ginger Groovy plugin allows to:<br/>
+          •    Configure groovy script execution by using script file.<br/>
+          •    Configure groovy script execution by using script content.</span></p>
+  <p><span style="font-size:17px;">For above execution methods ginger groovy plugin offers:<br/>
+          •    Send execution Input Values to groovy script. <br/>
+          •    Get execution output values by parsing and showing console values and look for “key=value” pairs                 </span></p>
+  <p><span style="font-size:17px;"><strong><span style="font-size:20px;">Pre-requisites</span></strong><br/>
+      Please see below the items which needs to be set up on the testing environment before executing the Groovy plugin.<br/>
+          1. NET Core SDK Installation<br/>
+              The plugin requires .NET Core SDK version 2.2 or above to be installed on the machine it is running on.<br/>
+              Please install it from below link:<br/>
+              https://dotnet.microsoft.com/download</span></p>
+  <p><span style="font-size:17px;">    2.    Groovy Installation<br/>
+              Groovy installation is must for the plugin to work.<br/>
+              “GROOVY_HOME” environment variable system configuration is also required.</span></p>
+  <p><span style="font-size:17px;">    3.    Java Installation<br/>
+              Java installation is must for the plugin to work.<br/>
+              “JAVA_HOME” environment variable system configuration is also required.<br/>
+       <br/>
+          4.    Script <br/>
+              The groovy script files need to be located on the machine on which the Groovy Plugin running.<br/>
+              It is recommended to place the script under the Ginger Solution “Documents” folder and use relative paths to it  (like “~/Documents/Scripts”) so it will work on any user machine. </span></p>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">Install Groovy Plugin</strong><br/>
+      Ginger groovy plugin needs to be installed to the Ginger Solution in order to be used.<br/>
+      Please follow below steps to perform it.</span></p>
+  <p><span style="font-size:17px;">    1.    Add groovy Plugin to Ginger Solution<br/>
+              a.    Download and Install latest/required Ginger version from here<br/>
+              b.    Launch Ginger and add Solution to it<br/>
+              c.    In Solution go to Resources-&gt; Plugins<br/>
+              d.    Click on “Download Plugin” tab<br/>
+              e.    Select “Groovy” Plugin from loaded list of Plugins<br/>
+              f.    Select latest/required Plugin version<br/>
+              g.    Click on Install <br/>
+                    Once installation done, shift to “Installed” tab and confirm ”Groovy” plugin appears on tree- you will see the Plugin details on the right including it embedded action types.</span></p>
+  <p>             <img src="../../assets/images/image1220.png"/></p>
+  <p>           <img src="../../assets/images/image1221.png"/></p>
+
+</body></html>

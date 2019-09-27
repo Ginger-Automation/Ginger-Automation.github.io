@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../../..";
+  gCommonRootRelPath = "../../../..";
+  gTopicId = "3.1.1.1.0_3";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Action Output Values</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Actions"/></head>
+<body>
+  <h1>Action Output Values</h1>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">1.    Introduction   </strong> <br/>
+               When an Activity Action is executed the output contents if any are displayed in the ‘Output Values’ tab.<br/>
+               The output values are displayed only after the Action is Run.</span></p>
+  <p><span style="font-size:17px;">         Below is the output value screen.</span></p>
+  <p>           <img src="../../../../assets/images/image510.png"/><img src="../../../../assets/images/image94.png"/></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong style="font-size: 20px">2.    Operators </strong>   </span></p>
+  <p><span style="font-size:17px;">       Shown below are the list of operators available to use.</span></p>
+  <p>         <img src="../../../../assets/images/image511.png"/><img src="../../../../assets/images/image95.png"/></p>
+  <p><span style="font-size:17px;">        <br/>
+              •    The Mathematical  operators require Numerical values for comparison between the Actual and the <br/>
+                    Expected values. <br/>
+              •    The Evaluate operator is used when some kind of evaluation is required while comparing the actual &amp; expected values.<br/>
+                     Eg. <br/>
+                     Click on the ‘…’ button and enter a value expression in the expected value. This will be evaluated during run time for comparison                  between actual &amp; expected values.</span></p>
+  <p><span style="font-size:17px;">              <img src="../../../../assets/images/image512.png"/>    <img src="../../../../assets/images/image96.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+      •    Legacy – is all the operators used before 3.1 versions will work as expected.</span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong style="font-size: 20px">3.    Store To</strong></span></p>
+  <p><span style="font-size:17px;">         This functionality allows user to store the output value into either in a variable or in data source.</span></p>
+  <p><span style="font-size:17px;">          <img src="../../../../assets/images/image513.png"/><img src="../../../../assets/images/image97.png"/></span></p>
+  <p><span style="font-size:17px;">  </span></p>
+  <p><strong><span style="font-size:17px;">   3.1    Variable</span></strong></p>
+  <p><span style="font-size:17px;">          When variable is selected, all the Business Flow and Global variables of type String will be displayed in the drop down for selection.                When the Action is Run and Passed, the output value will be stored in the selected variable.</span></p>
+  <p>             <img src="../../../../assets/images/image514.png"/><img src="../../../../assets/images/image98.png"/></p>
+  <p> </p>
+  <p><strong><span style="font-size:17px;">   3.2    DataSource</span></strong></p>
+  <p><span style="font-size:17px;">            When DataSource option is selected, below screen ‘DataSource Expression Editor’ is displayed.<br/>
+                  User has to select the desired DataSource table and the Cell Identifier.<br/>
+                 When the Action is Run &amp; Passed, the output value is stored the cell that satisfies the given condition.</span></p>
+  <p><span style="font-size:17px;">            <strong>Note:- </strong>The values can be stored either in the default Customized table of the DataSource or a new customized table can be added                  for the same in the Data Sources area under Resources tab.</span></p>
+  <p>              <img height="641" src="../../../../assets/images/image515.png" width="1012"/><img src="../../../../assets/images/image99.png"/></p>
+  <p> </p>
+  <p><span style="font-size:17px;"> <strong>3.3    Application Model Parameter</strong></span></p>
+  <p><span style="font-size:17px;">          This is used when the user wants to save the output value to one of the Application Models Global Parameter.</span></p>
+  <p><span style="font-size:17px;">            <img height="140" src="../../../../assets/images/image516.png" width="968"/>  <img src="../../../../assets/images/image100.png"/></span></p>
+  <p> </p>
+  <p><span style="font-size:17px;">           Below is the screen where the Application Models Global Parameters are added.<br/>
+                 These are mainly used for API Models.</span></p>
+  <p>              <img src="../../../../assets/images/image101.png"/></p>
+
+</body></html>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../../..";
+  gCommonRootRelPath = "../../../..";
+  gTopicId = "3.2.5.1.0_5";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>How to use Date &amp; Time functions in Value EXpression?</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Value Expression:Value Expression Types"/></head>
+<body>
+  <h1>How to use Date &amp; Time functions in Value EXpression?</h1>
+  <p><span style="font-size:17px;">a)    Get Current Time –It gives the current date and time of the system<br/>
+              <img src="../../../../assets/images/image485.png"/></span></p>
+  <p><span style="font-size:17px;">b)    Get Current TimeStamp -- It gives the current date and time of the system in Unix format </span></p>
+  <p>       <img src="../../../../assets/images/image486.png"/></p>
+  <p><span style="font-size:17px;">c)    Tomorrow -  it gives the tomorrow’s date and time from the PC. <br/>
+            ‘Test Value Expression’ button as shown by the arrow below, displays tomorrow’s date and time in ‘Value Calculated:’ which is used during execution.</span></p>
+  <p><span style="font-size:17px;">      <img src="../../../../assets/images/image487.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+      d)    Current Time Hour – it gives the current hour of the time from the PC. <br/>
+             ‘Test Value Expression’ button as shown by the arrow below, displays the current hour in ‘Value Calculated:’ which is used during execution.</span><br/>
+            <img src="../../../../assets/images/image488.png"/></p>
+  <p><span style="font-size:17px;"><br/>
+      e)    Current Time Minutes – it gives the current minutes of the time from the PC. <br/>
+             ‘Test Value Expression’ button as shown by the arrow below, displays the current minutes upto 5 decimals in ‘Value Calculated:’ which is used during execution.<br/>
+              <img src="../../../../assets/images/image489.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+      f)    Current Time Seconds – it gives the current seconds of the time from the PC. <br/>
+            ‘Test Value Expression’ button as shown by the arrow below, displays the current seconds in ‘Value Calculated:’ which is used during execution.<br/>
+              <img src="../../../../assets/images/image490.png"/></span></p>
+  <p><span style="font-size:17px;">g)    Current Time Hour (0# format) – it gives the current Hour of the time in standard format. <br/>
+             ‘Test Value Expression’ button as shown by the arrow below, displays the current hours in ‘Value Calculated:’ which is used during execution.<br/>
+              <img src="../../../../assets/images/image491.png"/></span></p>
+  <p><span style="font-size:17px;">h)    Current Time Minute (0# format) – it gives the current Minutes of the time in standard format. <br/>
+             ‘Test Value Expression’ button as shown by the arrow below, displays the current minutes in ‘Value Calculated:’ which is used during execution.<br/>
+              <img src="../../../../assets/images/image492.png"/></span></p>
+  <p><span style="font-size:17px;">i)    Current Time Second (0# format) – it gives the current Seconds of the time in standard format. <br/>
+            ‘Test Value Expression’ button as shown by the arrow below, displays the current seconds in ‘Value Calculated:’ which is used during execution.<br/>
+              <img src="../../../../assets/images/image493.png"/></span></p>
+  <p><span style="font-size:17px;">j)    Current Month (0# format) – it gives the current Month from the PC in standard format. <br/>
+            ‘Test Value Expression’ button as shown by the arrow below, displays the current month in ‘Value Calculated:’ which is used during execution.<br/>
+             <img src="../../../../assets/images/image494.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+      k)    Current Day (0# format) – it gives the current Day from the PC in standard format. <br/>
+      ‘Test Value Expression’ button as shown by the arrow below, displays the current day in ‘Value Calculated:’ which is used during execution.</span></p>
+  <p><span style="font-size:17px;">       <img src="../../../../assets/images/image495.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+      l)    Current Year (#### format) – it gives the current Year in YYYY format. <br/>
+            ‘Test Value Expression’ button as shown by the arrow below, displays the current year in ‘Value Calculated:’ which is used during execution.</span></p>
+  <p>       <img src="../../../../assets/images/image496.png"/></p>
+  <p><span style="font-size:17px;">m)    Current Year (## format) – it gives the current Year in YY format. <br/>
+             ‘Test Value Expression’ button as shown by the arrow below, displays the current year in ‘Value Calculated:’ which is used during execution</span></p>
+  <p><span style="font-size:17px;">        <img src="../../../../assets/images/image497.png"/><br/>
+       <br/>
+      n)    Current Month Date + 3 days – it adds 3 days to the current date in DDMMYYYY format. <br/>
+             ‘Test Value Expression’ button as shown by the arrow below, displays the calculated value in ‘Value Calculated:’ which is used during execution</span></p>
+  <p><span style="font-size:17px;">       <img src="../../../../assets/images/image498.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+      o)    Current Date -1 month – it gives the date in the previous month with respect to the current date in DDMMYYYY format.<br/>
+             ‘Test Value Expression’ button as shown by the arrow below, displays the calculated value in ‘Value Calculated:’ which is used during execution.</span><br/>
+            <img src="../../../../assets/images/image499.png"/></p>
+  <p><span style="font-size:17px;">p)    Current Date -1 month (MM format) – it gives the date in the previous month with respect to the current date in standard format.<br/>
+             ‘Test Value Expression’ button as shown by the arrow below, displays the calculated value in ‘Value Calculated:’ which is used during execution.<br/>
+                <img src="../../../../assets/images/image500.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+      q)    Current Day of Week (Name) – it gives the current day by name.<br/>
+              ‘Test Value Expression’ button as shown by the arrow below, displays the day in ‘Value Calculated:’ which is used during execution.</span></p>
+  <p><span style="font-size:17px;">         <img src="../../../../assets/images/image501.png"/></span><br/>
+     </p>
+
+</body></html>

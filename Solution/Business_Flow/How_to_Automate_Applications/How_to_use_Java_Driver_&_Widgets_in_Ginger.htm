@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../..";
+  gCommonRootRelPath = "../../..";
+  gTopicId = "3.1.2.0_4";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>How to use Java Driver &amp; Widgets in Ginger</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Java Driver &amp; Widgets"/></head>
+<body>
+  <h1>How to use Java Driver &amp; Widgets in Ginger</h1>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">Description   </strong> <br/>
+      This steps will explain how to work with Ginger Java Driver on any Java application OMS, CRM, Java and widgets (Web embedded in java application). <br/>
+      Java Agent offers:<br/>
+         a.    Automate Java Application. <br/>
+         b. Automate Web Embedded Widgets.<br/>
+         <br/>
+      <strong style="font-size: 20px">Pre Requisites</strong><br/>
+      1.    Latest Ginger version.<br/>
+      2.    JDK version 1.6_29 and up installed on the machine.</span></p>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">1.    Configure solution to work with Java Driver</strong><br/>
+          1.1    Add Java Agent to the Solution.<br/>
+              a.    Right click on Agents and Add new Agent.<br/>
+                    <img src="../../../assets/images/image971.png"/><br/>
+              b.    Add name and target platform type.</span><br/>
+                  <img src="../../../assets/images/image972.png"/></p>
+  <p><span style="font-size:17px;">    1.2    Add Java to the target application.</span></p>
+  <p><span style="font-size:17px;">        a.    Click on the solution name. <br/>
+                    <img src="../../../assets/images/image973.png"/><br/>
+              b.    Click on the business flow and verify that the target application is JavaApp.</span><br/>
+               <img src="../../../assets/images/image974.png"/></p>
+  <p><strong><span style="font-size:20px">2.    Launch your Java application</span></strong></p>
+  <p><span style="font-size:17px;">    While using the launch java application action you will fire your java application and attach the <br/>
+          Agent to the application.<br/>
+          2.1    Verify activity target application. <br/>
+              <img src="../../../assets/images/image975.png"/></span></p>
+  <p><span style="font-size:17px;">    2.2    Configure Java Launch application Action.<br/>
+              This action will enable you to:<br/>
+              •    Launch java application and attach the agent for using java driver to automate your application.   <br/>
+              •    Attach the agent to running Java application. <br/>
+              •    launch your java application without attaching the agent (use if u are using other agents to automate your application</span></p>
+  <p><span style="font-size:17px;">            a.    Add new action by clicking the add action button.<br/>
+                  b.    Move to General action tab and select the “Launch java application”.<br/>
+                   <img src="../../../assets/images/image976.png"/></span></p>
+  <p><span style="font-size:17px;">            c.    Edit launch java application action.<br/>
+                      <img src="../../../assets/images/image977.png"/><br/>
+                      1.    Java Version Path – Used for selecting the path for JDK location, you can select the first option <br/>
+                          if the JDK is set in your environment variable or the second option if the JDK is located in <br/>
+                          different location on the machine. In any case JDK is a must in order to run this action.<br/>
+                      2.    Launch Java Application – check this option if you want both launch the java application and attach<br/>
+                           the agent. You can also use this Action just for attaching the agent to already running java <br/>
+                          application by uncheck this section.<br/>
+                          Java Application Path – Add your application location is you are using to run CRM, add the full <br/>
+                          domain location for the JNLP.<br/>
+                          Use the “Add Parameter to Launch Application With” button if u need to launch your application <br/>
+                          with parameter like user name.<br/>
+                      <img src="../../../assets/images/image978.png"/><br/>
+                      3.    Wait for Java Application Window – Add the title of the window that you are expecting to be open <br/>
+                          once your application is launched and the time to wait for it (sec).<br/>
+                      4.    Attach Ginger Java Agent – use this to attach the agent to the application, by default the location<br/>
+                           of the agent is located in ginger folder. You can also change the port if 8888 is being used by <br/>
+                          different program.<br/>
+                      Notice: <br/>
+                          1.    Java Launch Action need to be on Separate Activity it can’t be with Other<br/>
+                              Action, as u can see below activity 1 holed only one action in the activity 2 <br/>
+                              We will handle the Login window.</span><br/>
+                           <img src="../../../assets/images/image979.png"/></p>
+  <p><span style="font-size:17px;">    <br/>
+      <strong style="font-size: 20px">3.    Working with Java Agent on Java Application</strong><br/>
+          3.1    Working with Window Explore<br/>
+              Window Explore will enabled you to identify objects on the screen, add locators (Xpath, id, etc.) for the <br/>
+              object and actions that can be done (set, get, validate etc.).<br/>
+              a.    Once the application is up and running you can start the agent and Window Explore <br/>
+                  Start the Agent:<br/>
+                  <img src="../../../assets/images/image980.png"/></span></p>
+  <p><span style="font-size:17px;">    Start the Window Explore:<br/>
+                   <img src="../../../assets/images/image981.png"/></span></p>
+  <p><span style="font-size:17px;">        b.    Once Window Explore is up select the application window title that need to work on.<br/>
+                 <img src="../../../assets/images/image982.png"/></span></p>
+  <p><span style="font-size:17px;">        c.    Add switch window action in order to set the focus on the window we want to work on, once you will click <br/>
+                  on this button “Switch Window” action will be add to the activity.<br/>
+                 <img src="../../../assets/images/image983.png"/><br/>
+                  Once you add the switch window action u can Edit it and add “Sync Time” that means how much time <br/>
+                  To wait for the window to come up.</span><br/>
+          <img src="../../../assets/images/image984.png"/></p>
+  <p><span style="font-size:17px;">        d.    You can also switch the view from tree View to Grid View by clicking on this Button. </span></p>
+  <p><span style="font-size:17px;">           <img src="../../../assets/images/image985.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+          3.2    Working with Spy</span></p>
+  <p><span style="font-size:17px;">        a.    Click on the spy icon </span></p>
+  <p><span style="font-size:17px;">             <img src="../../../assets/images/image986.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+              b.    Once Clicked on spy button move your cursor to the element you want and press on Ctrl,<br/>
+                  Once element found all details will be available.<br/>
+                  For Example if you want to work on the First Name text box:</span></p>
+  <p><span style="font-size:17px;">       <img src="../../../assets/images/image987.png"/><br/>
+              2.    Text box we want to work on, move your cursor to First name and press on Ctrl.<br/>
+              3.    Actions – this are all the actions that available for this control Set, get ,Validate etc..<br/>
+              4.    Locators – this is how we are locating the element in this case we have ByName or by Xpath<br/>
+                  We recommend to work with Xpath.<br/>
+              5.    Value – value to set on the text box.<br/>
+              6.    Playback – once setting the value you can test the action.<br/>
+              7.    Add to Activity – Add this Action to the flow in Ginger.<br/>
+                  This is the way we are working with all elements, Drop Down list radio Button Check box tables etc.<br/>
+          3.3 Working with Recording.<br/>
+              a.    Click on record Button and start your flow<br/>
+                  Do all actions you need, click menu set value etc..</span></p>
+  <p><span style="font-size:17px;">             <img src="../../../assets/images/image988.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+              b.    Once Done click again on record button to stop the recording , you can move now back to ginger <br/>
+                  And see that all actions were automatically add to the activity.</span></p>
+  <p>         <img src="../../../assets/images/image989.png"/></p>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">4.    Working with Widgets (Web Embedded)</strong><br/>
+          Widgets are Web pages that Embedded in CRM \OMS running on JExplore process, <br/>
+          We are handling it by injecting java scripts in to the web page and that enable us to interact with the page.</span></p>
+  <p><span style="font-size:17px;">    a.    Open window explore refresh the window list and select the window were the web Page is embedded.</span></p>
+  <p><span style="font-size:17px;">       <img src="../../../assets/images/image990.png"/></span></p>
+  <p><span style="font-size:17px;">    b.    Click on the switch window action and add it to the activity </span></p>
+  <p><span style="font-size:17px;">       <img src="../../../assets/images/image991.png"/></span></p>
+  <p><span style="font-size:17px;">    c.    In order to get the elements to window explore we need to inject the JS to the page<br/>
+              Click on Grid View.<br/>
+               <img src="../../../assets/images/image992.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+          d.    In the sreach box type JE and find the Jexplorer object in the grid select locator as Xpath and <br/>
+              Add the action to the activity </span></p>
+  <p><span style="font-size:17px;">     <img src="../../../assets/images/image993.png"/></span></p>
+  <p><span style="font-size:17px;">    e.    Once Done with all activities above you can start working with the spy<br/>
+              To add the actions. </span></p>
+  <p><span style="font-size:17px;">       <img src="../../../assets/images/image994.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+          f.    Activity that works with widgets action should be in this order<br/>
+             <img src="../../../assets/images/image995.png"/></span></p>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">Appendix: </strong><br/>
+      1.    Working with IFRAME (Widgets)<br/>
+          There are web pages that the content of the page is inside IFRAME so in Order to handle that<br/>
+          We need to add Switch Frame action.<br/>
+          a.    Once we add the Switch window and JExplorer Actions we need to add Switch Frame action</span></p>
+  <p><span style="font-size:17px;">        <img src="../../../assets/images/image996.png"/></span></p>
+  <p><span style="font-size:17px;">    b.    This is how IFRAME activity IFRAME should be handled <br/>
+            <img src="../../../assets/images/image997.png"/></span></p>
+  <p><span style="font-size:17px;">2.    Working With GTB and Java Driver</span></p>
+  <p><span style="font-size:17px;">    a.    Use Different Ports,  verify that you are not using the same port on GTB and Java Driver<br/>
+              Check your GTB port in this case it is 9999</span></p>
+  <p><span style="font-size:17px;">         <img src="../../../assets/images/image998.png"/></span></p>
+  <p><span style="font-size:17px;">        So when you use launch java application action check that you are not using the same port <br/>
+               <img src="../../../assets/images/image999.png"/></span></p>
+  <p><span style="font-size:17px;">    b.    On the java launch application action turn off the “show ginger Agent console” option.</span></p>
+  <p><span style="font-size:17px;">        <img src="../../../assets/images/image1000.png"/><br/>
+          c.    Use different activities for java Driver and GTB</span></p>
+  <p><span style="font-size:17px;"><br/>
+      3.    Using Wait for Idle action on Java Application<br/>
+          Once we are adding Action like Click, we have the option to select wait for Idle,<br/>
+          Wait for Idle Enable you to set the interval and timeout to check if application is done with processing all <br/>
+          events and idle to proceed with next actions.<br/>
+          <img src="../../../assets/images/image1001.png"/></span></p>
+  <p><span style="font-size:17px;">4.    Using Smart Sync Action on Java Application</span></p>
+  <p><span style="font-size:17px;">    Smart Sync will help you sync between the Automation steps and the application<br/>
+          We have 2 types:<br/>
+          1.    WaitUntilDisaper – set wait time and check until element disappear.<br/>
+          2.    WaitUntilDisplay – set wait time and Check until element is Displayed.</span></p>
+  <p><span style="font-size:17px;">    Click on Add new Action.<br/>
+          From the list of actions select “Smart Sync Action”<br/>
+           <img src="../../../assets/images/image1002.png"/></span></p>
+  <p><span style="font-size:17px;">    a.    Click on the window Explore Icon and Add your element<br/>
+          b.    Set the Action Type.<br/>
+          c.    Set Wait time.</span></p>
+  <p><span style="font-size:17px;">        <img src="../../../assets/images/image1003.png"/><br/>
+          <br/>
+      5.    Set Date of Birth on CRM screen using Java Driver</span></p>
+  <p><span style="font-size:17px;">    While setting and Date-type field on the CRM, we need to configure our Edit Java Element Action as per the <br/>
+          highlighted fields shown in the screenshot below.</span><br/>
+      <img src="../../../assets/images/image1004.png"/></p>
+
+</body></html>

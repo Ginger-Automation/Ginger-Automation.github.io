@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../../../../..";
+  gCommonRootRelPath = "../../../../../..";
+  gTopicId = "3.2.1.1.1.1.0_3";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Android Testing Setup On MAC machine </title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Android Agent"/></head>
+<body>
+  <h1>Android Testing Setup On MAC machine </h1>
+  <p><span style="font-size:17px;"><strong> </strong></span></p>
+  <p><span style="font-size:17px;">These steps will allows Ginger to run tests on an USB connected Android device using Appium.</span></p>
+  <p><span style="font-size:17px;"><strong><span style="font-size:20px;"> Prerequisites</span></strong><br/>
+          i)    Ginger need to be installed on a Windows operating system machine.</span></p>
+  <p><span style="font-size:17px;">    ii)    The server can be installed on  Mac machine (Mac Mini, Mac Book, etc.) with OS X operating system (OS X Yosemite or later) is </span></p>
+  <p><span style="font-size:17px;">           required</span></p>
+  <p><span style="font-size:17px;"><strong> </strong></span></p>
+  <p><span style="font-size:17px;"> <span style="font-size:20px;"><strong>   </strong>     <strong>1.    Mac: Install Appium Prerequisites</strong></span><strong></strong></span></p>
+  <p><span style="font-size:17px;">                1.1    Install latest Java JDK:</span></p>
+  <p><span style="font-size:17px;">                           a.    Download the latest Java JDK version from below link: </span></p>
+  <p><span style="font-size:17px;">                                  http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</span><br/>
+                                           <img src="../../../../../../assets/images/image288.png"/><img src="../../../../../../assets/images/image255.png"/></p>
+  <p><span style="font-size:17px;"><br/>
+                                 b.    Double click and install it</span></p>
+  <p> </p>
+  <p><span style="font-size:17px;"> <strong>   </strong>             1.2    Install Homebrew:<strong></strong><br/>
+                                 a.    Go to the Mac main menu bar -&gt; “Utilities” -&gt; “Terminal”<br/>
+                                 b.    Type and run below command:<br/>
+                                        ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;<br/>
+                                 c.    Make sure installation ended successfully<br/>
+                                        <strong>Note:</strong> for allowing network access from the Terminal you may need an external network connection (non Amdocs) only</span><span style="font-size:17px;"> for the installation purpose</span></p>
+  <p><span style="font-size:17px;"><br/>
+           <strong>    </strong>         1.3    Install Node:<br/>
+                                  a.    Go to the Mac main menu bar -&gt; “Utilities” -&gt; “Terminal”<br/>
+                                  b.    Type and run below command:<br/>
+                                          brew install node<br/>
+                                  c.    Make sure installation ended successfully</span></p>
+  <p><span style="font-size:17px;"><br/>
+                        1.4    Install Android SDK Tools:<br/>
+                                  a.    Go to https://developer.android.com/sdk/index.html<br/>
+                                  b.    Click on Other Download Options<br/>
+                                          <img src="../../../../../../assets/images/image289.png"/><img src="../../../../../../assets/images/image256.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                                  c.    Download the SDK Tools Only which fits to Mac OS X</span></p>
+  <p>                                        <img src="../../../../../../assets/images/image257.png"/> <img src="../../../../../../assets/images/image290.png"/></p>
+  <p> </p>
+  <p><span style="font-size:17px;">                            d.    Once it was downloaded and put it in desired place. Mark it full path, like in this below case it : </span></p>
+  <p><span style="font-size:17px;">                                   “/Users/menik/android-sdk-macosx”</span></p>
+  <p><span style="font-size:17px;">                                     <img src="../../../../../../assets/images/image291.png"/><img src="../../../../../../assets/images/image258.png"/></span></p>
+  <p><span style="font-size:17px;"><strong>       </strong>          1.5    Set the Environment Variables:<br/>
+                                  a.    Go to the Mac main menu bar -&gt; “Utilities” -&gt; “Terminal”<br/>
+                                  b.    Type and run below command:<br/>
+                                         nano ~/.bash_profile<br/>
+                                  c.    Editor window will open in Terminal</span><br/>
+                                            <img src="../../../../../../assets/images/image259.png"/> <img src="../../../../../../assets/images/image292.png"/></p>
+  <p> </p>
+  <p><span style="font-size:17px;">                            d.    Copy and paste to it below content<br/>
+                                         export ANDROID_HOME=&lt;&lt;path_you_found_in_step_1.4.4.d&gt;&gt;<br/>
+                                         export PATH=$ANDROID_HOME/platform-tools:$PATH<br/>
+                                         export PATH=$ANDROID_HOME/tools:$PATH<br/>
+                                         export JAVA_HOME=$(/usr/libexec/java_home -v &lt;&lt;your_Java_version_like_“1.8”&gt;&gt;)<br/>
+                                         export PATH=/usr/local/bin:$PATH</span></p>
+  <p><span style="font-size:17px;">                                   <img src="../../../../../../assets/images/image293.png"/><img src="../../../../../../assets/images/image260.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                                 e.    Click CTRL+O and then Enter in order to save this file<br/>
+                                 f.    Click CTRL+X in order to close it<br/>
+                                 g.    Open Terminal again (if it was closed) and type below command to apply the environment variables values:<br/>
+                                         source ~/.bash_profile<br/>
+                                 h.    Check that the new environment variables were saved by typing below command in Terminal and looking for the </span></p>
+  <p><span style="font-size:17px;">                                  relevant</span><span style="font-size:17px;"> variables and their value:</span><br/>
+                                         <img src="../../../../../../assets/images/image261.png"/>   <img src="../../../../../../assets/images/image294.png"/></p>
+  <p> </p>
+  <p><span style="font-size:17px;"><strong>         </strong>        1.6    Install Additional SDK Tools Packages<strong></strong><br/>
+                                  a.    Go to the Mac main menu bar -&gt; “Utilities” -&gt; “Terminal”<br/>
+                                  b.    Type and run below command:<br/>
+                                           android<br/>
+                                  c.    Android SDK Manager will be opened<br/>
+                                  d.    Mark below 3 Packages to be installed and install them</span><br/>
+                                         <img src="../../../../../../assets/images/image262.png"/>         <img src="../../../../../../assets/images/image295.png"/></p>
+  <p>                                      <img src="../../../../../../assets/images/image263.png"/></p>
+  <p>                                         <img src="../../../../../../assets/images/image296.png"/></p>
+  <p> </p>
+  <p><span style="font-size:17px;"></span></p>
+  <p><span style="font-size:17px;">                            e.    Make sure the installation ended successfully</span></p>
+  <p><span style="font-size:17px;">                                   <img src="../../../../../../assets/images/image297.png"/><img src="../../../../../../assets/images/image264.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+      <span style="font-size:20px;"><strong>     </strong>     <strong>2.    Mac: Install Appium </strong></span><strong></strong></span></p>
+  <p><span style="font-size:17px;">                       a.    Open the Appium Web site on the Mac machine (using Safari)<br/>
+                                     http://appium.io/<br/>
+                              b.    Click on Download Appium button<br/>
+                                      <img src="../../../../../../assets/images/image298.png"/><img src="../../../../../../assets/images/image265.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                              c.    Double click and install Appium application<br/>
+                              d.    Launch the application from main menu bar “Go” “Applications”<br/>
+                                      <img src="../../../../../../assets/images/image266.png"/> <img src="../../../../../../assets/images/image299.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                              e.    For checking that noting is missing, click on the “doctor” button in the Appium GUI<br/>
+                              f.    Terminal window supposed to open and tests will be done for iOS and Android setup, make sure the Android one passed </span></p>
+  <p><span style="font-size:17px;">                               successfully (iOS will be installed in different user guide)<br/>
+                                    <strong>Note:</strong> in case the Appium doctor (or on Appium launch) identify that something is missing and asks you if to install </span></p>
+  <p><span style="font-size:17px;">                                         it- answer YES</span></p>
+  <p><span style="font-size:17px;">                              <img src="../../../../../../assets/images/image300.png"/><img src="../../../../../../assets/images/image267.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+      <span style="font-size:20px;"><strong>           3.    Mac: Configure and Launch Appium Server </strong></span></span></p>
+  <p><span style="font-size:17px;">                       a.    Connect the Mac machine to the same network that Ginger Windows machine is in<br/>
+                             b.    Get the Mac IP Address by:<br/>
+                             c.    Go to main menu <strong>Go-&gt; Applications-&gt; System Preferences-&gt; Network</strong><br/>
+                                     <img src="../../../../../../assets/images/image301.png"/><img src="../../../../../../assets/images/image268.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                             d.    Copy the <strong>IP Address</strong><br/>
+                                     <img src="../../../../../../assets/images/image302.png"/><img src="../../../../../../assets/images/image269.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                              e.    Launch (if not already launched) the Appium application from main menu bar <strong>Go-&gt; Applications-&gt; Appium</strong><br/>
+                              f.    Click on <strong>General Settings </strong>button<br/>
+                             g.    Set the IP Address you found in step b into the <strong>Server Address</strong> field<br/>
+                             h.    Configure the rest of settings as appear in below screen shot<br/>
+                                      <img src="../../../../../../assets/images/image271.png"/> <img src="../../../../../../assets/images/image303.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                              i.    Close the General Settings window<br/>
+                              j.    Click on <strong>Launch</strong> button<br/>
+                                     <img src="../../../../../../assets/images/image304.png"/><img src="../../../../../../assets/images/image272.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+                             k.    Make sure appium is starting without errors</span></p>
+  <p><span style="font-size:17px;">                              <img src="../../../../../../assets/images/image305.png"/><img src="../../../../../../assets/images/image273.png"/><br/>
+       <br/>
+                              l.    Appium server is UP and ready to get connecting request from Ginger.</span></p>
+
+</body></html>

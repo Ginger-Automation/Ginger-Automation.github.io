@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../..";
+  gCommonRootRelPath = "../..";
+  gTopicId = "8.2.0_1";
+
+//]]></script>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>How to get Automation Coverage in Design Console?</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Amdocs BEAT TEsting Studio Integration"/></head>
+<body>
+  <h1>How to get Automation Coverage in Design Console?</h1>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px"> Introduction</strong>    <br/>
+          •    Projects which use ALM (QC) and BTS for their manual testing design are able to automate their ALM Activity Library using Ginger.<br/>
+          •    The automation coverage for their designed flows is visible in the Design Console of the BTS in real time.<br/>
+          •    After exporting the scenarios to ALM from BTS, the users will be able to import the ALM Test Set’s to Ginger and execute them according to the design in BTS.</span></p>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">How to get Automation Coverage in Design Console?</strong><br/>
+          1.    Export your Design Console designed flows to ALM as Test Set’s<br/>
+          2.    Import the Test Set’s from ALM into Ginger as a Business Flow<br/>
+          3.    Automate the Test Set’s in Ginger<br/>
+          4.    Add the automated TC’s to Ginger Shared Repository<br/>
+          5.    Upload the Ginger Shared Repository changes to the Ginger Source Control (SVN)<br/>
+          6.    Click on “Get Automation Coverage” button in Design Console</span></p>
+  <p>           <img src="../../assets/images/image1209.png"/></p>
+
+</body></html>

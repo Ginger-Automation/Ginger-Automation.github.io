@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "..";
+  gCommonRootRelPath = "..";
+  gTopicId = "1.0_4";
+
+//]]></script>
+
+<script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Ginger End To End Flow – Do It Yourself</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../assets/css/default.css"/>
+</head>
+<body>
+  <p align="center" class="MsoTitle" style="text-align:center; margin:0in 0in 0.0001pt"><span style="font-size:20pt"><span style="font-family:Calibri,sans-serif"><span style="color:#0f243e"><span style="letter-spacing:-0.5pt"><span style="font-weight:bold"><span style="font-size:16.0pt"><span style="font-family:&quot;Century Gothic&quot;,sans-serif"></span></span></span></span></span></span></span></p>
+  <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt"><span style="font-family:&quot;Century Gothic&quot;,sans-serif"></span></span></span></span></p>
+  <h1>GINGER END TO END FLOW – DO IT YOURSELF</h1>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="tab-stops:-27.0pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:14.0pt"><span style="line-height:107%">OBJECTIVE:</span></span></b></span></span></span></span></p>
+  <p style="margin-left:-9.0pt; margin:0in 0in 8pt"><span style="font-size:11pt"><span style="tab-stops:-27.0pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%">This exercise will help you automate a small flow using GINGER. </span></span></span></span></span></span></p>
+  <p style="margin-left:-9.0pt; margin:0in 0in 8pt"><span style="font-size:11pt"><span style="tab-stops:-27.0pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">Here we will see the steps on how we automate the flow of launching URL <a href="http://abeat.amdocs.com" style="color:#0563c1; text-decoration:underline"><span style="font-size:14.0pt"><span style="line-height:107%">http://abeat.amdocs.com</span></span></a><span style="font-size:14.0pt"><span style="line-height:107%"> and logging in with some credentials. </span></span></span></span></span></span></p>
+  <p style="margin-left:-9.0pt; margin:0in 0in 8pt"><span style="font-size:11pt"><span style="tab-stops:-27.0pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%">Also,</span></span><span style="font-size:14.0pt"><span style="line-height:107%"> we will understand customizing the execution report as per our requirement.</span></span></span></span></span></span></p>
+  <p style="margin-left:-9.0pt; margin:0in 0in 8pt"><span style="font-size:11pt"><span style="tab-stops:-27.0pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></span><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"></span><span style="font-size:14.0pt"><span style="line-height:107%">           1.  To create a solution click on the drop down as shown below and select ‘Create New Solution’ option.               </span></span></span></span></span></p>
+  <p style="margin-left:-9.0pt; margin:0in 0in 8pt">                     <img src="../assets/images/image58.png"/><img src="../assets/images/image42.png"/></p>
+  <p style="margin:0in 0in 0.0001pt 0.5in"> </p>
+  <p style="margin:0in 0in 0.0001pt 0.5in"> </p>
+  <p style="margin-left:-13.5pt; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin-left:-13.5pt; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin-left:-13.5pt; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin-left:-13.5pt; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin-left:-13.5pt; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin-left:-13.5pt; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin-left:-13.5pt; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%">In the pop window, enter the name of the solution (as shown below) browse to the location of the folder where you wish to save your solution.</span></span></span></span></span></p>
+  <p style="margin-left:-13.5pt; margin:0in 0in 0.0001pt 0.5in"><img src="../assets/images/image43.png"/></p>
+  <p style="margin-left:-13.5pt; margin:0in 0in 0.0001pt 0.5in">     <img src="../assets/images/image57.png"/></p>
+  <p style="margin-left:-13.5pt; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin-left:-13.5pt; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin-left:-13.5pt; margin:0in 0in 8pt 0.5in"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%">           Since we are automating a website flow select the application as “MywebApp” and platform as “WEB”. On click of create a solution is created successfully.</span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <ol start="2">
+    <li style="margin:0in 0in 8pt 0.5in"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"></span><span style="font-size:14.0pt"><span style="line-height:107%">This will load the solution as shown below.</span></span></span></span></span></li>
+  </ol>
+  <p style="margin:0in 0in 8pt 0.5in">            <img src="../assets/images/image60.png"/><img src="../assets/images/image44.png"/></p>
+  <p style="margin:0in 0in 8pt 0.5in"> </p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <ol start="3">
+    <li style="margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"></span><span style="font-size:14.0pt"><span style="line-height:107%">Go to the Configurations tab and click on Agents.  </span></span></span></span></span></li>
+  </ol>
+  <p style="margin-left:-13.5pt; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%">          In the left panel, the agent is automatically created for the “MyWebApp”. </span></span></span></span></span></p>
+  <p style="margin-left:-13.5pt; margin:0in 0in 8pt 0.5in"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%">          The default driver for WebApp application is Internet Explorer “SeleniumIE” and the driver type can be changed if needed using the drop down.</span></span></span></span></span></p>
+  <p style="margin-left:-13.5pt; margin:0in 0in 8pt 0.5in">             <img src="../assets/images/image61.png"/>   <img src="../assets/images/image45.png"/></p>
+  <p style="margin-left:-13.5pt; margin:0in 0in 8pt 0.5in"> </p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <ol start="4">
+    <li style="margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"></span><span style="font-size:14.0pt"><span style="line-height:107%">Once the solution and agent are created, double click on the Business flow and it will take you to the automation area.</span></span></span></span></span></li>
+  </ol>
+  <p style="margin-left:-13.5pt; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%">          In this window, you will see various sections like Variables, Activities Group , Activity-Variables and Activity Actions.</span></span></span></span></span></p>
+  <p style="margin-left:-13.5pt; margin:0in 0in 8pt 0.5in"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%">           By default, Activity1 is added as shown below. </span></span></span></span></span></p>
+  <p style="margin-left:-13.5pt; margin:0in 0in 8pt 0.5in">            <img src="../assets/images/image46.png"/> </p>
+  <p style="margin-left:-13.5pt; margin:0in 0in 8pt 0.5in"> </p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <ol start="5">
+    <li style="margin:0in 0in 8pt 0.5in"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%">Expand the ‘Business Flow Variables’ section and click on the + sign to create a new variable which can be used within the Business Flow.</span></span></span></span></span></li>
+  </ol>
+  <p style="margin:0in 0in 8pt 0.5in">          <img src="../assets/images/image47.png"/>  <img src="../assets/images/image63.png"/></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%">                     Here we will use the variable to give the name of the website which we intend to open as part of our automation flow.</span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%">                    Select the variable type from the list shown like in our case the website name will be variable string as highlighted in the list below.</span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt">                      <img src="../assets/images/image48.png"/>    <img src="../assets/images/image64.png"/></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">                    <span style="font-size:17px;"><span style="font-family:Calibri;"> In the pop window enter the variable name as “Website” and the string value as</span></span> <a href="http://abeat.amdocs.com" style="color:#0563c1; text-decoration:underline"><span style="font-size:14.0pt"><span style="line-height:107%">http://abeat.amdocs.com</span></span></a><span style="font-size:14.0pt"><span style="line-height:107%"> since  this is the URL we will open as part of automation</span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt">                      <img src="../assets/images/image49.png"/>    <img src="../assets/images/image65.png"/></p>
+  <p style="margin:0in 0in 8pt"> </p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <ol start="6">
+    <li style="margin:0in 0in 8pt 0.5in"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%">The variable gets added in the variable window. Now we need to add action using the + sign in the action section. Actions are executable on various platforms.</span></span></span></span></span></li>
+  </ol>
+  <p style="margin:0in 0in 8pt 0.5in">            <img src="../assets/images/image66.png"/><img src="../assets/images/image50.png"/></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%">                    On clicking + one will see platform specific actions. Since we have chosen platform as website hence web relat actions will be displayed. General Actions are not platform specific.</span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%">                    Since we want to launch a website in this URL hence we will select “Browser Action” </span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt">                     <img src="../assets/images/image51.png"/>     <img src="../assets/images/image67.png"/></p>
+  <p style="margin:0in 0in 8pt"> </p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%">                   In the screen below, select the ‘Operation Type’ as ‘Goto URL’</span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt">                     <img src="../assets/images/image52.png"/>    <img src="../assets/images/image68.png"/></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%">                   Since we have assigned the website name in a variable we will browse that variable name in the URL textbox. For this click on “…” button near the URL textbox as shown below.</span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%">                   Double click the ‘Website’ variable on the left pane. The variable gets added in the editor area and click Ok button of the ‘Value Expression Editor’ window and the Action window.</span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt">                       <img src="../assets/images/image53.png"/>  <img src="../assets/images/image69.png"/></p>
+  <p style="margin:0in 0in 8pt"> </p>
+  <p style="margin-left:-13.5pt; margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin-left:-13.5pt; margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <ol start="7">
+    <li style="margin:0in 0in 8pt 0.5in"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"></span><span style="font-size:14.0pt"><span style="line-height:107%"> Now run the action by clicking on RUN ACTION and agent will automatically be launched.</span></span></span></span></span></li>
+  </ol>
+  <p style="margin:0in 0in 8pt 0.5in">              <img src="../assets/images/image70.png"/><img src="../assets/images/image54.png"/></p>
+  <p style="margin:0in 0in 8pt 0.5in"> </p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%">                      And you will see the URL opened as below.</span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt">                         <img src="../assets/images/image55.png"/>   <img src="../assets/images/image71.png"/></p>
+  <p style="margin:0in 0in 8pt"> </p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <ol start="8">
+    <li style="margin:0in 0in 8pt 0.5in"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"></span><span style="font-size:14.0pt"><span style="line-height:107%">To record a particular flow, click on ‘Open Window Explorer’ button in the Agent area click on the highlighted icon (Yellow)</span></span></span></span></span></li>
+  </ol>
+  <p style="margin:0in 0in 8pt 0.5in">            <img src="../assets/images/image72.png"/><img src="../assets/images/image56.png"/></p>
+  <p style="margin:0in 0in 8pt 0.5in"> </p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%">                    It opens a ‘Window Explorer’ window. Click on “Start recording”. </span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt">                     <img src="../assets/images/image59.png"/></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%">                    Now go back to the browser window and enter the credentials as shown below</span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt">                     <img src="../assets/images/image58.png"/>    <img src="../assets/images/image73.png"/>    </p>
+  <p style="margin:0in 0in 8pt"> </p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%">                    Stop the recording once the flow to be captured is done.</span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt">                        <img src="../assets/images/image60.png"/>   <img src="../assets/images/image74.png"/></p>
+  <p style="margin:0in 0in 8pt"> </p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%">                     Once the recording is completed one can also the see the set of recorded actions in the activity action tab.</span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt">                        <img src="../assets/images/image61.png"/>   <img src="../assets/images/image75.png"/></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%">                   One can change the name of the action by clicking on each action and giving a relevant name as below.</span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt">                        <img src="../assets/images/image62.png"/>    <img src="../assets/images/image76.png"/></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%">                    Also,</span></span><span style="font-size:14.0pt"><span style="line-height:107%"> put some wait time between actions wherever necessary in the wait text box as shown in screenshot above.</span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"> </p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <ol start="9">
+    <li style="margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"></span><span style="font-size:14.0pt"><span style="line-height:107%"> Now to create a run set go to the RUN tab.</span></span></span></span></span></li>
+  </ol>
+  <p style="margin:0in 0in 0.0001pt 0.5in">             <img src="../assets/images/image77.png"/><img src="../assets/images/image63.png"/></p>
+  <p style="margin:0in 0in 0.0001pt 0.5in"> </p>
+  <p style="margin-left:-13.5pt; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%">           Click on the + button as shown by the arrow below to add the required Business Flows.</span></span></span></span></span></p>
+  <p style="margin-left:-13.5pt; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin-left:-13.5pt; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%">           In the displayed window, select the Business Flow and click on Select button.</span></span></span></span></span></p>
+  <p style="margin-left:-13.5pt; margin:0in 0in 0.0001pt 0.5in">              <img src="../assets/images/image64.png"/> <img src="../assets/images/image78.png"/></p>
+  <p style="margin-left:-13.5pt; margin:0in 0in 8pt 0.5in"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"> </p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%">                      The Activities &amp; Actions in the Business Flow gets added to the Run set.</span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt">                        <img src="../assets/images/image65.png"/>     <img src="../assets/images/image79.png"/></p>
+  <p style="margin:0in 0in 8pt"> </p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%">                      Now go to the Operations tab in the Run set </span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%">                      Here you can send the report that will be sent once the execution is completed.</span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt">                          <img src="../assets/images/image66.png"/>   <img src="../assets/images/image80.png"/> </p>
+  <p style="margin:0in 0in 8pt"> </p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%">                       Once the report is configured save the run set.</span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt">                           <img src="../assets/images/image67.png"/>   <img src="../assets/images/image81.png"/> </p>
+  <p style="margin:0in 0in 8pt"> </p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%">                       To run the run set, click on the RUN button as shown below.</span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt">                           <img src="../assets/images/image68.png"/>   <img src="../assets/images/image82.png"/></p>
+  <p style="margin:0in 0in 8pt"> </p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="tab-stops:277.5pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%">                        One can see the progress of the execution by the status displayed at the corner of the business flows, activities and actions as shown below.</span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt">                          <img src="../assets/images/image69.png"/></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%">                       Once the execution is complete a mail is sent showing the outcome of passed and failed test cases like below. It also shows the run set details with the execution start and end time.</span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%">                       There is also a zipped html with the mail containing the html report with all the details like below.</span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt">                         <img src="../assets/images/image70.png"/>    <img src="../assets/images/image83.png"/></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+  <p style="margin:0in 0in 8pt"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span style="font-size:14.0pt"><span style="line-height:107%"></span></span></span></span></span></p>
+
+</body></html>

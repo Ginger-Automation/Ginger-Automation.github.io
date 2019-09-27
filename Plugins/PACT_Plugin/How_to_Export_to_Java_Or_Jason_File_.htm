@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../..";
+  gCommonRootRelPath = "../..";
+  gTopicId = "5.4.2.0_6";
+
+//]]></script>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>How to Export to Java Or Jason File?</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Plugins:PACT Plugin"/></head>
+<body>
+  <h1>How to Export to Java Or Jason File?</h1>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">1. How to Export to a Java File?</strong><br/>
+          Pre-requisites: <br/>
+           •    Pact PlugIn loaded.<br/>
+           •    Pact File Created or Imported to the Documents Folder.<br/>
+           •    Pact File Compiled.</span></p>
+  <p><span style="font-size:17px;"><br/>
+          1.    On “PACT Content Editor” Page Click on Export To Java button<br/>
+                 <img src="../../assets/images/image1236.png"/></span></p>
+  <p><span style="font-size:17px;">    2.    Select a folder to export the Java file to<br/>
+          3.    It will ask you if you want to use the default Java template. <br/>
+                   <img src="../../assets/images/image1237.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+              a.    When user c<span style="font-size:17px;"><span style="font-size:17px;">licks on Yes, Ginger will take the ordinary Java template.</span></span><br/>
+                     <img src="../../assets/images/image1238.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+              b.    When user clicks on No, you will be asked to select a new template file, make sure the file you are selecting contains the Interactions Data place holder “&lt;&lt;Interactions_Data&gt;&gt;” <br/>
+                  otherwise the export will be failed.<br/>
+          4.    Once the Export process will finish the selected folder will be opened and the file will be inside with the following format “PactToJava&lt;&lt;TimeStamp&gt;&gt;.Java” for example <br/>
+              “PactToJava13_11_2017_17_13_47.Java”<br/>
+          5.    Also a success message will be popped up</span></p>
+  <p> </p>
+  <p><span style="font-size:17px;"><strong style="font-size: 20px">2.    How to Export to a Json File?</strong><br/>
+          Pre-requisites: <br/>
+           •    Pact PlugIn loaded.<br/>
+           •    Pact File Created or Imported to the Documents Folder.<br/>
+           •    Pact File Compiled.</span></p>
+  <p><span style="font-size:17px;"><br/>
+          1.    On “PACT Content Editor” Page Click on Export To JSON button<br/>
+                 <img src="../../assets/images/image1239.png"/></span></p>
+  <p><span style="font-size:17px;">    2.    Select a folder to export the JSON file to<br/>
+          3.    Once the Export process will finish the selected folder will be opened and the file will be inside another folder with the following format “PactToJSON&lt;&lt;TimeStamp&gt;&gt;” <br/>
+              for example “PactToJson13_11_2017_17_18_02.Java”<br/>
+              Inside this folder you will see the json file with a naming convention which built from the Consumer and Provider defined on the PACT Content Editor.<br/>
+          4.    Also you will find a log directory for this extract execution tracing <br/>
+          5.    A success message will be popped up.</span></p>
+
+</body></html>

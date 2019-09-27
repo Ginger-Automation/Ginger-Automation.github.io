@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../..";
+  gCommonRootRelPath = "../..";
+  gTopicId = "9.1.0_2";
+
+//]]></script>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>How to Import Gherkin File to a Business Flow? </title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Gherkins"/></head>
+<body>
+  <h1>How to Import Gherkin File to a Business Flow?</h1>
+  <p style="font-size: 17px"><br/>
+    The Ginger Automation Tool can import any Gherkin &lt;file&gt;.feature into Ginger and convert them to a Automation Business Flow in Ginger.</p>
+  <p style="font-size: 17px"><br/>
+    <span style="font-size:20px;"><strong>1.    IMPORT – Gherkin .feature file to BF</strong></span><br/>
+        In the Solutions Tab, under Business Flows (we suggest to organize with folders like in Fig 1.1), Import Instructions.<br/>
+            •    Right click on Business Flow or on the Folder you want to create the BF in, and in the dropdown select “Import” -&gt; “Import Gherkin Feature”. Fig 1.1</p>
+  <p style="font-size: 17px">        •    The File selection window will show, select “…” to browse windows location for your .feature file and click “Open”. Fig 1.2</p>
+  <p style="font-size: 17px">        •    You will be able to review the Gherkin file in the preview before selecting “Import”. Fig 1.3 -&gt;then select “Generate Business Flow”</p>
+  <p style="font-size: 17px"><br/>
+        (Fig 1.1)<br/>
+       <img src="../../assets/images/image1274.png"/></p>
+  <p style="font-size: 17px"><br/>
+        (Fig 1.2)<br/>
+           <img src="../../assets/images/image1275.png"/></p>
+  <p style="font-size: 17px"><br/>
+        (Fig 1.3)<br/>
+             <img src="../../assets/images/image1276.png"/>      </p>
+  <p style="font-size: 17px"><br/>
+    <span style="font-size:20px;"><strong>2.    IMPORT – Gherkin Business Flow creation from .Feature file </strong></span><br/>
+        After importing the Gherkin .feature:<br/>
+        Generate Business Flow instructions from Gherkin File<br/>
+            •    You will be given a chance to REVIEW the compiled Scenarios and Steps you just imported. (fig 2.1)</p>
+  <p style="font-size: 17px">        •    If you are want to proceed to create a Business Flow you can click “Generate Business Flow” (fig 2.1).</p>
+  <p style="font-size: 17px">        •    If you see “Update Business Flow” then the Business Flow already exists, and you can update the existing flow.<br/>
+                This will create a business flow INSIDE the folder that you originally right clicked and selected import. (fig 2.2)</p>
+  <p style="font-size: 17px"><br/>
+        (Fig 2.1)<br/>
+      <img src="../../assets/images/image1277.png"/><br/>
+        (Fig 2.2)<br/>
+      <img src="../../assets/images/image1278.png"/></p>
+  <p style="font-size: 17px"><span style="font-size:20px;"><strong>3.    IMPORT – Gherkin Optimized Activities to Automation Scenarios in Ginger</strong></span><br/>
+        If you are creating your scenarios using Gingers Gherkin TextEditor; <br/>
+        After you have completed your new .feature:<br/>
+        <strong>Optimized Activities</strong><br/>
+        You learned in section 2.1 – 2.2 how to compile and view the optimized activities Fig 3.1 in &#39;1.3.    LAYOUT – Gherkin “Optimize” to Automation&#39; section of &quot;What is Gherkin?&quot; topic.<br/>
+        If your Business Flow does not exist you will see in the optimize tab “Generate Business Flow”. Fig 3.1<br/>
+        This will create your Gherkin Business Flow as shown in Fig 2.2.</p>
+
+</body></html>

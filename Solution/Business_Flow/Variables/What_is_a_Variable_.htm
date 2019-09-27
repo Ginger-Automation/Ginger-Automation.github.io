@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../..";
+  gCommonRootRelPath = "../../..";
+  gTopicId = "3.1.3.0_1";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>What is a Variable?</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Variables"/></head>
+<body>
+  <h1>What is a Variable?</h1>
+  <p><span style="font-size:17px;">1.    What is Variable?    <br/>
+             An variable is an item which has a constant name and a value that can be changed.<br/>
+          <br/>
+      2.    How to create a variable?<br/>
+          i)    Go to Automate Tab, expand the Variables area and click on the ‘+’ button to add a new variable as shown below.<br/>
+            <img src="../../../assets/images/image932.png"/></span></p>
+  <p><span style="font-size:17px;">    ii)    Select the type of variable and click on ‘Add Variable’ button.<br/>
+              <img src="../../../assets/images/image933.png" style="cursor: nwse-resize;"/></span></p>
+  <p><span style="font-size:17px;">    iii)    Enter the Name and description. <br/>
+              •    Tag can be added using the ‘Add’ button which is used for grouping. (under development)<br/>
+              •    ‘Value Expression’ is the area where a value is entered for the variable. Value can also be set using the Set Variable Action.<br/>
+              •    ‘Linked Variable’ :- another variable of the same type can be linked so that one’s value is copied to another. Eg. Business variable is linked to an Activity variable , hence whenever the value of the activity variable changes, the business variable gets updated.<br/>
+              •    ‘Publish value’ will display the value from the linked variable.<br/>
+              •    Click on ‘Generate Auto value’ button. This will populate the ‘Current value’ of the variable.<br/>
+              •    Click on Ok button to add the variable.</span></p>
+  <p><span style="font-size:17px;">        <img src="../../../assets/images/image934.png"/><br/>
+       <br/>
+      3.    How to Reset value of a variable?<br/>
+             The Reset button as displayed below will reset the value of the variable.</span></p>
+  <p><span style="font-size:17px;">      <img src="../../../assets/images/image935.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+      4.    How to use a variable in an Action?<br/>
+                <br/>
+          a)    Variable can be used using the Set variable action<br/>
+              i)    Click on the ‘Add New’ button in the Activity Actions section.<br/>
+                    In the Add Action window, select the ‘Set Variable Action’ and click on Add Action button.</span></p>
+  <p><span style="font-size:17px;">           <img src="../../../assets/images/image936.png"/></span></p>
+  <p><span style="font-size:17px;">        ii)    Select the variable in the Variable Name drop down. The variable type is automatically populated depending on the variable used. <br/>
+                  Enter the value and click on the Ok button.<br/>
+                  <img src="../../../assets/images/image937.png"/></span></p>
+  <p><span style="font-size:17px;">        iii)    When this action is run, the variable value is set and is displayed in the current value field of the variable as shown below.<br/>
+                 <img src="../../../assets/images/image938.png"/></span></p>
+  <p><span style="font-size:17px;">    b)    Variables can be used in the Value Expression of an action</span></p>
+  <p><span style="font-size:17px;">        •    The Value Expression can be added for an action using the ‘…’ button in the Edit Action window as shown below.<br/>
+              <img src="../../../assets/images/image939.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+              •    The below screen is displayed. It displays the variables (Global, Business Flow, Activities and Environments). Ginger provides the functions from VB Script, Regular expressions and Data Source expressions.</span></p>
+  <p><span style="font-size:17px;">        <img src="../../../assets/images/image940.png"/></span></p>
+  <p><span style="font-size:17px;">          <br/>
+              •    Variables can be added to the  expressions. To add desired variables expand the Variables to see it and then double click on it to add it.<br/>
+               <img src="../../../assets/images/image941.png"/></span></p>
+  <p><span style="font-size:17px;">        The below screen displays a variables used in VB script function. The button ‘Test Value Expression’ as shown below gives the calculated Value of the expression after using the actual value of the variable in the ‘Value Calculated:’ field.</span></p>
+  <p><span style="font-size:17px;">     <img src="../../../assets/images/image942.png"/></span></p>
+  <p><span style="font-size:17px;"></span><br/>
+     </p>
+
+</body></html>

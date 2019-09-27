@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../..";
+  gCommonRootRelPath = "../..";
+  gTopicId = "5.4.4.0_3";
+
+//]]></script>
+
+<script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>How to Execute TestNG Flow using Free Command?</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Plugins:TestNG Plugin"/></head>
+<body>
+  <h1>How to Execute TestNG Flow using Free Command?</h1>
+  <p><span style="font-size:17px;">In case user need to execute TestNG flow using customized arguments or to integrate some Java/Maven commands with it, <br/>
+      he can use the Java/Maven command line Action to perform it using fully customized command to be used.</span></p>
+  <p><span style="font-size:17px;"><br/>
+      <strong>    1.    Executing Java Project TestNG Flow using Free Command</strong><br/>
+               a.    Add Business Flow or select existing one and click on “Automate” for loading it in Automate page<br/>
+               b.    Click on Add Action button, in loaded window go to “Plugins Actions”<br/>
+               c.    Select “Execute Java Free Command” Action<br/>
+                       <img src="../../assets/images/image1258.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+               d.    Set Action configurations according to the below:</span></p>
+  <p>                 </p>
+  <table class="MsoTableGrid" style="margin-left:35.75pt; border-collapse:collapse; border:solid windowtext 1.0pt" width="702">
+    <tbody>
+      <tr style="height:11.65pt">
+        <td style="border:solid windowtext 1.0pt; background:#daeef3; width:94.5pt; padding:0in 5.4pt 0in 5.4pt; height:11.65pt" valign="top" width="126">
+          <p align="center" style="margin-left:0in; text-align:center; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:9.0pt">Field Name</span></b></span></span></p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; background:#daeef3; width:81.0pt; border-left:none; padding:0in 5.4pt 0in 5.4pt; height:11.65pt" valign="top" width="108">
+          <p align="center" style="margin-left:0in; text-align:center; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:9.0pt">Mandatory?</span></b></span></span></p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; background:#daeef3; width:130.5pt; border-left:none; padding:0in 5.4pt 0in 5.4pt; height:11.65pt" valign="top" width="174">
+          <p align="center" style="margin-left:0in; text-align:center; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:9.0pt">Field Description</span></b></span></span></p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; background:#daeef3; width:99.0pt; border-left:none; padding:0in 5.4pt 0in 5.4pt; height:11.65pt" valign="top" width="132">
+          <p align="center" style="margin-left:0in; text-align:center; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:9.0pt">Sample Value</span></b></span></span></p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; background:#daeef3; width:121.5pt; border-left:none; padding:0in 5.4pt 0in 5.4pt; height:11.65pt" valign="top" width="162">
+          <p align="center" style="margin-left:0in; text-align:center; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:9.0pt">Comments</span></b></span></span></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:solid windowtext 1.0pt; width:94.5pt; border-top:none; padding:0in 5.4pt 0in 5.4pt" valign="top" width="126">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:9.0pt">Overwrite Java Home Path</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:81.0pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="108">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">No</span></span></span></p>
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">(assuming “JAVA_HOME” system variable was configured)</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:130.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="174">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">Full Path of Java executer (java.exe in windows or java in Linux).</span></span></span></p>
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">If value not been set (recommended) so “JAVA_HOME” system environment variable value will be used automatically.</span></span></span></p>
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">If “bin\java” is missing from provided path so it been added automatically.</span></span></span></p>
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt"></span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:99.0pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="132">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">“C:\Program Files\Java\jdk1.8.0_191\bin\java.exe”</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:121.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="162">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">For allowing the Action to run on any machine It is recommended to configure the “JAVA_HOME” system variable on the running machine and to keep this Action field value empty</span></span></span></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:solid windowtext 1.0pt; width:94.5pt; border-top:none; padding:0in 5.4pt 0in 5.4pt" valign="top" width="126">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:9.0pt">Java Working Folder Path</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:81.0pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="108">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">Yes</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:130.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="174">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">Path of working folder to run the command from.</span></span></span></p>
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">Usually the needed working folder is the Java project folder </span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:99.0pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="132">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">“C:\Users\menik\Documents\MENIK05\Demo\Demo Materials\TestNG Projects\JavaTestNG”</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:121.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="162">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">For allowing the Action to run on any machine It is recommended to place the project folder under the Ginger Solution “Documents” folder and set the a relative path to it in Action definitions like:</span></span></span></p>
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">“~\Documents\TestNG Projects\JavaTestNG”</span></span></span></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:solid windowtext 1.0pt; width:94.5pt; border-top:none; padding:0in 5.4pt 0in 5.4pt" valign="top" width="126">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:9.0pt">Free Command Arguments</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:81.0pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="108">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">Yes</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:130.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="174">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">Actual command line arguments to execute.</span></span></span></p>
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">No need to mention “java” executer at beginning of command, it will be added automatically.</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:99.0pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="132">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">“-cp &quot;C:\Users\menik\Documents\MENIK05\Demo\Demo Materials\TestNG Projects\JavaTestNG\bin;C:\Users\menik\Documents\MENIK05\Demo\Demo Materials\TestNG Projects\JavaTestNG\Resources\*&quot; org.testng.TestNG &quot;bin\Calculator\testng.xml&quot;</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:121.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="162">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">It is possible to transform the command to be dynamic by clicking on “…” button and integrate Value Expression arguments in it.</span></span></span></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:solid windowtext 1.0pt; width:94.5pt; border-top:none; padding:0in 5.4pt 0in 5.4pt" valign="top" width="126">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:9.0pt">Testing XML Path</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:81.0pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="108">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">No</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:130.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="174">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">Full/Relative Path to the TestNG XML to execute.</span></span></span></p>
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">Needs to be provided only if “Parameters Overwrite” functionality is needed.</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:99.0pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="132">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">&quot;C:\Users\menik\Documents\MENIK05\Demo\Demo Materials\TestNG Projects\JavaTestNG\bin\Calculator\testng.xml&quot;</span></span></span></p>
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt"></span></span></span></p>
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">Or</span></span></span></p>
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt"></span></span></span></p>
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">&quot;\bin\Calculator\testng.xml&quot;</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:121.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="162">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">Name of the XML can be any name.</span></span></span></p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="5" style="border:solid windowtext 1.0pt; width:526.5pt; border-top:none; padding:0in 5.4pt 0in 5.4pt" valign="top" width="702">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><i><span style="font-size:9.0pt">For rest of Action configurations fields- see other sections in this user guide</span></i></span></span></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p><span style="font-size:17px;"><strong>              <img src="../../assets/images/image1259.png"/> </strong></span></p>
+  <p><span style="font-size:17px;"><strong>   2.    Executing Maven Project TestNG Flow using Free Command</strong><br/>
+               a.    Add Business Flow or select existing one and click on “Automate” for loading it in Automate page<br/>
+               b.    Click on Add Action button, in loaded window go to “Plugins Actions”<br/>
+               c.    Select “Execute Java Free Command” Action<br/>
+                     <img src="../../assets/images/image1260.png"/></span></p>
+  <p><span style="font-size:17px;"><br/>
+               d.    Set Action configurations according to the below:</span></p>
+  <p>               </p>
+  <table class="MsoTableGrid" style="margin-left:35.75pt; border-collapse:collapse; border:solid windowtext 1.0pt" width="702">
+    <tbody>
+      <tr style="height:11.65pt">
+        <td style="border:solid windowtext 1.0pt; background:#daeef3; width:94.5pt; padding:0in 5.4pt 0in 5.4pt; height:11.65pt" valign="top" width="126">
+          <p align="center" style="margin-left:0in; text-align:center; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:9.0pt">Field Name</span></b></span></span></p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; background:#daeef3; width:81.0pt; border-left:none; padding:0in 5.4pt 0in 5.4pt; height:11.65pt" valign="top" width="108">
+          <p align="center" style="margin-left:0in; text-align:center; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:9.0pt">Mandatory?</span></b></span></span></p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; background:#daeef3; width:130.5pt; border-left:none; padding:0in 5.4pt 0in 5.4pt; height:11.65pt" valign="top" width="174">
+          <p align="center" style="margin-left:0in; text-align:center; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:9.0pt">Field Description</span></b></span></span></p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; background:#daeef3; width:99.0pt; border-left:none; padding:0in 5.4pt 0in 5.4pt; height:11.65pt" valign="top" width="132">
+          <p align="center" style="margin-left:0in; text-align:center; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:9.0pt">Sample Value</span></b></span></span></p>
+        </td>
+        <td style="border:solid windowtext 1.0pt; background:#daeef3; width:121.5pt; border-left:none; padding:0in 5.4pt 0in 5.4pt; height:11.65pt" valign="top" width="162">
+          <p align="center" style="margin-left:0in; text-align:center; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:9.0pt">Comments</span></b></span></span></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:solid windowtext 1.0pt; width:94.5pt; border-top:none; padding:0in 5.4pt 0in 5.4pt" valign="top" width="126">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:9.0pt">Overwrite Maven Home Path</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:81.0pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="108">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">No</span></span></span></p>
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">(assuming “MAVEN_HOME” / “M2_HOME” system variable was configured)</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:130.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="174">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">Full Path of Mvn executer (mvn.cmd in windows or mvn in Linux).</span></span></span></p>
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">If value not been set (recommended) so “MAVEN_HOME” / “M2_HOME” system environment variable value will be used automatically.</span></span></span></p>
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">If “bin\mvn” is missing from provided path so it been added automatically.</span></span></span></p>
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt"></span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:99.0pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="132">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">“C:\Program Files (x86)\apache-maven-3.5.3\bin\mvn.cmd”</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:121.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="162">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">For allowing the Action to run on any machine It is recommended to configure the “MAVEN_HOME” / “M2_HOME” system variable on the running machine and to keep this Action field value empty</span></span></span></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:solid windowtext 1.0pt; width:94.5pt; border-top:none; padding:0in 5.4pt 0in 5.4pt" valign="top" width="126">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:9.0pt">Maven Project Folder Path</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:81.0pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="108">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">Yes</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:130.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="174">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">Full Path of the Maven Project folder.</span></span></span></p>
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt"></span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:99.0pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="132">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">“C:\Users\menik\Documents\MENIK05\Demo\Demo Materials\TestNG Projects\MavenTestNG”</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:121.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="162">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">For allowing the Action to run on any machine It is recommended to place the Maven project folder under the Ginger Solution “Documents” folder and set the a relative path to it in Action definitions like:</span></span></span></p>
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">“~\Documents\TestNG Projects\MavenTestNG”</span></span></span></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:solid windowtext 1.0pt; width:94.5pt; border-top:none; padding:0in 5.4pt 0in 5.4pt" valign="top" width="126">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:9.0pt">Free Command Arguments</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:81.0pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="108">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">Yes</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:130.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="174">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">Actual command line arguments to execute.</span></span></span></p>
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">No need to mention “mvn” executer at beginning of command, it will be added automatically.</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:99.0pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="132">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">“clean install test -Dsurefire.suiteXmlFiles=&quot;src\main\java\com\Calculator\testng.xml&quot;”</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:121.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="162">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">It is possible to transform the command to be dynamic by clicking on “…” button and integrate Value Expression arguments in it.</span></span></span></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="border:solid windowtext 1.0pt; width:94.5pt; border-top:none; padding:0in 5.4pt 0in 5.4pt" valign="top" width="126">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:9.0pt">Testing XML Path</span></b></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:81.0pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="108">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">No</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:130.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="174">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">Full/Relative Path to the TestNG XML to execute.</span></span></span></p>
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">Needs to be provided only if “Parameters Overwrite” functionality is needed.</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:99.0pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="132">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">&quot;C:\Users\menik\Documents\MENIK05\Demo\Demo Materials\TestNG Projects\MavenTestNG\src\main\java\com\Calculator\testng.xml&quot;</span></span></span></p>
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt"></span></span></span></p>
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">Or</span></span></span></p>
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt"></span></span></span></p>
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">“\src\main\java\com\Calculator\testng.xml&quot;</span></span></span></p>
+        </td>
+        <td style="border-bottom:solid windowtext 1.0pt; width:121.5pt; border-top:none; border-left:none; border-right:solid windowtext 1.0pt; padding:0in 5.4pt 0in 5.4pt" valign="top" width="162">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:9.0pt">Name of the XML can be any name.</span></span></span></p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="5" style="border:solid windowtext 1.0pt; width:526.5pt; border-top:none; padding:0in 5.4pt 0in 5.4pt" valign="top" width="702">
+          <p style="margin-left:0in; margin:0in 0in 0.0001pt 0.5in"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><i><span style="font-size:9.0pt">For rest of Action configurations fields- see other sections in this user guide</span></i></span></span></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>           <img src="../../assets/images/image1261.png"/></p>
+
+</body></html>

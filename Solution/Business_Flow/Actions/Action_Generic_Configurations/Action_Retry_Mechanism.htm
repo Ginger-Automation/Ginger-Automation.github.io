@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script type="text/javascript" language="JavaScript">
+  //<![CDATA[
+  function reDo() {
+    if (innerWidth != origWidth || innerHeight != origHeight)
+      location.reload();
+  }
+  if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+    origWidth = innerWidth;
+    origHeight = innerHeight;
+    onresize = reDo;
+  }
+  onerror = null;
+  //]]>
+</script>
+<style type="text/css">/*<![CDATA[*/
+
+  <!-- div.WebHelpPopupMenu {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+    visibility: hidden;
+  }
+
+  p.WebHelpNavBar {
+    text-align: right;
+  }
+
+  -->
+
+/*]]>*/</style>
+
+<script type="text/javascript">//<![CDATA[
+
+  gRootRelPath = "../../../..";
+  gCommonRootRelPath = "../../../..";
+  gTopicId = "3.1.1.1.0_4";
+
+//]]></script>
+
+<script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <title>Action Retry Mechanism</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css"/>
+<meta name="rh-index-keywords" content="Actions"/></head>
+<body>
+  <h1>Action Retry Mechanism</h1>
+  <p style="margin:0in 0in 0.0001pt"><span style="font-size:17px;"><span style="font-family:Calibri,sans-serif">An Action can be re-executing multiple times if required. </span></span></p>
+  <p style="margin:0in 0in 0.0001pt"><span style="font-size:17px;"><span style="font-family:Calibri,sans-serif">This is used in situations like the web page is taking time to respond or when is connectivity issue.</span></span></p>
+  <p style="margin:0in 0in 0.0001pt"><span style="font-size:17px;"><span style="font-family:Calibri,sans-serif"></span></span></p>
+  <p style="margin:0in 0in 0.0001pt"><span style="font-size:17px;"><span style="font-family:Calibri,sans-serif">All types of Actions have this facility of Retry Mechanism.</span></span></p>
+  <p style="margin:0in 0in 0.0001pt"> </p>
+  <p style="margin:0in 0in 0.0001pt"><span style="font-size:17px;"><span style="font-family:Calibri,sans-serif"></span></span></p>
+  <p style="margin:0in 0in 0.0001pt"><span style="font-size:17px;"><span style="font-family:Calibri,sans-serif">As shown below, the ‘<i>Enable Retry Mechanism</i>’ check box needs to be checked to use it.</span></span></p>
+  <p style="margin:0in 0in 0.0001pt"><span style="font-size:17px;"><span style="font-family:Calibri,sans-serif">The ‘<i>Interval seconds</i>’ is the waiting period before retrying to execute the Action.</span></span></p>
+  <p style="margin:0in 0in 0.0001pt"><span style="font-size:17px;"><span style="font-family:Calibri,sans-serif">The ‘<i>Max Retries Number’</i> is the maximum number of times the action should be executed.</span></span></p>
+  <p style="margin:0in 0in 0.0001pt"> </p>
+  <p style="margin:0in 0in 0.0001pt"><img height="414" src="../../../../assets/images/image518.png" width="598"/><img src="../../../../assets/images/image102.png"/></p>
+  <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-size:12.0pt"></span></span></span></p>
+  <p style="margin:0in 0in 0.0001pt"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="font-size:12.0pt"></span></b></span></span></p>
+
+</body></html>
